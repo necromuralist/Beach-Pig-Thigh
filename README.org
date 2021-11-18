@@ -1,4 +1,4 @@
-#+TITLE Nikola Helpers Readme (if you want)
+#+TITLE: Nikola Helpers Readme (if you want)
 
 These are pieces of code that I use with [[https://getnikola.com/][Nikola]]. I use Nikola but haven't really studied it so there are probably better ways to do most of these things, but these seem to work well enough.
 
