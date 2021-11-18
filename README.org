@@ -1,0 +1,8 @@
+#+TITLE Nikola Helpers Readme (if you want)
+
+These are pieces of code that I use with [[https://getnikola.com/][Nikola]]. I use Nikola but haven't really studied it so there are probably better ways to do most of these things, but these seem to work well enough.
+
+ - psedocode.tmpl: This adds the mathjax 2 version of [[https://github.com/SaswatPadhi/pseudocode.js][pseudocode.js]]. It ignores the configurations in the `conf.py` file at the moment.
+ - lancelot/: This is a shortcode plugin that is basically the same as the `doc` shortcode but lets me pass in alternate text to use, even though I'm using org-mode, not RST.
+
+The `pseudocode.tmpl` is based on `mako`, not `jinja`.
