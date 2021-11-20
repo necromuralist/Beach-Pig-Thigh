@@ -1,8 +1,43 @@
 #+TITLE: Nikola Helpers Readme (if you want)
 
-These are pieces of code that I use with [[https://getnikola.com/][Nikola]]. I use Nikola but haven't really studied it so there are probably better ways to do most of these things, but these seem to work well enough.
+These are pieces of code that I use with [[https://getnikola.com/][Nikola]]. I use Nikola but haven't really studied it so there are probably better ways to do most of these things, but this seems to work well enough.
+ 
+* Templates
+  The templates are all mako templates for now. I have at least one repository that uses jinja (because why not? actually I think I just forgot which one I normally use) but I'm not updating it right at the moment. Templates go in the ~themes/custom/templates/~ folder, assuming the theme's name is ~custom~, as set in the ~conf.py~ file.
 
- - psedocode.tmpl: This adds the mathjax 2 version of [[https://github.com/SaswatPadhi/pseudocode.js][pseudocode.js]]. It ignores the configurations in the ~conf.py~ file at the moment.
- - lancelot/: This is a shortcode plugin that is basically the same as the ~doc~ shortcode but lets me pass in alternate text to use, even though I'm using org-mode, not RST.
+** ~math_helpers.tmpl~
 
-The ~pseudocode.tmpl~ is based on ~mako~, not ~jinja~.
+   This an update of the built-in template for handling math in nikola. It's what gets called when you set the ~has_math~ metadata flag with [[https://github.com/SaswatPadhi/pseudocode.js][pseudocode.js]] added to it. It checks for a ~has_pseudocode~ entry in the metadata to decide whether to inject it or not. It doesn't check what the value is set with ~has_pseudocode~, as long as /something/ is set it will put it in (so "False" is still ~True~).
+
+If you just want math put this in the metadata:
+
+#+begin_src rst
+.. has_math: True
+#+end_src
+
+But if you want pseudocode use:
+
+#+begin_src rst
+.. has_pseudocode: True
+#+end_src
+
+**Warning:**
+
+I made the ~has_math~ flag take precedence over the ~has_pseudocode~ flag so if you put both in only the math will get set. Maybe I'll re-think that later. For now don't put both in.
+** Using the Math Helpers with Pseudocode
+The ~math_helpers.tmpl~ puts the javascript in the footer, which means that ~pseudocode.js~ doesn't load before it gets called in the body of the HTML (although MathJax does, somehow) so you need to wait for the page to load or it won't render.
+
+#+begin_src html
+<script>
+window.addEventListener('load', function () {
+    pseudocode.renderElement(document.getElementById("bubblesort"));
+});
+</script>
+#+end_src
+
+Where "bubblesort" is the ID set in the LaTeX algorithm block.
+* Shortcodes
+** ~lancelot/~
+
+This is a shortcode plugin that is basically the same as the ~doc~ shortcode but lets me pass in alternate text to use, even though I'm using org-mode, not RST.
+
