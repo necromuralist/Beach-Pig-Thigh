@@ -1,6 +1,7 @@
 #+TITLE: Nikola Helpers Readme (if you want)
 
-These are pieces of code that I use with [[https://getnikola.com/][Nikola]]. I use Nikola but haven't really studied it so there are probably better ways to do most of these things, but this seems to work well enough.
+
+These are pieces of code that I use with [[https://getnikola.com/][Nikola]]. I use Nikola but haven't really studied it so there are probably better ways to do most of these things, but this seems to work well enough. I'm converting this to a web-site with the built html here: https://necromuralist.github.io/Beach-Pig-Thigh/.
  
 * Templates
   The templates are all mako templates for now. I have at least one repository that uses jinja (because why not? actually I think I just forgot which one I normally use) but I'm not updating it right at the moment. Templates go in the ~themes/custom/templates/~ folder, assuming the theme's name is ~custom~, as set in the ~conf.py~ file.
