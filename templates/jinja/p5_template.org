@@ -1,0 +1,32 @@
+* The P5 Template
+
+The P5 template is what I use to get p5 into posts. You use it by setting the ~.. template: p5.tmpl~ line in the metadata for the post you want to add it to. I also have it set to use a ~.. has_p5: true~ entry in the metadata, but I didn't want to update the post template to get it working so that will only work for the index page that shows the latests posts (not when you display an individual post).
+
+* The Tangle
+
+#+begin_src jinja :tangle p5.tmpl
+{#  -*- coding: utf-8 -*- #}
+<<p5-helper-import>>
+
+{% extends 'post.tmpl' %}
+
+{% block extra_head %}
+  {{ super() }}
+  <<p5-macro-call>>
+{% endblock %} 
+#+end_src
+
+* Import the Helpers
+Since both this template and the ~index.tmpl~ template need to import the p5 library I made a macro to do it and put it in a separate file (~p5_helper.tmpl~) so we need to import it here.
+
+#+begin_src jinja :noweb-ref p5-helper-import
+{% import 'p5_helper.tmpl' as p5 with context %}
+#+end_src
+
+* Add the p5
+
+Here's where we call the macro to insert the ~script~ tag to get p5. It seems to have to go into the head rather than the body of the post to work. It's actually just one line so I could have written the tag instead of calling the macro, but I'm using a CDN and the URL has the specific version of p5 that gets pulled in so I thought it would be better to have only one place where the URL gets defined.
+
+#+begin_src jinja :noweb-ref p5-macro-call
+{{ p5.p5_scripts() }}
+#+end_src

@@ -1,0 +1,62 @@
+* The P5 Helper Template
+
+This is where I defined some macros to add the p5 code to posts. It's based on the ~math_helper.tmpl~ template, although it took a little bit more work (well, too much work) to figure out how to get the metadata for this template.
+
+#+begin_src jinja :tangle p5_helper.tmpl
+{#  -*- coding: utf-8 -*- #}
+
+<<p5-scripts-macro>>
+
+<<p5-post-macro>>
+
+<<p5-index-macro>>
+#+end_src
+
+* P5 Scripts
+
+This is the macro to call to add the tag to pull in the p5 code from a CDN.
+
+#+begin_src jinja :noweb-ref p5-scripts-macro
+{# macro to add the p5.js code tag #}
+{% macro p5_scripts() %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+{% endmacro %}
+#+end_src
+
+* P5 Post Macro
+This is a macro to use if you have a template with a single post object (e.g. if you override the ~post.tmpl~ template or one of its children). I'm using a dedicated template for p5 posts right now so it isn't being used.
+
+#+begin_src jinja :noweb-ref p5-post-macro
+{# macro for a single post #}
+{# `post`: a Post object #}
+{% macro p5_scripts_ifpost(post) %}
+    {% if post.meta("has_p5") %}
+        {{ p5_scripts() }}
+    {% endif %}
+{% endmacro %}
+#+end_src
+
+* P5 Post Index Macro
+This is the macro I'm adding to the ~index.tmpl~ template to get p5 into the latest pages feed. Jinja doesn't support the comprehension-type syntax that ~mako~ does and ~Nikola~ puts the metadata dictionary into a Functionary object which is a default dict that is callable. The metadata dictionary that we want is actually set as the value to a key in the dictionary matching the language for the sight (~en~ in my case). So you can't access it directly (e.g. you can't use ~post.meta.has_p5~) but if you call the meta object like a function instead of using it as a dictionary it will bypass the language key for you so you don't have to know what the language is (e.g. ~post.meta("has_p5")~ is the same as ~post.meta.en.has_p5~ (if English is the language being used)). Since I only use English it's probably unnecessary to use the function-syntax, but it seems to be the way it's intended to be used (and it took forever to figure out what was going on) so I'm using it.
+
+But, after I set it up to check for ~has_p5~ in the metadata I realized that this fixed the ~index.tmpl~ but I'd have to update the ~post.tmpl~ to use it for individual posts, which seemed like too much so I instead set it to also check if the post uses the ~p5.tmpl~ template. If I start adding more conditional imports maybe it'll make sense to use ~has_p5~ but for now, the only way that works both in the feed and when viewing an individual post is to set the ~.. template: p5.tmpl~ metadata at the top of a post.
+
+#+begin_src jinja :noweb-ref p5-index-macro
+{# macro used by feed page with multiple posts (e.g. index.tmpl) #}
+{# 'posts': list of Post objects #}
+{# jinja doesn't support comprehensions so we have to use a for-loop #}
+{# the ~post.meta~ object is a Functionary object #}
+{# the metadata is in a dictionary that's in a dictionary #}
+{# if you try ~post.meta.has_p5~ it will fail because you need the language you're using as a key #}
+{# e.g. ~post.meta.en.has_p5~ #}
+{# to not refer to the langugage you need to call it like a function, passing in the "has_p5" key as an argument #}
+{% macro p5_scripts_ifposts(posts) %}
+  {% set p5_added = False %}
+  {% for post in posts %}
+    {% if (post.meta("has_p5") or post.meta("template") == "p5.tmpl") and not p5_added %}
+      {% set p5_added = True %}
+      {{ p5_scripts() }}
+    {% endif %}
+  {% endfor %}
+{% endmacro %}
+#+end_src
