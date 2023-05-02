@@ -1,3 +1,14 @@
+#+BEGIN_COMMENT
+.. title: Jinja P5 Helper
+.. slug: jinja-p5-helper
+.. date: 2023-05-02 16:14:09 UTC-07:00
+.. tags: jinja,template,p5,javascript
+.. category: Jinja
+.. link: 
+.. description: 
+.. type: text
+
+#+END_COMMENT
 * The P5 Helper Template
 
 This is where I defined some macros to add the p5 code to posts. It's based on the ~math_helper.tmpl~ template, although it took a little bit more work (well, too much work) to figure out how to get the metadata for this template.
@@ -16,7 +27,7 @@ This is where I defined some macros to add the p5 code to posts. It's based on t
 
 This is the macro to call to add the tag to pull in the p5 code from a CDN.
 
-#+begin_src jinja :noweb-ref p5-scripts-macro
+#+begin_src html :noweb-ref p5-scripts-macro
 {# macro to add the p5.js code tag #}
 {% macro p5_scripts() %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>

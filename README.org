@@ -41,3 +41,5 @@ Where "bubblesort" is the ID set in the LaTeX algorithm block.
 
 This is a shortcode plugin that is basically the same as the ~doc~ shortcode but lets me pass in alternate text to use, even though I'm using org-mode, not RST.
 
+* Image Source
+- Foresman PS. English:  Pig Butcher Diagram (PSF) [Internet]. 2019 [cited 2023 May 2]. Available from: https://commons.wikimedia.org/wiki/File:Pig_Butcher_Diagram_(PSF).png

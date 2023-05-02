@@ -1,0 +1,14 @@
+#+BEGIN_COMMENT
+.. title: Assets
+.. slug: assets
+.. date: 2023-05-02 16:00:45 UTC-07:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+
+#+END_COMMENT
+
+
+Write your page here.

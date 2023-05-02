@@ -1,9 +1,21 @@
+#+BEGIN_COMMENT
+.. title: Jinja Post Index Template
+.. slug: jinja-post-index-template
+.. date: 2023-05-02 16:10:21 UTC-07:00
+.. tags: template,jinja,override
+.. category: Jinja
+.. link: 
+.. description: The Post feed template.
+.. type: text
+
+#+END_COMMENT
+
 * The Index Template
 
 This is the template used to produce the page with the latest posts. The number of posts on the page is set in ~conf.py~ using the ~INDEX_DISPLAY_POST_COUNT~ variable (10 is the default). I'm overriding the default because I want to be able to add [[https://p5js.org/][p5]] code to posts. Using a special template works when you look at single posts (see the ~p5.tmpl~ template) but the index template won't pick up on that so I'm inserting a macro call to get p5 into the main page (if there's a p5 post on it).
 
 * The Tangle
-#+begin_src jinja :tangle index.tmpl
+#+begin_src html :tangle index.tmpl
 {#  -*- coding: utf-8 -*- #}
 <<default-imports>>
 

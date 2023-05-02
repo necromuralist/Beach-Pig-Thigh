@@ -1,3 +1,14 @@
+#+BEGIN_COMMENT
+.. title: Jinja P5 Template
+.. slug: jinja-p5-template
+.. date: 2023-05-02 16:18:21 UTC-07:00
+.. tags: jinja,template,javascript,p5
+.. category: Jinja
+.. link: 
+.. description: A Jinja template for pages with p5.js.
+.. type: text
+
+#+END_COMMENT
 * The P5 Template
 
 The P5 template is what I use to get p5 into posts. You use it by setting the ~.. template: p5.tmpl~ line in the metadata for the post you want to add it to. I also have it set to use a ~.. has_p5: true~ entry in the metadata, but I didn't want to update the post template to get it working so that will only work for the index page that shows the latests posts (not when you display an individual post).

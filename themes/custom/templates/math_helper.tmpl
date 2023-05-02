@@ -1,13 +1,3 @@
-#+TITLE: Math Helper Template
-#+begin_src mako :tangle math_helper.tmpl
-<<everything-else>>
-#+end_src
-* Introduction
-  This is an extension of the ~math_helper.tmpl~ mako template that comes with nikola. The original version checks for the ~has_math: True~ entry in the post meta-data and then loads either Kate or MathJax based on what's in the ~conf.py~ file. My extension adds support for [[https://github.com/SaswatPadhi/pseudocode.js#readme][pseudocode.js]].
-* Everything Else
-This is a dump for stuff until I finish this literate-code re-write.
-
-#+begin_src mako :noweb-ref everything-else
 ### Note: at present, MathJax and KaTeX do not respect the USE_CDN configuration option
 <%def name="math_scripts()">
   %if use_katex:
@@ -123,4 +113,3 @@ This is a dump for stuff until I finish this literate-code re-write.
             ${math_styles()}
             % endif
         </%def> # math_styles_ifposts
-#+end_src
