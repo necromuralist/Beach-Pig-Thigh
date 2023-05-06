@@ -1,0 +1,126 @@
+#+BEGIN_COMMENT
+.. title: Mako Post Index Template
+.. slug: mako-post-index-template
+.. date: 2023-05-05 16:10:21 UTC-07:00
+.. tags: template,mako,override
+.. category: Mako
+.. link: 
+.. description: The Post feed template.
+.. type: text
+
+#+END_COMMENT
+
+* The Index Template
+
+This is the template used to produce the page with the latest posts. The number of posts on the page is set in ~conf.py~ using the ~INDEX_DISPLAY_POST_COUNT~ variable (10 is the default). I'm overriding the default because I want to be able to add [[https://p5js.org/][p5]] code to posts. Using a special template works when you look at single posts (see the ~p5.tmpl~ template) but the index template won't pick up on that so I'm inserting a macro call to get p5 into the main page (if there's a p5 post on it).
+
+The original template is at ~.virtuanlenvs/beach-pig-thigh/lib/python3.11/site-packages-nikola/data/themes/base/templates/index.tmpl~.
+
+* The Tangle
+#+begin_src html :tangle index.tmpl
+## -*- coding: utf-8 -*-
+
+<<default-imports>>
+
+<<monkey-imports>>
+
+<%inherit file="base.tmpl"/>
+
+<%block name="extra_head">
+    ${parent.extra_head()}
+    % if posts and (permalink == '/' or permalink == '/' + index_file):
+        <link rel="prefetch" href="${posts[0].permalink()}" type="text/html">
+    % endif
+    ${math.math_styles_ifposts(posts)}
+    <<p5-macro>>
+</%block>
+
+
+<%block name="content">
+<%block name="content_header">
+    ${feeds_translations.translation_link(kind)}
+</%block>
+
+% if 'main_index' in pagekind:
+    ${front_index_header}
+% endif
+% if page_links:
+    ${pagination.page_navigation(current_page, page_links, prevlink, nextlink, prev_next_links_reversed)}
+% endif
+
+<div class="postindex">
+% for post in posts:
+    <article class="h-entry post-${post.meta('type')}" itemscope="itemscope" itemtype="http://schema.org/Article">
+    <header>
+        <h1 class="p-name entry-title"><a href="${post.permalink()}" class="u-url">${post.title()|h}</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            % if author_pages_generated and multiple_authors_per_post:
+                % for author in post.authors():
+                    <a href="${_link('author', author)}">${author|h}</a>
+                % endfor
+            % elif author_pages_generated:
+                <a href="${_link('author', post.author())}">${post.author()|h}</a>
+            % else:
+                ${post.author()|h}
+            % endif
+            </span></p>
+            <p class="dateline">
+            <a href="${post.permalink()}" rel="bookmark">
+            <time class="published dt-published" datetime="${post.formatted_date('webiso')}" itemprop="datePublished" title="${post.formatted_date(date_format)|h}">${post.formatted_date(date_format)|h}</time>
+            % if post.updated and post.updated != post.date:
+                <span class="updated"> (${messages("updated")}
+                    <time class="dt-updated" datetime="${post.formatted_updated('webiso')}" itemprop="dateUpdated" title="${post.formatted_updated(date_format)|h}">${post.formatted_updated(date_format)|h}</time>)</span>
+            % endif
+            </a>
+            </p>
+            % if not post.meta('nocomments') and site_has_comments:
+                <p class="commentline">${comments.comment_link(post.permalink(), post._base_path)}
+            % endif
+        </div>
+    </header>
+    %if index_teasers:
+    <div class="p-summary entry-summary">
+    ${post.text(teaser_only=True)}
+    %else:
+    <div class="e-content entry-content">
+    ${post.text(teaser_only=False)}
+    %endif
+    </div>
+    </article>
+% endfor
+</div>
+
+${helper.html_pager()}
+${comments.comment_link_script()}
+${math.math_scripts_ifposts(posts)}
+</%block>
+
+#+end_src
+* Imports
+** The Defaults
+These imports were already in the built-in template.
+
+#+begin_src mako :noweb-ref default-imports
+<%namespace name="helper" file="index_helper.tmpl"/>
+<%namespace name="math" file="math_helper.tmpl"/>
+<%namespace name="comments" file="comments_helper.tmpl"/>
+<%namespace name="pagination" file="pagination_helper.tmpl"/>
+<%namespace name="feeds_translations" file="feeds_translations_helper.tmpl" import="*"/>
+#+end_src
+
+* Monkey Imports
+This is what I'm adding.
+
+#+begin_src mako :noweb-ref monkey-imports
+## Monkey Template
+<%namespace name="p5" file="p5_helper.tmpl"/>
+#+end_src
+
+* Calling the P5 Macro
+
+This is where we call the macro to insert (or not) a tag to pull in the p5 library. I originally tried putting it next to where the mathjax macro gets called (at the end of the template) but this caused an error sayng that the ~p5~ object was undefined. Putting it in the head seems to fix it.
+
+#+begin_src mako :noweb-ref p5-macro
+${p5.p5_scripts_ifposts(posts)}
+#+end_src

@@ -6,11 +6,27 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
+  <loc>https://necromuralist.github.io/Beach-Pig-Thigh/categories/cat_p5.xml</loc>
+  <lastmod>2023-05-05T23:56:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://necromuralist.github.io/Beach-Pig-Thigh/categories/p5.xml</loc>
+  <lastmod>2023-05-05T23:56:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://necromuralist.github.io/Beach-Pig-Thigh/categories/shortcode.xml</loc>
+  <lastmod>2023-05-05T23:56:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://necromuralist.github.io/Beach-Pig-Thigh/categories/template.xml</loc>
+  <lastmod>2023-05-05T23:56:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/rss.xml</loc>
-  <lastmod>2023-05-02T23:22:00Z</lastmod>
+  <lastmod>2023-05-05T23:56:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/sitemap.xml</loc>
-  <lastmod>2023-05-02T23:44:00Z</lastmod>
+  <lastmod>2023-05-05T23:58:00Z</lastmod>
  </sitemap>
 </sitemapindex>
