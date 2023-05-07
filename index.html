@@ -15,8 +15,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="manifest" href="site.webmanifest">
-<link rel="prefetch" href="posts/p5-div-shortcode/" type="text/html">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+<link rel="prefetch" href="posts/p5-cdn-url/" type="text/html">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js" integrity="sha512-3RlxD1bW34eFKPwj9gUXEWtdSMC59QqIqHnD8O/NoTwSJhgxRizdcFVQhUMFyTp5RwLTDL0Lbcqtl8b7bFAzog==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -78,7 +78,36 @@ bg-light
     
 
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/p5-div-shortcode/" class="u-url">P5 Div Shortcode</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/p5-cdn-url/" class="u-url">P5 CDN URL</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                The Cloistered Monkey
+            </span></p>
+            <p class="dateline">
+            <a href="posts/p5-cdn-url/" rel="bookmark">
+            <time class="published dt-published" datetime="2023-05-05T15:19:31-07:00" itemprop="datePublished" title="2023-05-05 15:19">2023-05-05 15:19</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>
+<script language="javascript" type="text/javascript" src="posts/p5-div-shortcode/noise_graph.js"></script></p>
+<div id="noise-graph"></div>
+
+
+
+
+<p>
+To change the script tag with the URL for the p5 CDN, put a new one in the <code>GLOBAL_CONTEXT</code> dictionary defined in the <code>conf.py</code> file using the <code>p5_library_source</code> as the key and the new cag as the value. For example:
+</p>
+
+<div class="highlight"><pre><span></span><span class="n">GLOBAL_CONTEXT</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"p5_library_source"</span><span class="p">:</span> <span class="p">(</span>
+    <span class="s1">'&lt;script'</span>
+    <span class="s1">' src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"'</span>
+    <span class="s1">' integrity="sha512-3RlxD1bW34eFKPwj9gUXEWtdSMC59QqIqHnD8O/NoTwSJhgxRizdcFVQhUMFyTp5RwLTDL0Lbcqtl8b7bFAzog=="'</span>
+    <span class="s1">' crossorigin="anonymous" referrerpolicy="no-referrer"&gt;&lt;/script&gt;'</span><span class="p">)}</span>
+</pre></div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/p5-div-shortcode/" class="u-url">P5 Div Shortcode</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 The Cloistered Monkey

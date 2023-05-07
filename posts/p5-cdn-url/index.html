@@ -3,23 +3,24 @@
 " lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="description" content="Adding the P5 CDN URL with the conf.py.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>P5 Div Shortcode | Beach Pig Thigh Tower</title>
+<title>P5 CDN URL | Beach Pig Thigh Tower</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
-<link rel="canonical" href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/">
+<link rel="canonical" href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-cdn-url/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
 <link rel="manifest" href="../../site.webmanifest">
 <meta name="author" content="The Cloistered Monkey">
-<link rel="next" href="../p5-cdn-url/" title="P5 CDN URL" type="text/html">
+<link rel="prev" href="../p5-div-shortcode/" title="P5 Div Shortcode" type="text/html">
 <meta property="og:site_name" content="Beach Pig Thigh Tower">
-<meta property="og:title" content="P5 Div Shortcode">
-<meta property="og:url" content="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/">
-<meta property="og:description" content="This is a test of the p5div shortcode. For it to work you need to set up the p5.tmpl template, have ..template: p5.tmpl in the metadata for this post, and have p5div.tmpl in a folder named shortcodes ">
+<meta property="og:title" content="P5 CDN URL">
+<meta property="og:url" content="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-cdn-url/">
+<meta property="og:description" content="Adding the P5 CDN URL with the conf.py.">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2023-05-05T15:19:31-07:00">
 <meta property="article:tag" content="p5">
@@ -86,7 +87,7 @@ bg-light
         
         
         
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">P5 Div Shortcode</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">P5 CDN URL</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
@@ -104,35 +105,22 @@ bg-light
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <p>
-<script language="javascript" type="text/javascript" src="noise_graph.js"></script></p>
+<script language="javascript" type="text/javascript" src="../p5-div-shortcode/noise_graph.js"></script></p>
 <div id="noise-graph"></div>
 
 
 
-<p>
-This is a test of the <code>p5div</code> shortcode. For it to work you need to set up the <code>p5.tmpl</code> template, have <code>..template: p5.tmpl</code> in the metadata for this post, and have <code>p5div.tmpl</code> in a folder named <code>shortcodes</code> at the root of the nikola folder.
-</p>
 
 <p>
-The shortcode used to put the sketch in this post is:
+To change the script tag with the URL for the p5 CDN, put a new one in the <code>GLOBAL_CONTEXT</code> dictionary defined in the <code>conf.py</code> file using the <code>p5_library_source</code> as the key and the new cag as the value. For example:
 </p>
 
-<p>
-
-{{% p5div divid="noise-graph" source="noise_graph.js" %}}
-
-</p>
-
-<p>
-which assumes that the sketch is in <code>files/posts/&lt;slug&gt;/noise_graph.js</code>. And that the p5 code is adding the sketch to "noise-graph". Meaning that there's something like:
-</p>
-
-<div class="highlight"><pre><span></span><span class="nx">p5</span><span class="p">(</span><span class="nx">noise_graph</span><span class="p">,</span><span class="w"> </span><span class="s2">"noise-graph"</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="n">GLOBAL_CONTEXT</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"p5_library_source"</span><span class="p">:</span> <span class="p">(</span>
+    <span class="s1">'&lt;script'</span>
+    <span class="s1">' src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"'</span>
+    <span class="s1">' integrity="sha512-3RlxD1bW34eFKPwj9gUXEWtdSMC59QqIqHnD8O/NoTwSJhgxRizdcFVQhUMFyTp5RwLTDL0Lbcqtl8b7bFAzog=="'</span>
+    <span class="s1">' crossorigin="anonymous" referrerpolicy="no-referrer"&gt;&lt;/script&gt;'</span><span class="p">)}</span>
 </pre></div>
-
-<p>
-in the <code>noise_graph.js</code> file.
-</p>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
 <li><a class="tag p-category" href="../../categories/p5/" rel="tag">p5</a></li>
@@ -140,8 +128,8 @@ in the <code>noise_graph.js</code> file.
             <li><a class="tag p-category" href="../../categories/template/" rel="tag">template</a></li>
         </ul>
 <ul class="pager hidden-print">
-<li class="next">
-                <a href="../p5-cdn-url/" rel="next" title="P5 CDN URL">Next post</a>
+<li class="previous">
+                <a href="../p5-div-shortcode/" rel="prev" title="P5 Div Shortcode">Previous post</a>
             </li>
         </ul></nav></aside></article><!--End of body content--><footer id="footer"><a href="mailto:cloisteredmonkey.jmark@slmail.me">The Cloistered Monkey</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
  <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">

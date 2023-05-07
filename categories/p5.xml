@@ -3,7 +3,24 @@
  &lt;a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;
  &lt;img alt="Creative Commons License BY-NC-SA"
  style="border-width:0; margin-bottom:12px;"
- src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Sat, 06 May 2023 01:03:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>P5 Div Shortcode</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;p&gt;
+ src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Sun, 07 May 2023 01:25:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>P5 CDN URL</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-cdn-url/</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;p&gt;
+&lt;script language="javascript" type="text/javascript" src="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/noise_graph.js"&gt;&lt;/script&gt;
+
+&lt;/p&gt;&lt;div id="noise-graph"&gt;&lt;/div&gt;
+
+
+
+
+&lt;p&gt;
+To change the script tag with the URL for the p5 CDN, put a new one in the &lt;code&gt;GLOBAL_CONTEXT&lt;/code&gt; dictionary defined in the &lt;code&gt;conf.py&lt;/code&gt; file using the &lt;code&gt;p5_library_source&lt;/code&gt; as the key and the new cag as the value. For example:
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;GLOBAL_CONTEXT&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;"p5_library_source"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="s1"&gt;'&amp;lt;script'&lt;/span&gt;
+    &lt;span class="s1"&gt;' src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"'&lt;/span&gt;
+    &lt;span class="s1"&gt;' integrity="sha512-3RlxD1bW34eFKPwj9gUXEWtdSMC59QqIqHnD8O/NoTwSJhgxRizdcFVQhUMFyTp5RwLTDL0Lbcqtl8b7bFAzog=="'&lt;/span&gt;
+    &lt;span class="s1"&gt;' crossorigin="anonymous" referrerpolicy="no-referrer"&amp;gt;&amp;lt;/script&amp;gt;'&lt;/span&gt;&lt;span class="p"&gt;)}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><category>p5</category><category>shortcode</category><category>template</category><guid>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-cdn-url/</guid><pubDate>Fri, 05 May 2023 22:19:31 GMT</pubDate></item><item><title>P5 Div Shortcode</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;p&gt;
 &lt;script language="javascript" type="text/javascript" src="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/noise_graph.js"&gt;&lt;/script&gt;
 
 &lt;/p&gt;&lt;div id="noise-graph"&gt;&lt;/div&gt;
