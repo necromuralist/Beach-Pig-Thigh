@@ -1,0 +1,26 @@
+#+BEGIN_COMMENT
+.. title: P5 CDN URL
+.. slug: p5-cdn-url
+.. date: 2023-05-05 15:19:31 UTC-07:00
+.. tags: p5,template,shortcode
+.. category: P5
+.. link: 
+.. description: Adding the P5 CDN URL with the conf.py.
+.. type: text
+.. template: p5.tmpl
+#+END_COMMENT
+#+OPTIONS: ^:{}
+#+TOC: headlines 3
+
+{{% p5div divid="noise-graph" source="../p5-div-shortcode/noise_graph.js" %}}
+
+
+To change the script tag with the URL for the p5 CDN, put a new one in the ~GLOBAL_CONTEXT~ dictionary defined in the ~conf.py~ file using the ~p5_library_source~ as the key and the new cag as the value. For example:
+
+#+begin_src python :results none
+GLOBAL_CONTEXT = {"p5_library_source": (
+    '<script'
+    ' src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"'
+    ' integrity="sha512-3RlxD1bW34eFKPwj9gUXEWtdSMC59QqIqHnD8O/NoTwSJhgxRizdcFVQhUMFyTp5RwLTDL0Lbcqtl8b7bFAzog=="'
+    ' crossorigin="anonymous" referrerpolicy="no-referrer"></script>')}
+#+end_src

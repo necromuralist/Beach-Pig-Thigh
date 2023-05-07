@@ -25,12 +25,34 @@ This is where I defined some macros to add the p5 code to posts. It's based on t
 
 * P5 Scripts
 
-This is the macro to call to add the tag to pull in the p5 code from a CDN.
+This is the macro to call to add the tag to pull in the p5 code from a CDN. Any key you put in the ~GLOBAL_CONTEXT~ dictionary in your ~conf.py~ file becomes a variable you can use in the template. So in this case, to set a different source for the p5 library the user could update the ~GLOBAL_CONTEXT~ to be:
+
+#+begin_src python
+GLOBAL_CONTEXT = {"p5_library_source":
+                  ('<script' 'src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"'
+                   'integrity="sha512-3RlxD1bW34eFKPwj9gUXEWtdSMC59QqIqHnD8O/NoTwSJhgxRizdcFVQhUMFyTp5RwLTDL0Lbcqtl8b7bFAzog=="'
+                   ' crossorigin="anonymous"'
+                   ' referrerpolicy="no-referrer"></script>')}
+#+end_src
+
+And in the template there will magically appear a variable named ~p5_library_source~ with our new ~script~ tag in it.
 
 #+begin_src html :noweb-ref p5-scripts-macro
-## macro to add the p5.js code tag
+<%doc>
+Macro to add the p5 library to a page.
+
+To override the default source put the new source in ~GLOBAL_CONTEXT["p5_library_source"]~
+in the ~conf.py file. This will override the entire script tag so you can also set a file
+location if you choose not to use the CDN
+</%doc>
 <%def name="p5_scripts()">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+% if p5_library_source:
+  ${p5_library_source}
+% else:
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"
+          integrity="sha512-3RlxD1bW34eFKPwj9gUXEWtdSMC59QqIqHnD8O/NoTwSJhgxRizdcFVQhUMFyTp5RwLTDL0Lbcqtl8b7bFAzog=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+% endif
 </%def>
 #+end_src
 
@@ -61,8 +83,8 @@ But, after I set it up to check for ~has_p5~ in the metadata I realized that thi
  the ~post.meta~ object is a Functionary object
  the metadata is in a dictionary that's in a dictionary
  if you try ~post.meta.has_p5~ it will fail because you need the language you're using as a key
-e.g. ~post.meta.en.has_p5~ 
- to not refer to the langugage you need to call it like a function, passing in the "has_p5" key as an argument
+   e.g. ~post.meta.en.has_p5~ 
+ To not refer to the langugage you need to call it like a function, passing in the "has_p5" key as an argument
 </%doc>
 <%def name="p5_scripts_ifposts(posts)">
   %if any((post.meta("has_p5") or post.meta("template") == "p5.tmpl") for post in posts):
