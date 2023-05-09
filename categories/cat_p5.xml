@@ -3,7 +3,7 @@
  &lt;a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;
  &lt;img alt="Creative Commons License BY-NC-SA"
  style="border-width:0; margin-bottom:12px;"
- src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Sun, 07 May 2023 01:25:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>P5 CDN URL</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-cdn-url/</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;p&gt;
+ src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Tue, 09 May 2023 23:01:42 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>P5 CDN URL</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-cdn-url/</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;p&gt;
 &lt;script language="javascript" type="text/javascript" src="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/noise_graph.js"&gt;&lt;/script&gt;
 
 &lt;/p&gt;&lt;div id="noise-graph"&gt;&lt;/div&gt;
@@ -28,24 +28,29 @@ To change the script tag with the URL for the p5 CDN, put a new one in the &lt;c
 
 
 &lt;p&gt;
-This is a test of the &lt;code&gt;p5div&lt;/code&gt; shortcode. For it to work you need to set up the &lt;code&gt;p5.tmpl&lt;/code&gt; template, have &lt;code&gt;..template: p5.tmpl&lt;/code&gt; in the metadata for this post, and have &lt;code&gt;p5div.tmpl&lt;/code&gt; in a folder named &lt;code&gt;shortcodes&lt;/code&gt; at the root of the nikola folder.
+This is a test of the &lt;code&gt;p5div&lt;/code&gt; shortcode. For it to work you need:
 &lt;/p&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;set up the &lt;code&gt;p5.tmpl&lt;/code&gt; template&lt;/li&gt;
+&lt;li&gt;have &lt;code&gt;..template: p5.tmpl&lt;/code&gt; in the metadata for this post&lt;/li&gt;
+&lt;li&gt;have &lt;code&gt;p5div.tmpl&lt;/code&gt; in a folder named &lt;code&gt;shortcodes&lt;/code&gt; at the root of the nikola folder&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;
 The shortcode used to put the sketch in this post is:
 &lt;/p&gt;
 
-&lt;p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
+{{% p5div divid="div-noise-graph" source="noise_graph.js" %}}
 
-{{% p5div divid="noise-graph" source="noise_graph.js" %}}
-
-&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;
 which assumes that the sketch is in &lt;code&gt;files/posts/&amp;lt;slug&amp;gt;/noise_graph.js&lt;/code&gt;. And that the p5 code is adding the sketch to "noise-graph". Meaning that there's something like:
 &lt;/p&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;noise_graph&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"noise-graph"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;noise_graph&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"div-noise-graph"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;

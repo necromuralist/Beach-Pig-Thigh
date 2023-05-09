@@ -39,7 +39,7 @@ bg-light
         <div class="collapse navbar-collapse" id="bs-navbar">
             <ul class="navbar-nav mr-auto">
 <li class="nav-item">
-<a href="pages/" class="nav-link">Pages</a>
+<a href="source/" class="nav-link">Source Code</a>
                 </li>
 <li class="nav-item">
 <a href="archive.html" class="nav-link">Archive</a>
@@ -125,24 +125,28 @@ To change the script tag with the URL for the p5 CDN, put a new one in the <code
 
 
 <p>
-This is a test of the <code>p5div</code> shortcode. For it to work you need to set up the <code>p5.tmpl</code> template, have <code>..template: p5.tmpl</code> in the metadata for this post, and have <code>p5div.tmpl</code> in a folder named <code>shortcodes</code> at the root of the nikola folder.
+This is a test of the <code>p5div</code> shortcode. For it to work you need:
 </p>
 
+<ul class="org-ul">
+<li>set up the <code>p5.tmpl</code> template</li>
+<li>have <code>..template: p5.tmpl</code> in the metadata for this post</li>
+<li>have <code>p5div.tmpl</code> in a folder named <code>shortcodes</code> at the root of the nikola folder</li>
+</ul>
 <p>
 The shortcode used to put the sketch in this post is:
 </p>
 
-<p>
+<div class="highlight"><pre><span></span>
+{{% p5div divid="div-noise-graph" source="noise_graph.js" %}}
 
-{{% p5div divid="noise-graph" source="noise_graph.js" %}}
-
-</p>
+</pre></div>
 
 <p>
 which assumes that the sketch is in <code>files/posts/&lt;slug&gt;/noise_graph.js</code>. And that the p5 code is adding the sketch to "noise-graph". Meaning that there's something like:
 </p>
 
-<div class="highlight"><pre><span></span><span class="nx">p5</span><span class="p">(</span><span class="nx">noise_graph</span><span class="p">,</span><span class="w"> </span><span class="s2">"noise-graph"</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="nx">p5</span><span class="p">(</span><span class="nx">noise_graph</span><span class="p">,</span><span class="w"> </span><span class="s2">"div-noise-graph"</span><span class="p">)</span>
 </pre></div>
 
 <p>
