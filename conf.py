@@ -140,7 +140,7 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/pages/", "Pages"),
+        ("/source/", "Source Code"),
         ("/archive.html", "Archive"),
         ("/categories/", "Tags"),
         ("/rss.xml", "RSS feed"),
@@ -243,11 +243,11 @@ POSTS = (
     ("posts/*.html", "posts", "post.tmpl"),
 )
 PAGES = (
-    ("pages/*.org", "pages", "page.tmpl"),
-    ("pages/*.rst", "pages", "page.tmpl"),
-    ("pages/*.md", "pages", "page.tmpl"),
-    ("pages/*.txt", "pages", "page.tmpl"),
-    ("pages/*.html", "pages", "page.tmpl"),
+    ("source/*.org", "source", "page.tmpl"),
+    ("source/*.rst", "source", "page.tmpl"),
+    ("source/*.md", "source", "page.tmpl"),
+    ("source/*.txt", "source", "page.tmpl"),
+    ("source/*.html", "source", "page.tmpl"),
 )
 
 
