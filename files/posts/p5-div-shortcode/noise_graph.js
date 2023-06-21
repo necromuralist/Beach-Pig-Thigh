@@ -1,4 +1,5 @@
-const NOISE_GRAPH_DIV = "noise-graph";
+const NOISE_GRAPH_DIV = "e70fd042-noise-graph";
+
 function noise_graph(p5js){
   let X_NOISE_COORDINATE_START = 0;
   let X_NOISE_COORDINATE_STEP_SIZE = 0.01;

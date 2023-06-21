@@ -12,26 +12,91 @@
 #+OPTIONS: ^:{}
 #+TOC: headlines 3
 
-{{% p5div divid="noise-graph" source="noise_graph.js" %}}
+{{% p5divmako divid="e70fd042-noise-graph" source="noise_graph.js" %}}
 
-This is a test of the ~p5div~ shortcode. For it to work you need:
+This is a test of the ~p5div~ shortcode. For it to work (assuming you're using mako) you need to:
 
- - set up the ~p5.tmpl~ template
+ - set up the ~p5.tmpl~ template (in ~themes/custom-mako/templates/~)
  - have ~..template: p5.tmpl~ in the metadata for this post
- - have ~p5div.tmpl~ in a folder named ~shortcodes~ at the root of the nikola folder
+ - have ~p5divmako.tmpl~ in a folder named ~shortcodes~ at the root of the nikola folder   
+   
+* The Shortcodes
+There actually needs to be two different shortcodes, one for jinja and one for mako. This repository is using mako (as does https://necromuralist.github.io) but [[https://necromuralist.github.io/Ape-Iron/][ape-iron]] is using jinja. It's a little too convoluted to keep switching back and forth so I'm mostly going to be relying on ape-iron to test the jinja version (although I really should figure out an easy way to test both).
 
-The shortcode used to put the sketch in this post is:
+The shortcode creates two HTML tags:
+
+- a script tag that needs the path to the source p5js file
+- a div tag that needs the ID to use so that the p5 sketch can be put inside it
+
+I was originally setting the ~type~ and ~language~ attributes of the ~script~ tag, but apparently, according to the Mozilla Developers Network the ~language~ attribute was deprecated a long time ago:
+
+#+begin_quote
+Like the type attribute, this attribute identifies the scripting language in use. Unlike the type attribute, however, this attribute's possible values were never standardized. The type attribute should be used instead.
+#+end_quote
+
+And the default ~type~ is javascript so you don't need to use it if it's a regular script. When ~type~ isn't set or is set to an empty string:
+
+#+begin_quote
+[It] indicates that the script is a "classic script", containing JavaScript code. Authors are encouraged to omit the attribute if the script refers to JavaScript code rather than specify a MIME type. 
+#+end_quote
+
+**Note:** I was setting the class for the ~div~ to "p5js" but it turns out that ~p5~ already adds a class ("p5Canvas") so add the styling to that class instead.
+
+** Mako
+I don't see an easy way to set which shortcodes folder to use so I'm going to go with adding "mako" to the end of the shortcodes meant for the mako engine. This shortcode will go into ~shortcodes/p5divmako.tmpl~.
+
+#+begin_src mako :tangle ../shortcodes/p5divmako.tmpl :exports none
+## This is tangled from the "p5-div-shortcode" post
+
+<<mako-template>>
+#+end_src
+
+#+begin_src html :noweb-ref mako-template
+<script src="${source}"></script>
+
+<div class="p5js" id="${divid}"></div>
+#+end_src
+
+To use this shortcode you add something that looks like this.
 
 #+begin_src html
 {{% raw %}}
-{{% p5div divid="div-noise-graph" source="noise_graph.js" %}}
+{{% p5divmako divid="e70fd042-noise-graph" source="noise_graph.js" %}}
 {{% /raw %}}
 #+end_src
 
-which assumes that the sketch is in ~files/posts/<slug>/noise_graph.js~. And that the p5 code is adding the sketch to "noise-graph". Meaning that there's something like:
+which assumes that the sketch is in ~files/posts/<slug>/noise_graph.js~. And that the p5 code is adding the sketch to "e70fd042-noise-graph". Meaning that there's something like:
 
 #+begin_src js
-p5(noise_graph, "div-noise-graph")
+p5(noise_graph, "e70fd042-noise-graph")
 #+end_src
 
 in the ~noise_graph.js~ file.
+
+** Jinja
+
+Here's the jinja version of the shortcode. It's going to go into ~shortcodes/p5div.tmpl~.
+
+#+begin_src jinja :tangle ../shortcodes/p5div.tmpl :exports none
+{# This is tangled from the "p5-div-shortcode" post #}
+
+<<jinja-shortcode>>
+#+end_src
+
+#+begin_src html :noweb-ref jinja-shortcode
+<script src="{{ source }}"></script>
+
+<div class="p5js" id="{{ divid }}"></div>
+#+end_src
+
+To use it you use the same syntax as the mako-based shortcode, just change the name of the shortcode to ~p5div.tmpl~.
+
+#+begin_src html
+{{% raw %}}
+{{% p5div divid="e70fd042-noise-graph" source="noise_graph.js" %}}
+{{% /raw %}}
+#+end_src
+
+* Links
+
+- <script>: The Script element - HTML: HyperText Markup Language | MDN [Internet]. 2023 [cited 2023 Jun 20]. Available from: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script
