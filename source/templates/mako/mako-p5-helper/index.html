@@ -91,9 +91,9 @@ bg-light
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div id="outline-container-org5e3333d" class="outline-2">
-<h2 id="org5e3333d">The P5 Helper Template</h2>
-<div class="outline-text-2" id="text-org5e3333d">
+    <div id="outline-container-org6d65758" class="outline-2">
+<h2 id="org6d65758">The P5 Helper Template</h2>
+<div class="outline-text-2" id="text-org6d65758">
 <p>
 This is where I defined some macros to add the p5 code to posts. It's based on the <code>math_helper.tmpl</code> template, although it took a little bit more work (well, too much work) to figure out how to get the metadata for this template.
 </p>
@@ -109,9 +109,9 @@ This is where I defined some macros to add the p5 code to posts. It's based on t
 </div>
 </div>
 
-<div id="outline-container-orgba126ea" class="outline-2">
-<h2 id="orgba126ea">P5 Scripts</h2>
-<div class="outline-text-2" id="text-orgba126ea">
+<div id="outline-container-org9f81698" class="outline-2">
+<h2 id="org9f81698">P5 Scripts</h2>
+<div class="outline-text-2" id="text-org9f81698">
 <p>
 This is the macro to call to add the tag to pull in the p5 code from a CDN. Any key you put in the <code>GLOBAL_CONTEXT</code> dictionary in your <code>conf.py</code> file becomes a variable you can use in the template. So in this case, to set a different source for the p5 library the user could update the <code>GLOBAL_CONTEXT</code> to be:
 </p>
@@ -147,9 +147,9 @@ location if you choose not to use the CDN
 </div>
 </div>
 
-<div id="outline-container-org848ac21" class="outline-2">
-<h2 id="org848ac21">P5 Post Macro</h2>
-<div class="outline-text-2" id="text-org848ac21">
+<div id="outline-container-org458111a" class="outline-2">
+<h2 id="org458111a">P5 Post Macro</h2>
+<div class="outline-text-2" id="text-org458111a">
 <p>
 This is a macro to use if you have a template with a single post object (e.g. if you override the <code>post.tmpl</code> template or one of its children). I'm using a dedicated template for p5 posts right now so it isn't being used.
 </p>
@@ -167,9 +167,9 @@ This is a macro to use if you have a template with a single post object (e.g. if
 </div>
 </div>
 
-<div id="outline-container-org8fae6b9" class="outline-2">
-<h2 id="org8fae6b9">P5 Post Index Macro</h2>
-<div class="outline-text-2" id="text-org8fae6b9">
+<div id="outline-container-org38ba122" class="outline-2">
+<h2 id="org38ba122">P5 Post Index Macro</h2>
+<div class="outline-text-2" id="text-org38ba122">
 <p>
 This is the macro I'm adding to the <code>index.tmpl</code> template to get p5 into the latest pages feed. Jinja doesn't support the comprehension-type syntax that <code>mako</code> does and <code>Nikola</code> puts the metadata dictionary into a Functionary object which is a default dict that is callable. The metadata dictionary that we want is actually set as the value to a key in the dictionary matching the language for the sight (<code>en</code> in my case). So you can't access it directly (e.g. you can't use <code>post.meta.has_p5</code>) but if you call the meta object like a function instead of using it as a dictionary it will bypass the language key for you so you don't have to know what the language is (e.g. <code>post.meta("has_p5")</code> is the same as <code>post.meta.en.has_p5</code> (if English is the language being used)). Since I only use English it's probably unnecessary to use the function-syntax, but it seems to be the way it's intended to be used (and it took forever to figure out what was going on) so I'm using it.
 </p>

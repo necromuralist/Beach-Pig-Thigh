@@ -91,18 +91,18 @@ bg-light
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div id="outline-container-org755d3cc" class="outline-2">
-<h2 id="org755d3cc">The P5 Template</h2>
-<div class="outline-text-2" id="text-org755d3cc">
+    <div id="outline-container-org3a825f1" class="outline-2">
+<h2 id="org3a825f1">The P5 Template</h2>
+<div class="outline-text-2" id="text-org3a825f1">
 <p>
 The P5 template is what I use to get p5 into posts. You use it by setting the <code>.. template: p5.tmpl</code> line in the metadata for the post you want to add it to. I also have it set to use a <code>.. has_p5: true</code> entry in the metadata, but I didn't want to update the post template to get it working so that will only work for the index page that shows the latests posts (not when you display an individual post).
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgbf32f26" class="outline-2">
-<h2 id="orgbf32f26">The Tangle</h2>
-<div class="outline-text-2" id="text-orgbf32f26">
+<div id="outline-container-org16f4ac6" class="outline-2">
+<h2 id="org16f4ac6">The Tangle</h2>
+<div class="outline-text-2" id="text-org16f4ac6">
 <div class="highlight"><pre><span></span>{#  -*- coding: utf-8 -*- #}
 &lt;&lt;p5-helper-import&gt;&gt;
 
@@ -116,9 +116,9 @@ The P5 template is what I use to get p5 into posts. You use it by setting the <c
 </div>
 </div>
 
-<div id="outline-container-org2e22d19" class="outline-2">
-<h2 id="org2e22d19">Import the Helpers</h2>
-<div class="outline-text-2" id="text-org2e22d19">
+<div id="outline-container-org514b275" class="outline-2">
+<h2 id="org514b275">Import the Helpers</h2>
+<div class="outline-text-2" id="text-org514b275">
 <p>
 Since both this template and the <code>index.tmpl</code> template need to import the p5 library I made a macro to do it and put it in a separate file (<code>p5_helper.tmpl</code>) so we need to import it here.
 </p>
@@ -128,9 +128,9 @@ Since both this template and the <code>index.tmpl</code> template need to import
 </div>
 </div>
 
-<div id="outline-container-orgd9d711d" class="outline-2">
-<h2 id="orgd9d711d">Add the p5</h2>
-<div class="outline-text-2" id="text-orgd9d711d">
+<div id="outline-container-org67619ab" class="outline-2">
+<h2 id="org67619ab">Add the p5</h2>
+<div class="outline-text-2" id="text-org67619ab">
 <p>
 Here's where we call the macro to insert the <code>script</code> tag to get p5. It seems to have to go into the head rather than the body of the post to work. It's actually just one line so I could have written the tag instead of calling the macro, but I'm using a CDN and the URL has the specific version of p5 that gets pulled in so I thought it would be better to have only one place where the URL gets defined.
 </p>

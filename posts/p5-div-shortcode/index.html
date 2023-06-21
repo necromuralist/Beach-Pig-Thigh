@@ -19,13 +19,34 @@
 <meta property="og:site_name" content="Beach Pig Thigh Tower">
 <meta property="og:title" content="P5 Div Shortcode">
 <meta property="og:url" content="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/">
-<meta property="og:description" content="This is a test of the p5div shortcode. For it to work you need:
+<meta property="og:description" content="Table of Contents
+
+
+The Shortcodes
+
+Mako
+Jinja
+
+
+Links
 
 
 
-set up the p5.tmpl template
-have ..template: p5.tmpl in the metadata for this post
-have p5div.tmpl in a folder named shortcodes at th">
+
+
+
+
+
+
+
+
+
+
+This is a test of the p5div shortcode. For it to work (assuming you're using mako) you need to:
+
+
+
+set up the p5.tmpl template (in t">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2023-05-05T15:19:31-07:00">
 <meta property="article:tag" content="p5">
@@ -109,40 +130,145 @@ bg-light
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <p>
-<script language="javascript" type="text/javascript" src="noise_graph.js"></script></p>
-<div id="noise-graph"></div>
+    <div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li>
+<a href="#orgba3fd13">The Shortcodes</a>
+<ul>
+<li><a href="#orgf1f78de">Mako</a></li>
+<li><a href="#org07b65d0">Jinja</a></li>
+</ul>
+</li>
+<li><a href="#orgf7afd78">Links</a></li>
+</ul>
+</div>
+</div>
+
+<p>
+
+<script src="noise_graph.js"></script></p>
+<div class="p5js" id="e70fd042-noise-graph"></div>
 
 
 
 <p>
-This is a test of the <code>p5div</code> shortcode. For it to work you need:
+This is a test of the <code>p5div</code> shortcode. For it to work (assuming you're using mako) you need to:
 </p>
 
 <ul class="org-ul">
-<li>set up the <code>p5.tmpl</code> template</li>
+<li>set up the <code>p5.tmpl</code> template (in <code>themes/custom-mako/templates/</code>)</li>
 <li>have <code>..template: p5.tmpl</code> in the metadata for this post</li>
-<li>have <code>p5div.tmpl</code> in a folder named <code>shortcodes</code> at the root of the nikola folder</li>
+<li>have <code>p5divmako.tmpl</code> in a folder named <code>shortcodes</code> at the root of the nikola folder</li>
+</ul>
+<div id="outline-container-orgba3fd13" class="outline-2">
+<h2 id="orgba3fd13">The Shortcodes</h2>
+<div class="outline-text-2" id="text-orgba3fd13">
+<p>
+There actually needs to be two different shortcodes, one for jinja and one for mako. This repository is using mako (as does <a href="https://necromuralist.github.io">https://necromuralist.github.io</a>) but <a href="https://necromuralist.github.io/Ape-Iron/">ape-iron</a> is using jinja. It's a little too convoluted to keep switching back and forth so I'm mostly going to be relying on ape-iron to test the jinja version (although I really should figure out an easy way to test both).
+</p>
+
+<p>
+The shortcode creates two HTML tags:
+</p>
+
+<ul class="org-ul">
+<li>a script tag that needs the path to the source p5js file</li>
+<li>a div tag that needs the ID to use so that the p5 sketch can be put inside it</li>
 </ul>
 <p>
-The shortcode used to put the sketch in this post is:
+I was originally setting the <code>type</code> and <code>language</code> attributes of the <code>script</code> tag, but apparently, according to the Mozilla Developers Network the <code>language</code> attribute was deprecated a long time ago:
+</p>
+
+<blockquote>
+<p>
+Like the type attribute, this attribute identifies the scripting language in use. Unlike the type attribute, however, this attribute's possible values were never standardized. The type attribute should be used instead.
+</p>
+</blockquote>
+
+<p>
+And the default <code>type</code> is javascript so you don't need to use it if it's a regular script. When <code>type</code> isn't set or is set to an empty string:
+</p>
+
+<blockquote>
+<p>
+[It] indicates that the script is a "classic script", containing JavaScript code. Authors are encouraged to omit the attribute if the script refers to JavaScript code rather than specify a MIME type. 
+</p>
+</blockquote>
+
+<p>
+<b><b>Note:</b></b> I was setting the class for the <code>div</code> to "p5js" but it turns out that <code>p5</code> already adds a class ("p5Canvas") so add the styling to that class instead.
+</p>
+</div>
+
+<div id="outline-container-orgf1f78de" class="outline-3">
+<h3 id="orgf1f78de">Mako</h3>
+<div class="outline-text-3" id="text-orgf1f78de">
+<p>
+I don't see an easy way to set which shortcodes folder to use so I'm going to go with adding "mako" to the end of the shortcodes meant for the mako engine. This shortcode will go into <code>shortcodes/p5divmako.tmpl</code>.
+</p>
+
+<div class="highlight"><pre><span></span>&lt;script src="${source}"&gt;&lt;/script&gt;
+
+&lt;div class="p5js" id="${divid}"&gt;&lt;/div&gt;
+</pre></div>
+
+<p>
+To use this shortcode you add something that looks like this.
 </p>
 
 <div class="highlight"><pre><span></span>
-{{% p5div divid="div-noise-graph" source="noise_graph.js" %}}
+{{% p5divmako divid="e70fd042-noise-graph" source="noise_graph.js" %}}
 
 </pre></div>
 
 <p>
-which assumes that the sketch is in <code>files/posts/&lt;slug&gt;/noise_graph.js</code>. And that the p5 code is adding the sketch to "noise-graph". Meaning that there's something like:
+which assumes that the sketch is in <code>files/posts/&lt;slug&gt;/noise_graph.js</code>. And that the p5 code is adding the sketch to "e70fd042-noise-graph". Meaning that there's something like:
 </p>
 
-<div class="highlight"><pre><span></span><span class="nx">p5</span><span class="p">(</span><span class="nx">noise_graph</span><span class="p">,</span><span class="w"> </span><span class="s2">"div-noise-graph"</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="nx">p5</span><span class="p">(</span><span class="nx">noise_graph</span><span class="p">,</span><span class="w"> </span><span class="s2">"e70fd042-noise-graph"</span><span class="p">)</span>
 </pre></div>
 
 <p>
 in the <code>noise_graph.js</code> file.
 </p>
+</div>
+</div>
+
+<div id="outline-container-org07b65d0" class="outline-3">
+<h3 id="org07b65d0">Jinja</h3>
+<div class="outline-text-3" id="text-org07b65d0">
+<p>
+Here's the jinja version of the shortcode. It's going to go into <code>shortcodes/p5div.tmpl</code>.
+</p>
+
+<div class="highlight"><pre><span></span>&lt;script src="{{ source }}"&gt;&lt;/script&gt;
+
+&lt;div class="p5js" id="{{ divid }}"&gt;&lt;/div&gt;
+</pre></div>
+
+<p>
+To use it you use the same syntax as the mako-based shortcode, just change the name of the shortcode to <code>p5div.tmpl</code>.
+</p>
+
+<div class="highlight"><pre><span></span>
+{{% p5div divid="e70fd042-noise-graph" source="noise_graph.js" %}}
+
+</pre></div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf7afd78" class="outline-2">
+<h2 id="orgf7afd78">Links</h2>
+<div class="outline-text-2" id="text-orgf7afd78">
+<ul class="org-ul">
+<li>&lt;script&gt;: The Script element - HTML: HyperText Markup Language | MDN [Internet]. 2023 [cited 2023 Jun 20]. Available from: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script</a>
+</li>
+</ul>
+</div>
+</div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
 <li><a class="tag p-category" href="../../categories/p5/" rel="tag">p5</a></li>

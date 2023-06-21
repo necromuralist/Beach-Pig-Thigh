@@ -90,9 +90,9 @@ bg-light
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div id="outline-container-org9767f3d" class="outline-2">
-<h2 id="org9767f3d">The Index Template</h2>
-<div class="outline-text-2" id="text-org9767f3d">
+    <div id="outline-container-org7559312" class="outline-2">
+<h2 id="org7559312">The Index Template</h2>
+<div class="outline-text-2" id="text-org7559312">
 <p>
 This is the template used to produce the page with the latest posts. The number of posts on the page is set in <code>conf.py</code> using the <code>INDEX_DISPLAY_POST_COUNT</code> variable (10 is the default). I'm overriding the default because I want to be able to add <a href="https://p5js.org/">p5</a> code to posts. Using a special template works when you look at single posts (see the <code>p5.tmpl</code> template) but the index template won't pick up on that so I'm inserting a macro call to get p5 into the main page (if there's a p5 post on it).
 </p>
@@ -103,9 +103,9 @@ This overrides the built-in <code>index.tmpl</code> found at <code>&lt;virtualen
 </div>
 </div>
 
-<div id="outline-container-orgb4a04bc" class="outline-2">
-<h2 id="orgb4a04bc">The Tangle</h2>
-<div class="outline-text-2" id="text-orgb4a04bc">
+<div id="outline-container-org2034319" class="outline-2">
+<h2 id="org2034319">The Tangle</h2>
+<div class="outline-text-2" id="text-org2034319">
 <div class="highlight"><pre><span></span>{#  -*- coding: utf-8 -*- #}
 &lt;&lt;default-imports&gt;&gt;
 
@@ -181,13 +181,13 @@ This overrides the built-in <code>index.tmpl</code> found at <code>&lt;virtualen
 </pre></div>
 </div>
 </div>
-<div id="outline-container-orgac71a50" class="outline-2">
-<h2 id="orgac71a50">Imports</h2>
-<div class="outline-text-2" id="text-orgac71a50">
+<div id="outline-container-org9452eda" class="outline-2">
+<h2 id="org9452eda">Imports</h2>
+<div class="outline-text-2" id="text-org9452eda">
 </div>
-<div id="outline-container-org4bbcab9" class="outline-3">
-<h3 id="org4bbcab9">The Defaults</h3>
-<div class="outline-text-3" id="text-org4bbcab9">
+<div id="outline-container-org40c11de" class="outline-3">
+<h3 id="org40c11de">The Defaults</h3>
+<div class="outline-text-3" id="text-org40c11de">
 <p>
 These imports were already in the built-in template.
 </p>
@@ -202,9 +202,9 @@ These imports were already in the built-in template.
 </div>
 </div>
 
-<div id="outline-container-org228566b" class="outline-2">
-<h2 id="org228566b">Monkey Imports</h2>
-<div class="outline-text-2" id="text-org228566b">
+<div id="outline-container-orga27a958" class="outline-2">
+<h2 id="orga27a958">Monkey Imports</h2>
+<div class="outline-text-2" id="text-orga27a958">
 <p>
 This is what I'm adding.
 </p>
@@ -215,9 +215,9 @@ This is what I'm adding.
 </div>
 </div>
 
-<div id="outline-container-org9e274cc" class="outline-2">
-<h2 id="org9e274cc">Calling the P5 Macro</h2>
-<div class="outline-text-2" id="text-org9e274cc">
+<div id="outline-container-orge581152" class="outline-2">
+<h2 id="orge581152">Calling the P5 Macro</h2>
+<div class="outline-text-2" id="text-orge581152">
 <p>
 This is where we call the macro to insert (or not) a tag to pull in the p5 library. I originally tried putting it next to where the mathjax macro gets called (at the end of the template) but this caused an error sayng that the <code>p5</code> object was undefined. Putting it in the head seems to fix it.
 </p>

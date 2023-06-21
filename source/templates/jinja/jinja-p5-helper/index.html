@@ -93,9 +93,9 @@ bg-light
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div id="outline-container-orge74817b" class="outline-2">
-<h2 id="orge74817b">The P5 Helper Template</h2>
-<div class="outline-text-2" id="text-orge74817b">
+    <div id="outline-container-org06df96a" class="outline-2">
+<h2 id="org06df96a">The P5 Helper Template</h2>
+<div class="outline-text-2" id="text-org06df96a">
 <p>
 This is where I defined some macros to add the p5 code to posts. It's based on the <code>math_helper.tmpl</code> template, although it took a little bit more work (well, too much work) to figure out how to get the metadata for this template.
 </p>
@@ -111,9 +111,9 @@ This is where I defined some macros to add the p5 code to posts. It's based on t
 </div>
 </div>
 
-<div id="outline-container-orge0bc3e3" class="outline-2">
-<h2 id="orge0bc3e3">P5 Scripts</h2>
-<div class="outline-text-2" id="text-orge0bc3e3">
+<div id="outline-container-orgb8646b9" class="outline-2">
+<h2 id="orgb8646b9">P5 Scripts</h2>
+<div class="outline-text-2" id="text-orgb8646b9">
 <p>
 This is the macro to call to add the tag to pull in the p5 code from a CDN.
 </p>
@@ -126,9 +126,9 @@ This is the macro to call to add the tag to pull in the p5 code from a CDN.
 </div>
 </div>
 
-<div id="outline-container-org0b1853c" class="outline-2">
-<h2 id="org0b1853c">P5 Post Macro</h2>
-<div class="outline-text-2" id="text-org0b1853c">
+<div id="outline-container-orga6d90b3" class="outline-2">
+<h2 id="orga6d90b3">P5 Post Macro</h2>
+<div class="outline-text-2" id="text-orga6d90b3">
 <p>
 This is a macro to use if you have a template with a single post object (e.g. if you override the <code>post.tmpl</code> template or one of its children). I'm using a dedicated template for p5 posts right now so it isn't being used.
 </p>
@@ -144,9 +144,9 @@ This is a macro to use if you have a template with a single post object (e.g. if
 </div>
 </div>
 
-<div id="outline-container-org1b83c41" class="outline-2">
-<h2 id="org1b83c41">P5 Post Index Macro</h2>
-<div class="outline-text-2" id="text-org1b83c41">
+<div id="outline-container-orga22d356" class="outline-2">
+<h2 id="orga22d356">P5 Post Index Macro</h2>
+<div class="outline-text-2" id="text-orga22d356">
 <p>
 This is the macro I'm adding to the <code>index.tmpl</code> template to get p5 into the latest pages feed. Jinja doesn't support the comprehension-type syntax that <code>mako</code> does and <code>Nikola</code> puts the metadata dictionary into a Functionary object which is a default dict that is callable. The metadata dictionary that we want is actually set as the value to a key in the dictionary matching the language for the sight (<code>en</code> in my case). So you can't access it directly (e.g. you can't use <code>post.meta.has_p5</code>) but if you call the meta object like a function instead of using it as a dictionary it will bypass the language key for you so you don't have to know what the language is (e.g. <code>post.meta("has_p5")</code> is the same as <code>post.meta.en.has_p5</code> (if English is the language being used)). Since I only use English it's probably unnecessary to use the function-syntax, but it seems to be the way it's intended to be used (and it took forever to figure out what was going on) so I'm using it.
 </p>
