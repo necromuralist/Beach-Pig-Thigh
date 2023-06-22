@@ -1,5 +1,5 @@
 #+BEGIN_COMMENT
-.. title: Beach Pig Thigh & Rump
+.. title: Beach Pig Rump & Thigh
 .. slug: index
 .. date: 2023-05-02 15:53:33 UTC-07:00
 .. tags: root
