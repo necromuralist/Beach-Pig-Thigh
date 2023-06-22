@@ -229,3 +229,21 @@ see: https://superuser.com/a/727068
 .notecard p {
   display: inline;
 }
+
+/* for the Creative Commons license icons */
+#license img {
+    display: inline-block;
+    height:20px !important;
+    margin-left: 3px;
+    margin-bottom:5px;
+          }
+
+footer {
+    text-align: center;
+}
+
+/* for the imaga attribution */
+
+.attribution {
+    text-align: center;
+}
