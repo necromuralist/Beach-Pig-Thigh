@@ -12,6 +12,10 @@
 
 [[./source/wardenclyffe-tower.jpg]]
 
+#+begin_attribution
+[[https://commons.wikimedia.org/wiki/File:Wardenclyffe_Tower_full_view.jpg][Wardenclyffe Tower]]: Nikola Tesla, Public domain, via Wikimedia Commons
+#+end_attribution
+
 This is a place for little things I use to customize [[https://getnikola.com/handbook.html][Nikola]], the static site-generator. I started by writing and dumping files into a folder, then thought I should put it in git, and now am starting to go back and document it. This is version 0.1.0+closethedoorafterthehorsehasescaped.
 
 The source code is on [[https://github.com/necromuralist/Beach-Pig-Thigh][GitHub]].
@@ -20,6 +24,4 @@ The source code is on [[https://github.com/necromuralist/Beach-Pig-Thigh][GitHub
 - {{% doc %}}assets{{% /doc %}}
 - {{% doc %}}shortcodes{{% /doc %}}
 - {{% doc %}}templates{{% /doc %}}
-
-* Image Source
-- [[https://commons.wikimedia.org/wiki/File:Wardenclyffe_Tower_full_view.jpg][Wardenclyffe Tower]]: Nikola Tesla, Public domain, via Wikimedia Commons
+- {{% doc %}}themes-index{{% /doc %}}

@@ -1,0 +1,13 @@
+#+BEGIN_COMMENT
+.. title: Themes
+.. slug: themes-index
+.. date: 2023-06-22 16:24:28 UTC-07:00
+.. tags: index
+.. category: Index
+.. link: 
+.. description: Index page for the themes.
+.. type: text
+
+#+END_COMMENT
+
+Move the themes into here and link it?
