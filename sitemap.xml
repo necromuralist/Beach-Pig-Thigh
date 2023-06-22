@@ -7,67 +7,79 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/</loc>
-  <lastmod>2023-06-20T22:23:00Z</lastmod>
+  <lastmod>2023-06-21T22:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/2023/</loc>
-  <lastmod>2023-06-20T22:23:00Z</lastmod>
+  <lastmod>2023-06-21T22:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/archive.html</loc>
-  <lastmod>2023-06-21T02:05:00Z</lastmod>
+  <lastmod>2023-06-21T23:18:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Beach-Pig-Thigh/assets/assets/</loc>
+  <lastmod>2023-06-21T22:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/categories/</loc>
-  <lastmod>2023-06-20T22:53:00Z</lastmod>
+  <lastmod>2023-06-21T22:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/categories/cat_nikola/</loc>
-  <lastmod>2023-06-20T22:53:00Z</lastmod>
+  <lastmod>2023-06-21T22:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/categories/cat_p5/</loc>
-  <lastmod>2023-06-20T22:23:00Z</lastmod>
- </url>
- <url>
-  <loc>https://necromuralist.github.io/Beach-Pig-Thigh/categories/cat_shortcode/</loc>
-  <lastmod>2023-06-20T22:23:00Z</lastmod>
+  <lastmod>2023-06-21T22:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/categories/nikola/</loc>
-  <lastmod>2023-06-20T22:53:00Z</lastmod>
+  <lastmod>2023-06-21T22:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/categories/p5/</loc>
-  <lastmod>2023-06-20T22:23:00Z</lastmod>
+  <lastmod>2023-06-21T22:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/categories/shortcode/</loc>
-  <lastmod>2023-06-20T22:23:00Z</lastmod>
+  <lastmod>2023-06-21T22:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/categories/template/</loc>
-  <lastmod>2023-06-20T22:23:00Z</lastmod>
+  <lastmod>2023-06-21T22:45:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Beach-Pig-Thigh/posts/</loc>
+  <lastmod>2023-06-21T22:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/posts/nikola-confpy/</loc>
-  <lastmod>2023-06-20T22:53:00Z</lastmod>
+  <lastmod>2023-06-21T22:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-cdn-url/</loc>
-  <lastmod>2023-06-20T22:23:00Z</lastmod>
+  <lastmod>2023-06-21T22:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/</loc>
-  <lastmod>2023-06-20T22:23:00Z</lastmod>
+  <lastmod>2023-06-21T22:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-shortcode-revisited/</loc>
-  <lastmod>2023-06-20T22:23:00Z</lastmod>
+  <loc>https://necromuralist.github.io/Beach-Pig-Thigh/shortcodes/jinja/jinja-p5-html-div/</loc>
+  <lastmod>2023-06-21T22:45:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Beach-Pig-Thigh/shortcodes/mako/mako-p5-html-div/</loc>
+  <lastmod>2023-06-21T22:45:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Beach-Pig-Thigh/shortcodes/shortcodes/</loc>
+  <lastmod>2023-06-21T22:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/source/</loc>
-  <lastmod>2023-06-20T22:23:00Z</lastmod>
+  <lastmod>2023-06-21T23:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/source/assets/assets/</loc>
@@ -116,5 +128,37 @@
  <url>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/source/templates/templates/</loc>
   <lastmod>2023-06-20T22:23:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Beach-Pig-Thigh/templates/jinja/jinja-p5-helper/</loc>
+  <lastmod>2023-06-21T22:45:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Beach-Pig-Thigh/templates/jinja/jinja-p5-template/</loc>
+  <lastmod>2023-06-21T22:45:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Beach-Pig-Thigh/templates/jinja/jinja-post-index-template/</loc>
+  <lastmod>2023-06-21T22:45:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Beach-Pig-Thigh/templates/mako/mako-math-helper/</loc>
+  <lastmod>2023-06-21T22:45:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Beach-Pig-Thigh/templates/mako/mako-p5-helper/</loc>
+  <lastmod>2023-06-21T22:45:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Beach-Pig-Thigh/templates/mako/mako-p5-template/</loc>
+  <lastmod>2023-06-21T22:45:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Beach-Pig-Thigh/templates/mako/mako-post-index-template/</loc>
+  <lastmod>2023-06-21T22:45:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Beach-Pig-Thigh/templates/templates/</loc>
+  <lastmod>2023-06-21T22:45:00Z</lastmod>
  </url>
 </urlset>

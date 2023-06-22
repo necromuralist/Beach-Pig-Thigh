@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Beach Pig Thigh Tower (Posts about Nikola)</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/</link><description></description><atom:link href="https://necromuralist.github.io/Beach-Pig-Thigh/categories/cat_nikola.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Beach Pig Rump &amp; Thigh (Posts about Nikola)</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/</link><description></description><atom:link href="https://necromuralist.github.io/Beach-Pig-Thigh/categories/cat_nikola.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
  &lt;a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;
  &lt;img alt="Creative Commons License BY-NC-SA"
  style="border-width:0; margin-bottom:12px;"
- src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Wed, 21 Jun 2023 00:27:46 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Nikola Conf.py</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/nikola-confpy/</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-orgd877574" class="outline-2"&gt;
-&lt;h2 id="orgd877574"&gt;The Theme&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgd877574"&gt;
+ src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Wed, 21 Jun 2023 22:45:29 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Nikola Conf.py</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/nikola-confpy/</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-orga53a504" class="outline-2"&gt;
+&lt;h2 id="orga53a504"&gt;The Theme&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orga53a504"&gt;
 &lt;p&gt;
 This is how you choose the theme to use. We're using a custom theme so there's three things that have to match.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org573db56" class="outline-3"&gt;
-&lt;h3 id="org573db56"&gt;The Theme Location&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org573db56"&gt;
+&lt;div id="outline-container-org7ffbbea" class="outline-3"&gt;
+&lt;h3 id="org7ffbbea"&gt;The Theme Location&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org7ffbbea"&gt;
 &lt;p&gt;
 Next to the &lt;code&gt;conf.py&lt;/code&gt; file at the root of the nikola repository we need a folder named "themes" and inside that we put a folder whose name matches the name of our theme. I'm going to use &lt;code&gt;custom-mako&lt;/code&gt; as our example. The only other expected option at this point would be &lt;code&gt;custom-jinja&lt;/code&gt;. So our "themes" folder should look like this (more or less):
 &lt;/p&gt;
 
-&lt;pre class="example" id="org194abee"&gt;
+&lt;pre class="example" id="orge1a6c61"&gt;
 themes/
   custom-mako/
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org14a6354" class="outline-3"&gt;
-&lt;h3 id="org14a6354"&gt;The Theme Configuration&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org14a6354"&gt;
+&lt;div id="outline-container-orge610244" class="outline-3"&gt;
+&lt;h3 id="orge610244"&gt;The Theme Configuration&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orge610244"&gt;
 &lt;p&gt;
 Inside the &lt;code&gt;themes/custom-mako/&lt;/code&gt; folder we need a file with the name &lt;code&gt;custom-mako.theme&lt;/code&gt; - the base name of the file needs to match the name of our theme. This is where we tell nikola that we're using mako (or jinja as the case may be). Here's what's in it (the mako version).
 &lt;/p&gt;
@@ -47,9 +47,9 @@ family = bootstrap4
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgc96baad" class="outline-3"&gt;
-&lt;h3 id="orgc96baad"&gt;The conf.py&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgc96baad"&gt;
+&lt;div id="outline-container-org0cf59c4" class="outline-3"&gt;
+&lt;h3 id="org0cf59c4"&gt;The conf.py&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org0cf59c4"&gt;
 &lt;p&gt;
 Insitde &lt;code&gt;conf.py&lt;/code&gt; we put the name of the theme, matching the name of the folder and configuration file.
 &lt;/p&gt;
@@ -61,9 +61,9 @@ Insitde &lt;code&gt;conf.py&lt;/code&gt; we put the name of the theme, matching 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org481d15a" class="outline-2"&gt;
-&lt;h2 id="org481d15a"&gt;The Tangle&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org481d15a"&gt;
+&lt;div id="outline-container-orgd3185bc" class="outline-2"&gt;
+&lt;h2 id="orgd3185bc"&gt;The Tangle&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgd3185bc"&gt;
 &lt;p&gt;
 This should eventually get broken up enough to be hidden, but not yet.
 &lt;/p&gt;

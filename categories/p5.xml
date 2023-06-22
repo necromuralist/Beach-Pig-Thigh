@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Beach Pig Thigh Tower (Posts about p5)</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/</link><description></description><atom:link href="https://necromuralist.github.io/Beach-Pig-Thigh/categories/p5.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Beach Pig Rump &amp; Thigh (Posts about p5)</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/</link><description></description><atom:link href="https://necromuralist.github.io/Beach-Pig-Thigh/categories/p5.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
  &lt;a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;
  &lt;img alt="Creative Commons License BY-NC-SA"
  style="border-width:0; margin-bottom:12px;"
- src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Wed, 21 Jun 2023 02:05:34 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>P5 CDN URL</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-cdn-url/</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;p&gt;
+ src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Wed, 21 Jun 2023 23:58:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>P5 CDN URL</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-cdn-url/</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;p&gt;
 {# This is tangled from the "p5-div-shortcode" post #}
 
 &lt;script src="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-cdn-url/%7B%7B%20source%20%7D%7D"&gt;&lt;/script&gt;
@@ -26,13 +26,13 @@ To change the script tag with the URL for the p5 CDN, put a new one in the &lt;c
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/#orgba3fd13"&gt;The Shortcodes&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/#org0eb1e46"&gt;The Shortcodes&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/#orgf1f78de"&gt;Mako&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/#org07b65d0"&gt;Jinja&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/#orgcfa25e2"&gt;Mako&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/#org73c747b"&gt;Jinja&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/#orgf7afd78"&gt;Links&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/#org9d20819"&gt;Links&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -49,15 +49,29 @@ To change the script tag with the URL for the p5 CDN, put a new one in the &lt;c
 This is a test of the &lt;code&gt;p5div&lt;/code&gt; shortcode. For it to work (assuming you're using mako) you need to:
 &lt;/p&gt;
 
+&lt;div class="notecard" id="org525fec0"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;set up the &lt;code&gt;p5.tmpl&lt;/code&gt; template (in &lt;code&gt;themes/custom-mako/templates/&lt;/code&gt;)&lt;/li&gt;
 &lt;li&gt;have &lt;code&gt;..template: p5.tmpl&lt;/code&gt; in the metadata for this post&lt;/li&gt;
 &lt;li&gt;have &lt;code&gt;p5divmako.tmpl&lt;/code&gt; in a folder named &lt;code&gt;shortcodes&lt;/code&gt; at the root of the nikola folder&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div id="outline-container-orgba3fd13" class="outline-2"&gt;
-&lt;h2 id="orgba3fd13"&gt;The Shortcodes&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgba3fd13"&gt;
+&lt;/div&gt;
+
+&lt;div class="notecard" id="org1950980"&gt;
+&lt;p&gt;
+&lt;b&gt;&lt;b&gt;Note:&lt;/b&gt;&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+I'll be using the names based on the idea that we're using the &lt;code&gt;mako&lt;/code&gt; template engine. If we were using &lt;code&gt;jinja&lt;/code&gt; the path for the templates would be &lt;code&gt;themes/custom-jinja/templates/&lt;/code&gt; or whatever else name we used.
+&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div id="outline-container-org0eb1e46" class="outline-2"&gt;
+&lt;h2 id="org0eb1e46"&gt;The Shortcodes&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org0eb1e46"&gt;
 &lt;p&gt;
 There actually needs to be two different shortcodes, one for jinja and one for mako. This repository is using mako (as does &lt;a href="https://necromuralist.github.io"&gt;https://necromuralist.github.io&lt;/a&gt;) but &lt;a href="https://necromuralist.github.io/Ape-Iron/"&gt;ape-iron&lt;/a&gt; is using jinja. It's a little too convoluted to keep switching back and forth so I'm mostly going to be relying on ape-iron to test the jinja version (although I really should figure out an easy way to test both).
 &lt;/p&gt;
@@ -66,13 +80,16 @@ There actually needs to be two different shortcodes, one for jinja and one for m
 The shortcode creates two HTML tags:
 &lt;/p&gt;
 
+&lt;div class="notecard" id="org50a18c5"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;a script tag that needs the path to the source p5js file&lt;/li&gt;
 &lt;li&gt;a div tag that needs the ID to use so that the p5 sketch can be put inside it&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;/div&gt;
+
 &lt;p&gt;
-I was originally setting the &lt;code&gt;type&lt;/code&gt; and &lt;code&gt;language&lt;/code&gt; attributes of the &lt;code&gt;script&lt;/code&gt; tag, but apparently, according to the Mozilla Developers Network the &lt;code&gt;language&lt;/code&gt; attribute was deprecated a long time ago:
+I was originally setting the &lt;code&gt;type&lt;/code&gt; and &lt;code&gt;language&lt;/code&gt; attributes of the &lt;code&gt;script&lt;/code&gt; tag, but apparently, according to the Mozilla Developers Network (MDN) the &lt;code&gt;language&lt;/code&gt; attribute was deprecated a long time ago:
 &lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -82,7 +99,7 @@ Like the type attribute, this attribute identifies the scripting language in use
 &lt;/blockquote&gt;
 
 &lt;p&gt;
-And the default &lt;code&gt;type&lt;/code&gt; is javascript so you don't need to use it if it's a regular script. When &lt;code&gt;type&lt;/code&gt; isn't set or is set to an empty string:
+And the default &lt;code&gt;type&lt;/code&gt; is javascript so you don't need to use it if it's a regular script. Quoting the MDN again on what it means when &lt;code&gt;type&lt;/code&gt; isn't set or is set to an empty string:
 &lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -91,16 +108,23 @@ And the default &lt;code&gt;type&lt;/code&gt; is javascript so you don't need to
 &lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;div class="notecard" id="orgff7ef41"&gt;
 &lt;p&gt;
-&lt;b&gt;&lt;b&gt;Note:&lt;/b&gt;&lt;/b&gt; I was setting the class for the &lt;code&gt;div&lt;/code&gt; to "p5js" but it turns out that &lt;code&gt;p5&lt;/code&gt; already adds a class ("p5Canvas") so add the styling to that class instead.
+&lt;b&gt;&lt;b&gt;Note:&lt;/b&gt;&lt;/b&gt;
 &lt;/p&gt;
+
+&lt;p&gt;
+I was setting the class for the &lt;code&gt;div&lt;/code&gt; to "p5js" but it turns out that &lt;code&gt;p5&lt;/code&gt; already adds a class, "p5Canvas", so w can add the styling to that class instead and don't need another class.
+&lt;/p&gt;
+
+&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgf1f78de" class="outline-3"&gt;
-&lt;h3 id="orgf1f78de"&gt;Mako&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgf1f78de"&gt;
+&lt;div id="outline-container-orgcfa25e2" class="outline-3"&gt;
+&lt;h3 id="orgcfa25e2"&gt;Mako&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgcfa25e2"&gt;
 &lt;p&gt;
-I don't see an easy way to set which shortcodes folder to use so I'm going to go with adding "mako" to the end of the shortcodes meant for the mako engine. This shortcode will go into &lt;code&gt;shortcodes/p5divmako.tmpl&lt;/code&gt;.
+I don't see an easy way to set which shortcodes folder to use so I'm going to go with adding "mako" to the end of the shortcodes meant for the mako engine and not putting a suffix on the ones meant for jinja. This shortcode will go into &lt;code&gt;shortcodes/p5divmako.tmpl&lt;/code&gt;: 
 &lt;/p&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;script src="${source}"&amp;gt;&amp;lt;/script&amp;gt;
@@ -109,7 +133,7 @@ I don't see an easy way to set which shortcodes folder to use so I'm going to go
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;
-To use this shortcode you add something that looks like this.
+To use this shortcode you add something that looks like this to a page or post.
 &lt;/p&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
@@ -118,21 +142,21 @@ To use this shortcode you add something that looks like this.
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;
-which assumes that the sketch is in &lt;code&gt;files/posts/&amp;lt;slug&amp;gt;/noise_graph.js&lt;/code&gt;. And that the p5 code is adding the sketch to "e70fd042-noise-graph". Meaning that there's something like:
+This assumes that the sketch is in &lt;code&gt;files/posts/&amp;lt;slug&amp;gt;/noise_graph.js&lt;/code&gt; and that the p5 code is adding the sketch to  "e70fd042-noise-graph". Meaning that there's something like this in the in the &lt;code&gt;noise_graph.js&lt;/code&gt; file:
 &lt;/p&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;noise_graph&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"e70fd042-noise-graph"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;
-in the &lt;code&gt;noise_graph.js&lt;/code&gt; file.
+Where &lt;code&gt;noise_graph&lt;/code&gt; is the name of the function in &lt;code&gt;noise_graph.js&lt;/code&gt; that runs the sketch.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org07b65d0" class="outline-3"&gt;
-&lt;h3 id="org07b65d0"&gt;Jinja&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org07b65d0"&gt;
+&lt;div id="outline-container-org73c747b" class="outline-3"&gt;
+&lt;h3 id="org73c747b"&gt;Jinja&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org73c747b"&gt;
 &lt;p&gt;
 Here's the jinja version of the shortcode. It's going to go into &lt;code&gt;shortcodes/p5div.tmpl&lt;/code&gt;.
 &lt;/p&gt;
@@ -154,9 +178,9 @@ To use it you use the same syntax as the mako-based shortcode, just change the n
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgf7afd78" class="outline-2"&gt;
-&lt;h2 id="orgf7afd78"&gt;Links&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgf7afd78"&gt;
+&lt;div id="outline-container-org9d20819" class="outline-2"&gt;
+&lt;h2 id="org9d20819"&gt;Links&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org9d20819"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;&amp;lt;script&amp;gt;: The Script element - HTML: HyperText Markup Language | MDN [Internet]. 2023 [cited 2023 Jun 20]. Available from: &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script"&gt;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;

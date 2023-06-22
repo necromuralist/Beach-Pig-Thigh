@@ -1,0 +1,23 @@
+#+BEGIN_COMMENT
+.. title: Beach Pig Thigh & Rump
+.. slug: index
+.. date: 2023-05-02 15:53:33 UTC-07:00
+.. tags: root
+.. category: Root
+.. link: 
+.. description: The Root Page for this site.
+.. type: text
+
+#+END_COMMENT
+
+[[./source/wardenclyffe-tower.jpg]]
+
+This is a place for little things I use to customize [[https://getnikola.com/handbook.html][Nikola]], the static site-generator. The source code is on [[https://github.com/necromuralist/Beach-Pig-Thigh][GitHub]].
+
+* Sub-Categories
+- {{% doc %}}assets{{% /doc %}}
+- {{% doc %}}shortcodes{{% /doc %}}
+- {{% doc %}}templates{{% /doc %}}
+
+* Image Source
+- [[https://commons.wikimedia.org/wiki/File:Wardenclyffe_Tower_full_view.jpg][Wardenclyffe Tower]]: Nikola Tesla, Public domain, via Wikimedia Commons

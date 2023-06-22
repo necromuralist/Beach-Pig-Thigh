@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>P5 Div Shortcode | Beach Pig Thigh Tower</title>
+<title>P5 Div Shortcode | Beach Pig Rump &amp; Thigh</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
@@ -16,7 +16,7 @@
 <link rel="manifest" href="../../site.webmanifest">
 <meta name="author" content="The Cloistered Monkey">
 <link rel="next" href="../p5-cdn-url/" title="P5 CDN URL" type="text/html">
-<meta property="og:site_name" content="Beach Pig Thigh Tower">
+<meta property="og:site_name" content="Beach Pig Rump &amp; Thigh">
 <meta property="og:title" content="P5 Div Shortcode">
 <meta property="og:url" content="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/">
 <meta property="og:description" content="Table of Contents
@@ -46,7 +46,8 @@ This is a test of the p5div shortcode. For it to work (assuming you're using mak
 
 
 
-set up the p5.tmpl template (in t">
+
+set up the p5.tmpl template (in ">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2023-05-05T15:19:31-07:00">
 <meta property="article:tag" content="p5">
@@ -66,7 +67,7 @@ bg-light
 <!-- This keeps the margins nice -->
         <a class="navbar-brand" href="../../">
 
-            <span id="blog-title">Beach Pig Thigh Tower</span>
+            <span id="blog-title">Beach Pig Rump &amp; Thigh</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -75,7 +76,7 @@ bg-light
         <div class="collapse navbar-collapse" id="bs-navbar">
             <ul class="navbar-nav mr-auto">
 <li class="nav-item">
-<a href="../../source/" class="nav-link">Source Code</a>
+<a href="../" class="nav-link">Posts</a>
                 </li>
 <li class="nav-item">
 <a href="../../archive.html" class="nav-link">Archive</a>
@@ -84,7 +85,17 @@ bg-light
 <a href="../../categories/" class="nav-link">Tags</a>
                 </li>
 <li class="nav-item">
-<a href="../../rss.xml" class="nav-link">RSS feed</a>
+<a href="../../rss.xml" class="nav-link">RSS</a>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Links</a>
+            <div class="dropdown-menu">
+                    <a href="https://necromuralist.github.io/" class="dropdown-item">The Cloistered Monkey</a>
+                    <a href="https://necromuralist.github.io/Ape-Iron/" class="dropdown-item">Ape Iron</a>
+                    <a href="https://necromuralist.github.io/Bowling-For-Data/" class="dropdown-item">Bowling For Data</a>
+                    <a href="https://necromuralist.github.io/Neurotic-Networking/" class="dropdown-item">Neurotic Networking</a>
+                    <a href="https://necromuralist.github.io/Visions-Voices-Data/" class="dropdown-item">Visions, Voices, Data</a>
+            </div>
 
                 
             </li>
@@ -135,13 +146,13 @@ bg-light
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
 <li>
-<a href="#orgba3fd13">The Shortcodes</a>
+<a href="#org0eb1e46">The Shortcodes</a>
 <ul>
-<li><a href="#orgf1f78de">Mako</a></li>
-<li><a href="#org07b65d0">Jinja</a></li>
+<li><a href="#orgcfa25e2">Mako</a></li>
+<li><a href="#org73c747b">Jinja</a></li>
 </ul>
 </li>
-<li><a href="#orgf7afd78">Links</a></li>
+<li><a href="#org9d20819">Links</a></li>
 </ul>
 </div>
 </div>
@@ -157,14 +168,28 @@ bg-light
 This is a test of the <code>p5div</code> shortcode. For it to work (assuming you're using mako) you need to:
 </p>
 
+<div class="notecard" id="org525fec0">
 <ul class="org-ul">
 <li>set up the <code>p5.tmpl</code> template (in <code>themes/custom-mako/templates/</code>)</li>
 <li>have <code>..template: p5.tmpl</code> in the metadata for this post</li>
 <li>have <code>p5divmako.tmpl</code> in a folder named <code>shortcodes</code> at the root of the nikola folder</li>
 </ul>
-<div id="outline-container-orgba3fd13" class="outline-2">
-<h2 id="orgba3fd13">The Shortcodes</h2>
-<div class="outline-text-2" id="text-orgba3fd13">
+</div>
+
+<div class="notecard" id="org1950980">
+<p>
+<b><b>Note:</b></b>
+</p>
+
+<p>
+I'll be using the names based on the idea that we're using the <code>mako</code> template engine. If we were using <code>jinja</code> the path for the templates would be <code>themes/custom-jinja/templates/</code> or whatever else name we used.
+</p>
+
+</div>
+
+<div id="outline-container-org0eb1e46" class="outline-2">
+<h2 id="org0eb1e46">The Shortcodes</h2>
+<div class="outline-text-2" id="text-org0eb1e46">
 <p>
 There actually needs to be two different shortcodes, one for jinja and one for mako. This repository is using mako (as does <a href="https://necromuralist.github.io">https://necromuralist.github.io</a>) but <a href="https://necromuralist.github.io/Ape-Iron/">ape-iron</a> is using jinja. It's a little too convoluted to keep switching back and forth so I'm mostly going to be relying on ape-iron to test the jinja version (although I really should figure out an easy way to test both).
 </p>
@@ -173,12 +198,15 @@ There actually needs to be two different shortcodes, one for jinja and one for m
 The shortcode creates two HTML tags:
 </p>
 
+<div class="notecard" id="org50a18c5">
 <ul class="org-ul">
 <li>a script tag that needs the path to the source p5js file</li>
 <li>a div tag that needs the ID to use so that the p5 sketch can be put inside it</li>
 </ul>
+</div>
+
 <p>
-I was originally setting the <code>type</code> and <code>language</code> attributes of the <code>script</code> tag, but apparently, according to the Mozilla Developers Network the <code>language</code> attribute was deprecated a long time ago:
+I was originally setting the <code>type</code> and <code>language</code> attributes of the <code>script</code> tag, but apparently, according to the Mozilla Developers Network (MDN) the <code>language</code> attribute was deprecated a long time ago:
 </p>
 
 <blockquote>
@@ -188,7 +216,7 @@ Like the type attribute, this attribute identifies the scripting language in use
 </blockquote>
 
 <p>
-And the default <code>type</code> is javascript so you don't need to use it if it's a regular script. When <code>type</code> isn't set or is set to an empty string:
+And the default <code>type</code> is javascript so you don't need to use it if it's a regular script. Quoting the MDN again on what it means when <code>type</code> isn't set or is set to an empty string:
 </p>
 
 <blockquote>
@@ -197,16 +225,23 @@ And the default <code>type</code> is javascript so you don't need to use it if i
 </p>
 </blockquote>
 
+<div class="notecard" id="orgff7ef41">
 <p>
-<b><b>Note:</b></b> I was setting the class for the <code>div</code> to "p5js" but it turns out that <code>p5</code> already adds a class ("p5Canvas") so add the styling to that class instead.
+<b><b>Note:</b></b>
 </p>
+
+<p>
+I was setting the class for the <code>div</code> to "p5js" but it turns out that <code>p5</code> already adds a class, "p5Canvas", so w can add the styling to that class instead and don't need another class.
+</p>
+
+</div>
 </div>
 
-<div id="outline-container-orgf1f78de" class="outline-3">
-<h3 id="orgf1f78de">Mako</h3>
-<div class="outline-text-3" id="text-orgf1f78de">
+<div id="outline-container-orgcfa25e2" class="outline-3">
+<h3 id="orgcfa25e2">Mako</h3>
+<div class="outline-text-3" id="text-orgcfa25e2">
 <p>
-I don't see an easy way to set which shortcodes folder to use so I'm going to go with adding "mako" to the end of the shortcodes meant for the mako engine. This shortcode will go into <code>shortcodes/p5divmako.tmpl</code>.
+I don't see an easy way to set which shortcodes folder to use so I'm going to go with adding "mako" to the end of the shortcodes meant for the mako engine and not putting a suffix on the ones meant for jinja. This shortcode will go into <code>shortcodes/p5divmako.tmpl</code>: 
 </p>
 
 <div class="highlight"><pre><span></span>&lt;script src="${source}"&gt;&lt;/script&gt;
@@ -215,7 +250,7 @@ I don't see an easy way to set which shortcodes folder to use so I'm going to go
 </pre></div>
 
 <p>
-To use this shortcode you add something that looks like this.
+To use this shortcode you add something that looks like this to a page or post.
 </p>
 
 <div class="highlight"><pre><span></span>
@@ -224,21 +259,21 @@ To use this shortcode you add something that looks like this.
 </pre></div>
 
 <p>
-which assumes that the sketch is in <code>files/posts/&lt;slug&gt;/noise_graph.js</code>. And that the p5 code is adding the sketch to "e70fd042-noise-graph". Meaning that there's something like:
+This assumes that the sketch is in <code>files/posts/&lt;slug&gt;/noise_graph.js</code> and that the p5 code is adding the sketch to  "e70fd042-noise-graph". Meaning that there's something like this in the in the <code>noise_graph.js</code> file:
 </p>
 
 <div class="highlight"><pre><span></span><span class="nx">p5</span><span class="p">(</span><span class="nx">noise_graph</span><span class="p">,</span><span class="w"> </span><span class="s2">"e70fd042-noise-graph"</span><span class="p">)</span>
 </pre></div>
 
 <p>
-in the <code>noise_graph.js</code> file.
+Where <code>noise_graph</code> is the name of the function in <code>noise_graph.js</code> that runs the sketch.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org07b65d0" class="outline-3">
-<h3 id="org07b65d0">Jinja</h3>
-<div class="outline-text-3" id="text-org07b65d0">
+<div id="outline-container-org73c747b" class="outline-3">
+<h3 id="org73c747b">Jinja</h3>
+<div class="outline-text-3" id="text-org73c747b">
 <p>
 Here's the jinja version of the shortcode. It's going to go into <code>shortcodes/p5div.tmpl</code>.
 </p>
@@ -260,9 +295,9 @@ To use it you use the same syntax as the mako-based shortcode, just change the n
 </div>
 </div>
 
-<div id="outline-container-orgf7afd78" class="outline-2">
-<h2 id="orgf7afd78">Links</h2>
-<div class="outline-text-2" id="text-orgf7afd78">
+<div id="outline-container-org9d20819" class="outline-2">
+<h2 id="org9d20819">Links</h2>
+<div class="outline-text-2" id="text-org9d20819">
 <ul class="org-ul">
 <li>&lt;script&gt;: The Script element - HTML: HyperText Markup Language | MDN [Internet]. 2023 [cited 2023 Jun 20]. Available from: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script</a>
 </li>
