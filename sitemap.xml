@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/</loc>
-  <lastmod>2023-06-21T22:45:00Z</lastmod>
+  <lastmod>2023-06-22T23:26:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/2023/</loc>
@@ -15,7 +15,7 @@
  </url>
  <url>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/archive.html</loc>
-  <lastmod>2023-06-21T23:18:00Z</lastmod>
+  <lastmod>2023-06-22T23:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/assets/assets/</loc>
@@ -104,5 +104,9 @@
  <url>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/templates/templates/</loc>
   <lastmod>2023-06-21T22:45:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Beach-Pig-Thigh/themes/themes-index/</loc>
+  <lastmod>2023-06-22T23:26:00Z</lastmod>
  </url>
 </urlset>
