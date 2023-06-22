@@ -11,7 +11,7 @@
 #+END_COMMENT
 
 
-* Mako
+* P5
 
-- {{% doc %}}mako-p5-html-div{{% /doc %}}
-* Jinja
+- {{% doc %}}p5-div-shortcode{{% /doc %}}
+

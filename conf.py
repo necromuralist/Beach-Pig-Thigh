@@ -17,7 +17,7 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "The Cloistered Monkey"  # (translatable)
-BLOG_TITLE = "Beach Pig Thigh Tower"  # (translatable)
+BLOG_TITLE = "Beach Pig Rump & Thigh"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "https://necromuralist.github.io/Beach-Pig-Thigh/"
@@ -140,10 +140,20 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/source/", "Source Code"),
+        ("/posts/", "Posts"),
         ("/archive.html", "Archive"),
         ("/categories/", "Tags"),
-        ("/rss.xml", "RSS feed"),
+        ("/rss.xml", "RSS"),
+        (
+            (
+                ("https://necromuralist.github.io/", "The Cloistered Monkey"),
+                ("https://necromuralist.github.io/Ape-Iron/", "Ape Iron"),
+                ("https://necromuralist.github.io/Bowling-For-Data/", "Bowling For Data"),
+                ("https://necromuralist.github.io/Neurotic-Networking/", "Neurotic Networking"),
+                ("https://necromuralist.github.io/Visions-Voices-Data/", "Visions, Voices, Data")
+                ),
+            "Links"
+        ),
     ),
 }
 
@@ -242,12 +252,13 @@ POSTS = (
     ("posts/*.txt", "posts", "post.tmpl"),
     ("posts/*.html", "posts", "post.tmpl"),
 )
+
 PAGES = (
-    ("source/*.org", "source", "page.tmpl"),
-    ("source/*.rst", "source", "page.tmpl"),
-    ("source/*.md", "source", "page.tmpl"),
-    ("source/*.txt", "source", "page.tmpl"),
-    ("source/*.html", "source", "page.tmpl"),
+    ("source/*.org", "", "page.tmpl"),
+#    ("source/*.rst", "source", "page.tmpl"),
+#    ("source/*.md", "source", "page.tmpl"),
+#    ("source/*.txt", "source", "page.tmpl"),
+#    ("source/*.html", "source", "page.tmpl"),
 )
 
 
@@ -579,7 +590,7 @@ HIDDEN_AUTHORS = ['Guest']
 # Final location for the main blog page and sibling paginated pages is
 # output / TRANSLATION[lang] / INDEX_PATH / index-*.html
 # (translatable)
-# INDEX_PATH = ""
+INDEX_PATH = "posts"
 
 # Optional HTML that displayed on “main” blog index.html files.
 # May be used for a greeting. (translatable)
@@ -687,7 +698,7 @@ GITHUB_REMOTE_NAME = 'origin'
 
 # Whether or not github_deploy should commit to the source branch automatically
 # before deploying.
-GITHUB_COMMIT_SOURCE = True
+GITHUB_COMMIT_SOURCE = False # True
 
 # Where the output site should be located
 # If you don't use an absolute path, it will be considered as relative
