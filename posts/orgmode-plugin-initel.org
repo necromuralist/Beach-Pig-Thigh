@@ -1,3 +1,18 @@
+#+BEGIN_COMMENT
+.. title: Orgmode Plugin init.el
+.. slug: orgmode-plugin-initel
+.. date: 2023-06-25 20:39:18 UTC-07:00
+.. tags: plugins,orgmode
+.. category: Plugins
+.. link: 
+.. description: The emacs configuration for the orgmode plugin.
+.. type: text
+
+#+END_COMMENT
+
+This is the emacs configuration (~init.el~) for the [[https://plugins.getnikola.com/v8/orgmode/][orgmode plugin]] to export posts and pages to HTML. I spent forever messing with the ~init.el~ file for my emacs instance, but it turns out that the plugin has its own configuration so you have to make changes here or they won't matter.
+
+#+begin_src emacs-lisp :tangle ../plugins/orgmode/init.el
 ;; Init file to use with the orgmode plugin.
 
 ;; this is generated from the post with the slug: orgmode-plugin-initel
@@ -68,7 +83,7 @@
     ("d" . "d")
     ("emacs-lisp" . "scheme")
     ("F90" . "fortran")
-    ("fish" . "fish")
+    <<fish-pygments>>
     ("gnuplot" . "gnuplot")
     ("groovy" . "groovy")
     ("haskell" . "haskell")
@@ -147,3 +162,22 @@ specified location."
     (org-macro-replace-all nikola-macro-templates)
     (org-html-export-as-html nil nil t t)
     (write-file outfile nil)))
+#+end_src
+
+* Pygments
+This is the list of languages that pygments will colorize when source-code blocks are exported. The org-babel documentation has a [[https://orgmode.org/worg/org-contrib/babel/languages/index.html][list of supported]] languages, but it doesn't list ~fish~, although that seems to work. It might be because I inserted fish-mode, or maybe it just has to be a [[https://pygments.org/languages/][supported pygments language]].
+
+
+** Fish
+Add coloring for the fish-shell. 
+
+#+begin_src emacs-lisp :noweb-ref fish-pygments
+("fish" . "fish")
+#+end_src
+
+* Links
+- Chaganti P. Plugins for Nikola. 2020 [cited 2023 Jun 25]. orgmode. Available from: https://plugins.getnikola.com/v8/orgmode/
+
+- Babel: Languages [Internet]. [cited 2023 Jun 25]. Available from: https://orgmode.org/worg/org-contrib/babel/languages/index.html
+
+- Languages — Pygments [Internet]. [cited 2023 Jun 25]. Available from: https://pygments.org/languages/

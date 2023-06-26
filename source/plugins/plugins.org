@@ -1,0 +1,15 @@
+#+BEGIN_COMMENT
+.. title: Plugins
+.. slug: plugins-index
+.. date: 2023-06-25 21:00:36 UTC-07:00
+.. tags: plugins,index
+.. category: Plugins
+.. link: 
+.. description: Index page for the nikola plugins.
+.. type: text
+
+#+END_COMMENT
+
+* Org-Mode
+
+ - {{% doc %}}orgmode-plugin-initel{{% /doc %}}

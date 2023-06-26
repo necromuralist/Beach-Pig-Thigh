@@ -22,6 +22,7 @@ The source code is on [[https://github.com/necromuralist/Beach-Pig-Thigh][GitHub
 
 * Sub-Categories
 - {{% doc %}}assets{{% /doc %}}
+- {{% doc %}}plugins-index{{% /doc %}}
 - {{% doc %}}shortcodes{{% /doc %}}
 - {{% doc %}}templates{{% /doc %}}
 - {{% doc %}}themes-index{{% /doc %}}
