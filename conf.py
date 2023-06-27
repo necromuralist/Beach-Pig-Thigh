@@ -152,7 +152,7 @@ NAVIGATION_LINKS = {
                 ("https://necromuralist.github.io/Neurotic-Networking/", "Neurotic Networking"),
                 ("https://necromuralist.github.io/Visions-Voices-Data/", "Visions, Voices, Data")
                 ),
-            "Links"
+            "Monkey Pages"
         ),
     ),
 }
