@@ -248,3 +248,15 @@ footer {
 .attribution {
     text-align: center;
 }
+
+/* Center Headlines */
+
+.homecenter {
+    padding: 5% 0 10% 0;
+    text-align: center;
+}
+
+/* page titles */
+.p-name.entry-title {
+    text-align: center;
+}

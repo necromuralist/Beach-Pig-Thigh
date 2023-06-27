@@ -25,7 +25,8 @@ SITE_URL = "https://necromuralist.github.io/Beach-Pig-Thigh/"
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://necromuralist.github.io/Bowling-For-Data/"
 BLOG_EMAIL = "cloisteredmonkey.jmark@slmail.me"
-BLOG_DESCRIPTION = "A Monkey Working With Nikola."  # (translatable)
+BLOG_DESCRIPTION = "A Monkey Works With Nikola."  # (translatable)
+
 
 # Nikola is multilingual!
 #
@@ -244,7 +245,6 @@ THEME_CONFIG = {
 #         ("pages/*.rst", {"en": "pages", "de": "seiten"}, "page.tmpl"),
 #         ("pages/*.md", {"en": "pages", "de": "seiten"}, "page.tmpl"),
 #     )
-
 POSTS = (
     ("posts/*.org", "posts", "post.tmpl"),
     ("posts/*.rst", "posts", "post.tmpl"),
@@ -255,10 +255,10 @@ POSTS = (
 
 PAGES = (
     ("source/*.org", "", "page.tmpl"),
-#    ("source/*.rst", "source", "page.tmpl"),
-#    ("source/*.md", "source", "page.tmpl"),
-#    ("source/*.txt", "source", "page.tmpl"),
-#    ("source/*.html", "source", "page.tmpl"),
+    ("source/*.rst", "", "page.tmpl"),
+    ("source/*.md", "", "page.tmpl"),
+    ("source/*.txt", "", "page.tmpl"),
+    ("source/*.html", "", "page.tmpl"),
 )
 
 
@@ -590,6 +590,7 @@ HIDDEN_AUTHORS = ['Guest']
 # Final location for the main blog page and sibling paginated pages is
 # output / TRANSLATION[lang] / INDEX_PATH / index-*.html
 # (translatable)
+
 INDEX_PATH = "posts"
 
 # Optional HTML that displayed on “main” blog index.html files.
@@ -686,6 +687,10 @@ REDIRECTIONS = []
 #     ]
 # }
 
+# github_deploy configuration
+# For more details, read the manual:
+# https://getnikola.com/handbook.html#deploying-to-github
+# You will need to configure the deployment branch on GitHub.
 # github_deploy configuration
 # For more details, read the manual:
 # https://getnikola.com/handbook.html#deploying-to-github
@@ -981,13 +986,6 @@ FEED_LINKS_APPEND_QUERY = False
 
 # A HTML fragment describing the license, for the sidebar.
 # (translatable)
-# LICENSE = ""
-# I recommend using the Creative Commons' wizard:
-# https://creativecommons.org/choose/
-# compact
-# LICENSE = """
-# <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-# """
 LICENSE = '''
 <div id="license"xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under
 <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0
@@ -1061,7 +1059,7 @@ COMMENT_SYSTEM_ID = ""
 # http://mysite/foo/bar/index.html => http://mysite/foo/bar/
 # (Uses the INDEX_FILE setting, so if that is, say, default.html,
 # it will instead /foo/default.html => /foo)
-STRIP_INDEXES = True
+STRIP_INDEXES = False
 
 # List of files relative to the server root (!) that will be asked to be excluded
 # from indexing and other robotic spidering. * is supported. Will only be effective
@@ -1233,33 +1231,18 @@ PRETTY_URLS = True
 #
 SEARCH_FORM = """
  <!-- DuckDuckGo custom search -->
- <form method="get" id="search" action="https://duckduckgo.com/"
-  class="navbar-form pull-left">
+ <form method="get" id="search" action="https://duckduckgo.com/" role="search"
+  class="d-flex">
  <input type="hidden" name="sites" value="%s">
  <input type="hidden" name="k8" value="#444444">
  <input type="hidden" name="k9" value="#D51920">
  <input type="hidden" name="kt" value="h">
  <input type="text" name="q" maxlength="255"
-  placeholder="Search&hellip;" class="span2" style="margin-top: 4px;">
+  placeholder="Search&hellip;" class="form-control me-2" style="margin-top: 4px;" aria-lab>
  <input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
  </form>
  <!-- End of custom search -->
  """ % SITE_URL
-#
-# If you prefer a Google search form, here's an example that should just work:
-# SEARCH_FORM = """
-# <!-- Google custom search -->
-# <form method="get" action="https://www.google.com/search" class="navbar-form navbar-right" role="search">
-# <div class="form-group">
-# <input type="text" name="q" class="form-control" placeholder="Search">
-# </div>
-# <button type="submit" class="btn btn-primary">
-# 	<span class="glyphicon glyphicon-search"></span>
-# </button>
-# <input type="hidden" name="sitesearch" value="%s">
-# </form>
-# <!-- End of custom search -->
-# """ % SITE_URL
 
 # Use content distribution networks for jQuery, twitter-bootstrap css and js,
 # and html5shiv (for older versions of Internet Explorer)
