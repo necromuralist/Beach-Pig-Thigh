@@ -1124,7 +1124,7 @@ img {
      margin-right: auto;
  }
 
-  /* from https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/ */
+/* from https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/ */
 blockquote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
@@ -1185,6 +1185,18 @@ footer {
 /* for the imaga attribution */
 
 .attribution {
+    text-align: center;
+}
+
+/* Center Headlines */
+
+.homecenter {
+    padding: 5% 0 10% 0;
+    text-align: center;
+}
+
+/* page titles */
+.p-name.entry-title {
     text-align: center;
 }
 

@@ -10,17 +10,17 @@
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
-<link rel="canonical" href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/nikola-confpy/">
+<link rel="canonical" href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/nikola-confpy/index.html">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
 <link rel="manifest" href="../../site.webmanifest">
 <meta name="author" content="The Cloistered Monkey">
-<link rel="prev" href="../p5-cdn-url/" title="P5 CDN URL" type="text/html">
-<link rel="next" href="../orgmode-plugin-initel/" title="Orgmode Plugin init.el" type="text/html">
+<link rel="prev" href="../p5-cdn-url/index.html" title="P5 CDN URL" type="text/html">
+<link rel="next" href="../orgmode-plugin-initel/index.html" title="Orgmode Plugin init.el" type="text/html">
 <meta property="og:site_name" content="Beach Pig Rump &amp; Thigh">
 <meta property="og:title" content="Nikola Conf.py">
-<meta property="og:url" content="https://necromuralist.github.io/Beach-Pig-Thigh/posts/nikola-confpy/">
+<meta property="og:url" content="https://necromuralist.github.io/Beach-Pig-Thigh/posts/nikola-confpy/index.html">
 <meta property="og:description" content="The Nikola conf.py file.">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2023-06-20T15:42:22-07:00">
@@ -59,7 +59,7 @@ bg-light
 <a href="../../rss.xml" class="nav-link">RSS</a>
             </li>
 <li class="nav-item dropdown">
-<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Links</a>
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Monkey Pages</a>
             <div class="dropdown-menu">
                     <a href="https://necromuralist.github.io/" class="dropdown-item">The Cloistered Monkey</a>
                     <a href="https://necromuralist.github.io/Ape-Iron/" class="dropdown-item">Ape Iron</a>
@@ -71,8 +71,8 @@ bg-light
                 
             </li>
 </ul>
-<!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
- <input type="hidden" name="sites" value="https://necromuralist.github.io/Beach-Pig-Thigh/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" role="search" class="d-flex">
+ <input type="hidden" name="sites" value="https://necromuralist.github.io/Beach-Pig-Thigh/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="form-control me-2" style="margin-top: 4px;" aria-lab><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
  <!-- End of custom search -->
  
@@ -95,14 +95,14 @@ bg-light
         
         
         
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Nikola Conf.py</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Nikola Conf.py</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
                     The Cloistered Monkey
             </span></p>
             <p class="dateline">
-            <a href="." rel="bookmark">
+            <a href="#" rel="bookmark">
             <time class="published dt-published" datetime="2023-06-20T15:42:22-07:00" itemprop="datePublished" title="2023-06-20 15:42">2023-06-20 15:42</time></a>
             </p>
             
@@ -112,31 +112,50 @@ bg-light
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div id="outline-container-orga53a504" class="outline-2">
-<h2 id="orga53a504">The Theme</h2>
-<div class="outline-text-2" id="text-orga53a504">
+    <div id="outline-container-org338587d" class="outline-2">
+<h2 id="org338587d">Site Data</h2>
+<div class="outline-text-2" id="text-org338587d">
+<div class="highlight"><pre><span></span><span class="c1"># Data about this site</span>
+<span class="n">BLOG_AUTHOR</span> <span class="o">=</span> <span class="s2">"The Cloistered Monkey"</span>  <span class="c1"># (translatable)</span>
+<span class="n">BLOG_TITLE</span> <span class="o">=</span> <span class="s2">"Beach Pig Rump &amp; Thigh"</span>  <span class="c1"># (translatable)</span>
+<span class="c1"># This is the main URL for your site. It will be used</span>
+<span class="c1"># in a prominent link. Don't forget the protocol (http/https)!</span>
+<span class="n">SITE_URL</span> <span class="o">=</span> <span class="s2">"https://necromuralist.github.io/Beach-Pig-Thigh/"</span>
+<span class="c1"># This is the URL where Nikola's output will be deployed.</span>
+<span class="c1"># If not set, defaults to SITE_URL</span>
+<span class="c1"># BASE_URL = "https://necromuralist.github.io/Bowling-For-Data/"</span>
+<span class="n">BLOG_EMAIL</span> <span class="o">=</span> <span class="s2">"cloisteredmonkey.jmark@slmail.me"</span>
+<span class="n">BLOG_DESCRIPTION</span> <span class="o">=</span> <span class="s2">"A Monkey Works With Nikola."</span>  <span class="c1"># (translatable)</span>
+</pre></div>
+</div>
+</div>
+
+
+<div id="outline-container-orge6293ef" class="outline-2">
+<h2 id="orge6293ef">The Theme</h2>
+<div class="outline-text-2" id="text-orge6293ef">
 <p>
 This is how you choose the theme to use. We're using a custom theme so there's three things that have to match.
 </p>
 </div>
 
-<div id="outline-container-org7ffbbea" class="outline-3">
-<h3 id="org7ffbbea">The Theme Location</h3>
-<div class="outline-text-3" id="text-org7ffbbea">
+<div id="outline-container-org4c8ccb1" class="outline-3">
+<h3 id="org4c8ccb1">The Theme Location</h3>
+<div class="outline-text-3" id="text-org4c8ccb1">
 <p>
 Next to the <code>conf.py</code> file at the root of the nikola repository we need a folder named "themes" and inside that we put a folder whose name matches the name of our theme. I'm going to use <code>custom-mako</code> as our example. The only other expected option at this point would be <code>custom-jinja</code>. So our "themes" folder should look like this (more or less):
 </p>
 
-<pre class="example" id="orge1a6c61">
+<pre class="example" id="orga882cc6">
 themes/
   custom-mako/
 </pre>
 </div>
 </div>
 
-<div id="outline-container-orge610244" class="outline-3">
-<h3 id="orge610244">The Theme Configuration</h3>
-<div class="outline-text-3" id="text-orge610244">
+<div id="outline-container-org9f54574" class="outline-3">
+<h3 id="org9f54574">The Theme Configuration</h3>
+<div class="outline-text-3" id="text-org9f54574">
 <p>
 Inside the <code>themes/custom-mako/</code> folder we need a file with the name <code>custom-mako.theme</code> - the base name of the file needs to match the name of our theme. This is where we tell nikola that we're using mako (or jinja as the case may be). Here's what's in it (the mako version).
 </p>
@@ -156,11 +175,11 @@ family = bootstrap4
 </div>
 </div>
 
-<div id="outline-container-org0cf59c4" class="outline-3">
-<h3 id="org0cf59c4">The conf.py</h3>
-<div class="outline-text-3" id="text-org0cf59c4">
+<div id="outline-container-orgb001568" class="outline-3">
+<h3 id="orgb001568">The conf.py</h3>
+<div class="outline-text-3" id="text-orgb001568">
 <p>
-Insitde <code>conf.py</code> we put the name of the theme, matching the name of the folder and configuration file.
+Inside <code>conf.py</code> we put the name of the theme, matching the name of the folder and configuration file.
 </p>
 
 <div class="highlight"><pre><span></span><span class="c1"># Name of the theme to use.</span>
@@ -170,9 +189,162 @@ Insitde <code>conf.py</code> we put the name of the theme, matching the name of 
 </div>
 </div>
 
-<div id="outline-container-orgd3185bc" class="outline-2">
-<h2 id="orgd3185bc">The Tangle</h2>
-<div class="outline-text-2" id="text-orgd3185bc">
+<div id="outline-container-org785dfa5" class="outline-2">
+<h2 id="org785dfa5">Posts and Pages</h2>
+<div class="outline-text-2" id="text-org785dfa5">
+</div>
+<div id="outline-container-org79e556f" class="outline-3">
+<h3 id="org79e556f">Posts</h3>
+<div class="outline-text-3" id="text-org79e556f">
+<div class="highlight"><pre><span></span><span class="n">POSTS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s2">"posts/*.org"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"posts/*.rst"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"posts/*.md"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"posts/*.txt"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"posts/*.html"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-orgbf5e315" class="outline-3">
+<h3 id="orgbf5e315">Pages</h3>
+<div class="outline-text-3" id="text-orgbf5e315">
+<div class="highlight"><pre><span></span><span class="n">PAGES</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s2">"source/*.org"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"page.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"source/*.rst"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"page.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"source/*.md"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"page.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"source/*.txt"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"page.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"source/*.html"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"page.tmpl"</span><span class="p">),</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-orgcf5a113" class="outline-3">
+<h3 id="orgcf5a113">The Index Path</h3>
+<div class="outline-text-3" id="text-orgcf5a113">
+<div class="highlight"><pre><span></span><span class="c1"># Final location for the main blog page and sibling paginated pages is</span>
+<span class="c1"># output / TRANSLATION[lang] / INDEX_PATH / index-*.html</span>
+<span class="c1"># (translatable)</span>
+
+<span class="n">INDEX_PATH</span> <span class="o">=</span> <span class="s2">"posts"</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div id="outline-container-org9567614" class="outline-2">
+<h2 id="org9567614">Navigation Links</h2>
+<div class="outline-text-2" id="text-org9567614">
+<div class="highlight"><pre><span></span><span class="n">NAVIGATION_LINKS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">DEFAULT_LANG</span><span class="p">:</span> <span class="p">(</span>
+	<span class="p">(</span><span class="s2">"/posts/"</span><span class="p">,</span> <span class="s2">"Posts"</span><span class="p">),</span>
+	<span class="p">(</span><span class="s2">"/archive.html"</span><span class="p">,</span> <span class="s2">"Archive"</span><span class="p">),</span>
+	<span class="p">(</span><span class="s2">"/categories/"</span><span class="p">,</span> <span class="s2">"Tags"</span><span class="p">),</span>
+	<span class="p">(</span><span class="s2">"/rss.xml"</span><span class="p">,</span> <span class="s2">"RSS"</span><span class="p">),</span>
+	<span class="p">(</span>
+	    <span class="p">(</span>
+		<span class="p">(</span><span class="s2">"https://necromuralist.github.io/"</span><span class="p">,</span> <span class="s2">"The Cloistered Monkey"</span><span class="p">),</span>
+		<span class="p">(</span><span class="s2">"https://necromuralist.github.io/Ape-Iron/"</span><span class="p">,</span> <span class="s2">"Ape Iron"</span><span class="p">),</span>
+		<span class="p">(</span><span class="s2">"https://necromuralist.github.io/Bowling-For-Data/"</span><span class="p">,</span> <span class="s2">"Bowling For Data"</span><span class="p">),</span>
+		<span class="p">(</span><span class="s2">"https://necromuralist.github.io/Neurotic-Networking/"</span><span class="p">,</span> <span class="s2">"Neurotic Networking"</span><span class="p">),</span>
+		<span class="p">(</span><span class="s2">"https://necromuralist.github.io/Visions-Voices-Data/"</span><span class="p">,</span> <span class="s2">"Visions, Voices, Data"</span><span class="p">)</span>
+		<span class="p">),</span>
+	    <span class="s2">"Monkey Pages"</span>
+	<span class="p">),</span>
+    <span class="p">),</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-orgb05b0dc" class="outline-2">
+<h2 id="orgb05b0dc">Github Deploy</h2>
+<div class="outline-text-2" id="text-orgb05b0dc">
+<div class="highlight"><pre><span></span><span class="c1"># github_deploy configuration</span>
+<span class="c1"># For more details, read the manual:</span>
+<span class="c1"># https://getnikola.com/handbook.html#deploying-to-github</span>
+<span class="c1"># You will need to configure the deployment branch on GitHub.</span>
+<span class="n">GITHUB_SOURCE_BRANCH</span> <span class="o">=</span> <span class="s1">'main'</span>
+<span class="n">GITHUB_DEPLOY_BRANCH</span> <span class="o">=</span> <span class="s1">'gh-pages'</span>
+
+<span class="c1"># The name of the remote where you wish to push to, using github_deploy.</span>
+<span class="n">GITHUB_REMOTE_NAME</span> <span class="o">=</span> <span class="s1">'origin'</span>
+
+<span class="c1"># Whether or not github_deploy should commit to the source branch automatically</span>
+<span class="c1"># before deploying.</span>
+<span class="n">GITHUB_COMMIT_SOURCE</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># True</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-orgccd9700" class="outline-2">
+<h2 id="orgccd9700">The License</h2>
+<div class="outline-text-2" id="text-orgccd9700">
+<div class="highlight"><pre><span></span><span class="n">LICENSE</span> <span class="o">=</span> <span class="s1">'''</span>
+<span class="s1">&lt;div id="license"xmlns:cc="http://creativecommons.org/ns#" &gt;This work is licensed under</span>
+<span class="s1">&lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0</span>
+<span class="s1">&lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;</span>
+<span class="s1">&lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;</span>
+<span class="s1">&lt;/div&gt;</span>
+<span class="s1">'''</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-org2a4f878" class="outline-2">
+<h2 id="org2a4f878">The Footer</h2>
+<div class="outline-text-2" id="text-org2a4f878">
+<div class="highlight"><pre><span></span><span class="n">CONTENT_FOOTER</span> <span class="o">=</span> <span class="s1">'Scribbles by &lt;a href="mailto:</span><span class="si">{email}</span><span class="s1">"&gt;</span><span class="si">{author}</span><span class="s1">&lt;/a&gt; - Powered by         &lt;a href="https://getnikola.com" rel="nofollow"&gt;Nikola&lt;/a&gt;         </span><span class="si">{license}</span><span class="s1">'</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-orgd55ee87" class="outline-2">
+<h2 id="orgd55ee87">Strip Indexes</h2>
+<div class="outline-text-2" id="text-orgd55ee87">
+<div class="highlight"><pre><span></span><span class="c1"># If a link ends in /index.html,  drop the index.html part.</span>
+<span class="c1"># http://mysite/foo/bar/index.html =&gt; http://mysite/foo/bar/</span>
+<span class="c1"># (Uses the INDEX_FILE setting, so if that is, say, default.html,</span>
+<span class="c1"># it will instead /foo/default.html =&gt; /foo)</span>
+<span class="n">STRIP_INDEXES</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-orgeafee80" class="outline-2">
+<h2 id="orgeafee80">Search Form</h2>
+<div class="outline-text-2" id="text-orgeafee80">
+<div class="highlight"><pre><span></span><span class="c1"># A search form to search this site, for the sidebar. You can use a Google</span>
+<span class="c1"># custom search (https://www.google.com/cse/)</span>
+<span class="c1"># Or a DuckDuckGo search: https://duckduckgo.com/search_box.html</span>
+<span class="c1"># Default is no search form.</span>
+<span class="c1"># (translatable)</span>
+<span class="c1"># SEARCH_FORM = ""</span>
+<span class="c1">#</span>
+<span class="c1"># This search form works for any site and looks good in the "site" theme where</span>
+<span class="c1"># it appears on the navigation bar:</span>
+<span class="c1">#</span>
+<span class="n">SEARCH_FORM</span> <span class="o">=</span> <span class="s2">"""</span>
+<span class="s2"> &lt;!-- DuckDuckGo custom search --&gt;</span>
+<span class="s2"> &lt;form method="get" id="search" action="https://duckduckgo.com/" role="search"</span>
+<span class="s2">  class="d-flex"&gt;</span>
+<span class="s2"> &lt;input type="hidden" name="sites" value="</span><span class="si">%s</span><span class="s2">"&gt;</span>
+<span class="s2"> &lt;input type="hidden" name="k8" value="#444444"&gt;</span>
+<span class="s2"> &lt;input type="hidden" name="k9" value="#D51920"&gt;</span>
+<span class="s2"> &lt;input type="hidden" name="kt" value="h"&gt;</span>
+<span class="s2"> &lt;input type="text" name="q" maxlength="255"</span>
+<span class="s2">  placeholder="Search&amp;hellip;" class="form-control me-2" style="margin-top: 4px;" aria-lab&gt;</span>
+<span class="s2"> &lt;input type="submit" value="DuckDuckGo Search" style="visibility: hidden;"&gt;</span>
+<span class="s2"> &lt;/form&gt;</span>
+<span class="s2"> &lt;!-- End of custom search --&gt;</span>
+<span class="s2"> """</span> <span class="o">%</span> <span class="n">SITE_URL</span>
+</pre></div>
+</div>
+</div>
+<div id="outline-container-org7ba8a51" class="outline-2">
+<h2 id="org7ba8a51">The Tangle</h2>
+<div class="outline-text-2" id="text-org7ba8a51">
 <p>
 This should eventually get broken up enough to be hidden, but not yet.
 </p>
@@ -194,17 +366,8 @@ This should eventually get broken up enough to be hidden, but not yet.
 <span class="c1"># ! Option (b) is used for settings that are different in different languages.</span>
 
 
-<span class="c1"># Data about this site</span>
-<span class="n">BLOG_AUTHOR</span> <span class="o">=</span> <span class="s2">"The Cloistered Monkey"</span>  <span class="c1"># (translatable)</span>
-<span class="n">BLOG_TITLE</span> <span class="o">=</span> <span class="s2">"Beach Pig Thigh Tower"</span>  <span class="c1"># (translatable)</span>
-<span class="c1"># This is the main URL for your site. It will be used</span>
-<span class="c1"># in a prominent link. Don't forget the protocol (http/https)!</span>
-<span class="n">SITE_URL</span> <span class="o">=</span> <span class="s2">"https://necromuralist.github.io/Beach-Pig-Thigh/"</span>
-<span class="c1"># This is the URL where Nikola's output will be deployed.</span>
-<span class="c1"># If not set, defaults to SITE_URL</span>
-<span class="c1"># BASE_URL = "https://necromuralist.github.io/Bowling-For-Data/"</span>
-<span class="n">BLOG_EMAIL</span> <span class="o">=</span> <span class="s2">"cloisteredmonkey.jmark@slmail.me"</span>
-<span class="n">BLOG_DESCRIPTION</span> <span class="o">=</span> <span class="s2">"A Monkey Working With Nikola."</span>  <span class="c1"># (translatable)</span>
+<span class="o">&lt;&lt;</span><span class="n">site</span><span class="o">-</span><span class="n">data</span><span class="o">&gt;&gt;</span>
+
 
 <span class="c1"># Nikola is multilingual!</span>
 <span class="c1">#</span>
@@ -317,14 +480,7 @@ This should eventually get broken up enough to be hidden, but not yet.
 <span class="c1">#          with a ``/``, otherwise end them with ``/index.html`` — or</span>
 <span class="c1">#          else they won’t be highlighted when active.</span>
 
-<span class="n">NAVIGATION_LINKS</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="n">DEFAULT_LANG</span><span class="p">:</span> <span class="p">(</span>
-	<span class="p">(</span><span class="s2">"/source/"</span><span class="p">,</span> <span class="s2">"Source Code"</span><span class="p">),</span>
-	<span class="p">(</span><span class="s2">"/archive.html"</span><span class="p">,</span> <span class="s2">"Archive"</span><span class="p">),</span>
-	<span class="p">(</span><span class="s2">"/categories/"</span><span class="p">,</span> <span class="s2">"Tags"</span><span class="p">),</span>
-	<span class="p">(</span><span class="s2">"/rss.xml"</span><span class="p">,</span> <span class="s2">"RSS feed"</span><span class="p">),</span>
-    <span class="p">),</span>
-<span class="p">}</span>
+<span class="o">&lt;&lt;</span><span class="n">navigation</span><span class="o">-</span><span class="n">links</span><span class="o">&gt;&gt;</span>
 
 <span class="c1"># Alternative navigation links. Works the same way NAVIGATION_LINKS does,</span>
 <span class="c1"># although themes may not always support them. (translatable)</span>
@@ -412,21 +568,9 @@ This should eventually get broken up enough to be hidden, but not yet.
 <span class="c1">#         ("pages/*.rst", {"en": "pages", "de": "seiten"}, "page.tmpl"),</span>
 <span class="c1">#         ("pages/*.md", {"en": "pages", "de": "seiten"}, "page.tmpl"),</span>
 <span class="c1">#     )</span>
+<span class="o">&lt;&lt;</span><span class="n">post</span><span class="o">-</span><span class="n">formats</span><span class="o">&gt;&gt;</span>
 
-<span class="n">POSTS</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="p">(</span><span class="s2">"posts/*.org"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
-    <span class="p">(</span><span class="s2">"posts/*.rst"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
-    <span class="p">(</span><span class="s2">"posts/*.md"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
-    <span class="p">(</span><span class="s2">"posts/*.txt"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
-    <span class="p">(</span><span class="s2">"posts/*.html"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
-<span class="p">)</span>
-<span class="n">PAGES</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="p">(</span><span class="s2">"source/*.org"</span><span class="p">,</span> <span class="s2">"source"</span><span class="p">,</span> <span class="s2">"page.tmpl"</span><span class="p">),</span>
-    <span class="p">(</span><span class="s2">"source/*.rst"</span><span class="p">,</span> <span class="s2">"source"</span><span class="p">,</span> <span class="s2">"page.tmpl"</span><span class="p">),</span>
-    <span class="p">(</span><span class="s2">"source/*.md"</span><span class="p">,</span> <span class="s2">"source"</span><span class="p">,</span> <span class="s2">"page.tmpl"</span><span class="p">),</span>
-    <span class="p">(</span><span class="s2">"source/*.txt"</span><span class="p">,</span> <span class="s2">"source"</span><span class="p">,</span> <span class="s2">"page.tmpl"</span><span class="p">),</span>
-    <span class="p">(</span><span class="s2">"source/*.html"</span><span class="p">,</span> <span class="s2">"source"</span><span class="p">,</span> <span class="s2">"page.tmpl"</span><span class="p">),</span>
-<span class="p">)</span>
+<span class="o">&lt;&lt;</span><span class="n">pages</span><span class="o">&gt;&gt;</span>
 
 
 <span class="c1"># Below this point, everything is optional</span>
@@ -754,10 +898,7 @@ This should eventually get broken up enough to be hidden, but not yet.
 <span class="c1"># Allow multiple, comma-separated authors for a post? (Requires theme support, present in built-in themes)</span>
 <span class="c1"># MULTIPLE_AUTHORS_PER_POST = False</span>
 
-<span class="c1"># Final location for the main blog page and sibling paginated pages is</span>
-<span class="c1"># output / TRANSLATION[lang] / INDEX_PATH / index-*.html</span>
-<span class="c1"># (translatable)</span>
-<span class="c1"># INDEX_PATH = ""</span>
+<span class="o">&lt;&lt;</span><span class="n">index</span><span class="o">-</span><span class="n">path</span><span class="o">&gt;&gt;</span>
 
 <span class="c1"># Optional HTML that displayed on “main” blog index.html files.</span>
 <span class="c1"># May be used for a greeting. (translatable)</span>
@@ -857,15 +998,7 @@ This should eventually get broken up enough to be hidden, but not yet.
 <span class="c1"># For more details, read the manual:</span>
 <span class="c1"># https://getnikola.com/handbook.html#deploying-to-github</span>
 <span class="c1"># You will need to configure the deployment branch on GitHub.</span>
-<span class="n">GITHUB_SOURCE_BRANCH</span> <span class="o">=</span> <span class="s1">'main'</span>
-<span class="n">GITHUB_DEPLOY_BRANCH</span> <span class="o">=</span> <span class="s1">'gh-pages'</span>
-
-<span class="c1"># The name of the remote where you wish to push to, using github_deploy.</span>
-<span class="n">GITHUB_REMOTE_NAME</span> <span class="o">=</span> <span class="s1">'origin'</span>
-
-<span class="c1"># Whether or not github_deploy should commit to the source branch automatically</span>
-<span class="c1"># before deploying.</span>
-<span class="n">GITHUB_COMMIT_SOURCE</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="o">&lt;&lt;</span><span class="n">github</span><span class="o">-</span><span class="n">deploy</span><span class="o">&gt;&gt;</span>
 
 <span class="c1"># Where the output site should be located</span>
 <span class="c1"># If you don't use an absolute path, it will be considered as relative</span>
@@ -1148,22 +1281,11 @@ This should eventually get broken up enough to be hidden, but not yet.
 
 <span class="c1"># A HTML fragment describing the license, for the sidebar.</span>
 <span class="c1"># (translatable)</span>
-<span class="c1"># LICENSE = ""</span>
-<span class="c1"># I recommend using the Creative Commons' wizard:</span>
-<span class="c1"># https://creativecommons.org/choose/</span>
-<span class="c1"># compact</span>
-<span class="c1"># LICENSE = """</span>
-<span class="c1"># &lt;a rel="license" href="http://creativecommons.org/licenses/by/4.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /&gt;&lt;/a&gt;&lt;br /&gt;This work is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by/4.0/"&gt;Creative Commons Attribution 4.0 International License&lt;/a&gt;.</span>
-<span class="c1"># """</span>
-<span class="n">LICENSE</span> <span class="o">=</span> <span class="s2">"""</span>
-<span class="s2"> &lt;a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;</span>
-<span class="s2"> &lt;img alt="Creative Commons License BY-NC-SA"</span>
-<span class="s2"> style="border-width:0; margin-bottom:12px;"</span>
-<span class="s2"> src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"&gt;&lt;/a&gt;"""</span>
+<span class="o">&lt;&lt;</span><span class="n">the</span><span class="o">-</span><span class="n">license</span><span class="o">&gt;&gt;</span>
 
 <span class="c1"># A small copyright notice for the page footer (in HTML).</span>
 <span class="c1"># (translatable)</span>
-<span class="n">CONTENT_FOOTER</span> <span class="o">=</span> <span class="s1">'&lt;a href="mailto:</span><span class="si">{email}</span><span class="s1">"&gt;</span><span class="si">{author}</span><span class="s1">&lt;/a&gt; - Powered by         &lt;a href="https://getnikola.com" rel="nofollow"&gt;Nikola&lt;/a&gt;         </span><span class="si">{license}</span><span class="s1">'</span>
+<span class="o">&lt;&lt;</span><span class="n">content</span><span class="o">-</span><span class="n">footer</span><span class="o">&gt;&gt;</span>
 
 <span class="c1"># Things that will be passed to CONTENT_FOOTER.format().  This is done</span>
 <span class="c1"># for translatability, as dicts are not formattable.  Nikola will</span>
@@ -1222,11 +1344,7 @@ This should eventually get broken up enough to be hidden, but not yet.
 <span class="c1"># Common other alternatives: default.html for IIS, index.php</span>
 <span class="c1"># INDEX_FILE = "index.html"</span>
 
-<span class="c1"># If a link ends in /index.html,  drop the index.html part.</span>
-<span class="c1"># http://mysite/foo/bar/index.html =&gt; http://mysite/foo/bar/</span>
-<span class="c1"># (Uses the INDEX_FILE setting, so if that is, say, default.html,</span>
-<span class="c1"># it will instead /foo/default.html =&gt; /foo)</span>
-<span class="n">STRIP_INDEXES</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="o">&lt;&lt;</span><span class="n">strip</span><span class="o">-</span><span class="n">indexes</span><span class="o">&gt;&gt;</span>
 
 <span class="c1"># List of files relative to the server root (!) that will be asked to be excluded</span>
 <span class="c1"># from indexing and other robotic spidering. * is supported. Will only be effective</span>
@@ -1386,45 +1504,7 @@ This should eventually get broken up enough to be hidden, but not yet.
 <span class="c1"># change it for a FeedBurner feed or something else.</span>
 <span class="c1"># RSS_LINK = None</span>
 
-<span class="c1"># A search form to search this site, for the sidebar. You can use a Google</span>
-<span class="c1"># custom search (https://www.google.com/cse/)</span>
-<span class="c1"># Or a DuckDuckGo search: https://duckduckgo.com/search_box.html</span>
-<span class="c1"># Default is no search form.</span>
-<span class="c1"># (translatable)</span>
-<span class="c1"># SEARCH_FORM = ""</span>
-<span class="c1">#</span>
-<span class="c1"># This search form works for any site and looks good in the "site" theme where</span>
-<span class="c1"># it appears on the navigation bar:</span>
-<span class="c1">#</span>
-<span class="n">SEARCH_FORM</span> <span class="o">=</span> <span class="s2">"""</span>
-<span class="s2"> &lt;!-- DuckDuckGo custom search --&gt;</span>
-<span class="s2"> &lt;form method="get" id="search" action="https://duckduckgo.com/"</span>
-<span class="s2">  class="navbar-form pull-left"&gt;</span>
-<span class="s2"> &lt;input type="hidden" name="sites" value="</span><span class="si">%s</span><span class="s2">"&gt;</span>
-<span class="s2"> &lt;input type="hidden" name="k8" value="#444444"&gt;</span>
-<span class="s2"> &lt;input type="hidden" name="k9" value="#D51920"&gt;</span>
-<span class="s2"> &lt;input type="hidden" name="kt" value="h"&gt;</span>
-<span class="s2"> &lt;input type="text" name="q" maxlength="255"</span>
-<span class="s2">  placeholder="Search&amp;hellip;" class="span2" style="margin-top: 4px;"&gt;</span>
-<span class="s2"> &lt;input type="submit" value="DuckDuckGo Search" style="visibility: hidden;"&gt;</span>
-<span class="s2"> &lt;/form&gt;</span>
-<span class="s2"> &lt;!-- End of custom search --&gt;</span>
-<span class="s2"> """</span> <span class="o">%</span> <span class="n">SITE_URL</span>
-<span class="c1">#</span>
-<span class="c1"># If you prefer a Google search form, here's an example that should just work:</span>
-<span class="c1"># SEARCH_FORM = """</span>
-<span class="c1"># &lt;!-- Google custom search --&gt;</span>
-<span class="c1"># &lt;form method="get" action="https://www.google.com/search" class="navbar-form navbar-right" role="search"&gt;</span>
-<span class="c1"># &lt;div class="form-group"&gt;</span>
-<span class="c1"># &lt;input type="text" name="q" class="form-control" placeholder="Search"&gt;</span>
-<span class="c1"># &lt;/div&gt;</span>
-<span class="c1"># &lt;button type="submit" class="btn btn-primary"&gt;</span>
-<span class="c1"># 	&lt;span class="glyphicon glyphicon-search"&gt;&lt;/span&gt;</span>
-<span class="c1"># &lt;/button&gt;</span>
-<span class="c1"># &lt;input type="hidden" name="sitesearch" value="%s"&gt;</span>
-<span class="c1"># &lt;/form&gt;</span>
-<span class="c1"># &lt;!-- End of custom search --&gt;</span>
-<span class="c1"># """ % SITE_URL</span>
+<span class="o">&lt;&lt;</span><span class="n">search</span><span class="o">-</span><span class="n">form</span><span class="o">&gt;&gt;</span>
 
 <span class="c1"># Use content distribution networks for jQuery, twitter-bootstrap css and js,</span>
 <span class="c1"># and html5shiv (for older versions of Internet Explorer)</span>
@@ -1603,14 +1683,14 @@ This should eventually get broken up enough to be hidden, but not yet.
 </div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
-<li><a class="tag p-category" href="../../categories/nikola/" rel="tag">nikola</a></li>
+<li><a class="tag p-category" href="../../categories/nikola/index.html" rel="tag">nikola</a></li>
         </ul>
 <ul class="pager hidden-print">
 <li class="previous">
-                <a href="../p5-cdn-url/" rel="prev" title="P5 CDN URL">Previous post</a>
+                <a href="../p5-cdn-url/index.html" rel="prev" title="P5 CDN URL">Previous post</a>
             </li>
             <li class="next">
-                <a href="../orgmode-plugin-initel/" rel="next" title="Orgmode Plugin init.el">Next post</a>
+                <a href="../orgmode-plugin-initel/index.html" rel="next" title="Orgmode Plugin init.el">Next post</a>
             </li>
         </ul></nav></aside></article><!--End of body content--><footer id="footer">
             Scribbles by <a href="mailto:cloisteredmonkey.jmark@slmail.me">The Cloistered Monkey</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         

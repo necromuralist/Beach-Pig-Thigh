@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Beach Pig Rump &amp; Thigh (Posts about shortcode)</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/</link><description></description><atom:link href="https://necromuralist.github.io/Beach-Pig-Thigh/categories/shortcode.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
- &lt;a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;
- &lt;img alt="Creative Commons License BY-NC-SA"
- style="border-width:0; margin-bottom:12px;"
- src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Wed, 21 Jun 2023 23:58:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>P5 CDN URL</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-cdn-url/</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;p&gt;
+&lt;div id="license"xmlns:cc="http://creativecommons.org/ns#" &gt;This work is licensed under
+&lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0
+&lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;
+&lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;
+&lt;/div&gt;
+</copyright><lastBuildDate>Tue, 27 Jun 2023 23:57:34 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>P5 CDN URL</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-cdn-url/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;p&gt;
 {# This is tangled from the "p5-div-shortcode" post #}
 
 &lt;script src="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-cdn-url/%7B%7B%20source%20%7D%7D"&gt;&lt;/script&gt;
@@ -22,17 +24,17 @@ To change the script tag with the URL for the p5 CDN, put a new one in the &lt;c
     &lt;span class="s1"&gt;' src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"'&lt;/span&gt;
     &lt;span class="s1"&gt;' integrity="sha512-3RlxD1bW34eFKPwj9gUXEWtdSMC59QqIqHnD8O/NoTwSJhgxRizdcFVQhUMFyTp5RwLTDL0Lbcqtl8b7bFAzog=="'&lt;/span&gt;
     &lt;span class="s1"&gt;' crossorigin="anonymous" referrerpolicy="no-referrer"&amp;gt;&amp;lt;/script&amp;gt;'&lt;/span&gt;&lt;span class="p"&gt;)}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</description><category>p5</category><category>shortcode</category><category>template</category><guid>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-cdn-url/</guid><pubDate>Fri, 05 May 2023 22:19:31 GMT</pubDate></item><item><title>P5 Div Shortcode</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><category>p5</category><category>shortcode</category><category>template</category><guid>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-cdn-url/index.html</guid><pubDate>Fri, 05 May 2023 22:19:31 GMT</pubDate></item><item><title>P5 Div Shortcode</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/#org0eb1e46"&gt;The Shortcodes&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html#org0eb1e46"&gt;The Shortcodes&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/#orgcfa25e2"&gt;Mako&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/#org73c747b"&gt;Jinja&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html#orgcfa25e2"&gt;Mako&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html#org73c747b"&gt;Jinja&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/#org9d20819"&gt;Links&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html#org9d20819"&gt;Links&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -185,4 +187,4 @@ To use it you use the same syntax as the mako-based shortcode, just change the n
 &lt;li&gt;&amp;lt;script&amp;gt;: The Script element - HTML: HyperText Markup Language | MDN [Internet]. 2023 [cited 2023 Jun 20]. Available from: &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script"&gt;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>p5</category><category>shortcode</category><category>template</category><guid>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/</guid><pubDate>Fri, 05 May 2023 22:19:31 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;</description><category>p5</category><category>shortcode</category><category>template</category><guid>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html</guid><pubDate>Fri, 05 May 2023 22:19:31 GMT</pubDate></item></channel></rss>

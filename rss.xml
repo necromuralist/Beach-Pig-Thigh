@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Beach Pig Rump &amp; Thigh</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/</link><description>A Monkey Working With Nikola.</description><atom:link href="https://necromuralist.github.io/Beach-Pig-Thigh/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Beach Pig Rump &amp; Thigh</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/</link><description>A Monkey Works With Nikola.</description><atom:link href="https://necromuralist.github.io/Beach-Pig-Thigh/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
 &lt;div id="license"xmlns:cc="http://creativecommons.org/ns#" &gt;This work is licensed under
 &lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;
 &lt;/div&gt;
-</copyright><lastBuildDate>Mon, 26 Jun 2023 03:57:39 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Orgmode Plugin init.el</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;p&gt;
+</copyright><lastBuildDate>Tue, 27 Jun 2023 23:57:34 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Orgmode Plugin init.el</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;p&gt;
 This is the emacs configuration (&lt;code&gt;init.el&lt;/code&gt;) for the &lt;a href="https://plugins.getnikola.com/v8/orgmode/"&gt;orgmode plugin&lt;/a&gt; to export posts and pages to HTML. I spent forever messing with the &lt;code&gt;init.el&lt;/code&gt; file for my emacs instance, but it turns out that the plugin has its own configuration so you have to make changes here or they won't matter.
 &lt;/p&gt;
 
@@ -193,31 +193,50 @@ Add coloring for the fish-shell.
 &lt;li&gt;Languages — Pygments [Internet]. [cited 2023 Jun 25]. Available from: &lt;a href="https://pygments.org/languages/"&gt;https://pygments.org/languages/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>orgmode</category><category>plugins</category><guid>https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/</guid><pubDate>Mon, 26 Jun 2023 03:39:18 GMT</pubDate></item><item><title>Nikola Conf.py</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/nikola-confpy/</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-orga53a504" class="outline-2"&gt;
-&lt;h2 id="orga53a504"&gt;The Theme&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orga53a504"&gt;
+&lt;/div&gt;</description><category>orgmode</category><category>plugins</category><guid>https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html</guid><pubDate>Mon, 26 Jun 2023 03:39:18 GMT</pubDate></item><item><title>Nikola Conf.py</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/nikola-confpy/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-org338587d" class="outline-2"&gt;
+&lt;h2 id="org338587d"&gt;Site Data&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org338587d"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Data about this site&lt;/span&gt;
+&lt;span class="n"&gt;BLOG_AUTHOR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"The Cloistered Monkey"&lt;/span&gt;  &lt;span class="c1"&gt;# (translatable)&lt;/span&gt;
+&lt;span class="n"&gt;BLOG_TITLE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"Beach Pig Rump &amp;amp; Thigh"&lt;/span&gt;  &lt;span class="c1"&gt;# (translatable)&lt;/span&gt;
+&lt;span class="c1"&gt;# This is the main URL for your site. It will be used&lt;/span&gt;
+&lt;span class="c1"&gt;# in a prominent link. Don't forget the protocol (http/https)!&lt;/span&gt;
+&lt;span class="n"&gt;SITE_URL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"https://necromuralist.github.io/Beach-Pig-Thigh/"&lt;/span&gt;
+&lt;span class="c1"&gt;# This is the URL where Nikola's output will be deployed.&lt;/span&gt;
+&lt;span class="c1"&gt;# If not set, defaults to SITE_URL&lt;/span&gt;
+&lt;span class="c1"&gt;# BASE_URL = "https://necromuralist.github.io/Bowling-For-Data/"&lt;/span&gt;
+&lt;span class="n"&gt;BLOG_EMAIL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"cloisteredmonkey.jmark@slmail.me"&lt;/span&gt;
+&lt;span class="n"&gt;BLOG_DESCRIPTION&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"A Monkey Works With Nikola."&lt;/span&gt;  &lt;span class="c1"&gt;# (translatable)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id="outline-container-orge6293ef" class="outline-2"&gt;
+&lt;h2 id="orge6293ef"&gt;The Theme&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orge6293ef"&gt;
 &lt;p&gt;
 This is how you choose the theme to use. We're using a custom theme so there's three things that have to match.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org7ffbbea" class="outline-3"&gt;
-&lt;h3 id="org7ffbbea"&gt;The Theme Location&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org7ffbbea"&gt;
+&lt;div id="outline-container-org4c8ccb1" class="outline-3"&gt;
+&lt;h3 id="org4c8ccb1"&gt;The Theme Location&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org4c8ccb1"&gt;
 &lt;p&gt;
 Next to the &lt;code&gt;conf.py&lt;/code&gt; file at the root of the nikola repository we need a folder named "themes" and inside that we put a folder whose name matches the name of our theme. I'm going to use &lt;code&gt;custom-mako&lt;/code&gt; as our example. The only other expected option at this point would be &lt;code&gt;custom-jinja&lt;/code&gt;. So our "themes" folder should look like this (more or less):
 &lt;/p&gt;
 
-&lt;pre class="example" id="orge1a6c61"&gt;
+&lt;pre class="example" id="orga882cc6"&gt;
 themes/
   custom-mako/
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orge610244" class="outline-3"&gt;
-&lt;h3 id="orge610244"&gt;The Theme Configuration&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orge610244"&gt;
+&lt;div id="outline-container-org9f54574" class="outline-3"&gt;
+&lt;h3 id="org9f54574"&gt;The Theme Configuration&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org9f54574"&gt;
 &lt;p&gt;
 Inside the &lt;code&gt;themes/custom-mako/&lt;/code&gt; folder we need a file with the name &lt;code&gt;custom-mako.theme&lt;/code&gt; - the base name of the file needs to match the name of our theme. This is where we tell nikola that we're using mako (or jinja as the case may be). Here's what's in it (the mako version).
 &lt;/p&gt;
@@ -237,11 +256,11 @@ family = bootstrap4
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org0cf59c4" class="outline-3"&gt;
-&lt;h3 id="org0cf59c4"&gt;The conf.py&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org0cf59c4"&gt;
+&lt;div id="outline-container-orgb001568" class="outline-3"&gt;
+&lt;h3 id="orgb001568"&gt;The conf.py&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgb001568"&gt;
 &lt;p&gt;
-Insitde &lt;code&gt;conf.py&lt;/code&gt; we put the name of the theme, matching the name of the folder and configuration file.
+Inside &lt;code&gt;conf.py&lt;/code&gt; we put the name of the theme, matching the name of the folder and configuration file.
 &lt;/p&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Name of the theme to use.&lt;/span&gt;
@@ -251,9 +270,162 @@ Insitde &lt;code&gt;conf.py&lt;/code&gt; we put the name of the theme, matching 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgd3185bc" class="outline-2"&gt;
-&lt;h2 id="orgd3185bc"&gt;The Tangle&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgd3185bc"&gt;
+&lt;div id="outline-container-org785dfa5" class="outline-2"&gt;
+&lt;h2 id="org785dfa5"&gt;Posts and Pages&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org785dfa5"&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-org79e556f" class="outline-3"&gt;
+&lt;h3 id="org79e556f"&gt;Posts&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org79e556f"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;POSTS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.org"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.rst"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.md"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.txt"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.html"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgbf5e315" class="outline-3"&gt;
+&lt;h3 id="orgbf5e315"&gt;Pages&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgbf5e315"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;PAGES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"source/*.org"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"page.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"source/*.rst"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"page.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"source/*.md"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"page.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"source/*.txt"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"page.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"source/*.html"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"page.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgcf5a113" class="outline-3"&gt;
+&lt;h3 id="orgcf5a113"&gt;The Index Path&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgcf5a113"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Final location for the main blog page and sibling paginated pages is&lt;/span&gt;
+&lt;span class="c1"&gt;# output / TRANSLATION[lang] / INDEX_PATH / index-*.html&lt;/span&gt;
+&lt;span class="c1"&gt;# (translatable)&lt;/span&gt;
+
+&lt;span class="n"&gt;INDEX_PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-org9567614" class="outline-2"&gt;
+&lt;h2 id="org9567614"&gt;Navigation Links&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org9567614"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;NAVIGATION_LINKS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;DEFAULT_LANG&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+	&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"/posts/"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"Posts"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+	&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"/archive.html"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"Archive"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+	&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"/categories/"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"Tags"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+	&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"/rss.xml"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"RSS"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+	&lt;span class="p"&gt;(&lt;/span&gt;
+	    &lt;span class="p"&gt;(&lt;/span&gt;
+		&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"https://necromuralist.github.io/"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"The Cloistered Monkey"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+		&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"https://necromuralist.github.io/Ape-Iron/"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"Ape Iron"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+		&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"https://necromuralist.github.io/Bowling-For-Data/"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"Bowling For Data"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+		&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"https://necromuralist.github.io/Neurotic-Networking/"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"Neurotic Networking"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+		&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"https://necromuralist.github.io/Visions-Voices-Data/"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"Visions, Voices, Data"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+		&lt;span class="p"&gt;),&lt;/span&gt;
+	    &lt;span class="s2"&gt;"Monkey Pages"&lt;/span&gt;
+	&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;),&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgb05b0dc" class="outline-2"&gt;
+&lt;h2 id="orgb05b0dc"&gt;Github Deploy&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgb05b0dc"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# github_deploy configuration&lt;/span&gt;
+&lt;span class="c1"&gt;# For more details, read the manual:&lt;/span&gt;
+&lt;span class="c1"&gt;# https://getnikola.com/handbook.html#deploying-to-github&lt;/span&gt;
+&lt;span class="c1"&gt;# You will need to configure the deployment branch on GitHub.&lt;/span&gt;
+&lt;span class="n"&gt;GITHUB_SOURCE_BRANCH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'main'&lt;/span&gt;
+&lt;span class="n"&gt;GITHUB_DEPLOY_BRANCH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'gh-pages'&lt;/span&gt;
+
+&lt;span class="c1"&gt;# The name of the remote where you wish to push to, using github_deploy.&lt;/span&gt;
+&lt;span class="n"&gt;GITHUB_REMOTE_NAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'origin'&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Whether or not github_deploy should commit to the source branch automatically&lt;/span&gt;
+&lt;span class="c1"&gt;# before deploying.&lt;/span&gt;
+&lt;span class="n"&gt;GITHUB_COMMIT_SOURCE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt; &lt;span class="c1"&gt;# True&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgccd9700" class="outline-2"&gt;
+&lt;h2 id="orgccd9700"&gt;The License&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgccd9700"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;LICENSE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'''&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;lt;div id="license"xmlns:cc="http://creativecommons.org/ns#" &amp;gt;This work is licensed under&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&amp;gt;CC BY 4.0&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&amp;gt;&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&amp;gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class="s1"&gt;'''&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org2a4f878" class="outline-2"&gt;
+&lt;h2 id="org2a4f878"&gt;The Footer&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org2a4f878"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;CONTENT_FOOTER&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'Scribbles by &amp;lt;a href="mailto:&lt;/span&gt;&lt;span class="si"&gt;{email}&lt;/span&gt;&lt;span class="s1"&gt;"&amp;gt;&lt;/span&gt;&lt;span class="si"&gt;{author}&lt;/span&gt;&lt;span class="s1"&gt;&amp;lt;/a&amp;gt; - Powered by         &amp;lt;a href="https://getnikola.com" rel="nofollow"&amp;gt;Nikola&amp;lt;/a&amp;gt;         &lt;/span&gt;&lt;span class="si"&gt;{license}&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgd55ee87" class="outline-2"&gt;
+&lt;h2 id="orgd55ee87"&gt;Strip Indexes&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgd55ee87"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# If a link ends in /index.html,  drop the index.html part.&lt;/span&gt;
+&lt;span class="c1"&gt;# http://mysite/foo/bar/index.html =&amp;gt; http://mysite/foo/bar/&lt;/span&gt;
+&lt;span class="c1"&gt;# (Uses the INDEX_FILE setting, so if that is, say, default.html,&lt;/span&gt;
+&lt;span class="c1"&gt;# it will instead /foo/default.html =&amp;gt; /foo)&lt;/span&gt;
+&lt;span class="n"&gt;STRIP_INDEXES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgeafee80" class="outline-2"&gt;
+&lt;h2 id="orgeafee80"&gt;Search Form&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgeafee80"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# A search form to search this site, for the sidebar. You can use a Google&lt;/span&gt;
+&lt;span class="c1"&gt;# custom search (https://www.google.com/cse/)&lt;/span&gt;
+&lt;span class="c1"&gt;# Or a DuckDuckGo search: https://duckduckgo.com/search_box.html&lt;/span&gt;
+&lt;span class="c1"&gt;# Default is no search form.&lt;/span&gt;
+&lt;span class="c1"&gt;# (translatable)&lt;/span&gt;
+&lt;span class="c1"&gt;# SEARCH_FORM = ""&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;# This search form works for any site and looks good in the "site" theme where&lt;/span&gt;
+&lt;span class="c1"&gt;# it appears on the navigation bar:&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="n"&gt;SEARCH_FORM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"""&lt;/span&gt;
+&lt;span class="s2"&gt; &amp;lt;!-- DuckDuckGo custom search --&amp;gt;&lt;/span&gt;
+&lt;span class="s2"&gt; &amp;lt;form method="get" id="search" action="https://duckduckgo.com/" role="search"&lt;/span&gt;
+&lt;span class="s2"&gt;  class="d-flex"&amp;gt;&lt;/span&gt;
+&lt;span class="s2"&gt; &amp;lt;input type="hidden" name="sites" value="&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;"&amp;gt;&lt;/span&gt;
+&lt;span class="s2"&gt; &amp;lt;input type="hidden" name="k8" value="#444444"&amp;gt;&lt;/span&gt;
+&lt;span class="s2"&gt; &amp;lt;input type="hidden" name="k9" value="#D51920"&amp;gt;&lt;/span&gt;
+&lt;span class="s2"&gt; &amp;lt;input type="hidden" name="kt" value="h"&amp;gt;&lt;/span&gt;
+&lt;span class="s2"&gt; &amp;lt;input type="text" name="q" maxlength="255"&lt;/span&gt;
+&lt;span class="s2"&gt;  placeholder="Search&amp;amp;hellip;" class="form-control me-2" style="margin-top: 4px;" aria-lab&amp;gt;&lt;/span&gt;
+&lt;span class="s2"&gt; &amp;lt;input type="submit" value="DuckDuckGo Search" style="visibility: hidden;"&amp;gt;&lt;/span&gt;
+&lt;span class="s2"&gt; &amp;lt;/form&amp;gt;&lt;/span&gt;
+&lt;span class="s2"&gt; &amp;lt;!-- End of custom search --&amp;gt;&lt;/span&gt;
+&lt;span class="s2"&gt; """&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;SITE_URL&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-org7ba8a51" class="outline-2"&gt;
+&lt;h2 id="org7ba8a51"&gt;The Tangle&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org7ba8a51"&gt;
 &lt;p&gt;
 This should eventually get broken up enough to be hidden, but not yet.
 &lt;/p&gt;
@@ -275,17 +447,8 @@ This should eventually get broken up enough to be hidden, but not yet.
 &lt;span class="c1"&gt;# ! Option (b) is used for settings that are different in different languages.&lt;/span&gt;
 
 
-&lt;span class="c1"&gt;# Data about this site&lt;/span&gt;
-&lt;span class="n"&gt;BLOG_AUTHOR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"The Cloistered Monkey"&lt;/span&gt;  &lt;span class="c1"&gt;# (translatable)&lt;/span&gt;
-&lt;span class="n"&gt;BLOG_TITLE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"Beach Pig Thigh Tower"&lt;/span&gt;  &lt;span class="c1"&gt;# (translatable)&lt;/span&gt;
-&lt;span class="c1"&gt;# This is the main URL for your site. It will be used&lt;/span&gt;
-&lt;span class="c1"&gt;# in a prominent link. Don't forget the protocol (http/https)!&lt;/span&gt;
-&lt;span class="n"&gt;SITE_URL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"https://necromuralist.github.io/Beach-Pig-Thigh/"&lt;/span&gt;
-&lt;span class="c1"&gt;# This is the URL where Nikola's output will be deployed.&lt;/span&gt;
-&lt;span class="c1"&gt;# If not set, defaults to SITE_URL&lt;/span&gt;
-&lt;span class="c1"&gt;# BASE_URL = "https://necromuralist.github.io/Bowling-For-Data/"&lt;/span&gt;
-&lt;span class="n"&gt;BLOG_EMAIL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"cloisteredmonkey.jmark@slmail.me"&lt;/span&gt;
-&lt;span class="n"&gt;BLOG_DESCRIPTION&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"A Monkey Working With Nikola."&lt;/span&gt;  &lt;span class="c1"&gt;# (translatable)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;site&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt;
+
 
 &lt;span class="c1"&gt;# Nikola is multilingual!&lt;/span&gt;
 &lt;span class="c1"&gt;#&lt;/span&gt;
@@ -398,14 +561,7 @@ This should eventually get broken up enough to be hidden, but not yet.
 &lt;span class="c1"&gt;#          with a ``/``, otherwise end them with ``/index.html`` — or&lt;/span&gt;
 &lt;span class="c1"&gt;#          else they won’t be highlighted when active.&lt;/span&gt;
 
-&lt;span class="n"&gt;NAVIGATION_LINKS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="n"&gt;DEFAULT_LANG&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
-	&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"/source/"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"Source Code"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-	&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"/archive.html"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"Archive"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-	&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"/categories/"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"Tags"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-	&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"/rss.xml"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"RSS feed"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-    &lt;span class="p"&gt;),&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;navigation&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;links&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Alternative navigation links. Works the same way NAVIGATION_LINKS does,&lt;/span&gt;
 &lt;span class="c1"&gt;# although themes may not always support them. (translatable)&lt;/span&gt;
@@ -493,21 +649,9 @@ This should eventually get broken up enough to be hidden, but not yet.
 &lt;span class="c1"&gt;#         ("pages/*.rst", {"en": "pages", "de": "seiten"}, "page.tmpl"),&lt;/span&gt;
 &lt;span class="c1"&gt;#         ("pages/*.md", {"en": "pages", "de": "seiten"}, "page.tmpl"),&lt;/span&gt;
 &lt;span class="c1"&gt;#     )&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;formats&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt;
 
-&lt;span class="n"&gt;POSTS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
-    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.org"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.rst"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.md"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.txt"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.html"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;PAGES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
-    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"source/*.org"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"source"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"page.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"source/*.rst"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"source"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"page.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"source/*.md"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"source"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"page.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"source/*.txt"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"source"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"page.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"source/*.html"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"source"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"page.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;pages&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt;
 
 
 &lt;span class="c1"&gt;# Below this point, everything is optional&lt;/span&gt;
@@ -835,10 +979,7 @@ This should eventually get broken up enough to be hidden, but not yet.
 &lt;span class="c1"&gt;# Allow multiple, comma-separated authors for a post? (Requires theme support, present in built-in themes)&lt;/span&gt;
 &lt;span class="c1"&gt;# MULTIPLE_AUTHORS_PER_POST = False&lt;/span&gt;
 
-&lt;span class="c1"&gt;# Final location for the main blog page and sibling paginated pages is&lt;/span&gt;
-&lt;span class="c1"&gt;# output / TRANSLATION[lang] / INDEX_PATH / index-*.html&lt;/span&gt;
-&lt;span class="c1"&gt;# (translatable)&lt;/span&gt;
-&lt;span class="c1"&gt;# INDEX_PATH = ""&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Optional HTML that displayed on “main” blog index.html files.&lt;/span&gt;
 &lt;span class="c1"&gt;# May be used for a greeting. (translatable)&lt;/span&gt;
@@ -938,15 +1079,7 @@ This should eventually get broken up enough to be hidden, but not yet.
 &lt;span class="c1"&gt;# For more details, read the manual:&lt;/span&gt;
 &lt;span class="c1"&gt;# https://getnikola.com/handbook.html#deploying-to-github&lt;/span&gt;
 &lt;span class="c1"&gt;# You will need to configure the deployment branch on GitHub.&lt;/span&gt;
-&lt;span class="n"&gt;GITHUB_SOURCE_BRANCH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'main'&lt;/span&gt;
-&lt;span class="n"&gt;GITHUB_DEPLOY_BRANCH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'gh-pages'&lt;/span&gt;
-
-&lt;span class="c1"&gt;# The name of the remote where you wish to push to, using github_deploy.&lt;/span&gt;
-&lt;span class="n"&gt;GITHUB_REMOTE_NAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'origin'&lt;/span&gt;
-
-&lt;span class="c1"&gt;# Whether or not github_deploy should commit to the source branch automatically&lt;/span&gt;
-&lt;span class="c1"&gt;# before deploying.&lt;/span&gt;
-&lt;span class="n"&gt;GITHUB_COMMIT_SOURCE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;deploy&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Where the output site should be located&lt;/span&gt;
 &lt;span class="c1"&gt;# If you don't use an absolute path, it will be considered as relative&lt;/span&gt;
@@ -1229,22 +1362,11 @@ This should eventually get broken up enough to be hidden, but not yet.
 
 &lt;span class="c1"&gt;# A HTML fragment describing the license, for the sidebar.&lt;/span&gt;
 &lt;span class="c1"&gt;# (translatable)&lt;/span&gt;
-&lt;span class="c1"&gt;# LICENSE = ""&lt;/span&gt;
-&lt;span class="c1"&gt;# I recommend using the Creative Commons' wizard:&lt;/span&gt;
-&lt;span class="c1"&gt;# https://creativecommons.org/choose/&lt;/span&gt;
-&lt;span class="c1"&gt;# compact&lt;/span&gt;
-&lt;span class="c1"&gt;# LICENSE = """&lt;/span&gt;
-&lt;span class="c1"&gt;# &amp;lt;a rel="license" href="http://creativecommons.org/licenses/by/4.0/"&amp;gt;&amp;lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;This work is licensed under a &amp;lt;a rel="license" href="http://creativecommons.org/licenses/by/4.0/"&amp;gt;Creative Commons Attribution 4.0 International License&amp;lt;/a&amp;gt;.&lt;/span&gt;
-&lt;span class="c1"&gt;# """&lt;/span&gt;
-&lt;span class="n"&gt;LICENSE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"""&lt;/span&gt;
-&lt;span class="s2"&gt; &amp;lt;a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"&amp;gt;&lt;/span&gt;
-&lt;span class="s2"&gt; &amp;lt;img alt="Creative Commons License BY-NC-SA"&lt;/span&gt;
-&lt;span class="s2"&gt; style="border-width:0; margin-bottom:12px;"&lt;/span&gt;
-&lt;span class="s2"&gt; src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"&amp;gt;&amp;lt;/a&amp;gt;"""&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;license&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt;
 
 &lt;span class="c1"&gt;# A small copyright notice for the page footer (in HTML).&lt;/span&gt;
 &lt;span class="c1"&gt;# (translatable)&lt;/span&gt;
-&lt;span class="n"&gt;CONTENT_FOOTER&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'&amp;lt;a href="mailto:&lt;/span&gt;&lt;span class="si"&gt;{email}&lt;/span&gt;&lt;span class="s1"&gt;"&amp;gt;&lt;/span&gt;&lt;span class="si"&gt;{author}&lt;/span&gt;&lt;span class="s1"&gt;&amp;lt;/a&amp;gt; - Powered by         &amp;lt;a href="https://getnikola.com" rel="nofollow"&amp;gt;Nikola&amp;lt;/a&amp;gt;         &lt;/span&gt;&lt;span class="si"&gt;{license}&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;footer&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Things that will be passed to CONTENT_FOOTER.format().  This is done&lt;/span&gt;
 &lt;span class="c1"&gt;# for translatability, as dicts are not formattable.  Nikola will&lt;/span&gt;
@@ -1303,11 +1425,7 @@ This should eventually get broken up enough to be hidden, but not yet.
 &lt;span class="c1"&gt;# Common other alternatives: default.html for IIS, index.php&lt;/span&gt;
 &lt;span class="c1"&gt;# INDEX_FILE = "index.html"&lt;/span&gt;
 
-&lt;span class="c1"&gt;# If a link ends in /index.html,  drop the index.html part.&lt;/span&gt;
-&lt;span class="c1"&gt;# http://mysite/foo/bar/index.html =&amp;gt; http://mysite/foo/bar/&lt;/span&gt;
-&lt;span class="c1"&gt;# (Uses the INDEX_FILE setting, so if that is, say, default.html,&lt;/span&gt;
-&lt;span class="c1"&gt;# it will instead /foo/default.html =&amp;gt; /foo)&lt;/span&gt;
-&lt;span class="n"&gt;STRIP_INDEXES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;indexes&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt;
 
 &lt;span class="c1"&gt;# List of files relative to the server root (!) that will be asked to be excluded&lt;/span&gt;
 &lt;span class="c1"&gt;# from indexing and other robotic spidering. * is supported. Will only be effective&lt;/span&gt;
@@ -1467,45 +1585,7 @@ This should eventually get broken up enough to be hidden, but not yet.
 &lt;span class="c1"&gt;# change it for a FeedBurner feed or something else.&lt;/span&gt;
 &lt;span class="c1"&gt;# RSS_LINK = None&lt;/span&gt;
 
-&lt;span class="c1"&gt;# A search form to search this site, for the sidebar. You can use a Google&lt;/span&gt;
-&lt;span class="c1"&gt;# custom search (https://www.google.com/cse/)&lt;/span&gt;
-&lt;span class="c1"&gt;# Or a DuckDuckGo search: https://duckduckgo.com/search_box.html&lt;/span&gt;
-&lt;span class="c1"&gt;# Default is no search form.&lt;/span&gt;
-&lt;span class="c1"&gt;# (translatable)&lt;/span&gt;
-&lt;span class="c1"&gt;# SEARCH_FORM = ""&lt;/span&gt;
-&lt;span class="c1"&gt;#&lt;/span&gt;
-&lt;span class="c1"&gt;# This search form works for any site and looks good in the "site" theme where&lt;/span&gt;
-&lt;span class="c1"&gt;# it appears on the navigation bar:&lt;/span&gt;
-&lt;span class="c1"&gt;#&lt;/span&gt;
-&lt;span class="n"&gt;SEARCH_FORM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"""&lt;/span&gt;
-&lt;span class="s2"&gt; &amp;lt;!-- DuckDuckGo custom search --&amp;gt;&lt;/span&gt;
-&lt;span class="s2"&gt; &amp;lt;form method="get" id="search" action="https://duckduckgo.com/"&lt;/span&gt;
-&lt;span class="s2"&gt;  class="navbar-form pull-left"&amp;gt;&lt;/span&gt;
-&lt;span class="s2"&gt; &amp;lt;input type="hidden" name="sites" value="&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;"&amp;gt;&lt;/span&gt;
-&lt;span class="s2"&gt; &amp;lt;input type="hidden" name="k8" value="#444444"&amp;gt;&lt;/span&gt;
-&lt;span class="s2"&gt; &amp;lt;input type="hidden" name="k9" value="#D51920"&amp;gt;&lt;/span&gt;
-&lt;span class="s2"&gt; &amp;lt;input type="hidden" name="kt" value="h"&amp;gt;&lt;/span&gt;
-&lt;span class="s2"&gt; &amp;lt;input type="text" name="q" maxlength="255"&lt;/span&gt;
-&lt;span class="s2"&gt;  placeholder="Search&amp;amp;hellip;" class="span2" style="margin-top: 4px;"&amp;gt;&lt;/span&gt;
-&lt;span class="s2"&gt; &amp;lt;input type="submit" value="DuckDuckGo Search" style="visibility: hidden;"&amp;gt;&lt;/span&gt;
-&lt;span class="s2"&gt; &amp;lt;/form&amp;gt;&lt;/span&gt;
-&lt;span class="s2"&gt; &amp;lt;!-- End of custom search --&amp;gt;&lt;/span&gt;
-&lt;span class="s2"&gt; """&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;SITE_URL&lt;/span&gt;
-&lt;span class="c1"&gt;#&lt;/span&gt;
-&lt;span class="c1"&gt;# If you prefer a Google search form, here's an example that should just work:&lt;/span&gt;
-&lt;span class="c1"&gt;# SEARCH_FORM = """&lt;/span&gt;
-&lt;span class="c1"&gt;# &amp;lt;!-- Google custom search --&amp;gt;&lt;/span&gt;
-&lt;span class="c1"&gt;# &amp;lt;form method="get" action="https://www.google.com/search" class="navbar-form navbar-right" role="search"&amp;gt;&lt;/span&gt;
-&lt;span class="c1"&gt;# &amp;lt;div class="form-group"&amp;gt;&lt;/span&gt;
-&lt;span class="c1"&gt;# &amp;lt;input type="text" name="q" class="form-control" placeholder="Search"&amp;gt;&lt;/span&gt;
-&lt;span class="c1"&gt;# &amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class="c1"&gt;# &amp;lt;button type="submit" class="btn btn-primary"&amp;gt;&lt;/span&gt;
-&lt;span class="c1"&gt;# 	&amp;lt;span class="glyphicon glyphicon-search"&amp;gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-&lt;span class="c1"&gt;# &amp;lt;/button&amp;gt;&lt;/span&gt;
-&lt;span class="c1"&gt;# &amp;lt;input type="hidden" name="sitesearch" value="%s"&amp;gt;&lt;/span&gt;
-&lt;span class="c1"&gt;# &amp;lt;/form&amp;gt;&lt;/span&gt;
-&lt;span class="c1"&gt;# &amp;lt;!-- End of custom search --&amp;gt;&lt;/span&gt;
-&lt;span class="c1"&gt;# """ % SITE_URL&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;search&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;form&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Use content distribution networks for jQuery, twitter-bootstrap css and js,&lt;/span&gt;
 &lt;span class="c1"&gt;# and html5shiv (for older versions of Internet Explorer)&lt;/span&gt;
@@ -1681,7 +1761,7 @@ This should eventually get broken up enough to be hidden, but not yet.
 &lt;span class="n"&gt;GLOBAL_CONTEXT_FILLER&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>nikola</category><guid>https://necromuralist.github.io/Beach-Pig-Thigh/posts/nikola-confpy/</guid><pubDate>Tue, 20 Jun 2023 22:42:22 GMT</pubDate></item><item><title>P5 CDN URL</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-cdn-url/</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;p&gt;
+&lt;/div&gt;</description><category>nikola</category><guid>https://necromuralist.github.io/Beach-Pig-Thigh/posts/nikola-confpy/index.html</guid><pubDate>Tue, 20 Jun 2023 22:42:22 GMT</pubDate></item><item><title>P5 CDN URL</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-cdn-url/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;p&gt;
 {# This is tangled from the "p5-div-shortcode" post #}
 
 &lt;script src="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-cdn-url/%7B%7B%20source%20%7D%7D"&gt;&lt;/script&gt;
@@ -1700,17 +1780,17 @@ To change the script tag with the URL for the p5 CDN, put a new one in the &lt;c
     &lt;span class="s1"&gt;' src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"'&lt;/span&gt;
     &lt;span class="s1"&gt;' integrity="sha512-3RlxD1bW34eFKPwj9gUXEWtdSMC59QqIqHnD8O/NoTwSJhgxRizdcFVQhUMFyTp5RwLTDL0Lbcqtl8b7bFAzog=="'&lt;/span&gt;
     &lt;span class="s1"&gt;' crossorigin="anonymous" referrerpolicy="no-referrer"&amp;gt;&amp;lt;/script&amp;gt;'&lt;/span&gt;&lt;span class="p"&gt;)}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</description><category>p5</category><category>shortcode</category><category>template</category><guid>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-cdn-url/</guid><pubDate>Fri, 05 May 2023 22:19:31 GMT</pubDate></item><item><title>P5 Div Shortcode</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><category>p5</category><category>shortcode</category><category>template</category><guid>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-cdn-url/index.html</guid><pubDate>Fri, 05 May 2023 22:19:31 GMT</pubDate></item><item><title>P5 Div Shortcode</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/#org0eb1e46"&gt;The Shortcodes&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html#org0eb1e46"&gt;The Shortcodes&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/#orgcfa25e2"&gt;Mako&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/#org73c747b"&gt;Jinja&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html#orgcfa25e2"&gt;Mako&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html#org73c747b"&gt;Jinja&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/#org9d20819"&gt;Links&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html#org9d20819"&gt;Links&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1863,4 +1943,4 @@ To use it you use the same syntax as the mako-based shortcode, just change the n
 &lt;li&gt;&amp;lt;script&amp;gt;: The Script element - HTML: HyperText Markup Language | MDN [Internet]. 2023 [cited 2023 Jun 20]. Available from: &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script"&gt;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>p5</category><category>shortcode</category><category>template</category><guid>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/</guid><pubDate>Fri, 05 May 2023 22:19:31 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;</description><category>p5</category><category>shortcode</category><category>template</category><guid>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html</guid><pubDate>Fri, 05 May 2023 22:19:31 GMT</pubDate></item></channel></rss>

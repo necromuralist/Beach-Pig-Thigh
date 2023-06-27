@@ -10,6 +10,23 @@
 
 #+END_COMMENT
 
+* Site Data
+
+#+begin_src python :noweb-ref site-data
+# Data about this site
+BLOG_AUTHOR = "The Cloistered Monkey"  # (translatable)
+BLOG_TITLE = "Beach Pig Rump & Thigh"  # (translatable)
+# This is the main URL for your site. It will be used
+# in a prominent link. Don't forget the protocol (http/https)!
+SITE_URL = "https://necromuralist.github.io/Beach-Pig-Thigh/"
+# This is the URL where Nikola's output will be deployed.
+# If not set, defaults to SITE_URL
+# BASE_URL = "https://necromuralist.github.io/Bowling-For-Data/"
+BLOG_EMAIL = "cloisteredmonkey.jmark@slmail.me"
+BLOG_DESCRIPTION = "A Monkey Works With Nikola."  # (translatable)
+#+end_src
+
+
 * The Theme
 This is how you choose the theme to use. We're using a custom theme so there's three things that have to match.
 
@@ -30,13 +47,144 @@ Inside the ~themes/custom-mako/~ folder we need a file with the name ~custom-mak
 
 ** The conf.py
 
-Insitde ~conf.py~ we put the name of the theme, matching the name of the folder and configuration file.
+Inside ~conf.py~ we put the name of the theme, matching the name of the folder and configuration file.
 
 #+begin_src python :noweb-ref theme-name
 # Name of the theme to use.
 THEME = "custom-mako"
 #+end_src
 
+* Posts and Pages
+** Posts
+
+#+begin_src python :noweb-ref post-formats
+POSTS = (
+    ("posts/*.org", "posts", "post.tmpl"),
+    ("posts/*.rst", "posts", "post.tmpl"),
+    ("posts/*.md", "posts", "post.tmpl"),
+    ("posts/*.txt", "posts", "post.tmpl"),
+    ("posts/*.html", "posts", "post.tmpl"),
+)
+#+end_src
+
+** Pages
+
+#+begin_src python :noweb-ref pages
+PAGES = (
+    ("source/*.org", "", "page.tmpl"),
+    ("source/*.rst", "", "page.tmpl"),
+    ("source/*.md", "", "page.tmpl"),
+    ("source/*.txt", "", "page.tmpl"),
+    ("source/*.html", "", "page.tmpl"),
+)
+#+end_src
+
+** The Index Path
+
+#+begin_src python :noweb-ref index-path
+# Final location for the main blog page and sibling paginated pages is
+# output / TRANSLATION[lang] / INDEX_PATH / index-*.html
+# (translatable)
+
+INDEX_PATH = "posts"
+#+end_src
+* Navigation Links
+
+#+begin_src python :noweb-ref navigation-links
+NAVIGATION_LINKS = {
+    DEFAULT_LANG: (
+        ("/posts/", "Posts"),
+        ("/archive.html", "Archive"),
+        ("/categories/", "Tags"),
+        ("/rss.xml", "RSS"),
+        (
+            (
+                ("https://necromuralist.github.io/", "The Cloistered Monkey"),
+                ("https://necromuralist.github.io/Ape-Iron/", "Ape Iron"),
+                ("https://necromuralist.github.io/Bowling-For-Data/", "Bowling For Data"),
+                ("https://necromuralist.github.io/Neurotic-Networking/", "Neurotic Networking"),
+                ("https://necromuralist.github.io/Visions-Voices-Data/", "Visions, Voices, Data")
+                ),
+            "Monkey Pages"
+        ),
+    ),
+}
+#+end_src
+
+* Github Deploy
+
+#+begin_src python :noweb-ref github-deploy
+# github_deploy configuration
+# For more details, read the manual:
+# https://getnikola.com/handbook.html#deploying-to-github
+# You will need to configure the deployment branch on GitHub.
+GITHUB_SOURCE_BRANCH = 'main'
+GITHUB_DEPLOY_BRANCH = 'gh-pages'
+
+# The name of the remote where you wish to push to, using github_deploy.
+GITHUB_REMOTE_NAME = 'origin'
+
+# Whether or not github_deploy should commit to the source branch automatically
+# before deploying.
+GITHUB_COMMIT_SOURCE = False # True
+#+end_src
+
+* The License
+
+#+begin_src python :noweb-ref the-license
+LICENSE = '''
+<div id="license"xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under
+<a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0
+<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1">
+<img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a>
+</div>
+'''
+#+end_src
+
+* The Footer
+
+#+begin_src python :noweb-ref content-footer
+CONTENT_FOOTER = 'Scribbles by <a href="mailto:{email}">{author}</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         {license}'
+#+end_src
+
+* Strip Indexes
+
+#+begin_src python :noweb-ref strip-indexes
+# If a link ends in /index.html,  drop the index.html part.
+# http://mysite/foo/bar/index.html => http://mysite/foo/bar/
+# (Uses the INDEX_FILE setting, so if that is, say, default.html,
+# it will instead /foo/default.html => /foo)
+STRIP_INDEXES = False
+#+end_src
+
+* Search Form
+
+#+begin_src python :noweb-ref search-form
+# A search form to search this site, for the sidebar. You can use a Google
+# custom search (https://www.google.com/cse/)
+# Or a DuckDuckGo search: https://duckduckgo.com/search_box.html
+# Default is no search form.
+# (translatable)
+# SEARCH_FORM = ""
+#
+# This search form works for any site and looks good in the "site" theme where
+# it appears on the navigation bar:
+#
+SEARCH_FORM = """
+ <!-- DuckDuckGo custom search -->
+ <form method="get" id="search" action="https://duckduckgo.com/" role="search"
+  class="d-flex">
+ <input type="hidden" name="sites" value="%s">
+ <input type="hidden" name="k8" value="#444444">
+ <input type="hidden" name="k9" value="#D51920">
+ <input type="hidden" name="kt" value="h">
+ <input type="text" name="q" maxlength="255"
+  placeholder="Search&hellip;" class="form-control me-2" style="margin-top: 4px;" aria-lab>
+ <input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+ </form>
+ <!-- End of custom search -->
+ """ % SITE_URL
+#+end_src
 * The Tangle
 
 This should eventually get broken up enough to be hidden, but not yet.
@@ -59,17 +207,8 @@ import time
 # ! Option (b) is used for settings that are different in different languages.
 
 
-# Data about this site
-BLOG_AUTHOR = "The Cloistered Monkey"  # (translatable)
-BLOG_TITLE = "Beach Pig Thigh Tower"  # (translatable)
-# This is the main URL for your site. It will be used
-# in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "https://necromuralist.github.io/Beach-Pig-Thigh/"
-# This is the URL where Nikola's output will be deployed.
-# If not set, defaults to SITE_URL
-# BASE_URL = "https://necromuralist.github.io/Bowling-For-Data/"
-BLOG_EMAIL = "cloisteredmonkey.jmark@slmail.me"
-BLOG_DESCRIPTION = "A Monkey Working With Nikola."  # (translatable)
+<<site-data>>
+
 
 # Nikola is multilingual!
 #
@@ -182,14 +321,7 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 #          with a ``/``, otherwise end them with ``/index.html`` — or
 #          else they won’t be highlighted when active.
 
-NAVIGATION_LINKS = {
-    DEFAULT_LANG: (
-        ("/source/", "Source Code"),
-        ("/archive.html", "Archive"),
-        ("/categories/", "Tags"),
-        ("/rss.xml", "RSS feed"),
-    ),
-}
+<<navigation-links>>
 
 # Alternative navigation links. Works the same way NAVIGATION_LINKS does,
 # although themes may not always support them. (translatable)
@@ -277,21 +409,9 @@ THEME_CONFIG = {
 #         ("pages/*.rst", {"en": "pages", "de": "seiten"}, "page.tmpl"),
 #         ("pages/*.md", {"en": "pages", "de": "seiten"}, "page.tmpl"),
 #     )
+<<post-formats>>
 
-POSTS = (
-    ("posts/*.org", "posts", "post.tmpl"),
-    ("posts/*.rst", "posts", "post.tmpl"),
-    ("posts/*.md", "posts", "post.tmpl"),
-    ("posts/*.txt", "posts", "post.tmpl"),
-    ("posts/*.html", "posts", "post.tmpl"),
-)
-PAGES = (
-    ("source/*.org", "source", "page.tmpl"),
-    ("source/*.rst", "source", "page.tmpl"),
-    ("source/*.md", "source", "page.tmpl"),
-    ("source/*.txt", "source", "page.tmpl"),
-    ("source/*.html", "source", "page.tmpl"),
-)
+<<pages>>
 
 
 # Below this point, everything is optional
@@ -619,10 +739,7 @@ HIDDEN_AUTHORS = ['Guest']
 # Allow multiple, comma-separated authors for a post? (Requires theme support, present in built-in themes)
 # MULTIPLE_AUTHORS_PER_POST = False
 
-# Final location for the main blog page and sibling paginated pages is
-# output / TRANSLATION[lang] / INDEX_PATH / index-*.html
-# (translatable)
-# INDEX_PATH = ""
+<<index-path>>
 
 # Optional HTML that displayed on “main” blog index.html files.
 # May be used for a greeting. (translatable)
@@ -722,15 +839,7 @@ REDIRECTIONS = []
 # For more details, read the manual:
 # https://getnikola.com/handbook.html#deploying-to-github
 # You will need to configure the deployment branch on GitHub.
-GITHUB_SOURCE_BRANCH = 'main'
-GITHUB_DEPLOY_BRANCH = 'gh-pages'
-
-# The name of the remote where you wish to push to, using github_deploy.
-GITHUB_REMOTE_NAME = 'origin'
-
-# Whether or not github_deploy should commit to the source branch automatically
-# before deploying.
-GITHUB_COMMIT_SOURCE = True
+<<github-deploy>>
 
 # Where the output site should be located
 # If you don't use an absolute path, it will be considered as relative
@@ -1013,22 +1122,11 @@ FEED_LINKS_APPEND_QUERY = False
 
 # A HTML fragment describing the license, for the sidebar.
 # (translatable)
-# LICENSE = ""
-# I recommend using the Creative Commons' wizard:
-# https://creativecommons.org/choose/
-# compact
-# LICENSE = """
-# <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-# """
-LICENSE = """
- <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
- <img alt="Creative Commons License BY-NC-SA"
- style="border-width:0; margin-bottom:12px;"
- src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a>"""
+<<the-license>>
 
 # A small copyright notice for the page footer (in HTML).
 # (translatable)
-CONTENT_FOOTER = '<a href="mailto:{email}">{author}</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         {license}'
+<<content-footer>>
 
 # Things that will be passed to CONTENT_FOOTER.format().  This is done
 # for translatability, as dicts are not formattable.  Nikola will
@@ -1087,11 +1185,7 @@ COMMENT_SYSTEM_ID = ""
 # Common other alternatives: default.html for IIS, index.php
 # INDEX_FILE = "index.html"
 
-# If a link ends in /index.html,  drop the index.html part.
-# http://mysite/foo/bar/index.html => http://mysite/foo/bar/
-# (Uses the INDEX_FILE setting, so if that is, say, default.html,
-# it will instead /foo/default.html => /foo)
-STRIP_INDEXES = True
+<<strip-indexes>>
 
 # List of files relative to the server root (!) that will be asked to be excluded
 # from indexing and other robotic spidering. * is supported. Will only be effective
@@ -1251,45 +1345,7 @@ PRETTY_URLS = True
 # change it for a FeedBurner feed or something else.
 # RSS_LINK = None
 
-# A search form to search this site, for the sidebar. You can use a Google
-# custom search (https://www.google.com/cse/)
-# Or a DuckDuckGo search: https://duckduckgo.com/search_box.html
-# Default is no search form.
-# (translatable)
-# SEARCH_FORM = ""
-#
-# This search form works for any site and looks good in the "site" theme where
-# it appears on the navigation bar:
-#
-SEARCH_FORM = """
- <!-- DuckDuckGo custom search -->
- <form method="get" id="search" action="https://duckduckgo.com/"
-  class="navbar-form pull-left">
- <input type="hidden" name="sites" value="%s">
- <input type="hidden" name="k8" value="#444444">
- <input type="hidden" name="k9" value="#D51920">
- <input type="hidden" name="kt" value="h">
- <input type="text" name="q" maxlength="255"
-  placeholder="Search&hellip;" class="span2" style="margin-top: 4px;">
- <input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
- </form>
- <!-- End of custom search -->
- """ % SITE_URL
-#
-# If you prefer a Google search form, here's an example that should just work:
-# SEARCH_FORM = """
-# <!-- Google custom search -->
-# <form method="get" action="https://www.google.com/search" class="navbar-form navbar-right" role="search">
-# <div class="form-group">
-# <input type="text" name="q" class="form-control" placeholder="Search">
-# </div>
-# <button type="submit" class="btn btn-primary">
-# 	<span class="glyphicon glyphicon-search"></span>
-# </button>
-# <input type="hidden" name="sitesearch" value="%s">
-# </form>
-# <!-- End of custom search -->
-# """ % SITE_URL
+<<search-form>>
 
 # Use content distribution networks for jQuery, twitter-bootstrap css and js,
 # and html5shiv (for older versions of Internet Explorer)

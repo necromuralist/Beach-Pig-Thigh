@@ -5,7 +5,7 @@
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;
 &lt;/div&gt;
-</copyright><lastBuildDate>Mon, 26 Jun 2023 03:57:39 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Orgmode Plugin init.el</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;p&gt;
+</copyright><lastBuildDate>Tue, 27 Jun 2023 23:57:34 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Orgmode Plugin init.el</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;p&gt;
 This is the emacs configuration (&lt;code&gt;init.el&lt;/code&gt;) for the &lt;a href="https://plugins.getnikola.com/v8/orgmode/"&gt;orgmode plugin&lt;/a&gt; to export posts and pages to HTML. I spent forever messing with the &lt;code&gt;init.el&lt;/code&gt; file for my emacs instance, but it turns out that the plugin has its own configuration so you have to make changes here or they won't matter.
 &lt;/p&gt;
 
@@ -193,4 +193,4 @@ Add coloring for the fish-shell.
 &lt;li&gt;Languages — Pygments [Internet]. [cited 2023 Jun 25]. Available from: &lt;a href="https://pygments.org/languages/"&gt;https://pygments.org/languages/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>orgmode</category><category>plugins</category><guid>https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/</guid><pubDate>Mon, 26 Jun 2023 03:39:18 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;</description><category>orgmode</category><category>plugins</category><guid>https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html</guid><pubDate>Mon, 26 Jun 2023 03:39:18 GMT</pubDate></item></channel></rss>
