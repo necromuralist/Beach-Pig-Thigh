@@ -12,6 +12,48 @@
 
 This is the emacs configuration (~init.el~) for the [[https://plugins.getnikola.com/v8/orgmode/][orgmode plugin]] to export posts and pages to HTML. I spent forever messing with the ~init.el~ file for my emacs instance, but it turns out that the plugin has its own configuration so you have to make changes here or they won't matter.
 
+* Pygments
+This is the list of languages that pygments will colorize when source-code blocks are exported. The org-babel documentation has a [[https://orgmode.org/worg/org-contrib/babel/languages/index.html][list of supported]] languages, but it doesn't list ~fish~, although that seems to work. It might be because I inserted fish-mode, or maybe it just has to be a [[https://pygments.org/languages/][supported pygments language]].
+
+
+** Fish
+Add coloring for the fish-shell. 
+
+#+begin_src emacs-lisp :noweb-ref fish-pygments
+("fish" . "fish")
+#+end_src
+
+
+#+begin_src fish
+function color_test
+  echo "colorize me"
+end
+#+end_src
+** Gherkin
+
+#+begin_src emacs-lisp :noweb-ref gherkin-pygments
+("gherkin" . "gherkin")
+#+end_src
+
+#+begin_src gherkin
+Scenario: Gherkin colorization
+
+Feature: Pygments gherkin colorization
+
+Given a gherkin feature file
+When the org-mode file is exported to HTML
+Then the feature fragment is colorized.
+#+end_src
+** HTML
+
+#+begin_src emacs-lisp :noweb-ref html-pygments
+("html" . "html")
+#+end_src
+
+#+begin_src html
+<h1>Colorize HTML</h1>
+#+end_src
+* The Tangle
 #+begin_src emacs-lisp :tangle ../plugins/orgmode/init.el
 ;; Init file to use with the orgmode plugin.
 
@@ -84,9 +126,11 @@ This is the emacs configuration (~init.el~) for the [[https://plugins.getnikola.
     ("emacs-lisp" . "scheme")
     ("F90" . "fortran")
     <<fish-pygments>>
+    <<gherkin-pygments>>
     ("gnuplot" . "gnuplot")
     ("groovy" . "groovy")
     ("haskell" . "haskell")
+    <<html-pygments>>
     ("java" . "java")
     ("js" . "js")
     ("julia" . "julia")
@@ -162,17 +206,6 @@ specified location."
     (org-macro-replace-all nikola-macro-templates)
     (org-html-export-as-html nil nil t t)
     (write-file outfile nil)))
-#+end_src
-
-* Pygments
-This is the list of languages that pygments will colorize when source-code blocks are exported. The org-babel documentation has a [[https://orgmode.org/worg/org-contrib/babel/languages/index.html][list of supported]] languages, but it doesn't list ~fish~, although that seems to work. It might be because I inserted fish-mode, or maybe it just has to be a [[https://pygments.org/languages/][supported pygments language]].
-
-
-** Fish
-Add coloring for the fish-shell. 
-
-#+begin_src emacs-lisp :noweb-ref fish-pygments
-("fish" . "fish")
 #+end_src
 
 * Links
