@@ -3,31 +3,18 @@
 " lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="Adding the P5 CDN URL with the conf.py.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>P5 CDN URL | Beach Pig Rump &amp; Thigh</title>
+<title>Posts about Jinja | Beach Pig Rump &amp; Thigh</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
-<link rel="canonical" href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-cdn-url/index.html">
+<link rel="canonical" href="https://necromuralist.github.io/Beach-Pig-Thigh/categories/cat_jinja/index.html">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
 <link rel="manifest" href="../../site.webmanifest">
-<meta name="author" content="The Cloistered Monkey">
-<link rel="prev" href="../p5-div-shortcode/index.html" title="P5 Div Shortcode" type="text/html">
-<link rel="next" href="../nikola-confpy/index.html" title="Nikola Conf.py" type="text/html">
-<meta property="og:site_name" content="Beach Pig Rump &amp; Thigh">
-<meta property="og:title" content="P5 CDN URL">
-<meta property="og:url" content="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-cdn-url/index.html">
-<meta property="og:description" content="Adding the P5 CDN URL with the conf.py.">
-<meta property="og:type" content="article">
-<meta property="article:published_time" content="2023-05-05T15:19:31-07:00">
-<meta property="article:tag" content="p5">
-<meta property="article:tag" content="shortcode">
-<meta property="article:tag" content="template">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js" integrity="sha512-3RlxD1bW34eFKPwj9gUXEWtdSMC59QqIqHnD8O/NoTwSJhgxRizdcFVQhUMFyTp5RwLTDL0Lbcqtl8b7bFAzog==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="alternate" type="application/rss+xml" title="RSS for category Jinja" hreflang="en" href="../cat_jinja.xml">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -50,13 +37,13 @@ bg-light
         <div class="collapse navbar-collapse" id="bs-navbar">
             <ul class="navbar-nav mr-auto">
 <li class="nav-item">
-<a href="../" class="nav-link">Posts</a>
+<a href="../../posts/" class="nav-link">Posts</a>
                 </li>
 <li class="nav-item">
 <a href="../../archive.html" class="nav-link">Archive</a>
                 </li>
 <li class="nav-item">
-<a href="../../categories/" class="nav-link">Tags</a>
+<a href="../" class="nav-link">Tags</a>
                 </li>
 <li class="nav-item">
 <a href="../../rss.xml" class="nav-link">RSS</a>
@@ -81,14 +68,7 @@ bg-light
  <!-- End of custom search -->
  
 
-            <ul class="navbar-nav navbar-right">
-<li class="nav-item">
-    <a href="index.org" id="sourcelink" class="nav-link">Source</a>
-    </li>
-
-
-                
-            </ul>
+            <ul class="navbar-nav navbar-right"></ul>
 </div>
 <!-- /.navbar-collapse -->
     </div>
@@ -99,47 +79,23 @@ bg-light
         
         
         
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">P5 CDN URL</a></h1>
-
+<article class="tagpage"><header><h1>Posts about Jinja</h1>
         <div class="metadata">
-            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
-                    The Cloistered Monkey
-            </span></p>
-            <p class="dateline">
-            <a href="#" rel="bookmark">
-            <time class="published dt-published" datetime="2023-05-05T15:19:31-07:00" itemprop="datePublished" title="2023-05-05 15:19">2023-05-05 15:19</time></a>
-            </p>
             
-        <p class="sourceline"><a href="index.org" class="sourcelink">Source</a></p>
+                <p class="feedlink">
+                        
+            <a href="../cat_jinja.xml" hreflang="en" type="application/rss+xml">RSS feed</a>
+
+                </p>
 
         </div>
         
 
-    </header><div class="e-content entry-content" itemprop="articleBody text">
-    <p>
-To change the script tag with the URL for the p5 CDN, put a new one in the <code>GLOBAL_CONTEXT</code> dictionary defined in the <code>conf.py</code> file using the <code>p5_library_source</code> as the key and the new cag as the value. For example:
-</p>
-
-<div class="highlight"><pre><span></span><span class="n">GLOBAL_CONTEXT</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"p5_library_source"</span><span class="p">:</span> <span class="p">(</span>
-    <span class="s1">'&lt;script'</span>
-    <span class="s1">' src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"'</span>
-    <span class="s1">' integrity="sha512-3RlxD1bW34eFKPwj9gUXEWtdSMC59QqIqHnD8O/NoTwSJhgxRizdcFVQhUMFyTp5RwLTDL0Lbcqtl8b7bFAzog=="'</span>
-    <span class="s1">' crossorigin="anonymous" referrerpolicy="no-referrer"&gt;&lt;/script&gt;'</span><span class="p">)}</span>
-</pre></div>
-    </div>
-    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
-<li><a class="tag p-category" href="../../categories/p5/index.html" rel="tag">p5</a></li>
-            <li><a class="tag p-category" href="../../categories/shortcode/index.html" rel="tag">shortcode</a></li>
-            <li><a class="tag p-category" href="../../categories/template/index.html" rel="tag">template</a></li>
-        </ul>
-<ul class="pager hidden-print">
-<li class="previous">
-                <a href="../p5-div-shortcode/index.html" rel="prev" title="P5 Div Shortcode">Previous post</a>
-            </li>
-            <li class="next">
-                <a href="../nikola-confpy/index.html" rel="next" title="Nikola Conf.py">Next post</a>
-            </li>
-        </ul></nav></aside></article><!--End of body content--><footer id="footer">
+    </header><ul class="postlist">
+<li>
+<time class="listdate" datetime="2023-10-09T16:30:02-07:00" title="2023-10-09 16:30">2023-10-09 16:30</time><a href="../../posts/jinja-math-helper/index.html" class="listtitle">Jinja Math Helper</a><a></a>
+</li>
+        </ul></article><!--End of body content--><footer id="footer">
             Scribbles by <a href="mailto:cloisteredmonkey.jmark@slmail.me">The Cloistered Monkey</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
 <div id="license" xmlns:cc="http://creativecommons.org/ns#">This work is licensed under
 <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0

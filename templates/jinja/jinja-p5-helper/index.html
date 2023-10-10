@@ -104,60 +104,60 @@ bg-light
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div id="outline-container-orga668100" class="outline-2">
-<h2 id="orga668100">The P5 Helper Template</h2>
-<div class="outline-text-2" id="text-orga668100">
+    <div id="outline-container-org4fa1261" class="outline-2">
+<h2 id="org4fa1261">The P5 Helper Template</h2>
+<div class="outline-text-2" id="text-org4fa1261">
 <p>
 This is where I defined some macros to add the p5 code to posts. It's based on the <code>math_helper.tmpl</code> template, although it took a little bit more work (well, too much work) to figure out how to get the metadata for this template.
 </p>
 
-<div class="highlight"><pre><span></span>{#  -*- coding: utf-8 -*- #}
+<div class="highlight"><pre><span></span><span class="c">{#  -*- coding: utf-8 -*- #}</span>
 
-&lt;&lt;p5-scripts-macro&gt;&gt;
+<span class="err">&lt;</span><span class="p">&lt;</span><span class="nt">p5-scripts-macro</span><span class="p">&gt;</span>&gt;
 
-&lt;&lt;p5-post-macro&gt;&gt;
+<span class="err">&lt;</span><span class="p">&lt;</span><span class="nt">p5-post-macro</span><span class="p">&gt;</span>&gt;
 
-&lt;&lt;p5-index-macro&gt;&gt;
+<span class="err">&lt;</span><span class="p">&lt;</span><span class="nt">p5-index-macro</span><span class="p">&gt;</span>&gt;
 </pre></div>
 </div>
 </div>
 
-<div id="outline-container-org8983084" class="outline-2">
-<h2 id="org8983084">P5 Scripts</h2>
-<div class="outline-text-2" id="text-org8983084">
+<div id="outline-container-org9bcf3c2" class="outline-2">
+<h2 id="org9bcf3c2">P5 Scripts</h2>
+<div class="outline-text-2" id="text-org9bcf3c2">
 <p>
 This is the macro to call to add the tag to pull in the p5 code from a CDN.
 </p>
 
 <div class="highlight"><pre><span></span>{# macro to add the p5.js code tag #}
 {% macro p5_scripts() %}
-  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"&gt;&lt;/script&gt;
+  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 {% endmacro %}
 </pre></div>
 </div>
 </div>
 
-<div id="outline-container-orgd1a009d" class="outline-2">
-<h2 id="orgd1a009d">P5 Post Macro</h2>
-<div class="outline-text-2" id="text-orgd1a009d">
+<div id="outline-container-org3bea09a" class="outline-2">
+<h2 id="org3bea09a">P5 Post Macro</h2>
+<div class="outline-text-2" id="text-org3bea09a">
 <p>
 This is a macro to use if you have a template with a single post object (e.g. if you override the <code>post.tmpl</code> template or one of its children). I'm using a dedicated template for p5 posts right now so it isn't being used.
 </p>
 
-<div class="highlight"><pre><span></span>{# macro for a single post #}
-{# `post`: a Post object #}
-{% macro p5_scripts_ifpost(post) %}
-    {% if post.meta("has_p5") %}
-	{{ p5_scripts() }}
-    {% endif %}
-{% endmacro %}
+<div class="highlight"><pre><span></span><span class="c">{# macro for a single post #}</span>
+<span class="c">{# `post`: a Post object #}</span>
+<span class="cp">{%</span> <span class="k">macro</span> <span class="nv">p5_scripts_ifpost</span><span class="o">(</span><span class="nv">post</span><span class="o">)</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">if</span> <span class="nv">post.meta</span><span class="o">(</span><span class="s2">"has_p5"</span><span class="o">)</span> <span class="cp">%}</span>
+	<span class="cp">{{</span> <span class="nv">p5_scripts</span><span class="o">()</span> <span class="cp">}}</span>
+    <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
 </pre></div>
 </div>
 </div>
 
-<div id="outline-container-orgf453c6d" class="outline-2">
-<h2 id="orgf453c6d">P5 Post Index Macro</h2>
-<div class="outline-text-2" id="text-orgf453c6d">
+<div id="outline-container-orgbe2352e" class="outline-2">
+<h2 id="orgbe2352e">P5 Post Index Macro</h2>
+<div class="outline-text-2" id="text-orgbe2352e">
 <p>
 This is the macro I'm adding to the <code>index.tmpl</code> template to get p5 into the latest pages feed. Jinja doesn't support the comprehension-type syntax that <code>mako</code> does and <code>Nikola</code> puts the metadata dictionary into a Functionary object which is a default dict that is callable. The metadata dictionary that we want is actually set as the value to a key in the dictionary matching the language for the sight (<code>en</code> in my case). So you can't access it directly (e.g. you can't use <code>post.meta.has_p5</code>) but if you call the meta object like a function instead of using it as a dictionary it will bypass the language key for you so you don't have to know what the language is (e.g. <code>post.meta("has_p5")</code> is the same as <code>post.meta.en.has_p5</code> (if English is the language being used)). Since I only use English it's probably unnecessary to use the function-syntax, but it seems to be the way it's intended to be used (and it took forever to figure out what was going on) so I'm using it.
 </p>
@@ -166,23 +166,23 @@ This is the macro I'm adding to the <code>index.tmpl</code> template to get p5 i
 But, after I set it up to check for <code>has_p5</code> in the metadata I realized that this fixed the <code>index.tmpl</code> but I'd have to update the <code>post.tmpl</code> to use it for individual posts, which seemed like too much so I instead set it to also check if the post uses the <code>p5.tmpl</code> template. If I start adding more conditional imports maybe it'll make sense to use <code>has_p5</code> but for now, the only way that works both in the feed and when viewing an individual post is to set the <code>.. template: p5.tmpl</code> metadata at the top of a post.
 </p>
 
-<div class="highlight"><pre><span></span>{# macro used by feed page with multiple posts (e.g. index.tmpl) #}
-{# 'posts': list of Post objects #}
-{# jinja doesn't support comprehensions so we have to use a for-loop #}
-{# the ~post.meta~ object is a Functionary object #}
-{# the metadata is in a dictionary that's in a dictionary #}
-{# if you try ~post.meta.has_p5~ it will fail because you need the language you're using as a key #}
-{# e.g. ~post.meta.en.has_p5~ #}
-{# to not refer to the langugage you need to call it like a function, passing in the "has_p5" key as an argument #}
-{% macro p5_scripts_ifposts(posts) %}
-  {% set p5_added = False %}
-  {% for post in posts %}
-    {% if (post.meta("has_p5") or post.meta("template") == "p5.tmpl") and not p5_added %}
-      {% set p5_added = True %}
-      {{ p5_scripts() }}
-    {% endif %}
-  {% endfor %}
-{% endmacro %}
+<div class="highlight"><pre><span></span><span class="c">{# macro used by feed page with multiple posts (e.g. index.tmpl) #}</span>
+<span class="c">{# 'posts': list of Post objects #}</span>
+<span class="c">{# jinja doesn't support comprehensions so we have to use a for-loop #}</span>
+<span class="c">{# the ~post.meta~ object is a Functionary object #}</span>
+<span class="c">{# the metadata is in a dictionary that's in a dictionary #}</span>
+<span class="c">{# if you try ~post.meta.has_p5~ it will fail because you need the language you're using as a key #}</span>
+<span class="c">{# e.g. ~post.meta.en.has_p5~ #}</span>
+<span class="c">{# to not refer to the langugage you need to call it like a function, passing in the "has_p5" key as an argument #}</span>
+<span class="cp">{%</span> <span class="k">macro</span> <span class="nv">p5_scripts_ifposts</span><span class="o">(</span><span class="nv">posts</span><span class="o">)</span> <span class="cp">%}</span>
+  <span class="cp">{%</span> <span class="k">set</span> <span class="nv">p5_added</span> <span class="o">=</span> <span class="kp">False</span> <span class="cp">%}</span>
+  <span class="cp">{%</span> <span class="k">for</span> <span class="nv">post</span> <span class="k">in</span> <span class="nv">posts</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">if</span> <span class="o">(</span><span class="nv">post.meta</span><span class="o">(</span><span class="s2">"has_p5"</span><span class="o">)</span> <span class="k">or</span> <span class="nv">post.meta</span><span class="o">(</span><span class="s2">"template"</span><span class="o">)</span> <span class="o">==</span> <span class="s2">"p5.tmpl"</span><span class="o">)</span> <span class="k">and</span> <span class="k">not</span> <span class="nv">p5_added</span> <span class="cp">%}</span>
+      <span class="cp">{%</span> <span class="k">set</span> <span class="nv">p5_added</span> <span class="o">=</span> <span class="kp">True</span> <span class="cp">%}</span>
+      <span class="cp">{{</span> <span class="nv">p5_scripts</span><span class="o">()</span> <span class="cp">}}</span>
+    <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+  <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
 </pre></div>
 </div>
 </div>

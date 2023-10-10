@@ -147,13 +147,13 @@ bg-light
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
 <li>
-<a href="index.html#org0eb1e46">The Shortcodes</a>
+<a href="index.html#orge004912">The Shortcodes</a>
 <ul>
-<li><a href="index.html#orgcfa25e2">Mako</a></li>
-<li><a href="index.html#org73c747b">Jinja</a></li>
+<li><a href="index.html#org82772cd">Mako</a></li>
+<li><a href="index.html#org26978c3">Jinja</a></li>
 </ul>
 </li>
-<li><a href="index.html#org9d20819">Links</a></li>
+<li><a href="index.html#org71540df">Links</a></li>
 </ul>
 </div>
 </div>
@@ -169,7 +169,7 @@ bg-light
 This is a test of the <code>p5div</code> shortcode. For it to work (assuming you're using mako) you need to:
 </p>
 
-<div class="notecard" id="org525fec0">
+<div class="notecard" id="orgb8414b1">
 <ul class="org-ul">
 <li>set up the <code>p5.tmpl</code> template (in <code>themes/custom-mako/templates/</code>)</li>
 <li>have <code>..template: p5.tmpl</code> in the metadata for this post</li>
@@ -177,7 +177,7 @@ This is a test of the <code>p5div</code> shortcode. For it to work (assuming you
 </ul>
 </div>
 
-<div class="notecard" id="org1950980">
+<div class="notecard" id="org98053b9">
 <p>
 <b><b>Note:</b></b>
 </p>
@@ -188,9 +188,9 @@ I'll be using the names based on the idea that we're using the <code>mako</code>
 
 </div>
 
-<div id="outline-container-org0eb1e46" class="outline-2">
-<h2 id="org0eb1e46">The Shortcodes</h2>
-<div class="outline-text-2" id="text-org0eb1e46">
+<div id="outline-container-orge004912" class="outline-2">
+<h2 id="orge004912">The Shortcodes</h2>
+<div class="outline-text-2" id="text-orge004912">
 <p>
 There actually needs to be two different shortcodes, one for jinja and one for mako. This repository is using mako (as does <a href="https://necromuralist.github.io">https://necromuralist.github.io</a>) but <a href="https://necromuralist.github.io/Ape-Iron/">ape-iron</a> is using jinja. It's a little too convoluted to keep switching back and forth so I'm mostly going to be relying on ape-iron to test the jinja version (although I really should figure out an easy way to test both).
 </p>
@@ -199,7 +199,7 @@ There actually needs to be two different shortcodes, one for jinja and one for m
 The shortcode creates two HTML tags:
 </p>
 
-<div class="notecard" id="org50a18c5">
+<div class="notecard" id="org05b1a0e">
 <ul class="org-ul">
 <li>a script tag that needs the path to the source p5js file</li>
 <li>a div tag that needs the ID to use so that the p5 sketch can be put inside it</li>
@@ -226,7 +226,7 @@ And the default <code>type</code> is javascript so you don't need to use it if i
 </p>
 </blockquote>
 
-<div class="notecard" id="orgff7ef41">
+<div class="notecard" id="orgdee2da7">
 <p>
 <b><b>Note:</b></b>
 </p>
@@ -238,25 +238,23 @@ I was setting the class for the <code>div</code> to "p5js" but it turns out that
 </div>
 </div>
 
-<div id="outline-container-orgcfa25e2" class="outline-3">
-<h3 id="orgcfa25e2">Mako</h3>
-<div class="outline-text-3" id="text-orgcfa25e2">
+<div id="outline-container-org82772cd" class="outline-3">
+<h3 id="org82772cd">Mako</h3>
+<div class="outline-text-3" id="text-org82772cd">
 <p>
 I don't see an easy way to set which shortcodes folder to use so I'm going to go with adding "mako" to the end of the shortcodes meant for the mako engine and not putting a suffix on the ones meant for jinja. This shortcode will go into <code>shortcodes/p5divmako.tmpl</code>: 
 </p>
 
-<div class="highlight"><pre><span></span>&lt;script src="${source}"&gt;&lt;/script&gt;
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"${source}"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 
-&lt;div class="p5js" id="${divid}"&gt;&lt;/div&gt;
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"p5js"</span> <span class="na">id</span><span class="o">=</span><span class="s">"${divid}"</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
 
 <p>
 To use this shortcode you add something that looks like this to a page or post.
 </p>
 
-<div class="highlight"><pre><span></span>
-{{% p5divmako divid="e70fd042-noise-graph" source="noise_graph.js" %}}
-
+<div class="highlight"><pre><span></span><span class="cp">{{</span><span class="o">%</span> <span class="nv">p5divmako</span> <span class="nv">divid</span><span class="o">=</span><span class="s2">"e70fd042-noise-graph"</span> <span class="nv">source</span><span class="o">=</span><span class="s2">"noise_graph.js"</span> <span class="o">%</span><span class="cp">}}</span>
 </pre></div>
 
 <p>
@@ -272,33 +270,31 @@ Where <code>noise_graph</code> is the name of the function in <code>noise_graph.
 </div>
 </div>
 
-<div id="outline-container-org73c747b" class="outline-3">
-<h3 id="org73c747b">Jinja</h3>
-<div class="outline-text-3" id="text-org73c747b">
+<div id="outline-container-org26978c3" class="outline-3">
+<h3 id="org26978c3">Jinja</h3>
+<div class="outline-text-3" id="text-org26978c3">
 <p>
 Here's the jinja version of the shortcode. It's going to go into <code>shortcodes/p5div.tmpl</code>.
 </p>
 
-<div class="highlight"><pre><span></span>&lt;script src="{{ source }}"&gt;&lt;/script&gt;
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"</span><span class="cp">{{</span> <span class="nv">source</span> <span class="cp">}}</span><span class="s">"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 
-&lt;div class="p5js" id="{{ divid }}"&gt;&lt;/div&gt;
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"p5js"</span> <span class="na">id</span><span class="o">=</span><span class="s">"</span><span class="cp">{{</span> <span class="nv">divid</span> <span class="cp">}}</span><span class="s">"</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
 
 <p>
 To use it you use the same syntax as the mako-based shortcode, just change the name of the shortcode to <code>p5div.tmpl</code>.
 </p>
 
-<div class="highlight"><pre><span></span>
-{{% p5div divid="e70fd042-noise-graph" source="noise_graph.js" %}}
-
+<div class="highlight"><pre><span></span><span class="cp">{{</span><span class="o">%</span> <span class="nv">p5div</span> <span class="nv">divid</span><span class="o">=</span><span class="s2">"e70fd042-noise-graph"</span> <span class="nv">source</span><span class="o">=</span><span class="s2">"noise_graph.js"</span> <span class="o">%</span><span class="cp">}}</span>
 </pre></div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org9d20819" class="outline-2">
-<h2 id="org9d20819">Links</h2>
-<div class="outline-text-2" id="text-org9d20819">
+<div id="outline-container-org71540df" class="outline-2">
+<h2 id="org71540df">Links</h2>
+<div class="outline-text-2" id="text-org71540df">
 <ul class="org-ul">
 <li>&lt;script&gt;: The Script element - HTML: HyperText Markup Language | MDN [Internet]. 2023 [cited 2023 Jun 20]. Available from: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script</a>
 </li>

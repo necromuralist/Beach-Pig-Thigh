@@ -5,22 +5,261 @@
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;
 &lt;/div&gt;
-</copyright><lastBuildDate>Wed, 28 Jun 2023 00:04:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Orgmode Plugin init.el</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;p&gt;
-This is the emacs configuration (&lt;code&gt;init.el&lt;/code&gt;) for the &lt;a href="https://plugins.getnikola.com/v8/orgmode/"&gt;orgmode plugin&lt;/a&gt; to export posts and pages to HTML. I spent forever messing with the &lt;code&gt;init.el&lt;/code&gt; file for my emacs instance, but it turns out that the plugin has its own configuration so you have to make changes here or they won't matter.
+</copyright><lastBuildDate>Tue, 10 Oct 2023 00:30:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Jinja Math Helper</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id="text-table-of-contents" role="doc-toc"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#org977ee21"&gt;The Math Macros&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#orga9a138c"&gt;The Math Scripts Macro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#org2675dbe"&gt;Pseudocode Additional Config&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#org792f303"&gt;The Math Styles Macro&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#org6cfd849"&gt;The Post Checkers&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#org31dd385"&gt;Math Scripts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#orgc1005f9"&gt;Math Styles&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#orgdb2b33a"&gt;Pseudocode Macros&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#org6dabdf4"&gt;Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#org5516a79"&gt;Style&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org977ee21" class="outline-2"&gt;
+&lt;h2 id="org977ee21"&gt;The Math Macros&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org977ee21"&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-orga9a138c" class="outline-3"&gt;
+&lt;h3 id="orga9a138c"&gt;The Math Scripts Macro&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orga9a138c"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;macro&lt;/span&gt; &lt;span class="nv"&gt;math_scripts&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+    &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;use_katex&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+	&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js"&lt;/span&gt; &lt;span class="na"&gt;integrity&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ"&lt;/span&gt; &lt;span class="na"&gt;crossorigin&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"anonymous"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js"&lt;/span&gt; &lt;span class="na"&gt;integrity&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"&lt;/span&gt; &lt;span class="na"&gt;crossorigin&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"anonymous"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;katex_auto_render&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+	    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;		&lt;/span&gt;&lt;span class="nx"&gt;renderMathInElement&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;body&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;		    &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;			&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;katex_auto_render&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;
+&lt;span class="w"&gt;		    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;		&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;	    &lt;/span&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+	    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;		&lt;/span&gt;&lt;span class="nx"&gt;renderMathInElement&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;body&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;		    &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;			&lt;/span&gt;&lt;span class="nx"&gt;delimiters&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;
+&lt;span class="w"&gt;			    &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;left&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"$$"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;right&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"$$"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;display&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+&lt;span class="w"&gt;			    &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;left&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"\\["&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;right&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"\\]"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;display&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+&lt;span class="w"&gt;			    &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;left&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"\\begin{equation*}"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;right&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"\\end{equation*}"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;display&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+&lt;span class="w"&gt;			    &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;left&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"\\("&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;right&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"\\)"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;display&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;			&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="w"&gt;		    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;		&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;	    &lt;/span&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+    &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+	&lt;span class="c"&gt;{#  Note: given the size of MathJax; nikola will retrieve MathJax from a CDN regardless of use_cdn configuration #}&lt;/span&gt;
+
+&lt;span class="c"&gt;{# the default config has been updated with stuff that pseudocode.js needs #}&lt;/span&gt;
+	&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"&lt;/span&gt; &lt;span class="na"&gt;integrity&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH"&lt;/span&gt; &lt;span class="na"&gt;crossorigin&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"anonymous"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;mathjax_config&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+	&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;mathjax_config&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;
+	&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+	&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"text/x-mathjax-config"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;	 &lt;/span&gt;&lt;span class="nx"&gt;MathJax&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Hub&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Config&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
+	   tex2jax: {
+	     inlineMath: [['$','$'], ['\\(','\\)']],
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org2675dbe" class="outline-3"&gt;
+&lt;h3 id="org2675dbe"&gt;Pseudocode Additional Config&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org2675dbe"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;	     displayMath: [['$$','$$'], ['\\[','\\]']],
+	     processEscapes: true,
+	     processEnvironments: true,
+	   },
+	   displayAlign: 'center',
+	   "HTML-CSS": {
+	     styles: {'.MathJax_Display': {"margin": 0}}
+	   }
+	 });
+	&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+    &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endmacro&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org792f303" class="outline-3"&gt;
+&lt;h3 id="org792f303"&gt;The Math Styles Macro&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org792f303"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;macro&lt;/span&gt; &lt;span class="nv"&gt;math_styles&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+    &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;use_katex&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+	&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;link&lt;/span&gt; &lt;span class="na"&gt;rel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"stylesheet"&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css"&lt;/span&gt; &lt;span class="na"&gt;integrity&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j"&lt;/span&gt; &lt;span class="na"&gt;crossorigin&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"anonymous"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endmacro&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org6cfd849" class="outline-2"&gt;
+&lt;h2 id="org6cfd849"&gt;The Post Checkers&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org6cfd849"&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-org31dd385" class="outline-3"&gt;
+&lt;h3 id="org31dd385"&gt;Math Scripts&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org31dd385"&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-org8fad752" class="outline-4"&gt;
+&lt;h4 id="org8fad752"&gt;Math Scripts If Post&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org8fad752"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;macro&lt;/span&gt; &lt;span class="nv"&gt;math_scripts_ifpost&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;post&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+  &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;post.has_math&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+    &lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;math_scripts&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;
+I didn't build code to make a proper metadata setting for pseudocode
+so it checks the post.meta object has_pseudocode
+So as long as the post header has `.. has_pseudocode: &amp;lt;any text&amp;gt;` it will put it in 
 &lt;/p&gt;
 
-&lt;div id="outline-container-orgcf2dcce" class="outline-2"&gt;
-&lt;h2 id="orgcf2dcce"&gt;Pygments&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgcf2dcce"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="nv"&gt;post.meta&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"has_pseudocode"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+  &lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;math_scripts&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;
+  &lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;pseudocode&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;  &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endmacro&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-orge279dcd" class="outline-4"&gt;
+&lt;h4 id="orge279dcd"&gt;Math Scripts If Posts&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orge279dcd"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;macro&lt;/span&gt; &lt;span class="nv"&gt;math_scripts_ifposts&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;posts&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+    &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;posts&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="nf"&gt;selectattr&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"has_math"&lt;/span&gt;&lt;span class="o"&gt;)|&lt;/span&gt;&lt;span class="nf"&gt;list&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+      &lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;math_scripts&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+      &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;not_yet&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;namespace&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;set_up&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kp"&gt;true&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+      &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;post&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;posts&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+	&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;post.meta&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"has_pseudocode"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="k"&gt;and&lt;/span&gt; &lt;span class="nv"&gt;not_yet.set_up&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+	  &lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;math_scripts&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;
+	  &lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;pseudocode&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;
+	  &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;not_yet.set_up&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kp"&gt;false&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+	&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+      &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endfor&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+    &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endmacro&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-orgc1005f9" class="outline-3"&gt;
+&lt;h3 id="orgc1005f9"&gt;Math Styles&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgc1005f9"&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-orgee150ed" class="outline-4"&gt;
+&lt;h4 id="orgee150ed"&gt;Math Styles If Post&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgee150ed"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;macro&lt;/span&gt; &lt;span class="nv"&gt;math_styles_ifpost&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;post&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+    &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;post.has_math&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+      &lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;math_styles&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="nv"&gt;post.meta&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"has_pseudocode"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+      &lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;code_styles&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;
+    &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endmacro&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org0dadbbf" class="outline-4"&gt;
+&lt;h4 id="org0dadbbf"&gt;Math Styles If Posts&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org0dadbbf"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;macro&lt;/span&gt; &lt;span class="nv"&gt;math_styles_ifposts&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;posts&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+    &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;posts&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="nf"&gt;selectattr&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"has_math"&lt;/span&gt;&lt;span class="o"&gt;)|&lt;/span&gt;&lt;span class="nf"&gt;list&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+      &lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;math_styles&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+      &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;not_yet&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;namespace&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;set_up&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kp"&gt;true&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+      &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;post&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;posts&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+	&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;post.meta&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"has_pseudocode"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="k"&gt;and&lt;/span&gt; &lt;span class="nv"&gt;not_yet.set_up&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+	  &lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;math_styles&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;
+	  &lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;code_styles&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;
+	  &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;not_yet.set_up&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kp"&gt;false&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+	&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+      &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endfor&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+    &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endmacro&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-orgdb2b33a" class="outline-2"&gt;
+&lt;h2 id="orgdb2b33a"&gt;Pseudocode Macros&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgdb2b33a"&gt;
 &lt;p&gt;
-This is the list of languages that pygments will colorize when source-code blocks are exported. The org-babel documentation has a &lt;a href="https://orgmode.org/worg/org-contrib/babel/languages/index.html"&gt;list of supported&lt;/a&gt; languages, but it doesn't list &lt;code&gt;fish&lt;/code&gt;, although that seems to work. It might be because I inserted fish-mode, or maybe it just has to be a &lt;a href="https://pygments.org/languages/"&gt;supported pygments language&lt;/a&gt;.
+These define the macros to insert the pseudocode scripts into the HTML.
 &lt;/p&gt;
 &lt;/div&gt;
 
+&lt;div id="outline-container-org6dabdf4" class="outline-3"&gt;
+&lt;h3 id="org6dabdf4"&gt;Code&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org6dabdf4"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;macro&lt;/span&gt; &lt;span class="nv"&gt;pseudocode&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endmacro&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
-&lt;div id="outline-container-org9cccb01" class="outline-3"&gt;
-&lt;h3 id="org9cccb01"&gt;Fish&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org9cccb01"&gt;
+&lt;div id="outline-container-org5516a79" class="outline-3"&gt;
+&lt;h3 id="org5516a79"&gt;Style&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org5516a79"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;macro&lt;/span&gt; &lt;span class="nv"&gt;code_styles&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;link&lt;/span&gt; &lt;span class="na"&gt;rel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"stylesheet"&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.css"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endmacro&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><category>jinja</category><category>math</category><category>pseudocode</category><category>template</category><guid>https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html</guid><pubDate>Mon, 09 Oct 2023 23:30:02 GMT</pubDate></item><item><title>Orgmode Plugin init.el</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;p&gt;
+This is the emacs configuration (&lt;code&gt;init.el&lt;/code&gt;) for the &lt;a href="https://plugins.getnikola.com/v8/orgmode/"&gt;orgmode plugin&lt;/a&gt; to export posts and pages to HTML. I spent forever messing with the &lt;code&gt;init.el&lt;/code&gt; file for my emacs instance, but it turns out that the plugin has its own configuration so you have to make changes here or they won't matter.
+&lt;/p&gt;
+
+&lt;div id="outline-container-orgddc05da" class="outline-2"&gt;
+&lt;h2 id="orgddc05da"&gt;Pygments&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgddc05da"&gt;
+&lt;p&gt;
+This is the list of languages that pygments will colorize when source-code blocks are exported. The org-babel documentation has a &lt;a href="https://orgmode.org/worg/org-contrib/babel/languages/index.html"&gt;list of supported&lt;/a&gt; languages, but it doesn't list &lt;code&gt;fish&lt;/code&gt;, although that seems to work. It might be because I inserted fish-mode, or maybe it just has to be a &lt;a href="https://pygments.org/languages/"&gt;supported pygments language&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+The first argument is what you put as the type in the source block and the second is the pygments short-name &lt;code&gt;("org-source-name" . "pygments-name")&lt;/code&gt;.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org2e4c152" class="outline-3"&gt;
+&lt;h3 id="org2e4c152"&gt;Fish&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org2e4c152"&gt;
 &lt;p&gt;
 Add coloring for the fish-shell. 
 &lt;/p&gt;
@@ -35,9 +274,9 @@ Add coloring for the fish-shell.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org0ef1e27" class="outline-3"&gt;
-&lt;h3 id="org0ef1e27"&gt;Gherkin&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org0ef1e27"&gt;
+&lt;div id="outline-container-org2185e6e" class="outline-3"&gt;
+&lt;h3 id="org2185e6e"&gt;Gherkin&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org2185e6e"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"gherkin"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"gherkin"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -51,9 +290,9 @@ Add coloring for the fish-shell.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org9f27e70" class="outline-3"&gt;
-&lt;h3 id="org9f27e70"&gt;HTML&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org9f27e70"&gt;
+&lt;div id="outline-container-orgc6b1b95" class="outline-3"&gt;
+&lt;h3 id="orgc6b1b95"&gt;HTML&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgc6b1b95"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"html"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"html"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -61,10 +300,37 @@ Add coloring for the fish-shell.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
+&lt;div id="outline-container-org99b9895" class="outline-3"&gt;
+&lt;h3 id="org99b9895"&gt;Jinja&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org99b9895"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"jinja"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"html+jinja"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;macro&lt;/span&gt; &lt;span class="nv"&gt;pseudocode&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endmacro&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgca991a9" class="outline-2"&gt;
-&lt;h2 id="orgca991a9"&gt;The Tangle&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgca991a9"&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org118b2db" class="outline-3"&gt;
+&lt;h3 id="org118b2db"&gt;Mako&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org118b2db"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"mako"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"html+mako"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%&lt;/span&gt;&lt;span class="nb"&gt;def&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;"pseudocode()"&lt;/span&gt;&lt;span class="cp"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;&amp;lt;/%&lt;/span&gt;&lt;span class="nb"&gt;def&lt;/span&gt;&lt;span class="cp"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orga611118" class="outline-2"&gt;
+&lt;h2 id="orga611118"&gt;The Tangle&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orga611118"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;;; Init file to use with the orgmode plugin.&lt;/span&gt;
 
 &lt;span class="c1"&gt;;; this is generated from the post with the slug: orgmode-plugin-initel&lt;/span&gt;
@@ -142,10 +408,12 @@ Add coloring for the fish-shell.
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"haskell"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"haskell"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;&amp;lt;&amp;lt;html-pygments&amp;gt;&amp;gt;&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"java"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"java"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;&amp;lt;&amp;lt;jinja-pygments&amp;gt;&amp;gt;&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"js"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"js"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"julia"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"julia"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"latex"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"latex"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"lisp"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"lisp"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;&amp;lt;&amp;lt;mako-pygments&amp;gt;&amp;gt;&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"makefile"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"makefile"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"matlab"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"matlab"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"mscgen"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"mscgen"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -220,9 +488,9 @@ Add coloring for the fish-shell.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgc2393d6" class="outline-2"&gt;
-&lt;h2 id="orgc2393d6"&gt;Links&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgc2393d6"&gt;
+&lt;div id="outline-container-org0eea310" class="outline-2"&gt;
+&lt;h2 id="org0eea310"&gt;Links&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org0eea310"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;Chaganti P. Plugins for Nikola. 2020 [cited 2023 Jun 25]. orgmode. Available from: &lt;a href="https://plugins.getnikola.com/v8/orgmode/"&gt;https://plugins.getnikola.com/v8/orgmode/&lt;/a&gt;&lt;/li&gt;
 
@@ -231,9 +499,9 @@ Add coloring for the fish-shell.
 &lt;li&gt;Languages — Pygments [Internet]. [cited 2023 Jun 25]. Available from: &lt;a href="https://pygments.org/languages/"&gt;https://pygments.org/languages/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>orgmode</category><category>plugins</category><guid>https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html</guid><pubDate>Mon, 26 Jun 2023 03:39:18 GMT</pubDate></item><item><title>Nikola Conf.py</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/nikola-confpy/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-org338587d" class="outline-2"&gt;
-&lt;h2 id="org338587d"&gt;Site Data&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org338587d"&gt;
+&lt;/div&gt;</description><category>orgmode</category><category>plugins</category><guid>https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html</guid><pubDate>Mon, 26 Jun 2023 03:39:18 GMT</pubDate></item><item><title>Nikola Conf.py</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/nikola-confpy/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-orge93e542" class="outline-2"&gt;
+&lt;h2 id="orge93e542"&gt;Site Data&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orge93e542"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Data about this site&lt;/span&gt;
 &lt;span class="n"&gt;BLOG_AUTHOR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"The Cloistered Monkey"&lt;/span&gt;  &lt;span class="c1"&gt;# (translatable)&lt;/span&gt;
 &lt;span class="n"&gt;BLOG_TITLE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"Beach Pig Rump &amp;amp; Thigh"&lt;/span&gt;  &lt;span class="c1"&gt;# (translatable)&lt;/span&gt;
@@ -250,31 +518,31 @@ Add coloring for the fish-shell.
 &lt;/div&gt;
 
 
-&lt;div id="outline-container-orge6293ef" class="outline-2"&gt;
-&lt;h2 id="orge6293ef"&gt;The Theme&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orge6293ef"&gt;
+&lt;div id="outline-container-org98bee22" class="outline-2"&gt;
+&lt;h2 id="org98bee22"&gt;The Theme&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org98bee22"&gt;
 &lt;p&gt;
 This is how you choose the theme to use. We're using a custom theme so there's three things that have to match.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org4c8ccb1" class="outline-3"&gt;
-&lt;h3 id="org4c8ccb1"&gt;The Theme Location&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org4c8ccb1"&gt;
+&lt;div id="outline-container-org84375b6" class="outline-3"&gt;
+&lt;h3 id="org84375b6"&gt;The Theme Location&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org84375b6"&gt;
 &lt;p&gt;
 Next to the &lt;code&gt;conf.py&lt;/code&gt; file at the root of the nikola repository we need a folder named "themes" and inside that we put a folder whose name matches the name of our theme. I'm going to use &lt;code&gt;custom-mako&lt;/code&gt; as our example. The only other expected option at this point would be &lt;code&gt;custom-jinja&lt;/code&gt;. So our "themes" folder should look like this (more or less):
 &lt;/p&gt;
 
-&lt;pre class="example" id="orga882cc6"&gt;
+&lt;pre class="example" id="orgfb5f595"&gt;
 themes/
   custom-mako/
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org9f54574" class="outline-3"&gt;
-&lt;h3 id="org9f54574"&gt;The Theme Configuration&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org9f54574"&gt;
+&lt;div id="outline-container-orgbdb2ec7" class="outline-3"&gt;
+&lt;h3 id="orgbdb2ec7"&gt;The Theme Configuration&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgbdb2ec7"&gt;
 &lt;p&gt;
 Inside the &lt;code&gt;themes/custom-mako/&lt;/code&gt; folder we need a file with the name &lt;code&gt;custom-mako.theme&lt;/code&gt; - the base name of the file needs to match the name of our theme. This is where we tell nikola that we're using mako (or jinja as the case may be). Here's what's in it (the mako version).
 &lt;/p&gt;
@@ -294,9 +562,9 @@ family = bootstrap4
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgb001568" class="outline-3"&gt;
-&lt;h3 id="orgb001568"&gt;The conf.py&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgb001568"&gt;
+&lt;div id="outline-container-orgfd17f6a" class="outline-3"&gt;
+&lt;h3 id="orgfd17f6a"&gt;The conf.py&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgfd17f6a"&gt;
 &lt;p&gt;
 Inside &lt;code&gt;conf.py&lt;/code&gt; we put the name of the theme, matching the name of the folder and configuration file.
 &lt;/p&gt;
@@ -308,13 +576,13 @@ Inside &lt;code&gt;conf.py&lt;/code&gt; we put the name of the theme, matching t
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org785dfa5" class="outline-2"&gt;
-&lt;h2 id="org785dfa5"&gt;Posts and Pages&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org785dfa5"&gt;
+&lt;div id="outline-container-orgedf5558" class="outline-2"&gt;
+&lt;h2 id="orgedf5558"&gt;Posts and Pages&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgedf5558"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org79e556f" class="outline-3"&gt;
-&lt;h3 id="org79e556f"&gt;Posts&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org79e556f"&gt;
+&lt;div id="outline-container-orgd530b97" class="outline-3"&gt;
+&lt;h3 id="orgd530b97"&gt;Posts&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgd530b97"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;POSTS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.org"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
     &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.rst"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
@@ -326,9 +594,9 @@ Inside &lt;code&gt;conf.py&lt;/code&gt; we put the name of the theme, matching t
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgbf5e315" class="outline-3"&gt;
-&lt;h3 id="orgbf5e315"&gt;Pages&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgbf5e315"&gt;
+&lt;div id="outline-container-org718a9e4" class="outline-3"&gt;
+&lt;h3 id="org718a9e4"&gt;Pages&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org718a9e4"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;PAGES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"source/*.org"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"page.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
     &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"source/*.rst"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"page.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
@@ -340,9 +608,9 @@ Inside &lt;code&gt;conf.py&lt;/code&gt; we put the name of the theme, matching t
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgcf5a113" class="outline-3"&gt;
-&lt;h3 id="orgcf5a113"&gt;The Index Path&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgcf5a113"&gt;
+&lt;div id="outline-container-orgaacdce1" class="outline-3"&gt;
+&lt;h3 id="orgaacdce1"&gt;The Index Path&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgaacdce1"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Final location for the main blog page and sibling paginated pages is&lt;/span&gt;
 &lt;span class="c1"&gt;# output / TRANSLATION[lang] / INDEX_PATH / index-*.html&lt;/span&gt;
 &lt;span class="c1"&gt;# (translatable)&lt;/span&gt;
@@ -352,9 +620,9 @@ Inside &lt;code&gt;conf.py&lt;/code&gt; we put the name of the theme, matching t
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org9567614" class="outline-2"&gt;
-&lt;h2 id="org9567614"&gt;Navigation Links&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org9567614"&gt;
+&lt;div id="outline-container-orgf7a073c" class="outline-2"&gt;
+&lt;h2 id="orgf7a073c"&gt;Navigation Links&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgf7a073c"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;NAVIGATION_LINKS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="n"&gt;DEFAULT_LANG&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
 	&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"/posts/"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"Posts"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
@@ -377,9 +645,9 @@ Inside &lt;code&gt;conf.py&lt;/code&gt; we put the name of the theme, matching t
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgb05b0dc" class="outline-2"&gt;
-&lt;h2 id="orgb05b0dc"&gt;Github Deploy&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgb05b0dc"&gt;
+&lt;div id="outline-container-org22de4a1" class="outline-2"&gt;
+&lt;h2 id="org22de4a1"&gt;Github Deploy&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org22de4a1"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# github_deploy configuration&lt;/span&gt;
 &lt;span class="c1"&gt;# For more details, read the manual:&lt;/span&gt;
 &lt;span class="c1"&gt;# https://getnikola.com/handbook.html#deploying-to-github&lt;/span&gt;
@@ -397,9 +665,9 @@ Inside &lt;code&gt;conf.py&lt;/code&gt; we put the name of the theme, matching t
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgccd9700" class="outline-2"&gt;
-&lt;h2 id="orgccd9700"&gt;The License&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgccd9700"&gt;
+&lt;div id="outline-container-org23066b0" class="outline-2"&gt;
+&lt;h2 id="org23066b0"&gt;The License&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org23066b0"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;LICENSE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'''&lt;/span&gt;
 &lt;span class="s1"&gt;&amp;lt;div id="license"xmlns:cc="http://creativecommons.org/ns#" &amp;gt;This work is licensed under&lt;/span&gt;
 &lt;span class="s1"&gt;&amp;lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&amp;gt;CC BY 4.0&lt;/span&gt;
@@ -411,17 +679,17 @@ Inside &lt;code&gt;conf.py&lt;/code&gt; we put the name of the theme, matching t
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org2a4f878" class="outline-2"&gt;
-&lt;h2 id="org2a4f878"&gt;The Footer&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org2a4f878"&gt;
+&lt;div id="outline-container-orgcd885d1" class="outline-2"&gt;
+&lt;h2 id="orgcd885d1"&gt;The Footer&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgcd885d1"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;CONTENT_FOOTER&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'Scribbles by &amp;lt;a href="mailto:&lt;/span&gt;&lt;span class="si"&gt;{email}&lt;/span&gt;&lt;span class="s1"&gt;"&amp;gt;&lt;/span&gt;&lt;span class="si"&gt;{author}&lt;/span&gt;&lt;span class="s1"&gt;&amp;lt;/a&amp;gt; - Powered by         &amp;lt;a href="https://getnikola.com" rel="nofollow"&amp;gt;Nikola&amp;lt;/a&amp;gt;         &lt;/span&gt;&lt;span class="si"&gt;{license}&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgd55ee87" class="outline-2"&gt;
-&lt;h2 id="orgd55ee87"&gt;Strip Indexes&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgd55ee87"&gt;
+&lt;div id="outline-container-orgd79aa51" class="outline-2"&gt;
+&lt;h2 id="orgd79aa51"&gt;Strip Indexes&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgd79aa51"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# If a link ends in /index.html,  drop the index.html part.&lt;/span&gt;
 &lt;span class="c1"&gt;# http://mysite/foo/bar/index.html =&amp;gt; http://mysite/foo/bar/&lt;/span&gt;
 &lt;span class="c1"&gt;# (Uses the INDEX_FILE setting, so if that is, say, default.html,&lt;/span&gt;
@@ -431,9 +699,9 @@ Inside &lt;code&gt;conf.py&lt;/code&gt; we put the name of the theme, matching t
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgeafee80" class="outline-2"&gt;
-&lt;h2 id="orgeafee80"&gt;Search Form&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgeafee80"&gt;
+&lt;div id="outline-container-orgb4874ad" class="outline-2"&gt;
+&lt;h2 id="orgb4874ad"&gt;Search Form&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgb4874ad"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# A search form to search this site, for the sidebar. You can use a Google&lt;/span&gt;
 &lt;span class="c1"&gt;# custom search (https://www.google.com/cse/)&lt;/span&gt;
 &lt;span class="c1"&gt;# Or a DuckDuckGo search: https://duckduckgo.com/search_box.html&lt;/span&gt;
@@ -461,9 +729,9 @@ Inside &lt;code&gt;conf.py&lt;/code&gt; we put the name of the theme, matching t
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org7ba8a51" class="outline-2"&gt;
-&lt;h2 id="org7ba8a51"&gt;The Tangle&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org7ba8a51"&gt;
+&lt;div id="outline-container-org729db7f" class="outline-2"&gt;
+&lt;h2 id="org729db7f"&gt;The Tangle&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org729db7f"&gt;
 &lt;p&gt;
 This should eventually get broken up enough to be hidden, but not yet.
 &lt;/p&gt;
@@ -1800,16 +2068,6 @@ This should eventually get broken up enough to be hidden, but not yet.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description><category>nikola</category><guid>https://necromuralist.github.io/Beach-Pig-Thigh/posts/nikola-confpy/index.html</guid><pubDate>Tue, 20 Jun 2023 22:42:22 GMT</pubDate></item><item><title>P5 CDN URL</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-cdn-url/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;p&gt;
-{# This is tangled from the "p5-div-shortcode" post #}
-
-&lt;script src="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-cdn-url/%7B%7B%20source%20%7D%7D"&gt;&lt;/script&gt;
-
-&lt;/p&gt;&lt;div class="p5js" id="{{ divid }}"&gt;&lt;/div&gt;
-
-
-
-
-&lt;p&gt;
 To change the script tag with the URL for the p5 CDN, put a new one in the &lt;code&gt;GLOBAL_CONTEXT&lt;/code&gt; dictionary defined in the &lt;code&gt;conf.py&lt;/code&gt; file using the &lt;code&gt;p5_library_source&lt;/code&gt; as the key and the new cag as the value. For example:
 &lt;/p&gt;
 
@@ -1822,13 +2080,13 @@ To change the script tag with the URL for the p5 CDN, put a new one in the &lt;c
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html#org0eb1e46"&gt;The Shortcodes&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html#orge004912"&gt;The Shortcodes&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html#orgcfa25e2"&gt;Mako&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html#org73c747b"&gt;Jinja&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html#org82772cd"&gt;Mako&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html#org26978c3"&gt;Jinja&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html#org9d20819"&gt;Links&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html#org71540df"&gt;Links&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1845,7 +2103,7 @@ To change the script tag with the URL for the p5 CDN, put a new one in the &lt;c
 This is a test of the &lt;code&gt;p5div&lt;/code&gt; shortcode. For it to work (assuming you're using mako) you need to:
 &lt;/p&gt;
 
-&lt;div class="notecard" id="org525fec0"&gt;
+&lt;div class="notecard" id="orgb8414b1"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;set up the &lt;code&gt;p5.tmpl&lt;/code&gt; template (in &lt;code&gt;themes/custom-mako/templates/&lt;/code&gt;)&lt;/li&gt;
 &lt;li&gt;have &lt;code&gt;..template: p5.tmpl&lt;/code&gt; in the metadata for this post&lt;/li&gt;
@@ -1854,7 +2112,7 @@ This is a test of the &lt;code&gt;p5div&lt;/code&gt; shortcode. For it to work (
 
 &lt;/div&gt;
 
-&lt;div class="notecard" id="org1950980"&gt;
+&lt;div class="notecard" id="org98053b9"&gt;
 &lt;p&gt;
 &lt;b&gt;&lt;b&gt;Note:&lt;/b&gt;&lt;/b&gt;
 &lt;/p&gt;
@@ -1865,9 +2123,9 @@ I'll be using the names based on the idea that we're using the &lt;code&gt;mako&
 
 &lt;/div&gt;
 
-&lt;div id="outline-container-org0eb1e46" class="outline-2"&gt;
-&lt;h2 id="org0eb1e46"&gt;The Shortcodes&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org0eb1e46"&gt;
+&lt;div id="outline-container-orge004912" class="outline-2"&gt;
+&lt;h2 id="orge004912"&gt;The Shortcodes&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orge004912"&gt;
 &lt;p&gt;
 There actually needs to be two different shortcodes, one for jinja and one for mako. This repository is using mako (as does &lt;a href="https://necromuralist.github.io"&gt;https://necromuralist.github.io&lt;/a&gt;) but &lt;a href="https://necromuralist.github.io/Ape-Iron/"&gt;ape-iron&lt;/a&gt; is using jinja. It's a little too convoluted to keep switching back and forth so I'm mostly going to be relying on ape-iron to test the jinja version (although I really should figure out an easy way to test both).
 &lt;/p&gt;
@@ -1876,7 +2134,7 @@ There actually needs to be two different shortcodes, one for jinja and one for m
 The shortcode creates two HTML tags:
 &lt;/p&gt;
 
-&lt;div class="notecard" id="org50a18c5"&gt;
+&lt;div class="notecard" id="org05b1a0e"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;a script tag that needs the path to the source p5js file&lt;/li&gt;
 &lt;li&gt;a div tag that needs the ID to use so that the p5 sketch can be put inside it&lt;/li&gt;
@@ -1904,7 +2162,7 @@ And the default &lt;code&gt;type&lt;/code&gt; is javascript so you don't need to
 &lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;div class="notecard" id="orgff7ef41"&gt;
+&lt;div class="notecard" id="orgdee2da7"&gt;
 &lt;p&gt;
 &lt;b&gt;&lt;b&gt;Note:&lt;/b&gt;&lt;/b&gt;
 &lt;/p&gt;
@@ -1916,25 +2174,23 @@ I was setting the class for the &lt;code&gt;div&lt;/code&gt; to "p5js" but it tu
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgcfa25e2" class="outline-3"&gt;
-&lt;h3 id="orgcfa25e2"&gt;Mako&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgcfa25e2"&gt;
+&lt;div id="outline-container-org82772cd" class="outline-3"&gt;
+&lt;h3 id="org82772cd"&gt;Mako&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org82772cd"&gt;
 &lt;p&gt;
 I don't see an easy way to set which shortcodes folder to use so I'm going to go with adding "mako" to the end of the shortcodes meant for the mako engine and not putting a suffix on the ones meant for jinja. This shortcode will go into &lt;code&gt;shortcodes/p5divmako.tmpl&lt;/code&gt;: 
 &lt;/p&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;script src="${source}"&amp;gt;&amp;lt;/script&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"${source}"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 
-&amp;lt;div class="p5js" id="${divid}"&amp;gt;&amp;lt;/div&amp;gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"p5js"&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"${divid}"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;
 To use this shortcode you add something that looks like this to a page or post.
 &lt;/p&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
-{{% p5divmako divid="e70fd042-noise-graph" source="noise_graph.js" %}}
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="nv"&gt;p5divmako&lt;/span&gt; &lt;span class="nv"&gt;divid&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"e70fd042-noise-graph"&lt;/span&gt; &lt;span class="nv"&gt;source&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"noise_graph.js"&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="cp"&gt;}}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;
@@ -1950,33 +2206,31 @@ Where &lt;code&gt;noise_graph&lt;/code&gt; is the name of the function in &lt;co
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org73c747b" class="outline-3"&gt;
-&lt;h3 id="org73c747b"&gt;Jinja&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org73c747b"&gt;
+&lt;div id="outline-container-org26978c3" class="outline-3"&gt;
+&lt;h3 id="org26978c3"&gt;Jinja&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org26978c3"&gt;
 &lt;p&gt;
 Here's the jinja version of the shortcode. It's going to go into &lt;code&gt;shortcodes/p5div.tmpl&lt;/code&gt;.
 &lt;/p&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;script src="{{ source }}"&amp;gt;&amp;lt;/script&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;source&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 
-&amp;lt;div class="p5js" id="{{ divid }}"&amp;gt;&amp;lt;/div&amp;gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"p5js"&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;divid&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;
 To use it you use the same syntax as the mako-based shortcode, just change the name of the shortcode to &lt;code&gt;p5div.tmpl&lt;/code&gt;.
 &lt;/p&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
-{{% p5div divid="e70fd042-noise-graph" source="noise_graph.js" %}}
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="nv"&gt;p5div&lt;/span&gt; &lt;span class="nv"&gt;divid&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"e70fd042-noise-graph"&lt;/span&gt; &lt;span class="nv"&gt;source&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"noise_graph.js"&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="cp"&gt;}}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org9d20819" class="outline-2"&gt;
-&lt;h2 id="org9d20819"&gt;Links&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org9d20819"&gt;
+&lt;div id="outline-container-org71540df" class="outline-2"&gt;
+&lt;h2 id="org71540df"&gt;Links&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org71540df"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;&amp;lt;script&amp;gt;: The Script element - HTML: HyperText Markup Language | MDN [Internet]. 2023 [cited 2023 Jun 20]. Available from: &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script"&gt;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;

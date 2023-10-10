@@ -102,27 +102,27 @@ bg-light
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div id="outline-container-orgfde6dba" class="outline-2">
-<h2 id="orgfde6dba">The P5 Helper Template</h2>
-<div class="outline-text-2" id="text-orgfde6dba">
+    <div id="outline-container-orgcbb7da4" class="outline-2">
+<h2 id="orgcbb7da4">The P5 Helper Template</h2>
+<div class="outline-text-2" id="text-orgcbb7da4">
 <p>
 This is where I defined some macros to add the p5 code to posts. It's based on the <code>math_helper.tmpl</code> template, although it took a little bit more work (well, too much work) to figure out how to get the metadata for this template.
 </p>
 
-<div class="highlight"><pre><span></span>## -*- coding: utf-8 -*-
+<div class="highlight"><pre><span></span><span class="c1">## -*- coding: utf-8 -*-</span>
 
-&lt;&lt;p5-scripts-macro&gt;&gt;
+<span class="err">&lt;</span><span class="p">&lt;</span><span class="nt">p5-scripts-macro</span><span class="p">&gt;</span>&gt;
 
-&lt;&lt;p5-post-macro&gt;&gt;
+<span class="err">&lt;</span><span class="p">&lt;</span><span class="nt">p5-post-macro</span><span class="p">&gt;</span>&gt;
 
-&lt;&lt;p5-index-macro&gt;&gt;
+<span class="err">&lt;</span><span class="p">&lt;</span><span class="nt">p5-index-macro</span><span class="p">&gt;</span>&gt;
 </pre></div>
 </div>
 </div>
 
-<div id="outline-container-orgd3ff5e4" class="outline-2">
-<h2 id="orgd3ff5e4">P5 Scripts</h2>
-<div class="outline-text-2" id="text-orgd3ff5e4">
+<div id="outline-container-orga758069" class="outline-2">
+<h2 id="orga758069">P5 Scripts</h2>
+<div class="outline-text-2" id="text-orga758069">
 <p>
 This is the macro to call to add the tag to pull in the p5 code from a CDN. Any key you put in the <code>GLOBAL_CONTEXT</code> dictionary in your <code>conf.py</code> file becomes a variable you can use in the template. So in this case, to set a different source for the p5 library the user could update the <code>GLOBAL_CONTEXT</code> to be:
 </p>
@@ -138,49 +138,49 @@ This is the macro to call to add the tag to pull in the p5 code from a CDN. Any 
 And in the template there will magically appear a variable named <code>p5_library_source</code> with our new <code>script</code> tag in it.
 </p>
 
-<div class="highlight"><pre><span></span>&lt;%doc&gt;
+<div class="highlight"><pre><span></span><span class="err">&lt;</span>%doc&gt;
 Macro to add the p5 library to a page.
 
 To override the default source put the new source in ~GLOBAL_CONTEXT["p5_library_source"]~
 in the ~conf.py file. This will override the entire script tag so you can also set a file
 location if you choose not to use the CDN
-&lt;/%doc&gt;
-&lt;%def name="p5_scripts()"&gt;
+<span class="err">&lt;</span>/%doc&gt;
+<span class="err">&lt;</span>%def name="p5_scripts()"&gt;
 % if p5_library_source:
   ${p5_library_source}
 % else:
-  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"
-	  integrity="sha512-3RlxD1bW34eFKPwj9gUXEWtdSMC59QqIqHnD8O/NoTwSJhgxRizdcFVQhUMFyTp5RwLTDL0Lbcqtl8b7bFAzog=="
-	  crossorigin="anonymous" referrerpolicy="no-referrer"&gt;&lt;/script&gt;
+  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"</span>
+	  <span class="na">integrity</span><span class="o">=</span><span class="s">"sha512-3RlxD1bW34eFKPwj9gUXEWtdSMC59QqIqHnD8O/NoTwSJhgxRizdcFVQhUMFyTp5RwLTDL0Lbcqtl8b7bFAzog=="</span>
+	  <span class="na">crossorigin</span><span class="o">=</span><span class="s">"anonymous"</span> <span class="na">referrerpolicy</span><span class="o">=</span><span class="s">"no-referrer"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 % endif
-&lt;/%def&gt;
+<span class="err">&lt;</span>/%def&gt;
 </pre></div>
 </div>
 </div>
 
-<div id="outline-container-orged34769" class="outline-2">
-<h2 id="orged34769">P5 Post Macro</h2>
-<div class="outline-text-2" id="text-orged34769">
+<div id="outline-container-orgb873573" class="outline-2">
+<h2 id="orgb873573">P5 Post Macro</h2>
+<div class="outline-text-2" id="text-orgb873573">
 <p>
 This is a macro to use if you have a template with a single post object (e.g. if you override the <code>post.tmpl</code> template or one of its children). I'm using a dedicated template for p5 posts right now so it isn't being used.
 </p>
 
-<div class="highlight"><pre><span></span>&lt;%doc&gt;
+<div class="highlight"><pre><span></span><span class="err">&lt;</span>%doc&gt;
  macro for a single post
  `post`: a Post object
-&lt;/%doc&gt;
-&lt;%def name="p5_ifpost(post)"&gt;
+<span class="err">&lt;</span>/%doc&gt;
+<span class="err">&lt;</span>%def name="p5_ifpost(post)"&gt;
     %if post.meta("has_p5"):
 	${p5_scripts()}
     %endif
-&lt;/%def&gt;
+<span class="err">&lt;</span>/%def&gt;
 </pre></div>
 </div>
 </div>
 
-<div id="outline-container-orgf6284c9" class="outline-2">
-<h2 id="orgf6284c9">P5 Post Index Macro</h2>
-<div class="outline-text-2" id="text-orgf6284c9">
+<div id="outline-container-org82a01ff" class="outline-2">
+<h2 id="org82a01ff">P5 Post Index Macro</h2>
+<div class="outline-text-2" id="text-org82a01ff">
 <p>
 This is the macro I'm adding to the <code>index.tmpl</code> template to get p5 into the latest pages feed. Jinja doesn't support the comprehension-type syntax that <code>mako</code> does and <code>Nikola</code> puts the metadata dictionary into a Functionary object which is a default dict that is callable. The metadata dictionary that we want is actually set as the value to a key in the dictionary matching the language for the sight (<code>en</code> in my case). So you can't access it directly (e.g. you can't use <code>post.meta.has_p5</code>) but if you call the meta object like a function instead of using it as a dictionary it will bypass the language key for you so you don't have to know what the language is (e.g. <code>post.meta("has_p5")</code> is the same as <code>post.meta.en.has_p5</code> (if English is the language being used)). Since I only use English it's probably unnecessary to use the function-syntax, but it seems to be the way it's intended to be used (and it took forever to figure out what was going on) so I'm using it.
 </p>
@@ -189,7 +189,7 @@ This is the macro I'm adding to the <code>index.tmpl</code> template to get p5 i
 But, after I set it up to check for <code>has_p5</code> in the metadata I realized that this fixed the <code>index.tmpl</code> but I'd have to update the <code>post.tmpl</code> to use it for individual posts, which seemed like too much so I instead set it to also check if the post uses the <code>p5.tmpl</code> template. If I start adding more conditional imports maybe it'll make sense to use <code>has_p5</code> but for now, the only way that works both in the feed and when viewing an individual post is to set the <code>.. template: p5.tmpl</code> metadata at the top of a post.
 </p>
 
-<div class="highlight"><pre><span></span>&lt;%doc&gt;
+<div class="highlight"><pre><span></span><span class="err">&lt;</span>%doc&gt;
   macro used by feed page with multiple posts (e.g. index.tmpl)
  'posts': list of Post objects
  the ~post.meta~ object is a Functionary object
@@ -197,12 +197,12 @@ But, after I set it up to check for <code>has_p5</code> in the metadata I realiz
  if you try ~post.meta.has_p5~ it will fail because you need the language you're using as a key
    e.g. ~post.meta.en.has_p5~ 
  To not refer to the langugage you need to call it like a function, passing in the "has_p5" key as an argument
-&lt;/%doc&gt;
-&lt;%def name="p5_scripts_ifposts(posts)"&gt;
+<span class="err">&lt;</span>/%doc&gt;
+<span class="err">&lt;</span>%def name="p5_scripts_ifposts(posts)"&gt;
   %if any((post.meta("has_p5") or post.meta("template") == "p5.tmpl") for post in posts):
       ${p5_scripts()}
   %endif
-&lt;/%def&gt;
+<span class="err">&lt;</span>/%def&gt;
 </pre></div>
 </div>
 </div>

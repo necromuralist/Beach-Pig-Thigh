@@ -113,9 +113,9 @@ bg-light
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div id="outline-container-org338587d" class="outline-2">
-<h2 id="org338587d">Site Data</h2>
-<div class="outline-text-2" id="text-org338587d">
+    <div id="outline-container-orge93e542" class="outline-2">
+<h2 id="orge93e542">Site Data</h2>
+<div class="outline-text-2" id="text-orge93e542">
 <div class="highlight"><pre><span></span><span class="c1"># Data about this site</span>
 <span class="n">BLOG_AUTHOR</span> <span class="o">=</span> <span class="s2">"The Cloistered Monkey"</span>  <span class="c1"># (translatable)</span>
 <span class="n">BLOG_TITLE</span> <span class="o">=</span> <span class="s2">"Beach Pig Rump &amp; Thigh"</span>  <span class="c1"># (translatable)</span>
@@ -132,31 +132,31 @@ bg-light
 </div>
 
 
-<div id="outline-container-orge6293ef" class="outline-2">
-<h2 id="orge6293ef">The Theme</h2>
-<div class="outline-text-2" id="text-orge6293ef">
+<div id="outline-container-org98bee22" class="outline-2">
+<h2 id="org98bee22">The Theme</h2>
+<div class="outline-text-2" id="text-org98bee22">
 <p>
 This is how you choose the theme to use. We're using a custom theme so there's three things that have to match.
 </p>
 </div>
 
-<div id="outline-container-org4c8ccb1" class="outline-3">
-<h3 id="org4c8ccb1">The Theme Location</h3>
-<div class="outline-text-3" id="text-org4c8ccb1">
+<div id="outline-container-org84375b6" class="outline-3">
+<h3 id="org84375b6">The Theme Location</h3>
+<div class="outline-text-3" id="text-org84375b6">
 <p>
 Next to the <code>conf.py</code> file at the root of the nikola repository we need a folder named "themes" and inside that we put a folder whose name matches the name of our theme. I'm going to use <code>custom-mako</code> as our example. The only other expected option at this point would be <code>custom-jinja</code>. So our "themes" folder should look like this (more or less):
 </p>
 
-<pre class="example" id="orga882cc6">
+<pre class="example" id="orgfb5f595">
 themes/
   custom-mako/
 </pre>
 </div>
 </div>
 
-<div id="outline-container-org9f54574" class="outline-3">
-<h3 id="org9f54574">The Theme Configuration</h3>
-<div class="outline-text-3" id="text-org9f54574">
+<div id="outline-container-orgbdb2ec7" class="outline-3">
+<h3 id="orgbdb2ec7">The Theme Configuration</h3>
+<div class="outline-text-3" id="text-orgbdb2ec7">
 <p>
 Inside the <code>themes/custom-mako/</code> folder we need a file with the name <code>custom-mako.theme</code> - the base name of the file needs to match the name of our theme. This is where we tell nikola that we're using mako (or jinja as the case may be). Here's what's in it (the mako version).
 </p>
@@ -176,9 +176,9 @@ family = bootstrap4
 </div>
 </div>
 
-<div id="outline-container-orgb001568" class="outline-3">
-<h3 id="orgb001568">The conf.py</h3>
-<div class="outline-text-3" id="text-orgb001568">
+<div id="outline-container-orgfd17f6a" class="outline-3">
+<h3 id="orgfd17f6a">The conf.py</h3>
+<div class="outline-text-3" id="text-orgfd17f6a">
 <p>
 Inside <code>conf.py</code> we put the name of the theme, matching the name of the folder and configuration file.
 </p>
@@ -190,13 +190,13 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </div>
 </div>
 
-<div id="outline-container-org785dfa5" class="outline-2">
-<h2 id="org785dfa5">Posts and Pages</h2>
-<div class="outline-text-2" id="text-org785dfa5">
+<div id="outline-container-orgedf5558" class="outline-2">
+<h2 id="orgedf5558">Posts and Pages</h2>
+<div class="outline-text-2" id="text-orgedf5558">
 </div>
-<div id="outline-container-org79e556f" class="outline-3">
-<h3 id="org79e556f">Posts</h3>
-<div class="outline-text-3" id="text-org79e556f">
+<div id="outline-container-orgd530b97" class="outline-3">
+<h3 id="orgd530b97">Posts</h3>
+<div class="outline-text-3" id="text-orgd530b97">
 <div class="highlight"><pre><span></span><span class="n">POSTS</span> <span class="o">=</span> <span class="p">(</span>
     <span class="p">(</span><span class="s2">"posts/*.org"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
     <span class="p">(</span><span class="s2">"posts/*.rst"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
@@ -208,9 +208,9 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </div>
 </div>
 
-<div id="outline-container-orgbf5e315" class="outline-3">
-<h3 id="orgbf5e315">Pages</h3>
-<div class="outline-text-3" id="text-orgbf5e315">
+<div id="outline-container-org718a9e4" class="outline-3">
+<h3 id="org718a9e4">Pages</h3>
+<div class="outline-text-3" id="text-org718a9e4">
 <div class="highlight"><pre><span></span><span class="n">PAGES</span> <span class="o">=</span> <span class="p">(</span>
     <span class="p">(</span><span class="s2">"source/*.org"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"page.tmpl"</span><span class="p">),</span>
     <span class="p">(</span><span class="s2">"source/*.rst"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"page.tmpl"</span><span class="p">),</span>
@@ -222,9 +222,9 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </div>
 </div>
 
-<div id="outline-container-orgcf5a113" class="outline-3">
-<h3 id="orgcf5a113">The Index Path</h3>
-<div class="outline-text-3" id="text-orgcf5a113">
+<div id="outline-container-orgaacdce1" class="outline-3">
+<h3 id="orgaacdce1">The Index Path</h3>
+<div class="outline-text-3" id="text-orgaacdce1">
 <div class="highlight"><pre><span></span><span class="c1"># Final location for the main blog page and sibling paginated pages is</span>
 <span class="c1"># output / TRANSLATION[lang] / INDEX_PATH / index-*.html</span>
 <span class="c1"># (translatable)</span>
@@ -234,9 +234,9 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </div>
 </div>
 </div>
-<div id="outline-container-org9567614" class="outline-2">
-<h2 id="org9567614">Navigation Links</h2>
-<div class="outline-text-2" id="text-org9567614">
+<div id="outline-container-orgf7a073c" class="outline-2">
+<h2 id="orgf7a073c">Navigation Links</h2>
+<div class="outline-text-2" id="text-orgf7a073c">
 <div class="highlight"><pre><span></span><span class="n">NAVIGATION_LINKS</span> <span class="o">=</span> <span class="p">{</span>
     <span class="n">DEFAULT_LANG</span><span class="p">:</span> <span class="p">(</span>
 	<span class="p">(</span><span class="s2">"/posts/"</span><span class="p">,</span> <span class="s2">"Posts"</span><span class="p">),</span>
@@ -259,9 +259,9 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </div>
 </div>
 
-<div id="outline-container-orgb05b0dc" class="outline-2">
-<h2 id="orgb05b0dc">Github Deploy</h2>
-<div class="outline-text-2" id="text-orgb05b0dc">
+<div id="outline-container-org22de4a1" class="outline-2">
+<h2 id="org22de4a1">Github Deploy</h2>
+<div class="outline-text-2" id="text-org22de4a1">
 <div class="highlight"><pre><span></span><span class="c1"># github_deploy configuration</span>
 <span class="c1"># For more details, read the manual:</span>
 <span class="c1"># https://getnikola.com/handbook.html#deploying-to-github</span>
@@ -279,9 +279,9 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </div>
 </div>
 
-<div id="outline-container-orgccd9700" class="outline-2">
-<h2 id="orgccd9700">The License</h2>
-<div class="outline-text-2" id="text-orgccd9700">
+<div id="outline-container-org23066b0" class="outline-2">
+<h2 id="org23066b0">The License</h2>
+<div class="outline-text-2" id="text-org23066b0">
 <div class="highlight"><pre><span></span><span class="n">LICENSE</span> <span class="o">=</span> <span class="s1">'''</span>
 <span class="s1">&lt;div id="license"xmlns:cc="http://creativecommons.org/ns#" &gt;This work is licensed under</span>
 <span class="s1">&lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0</span>
@@ -293,17 +293,17 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </div>
 </div>
 
-<div id="outline-container-org2a4f878" class="outline-2">
-<h2 id="org2a4f878">The Footer</h2>
-<div class="outline-text-2" id="text-org2a4f878">
+<div id="outline-container-orgcd885d1" class="outline-2">
+<h2 id="orgcd885d1">The Footer</h2>
+<div class="outline-text-2" id="text-orgcd885d1">
 <div class="highlight"><pre><span></span><span class="n">CONTENT_FOOTER</span> <span class="o">=</span> <span class="s1">'Scribbles by &lt;a href="mailto:</span><span class="si">{email}</span><span class="s1">"&gt;</span><span class="si">{author}</span><span class="s1">&lt;/a&gt; - Powered by         &lt;a href="https://getnikola.com" rel="nofollow"&gt;Nikola&lt;/a&gt;         </span><span class="si">{license}</span><span class="s1">'</span>
 </pre></div>
 </div>
 </div>
 
-<div id="outline-container-orgd55ee87" class="outline-2">
-<h2 id="orgd55ee87">Strip Indexes</h2>
-<div class="outline-text-2" id="text-orgd55ee87">
+<div id="outline-container-orgd79aa51" class="outline-2">
+<h2 id="orgd79aa51">Strip Indexes</h2>
+<div class="outline-text-2" id="text-orgd79aa51">
 <div class="highlight"><pre><span></span><span class="c1"># If a link ends in /index.html,  drop the index.html part.</span>
 <span class="c1"># http://mysite/foo/bar/index.html =&gt; http://mysite/foo/bar/</span>
 <span class="c1"># (Uses the INDEX_FILE setting, so if that is, say, default.html,</span>
@@ -313,9 +313,9 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </div>
 </div>
 
-<div id="outline-container-orgeafee80" class="outline-2">
-<h2 id="orgeafee80">Search Form</h2>
-<div class="outline-text-2" id="text-orgeafee80">
+<div id="outline-container-orgb4874ad" class="outline-2">
+<h2 id="orgb4874ad">Search Form</h2>
+<div class="outline-text-2" id="text-orgb4874ad">
 <div class="highlight"><pre><span></span><span class="c1"># A search form to search this site, for the sidebar. You can use a Google</span>
 <span class="c1"># custom search (https://www.google.com/cse/)</span>
 <span class="c1"># Or a DuckDuckGo search: https://duckduckgo.com/search_box.html</span>
@@ -343,9 +343,9 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </pre></div>
 </div>
 </div>
-<div id="outline-container-org7ba8a51" class="outline-2">
-<h2 id="org7ba8a51">The Tangle</h2>
-<div class="outline-text-2" id="text-org7ba8a51">
+<div id="outline-container-org729db7f" class="outline-2">
+<h2 id="org729db7f">The Tangle</h2>
+<div class="outline-text-2" id="text-org729db7f">
 <p>
 This should eventually get broken up enough to be hidden, but not yet.
 </p>

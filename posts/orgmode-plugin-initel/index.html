@@ -17,6 +17,7 @@
 <link rel="manifest" href="../../site.webmanifest">
 <meta name="author" content="The Cloistered Monkey">
 <link rel="prev" href="../nikola-confpy/index.html" title="Nikola Conf.py" type="text/html">
+<link rel="next" href="../jinja-math-helper/index.html" title="Jinja Math Helper" type="text/html">
 <meta property="og:site_name" content="Beach Pig Rump &amp; Thigh">
 <meta property="og:title" content="Orgmode Plugin init.el">
 <meta property="og:url" content="https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html">
@@ -117,18 +118,21 @@ bg-light
 This is the emacs configuration (<code>init.el</code>) for the <a href="https://plugins.getnikola.com/v8/orgmode/">orgmode plugin</a> to export posts and pages to HTML. I spent forever messing with the <code>init.el</code> file for my emacs instance, but it turns out that the plugin has its own configuration so you have to make changes here or they won't matter.
 </p>
 
-<div id="outline-container-orgcf2dcce" class="outline-2">
-<h2 id="orgcf2dcce">Pygments</h2>
-<div class="outline-text-2" id="text-orgcf2dcce">
+<div id="outline-container-orgddc05da" class="outline-2">
+<h2 id="orgddc05da">Pygments</h2>
+<div class="outline-text-2" id="text-orgddc05da">
 <p>
 This is the list of languages that pygments will colorize when source-code blocks are exported. The org-babel documentation has a <a href="https://orgmode.org/worg/org-contrib/babel/languages/index.html">list of supported</a> languages, but it doesn't list <code>fish</code>, although that seems to work. It might be because I inserted fish-mode, or maybe it just has to be a <a href="https://pygments.org/languages/">supported pygments language</a>.
 </p>
+
+<p>
+The first argument is what you put as the type in the source block and the second is the pygments short-name <code>("org-source-name" . "pygments-name")</code>.
+</p>
 </div>
 
-
-<div id="outline-container-org9cccb01" class="outline-3">
-<h3 id="org9cccb01">Fish</h3>
-<div class="outline-text-3" id="text-org9cccb01">
+<div id="outline-container-org2e4c152" class="outline-3">
+<h3 id="org2e4c152">Fish</h3>
+<div class="outline-text-3" id="text-org2e4c152">
 <p>
 Add coloring for the fish-shell. 
 </p>
@@ -143,9 +147,9 @@ Add coloring for the fish-shell.
 </pre></div>
 </div>
 </div>
-<div id="outline-container-org0ef1e27" class="outline-3">
-<h3 id="org0ef1e27">Gherkin</h3>
-<div class="outline-text-3" id="text-org0ef1e27">
+<div id="outline-container-org2185e6e" class="outline-3">
+<h3 id="org2185e6e">Gherkin</h3>
+<div class="outline-text-3" id="text-org2185e6e">
 <div class="highlight"><pre><span></span><span class="p">(</span><span class="s">"gherkin"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"gherkin"</span><span class="p">)</span>
 </pre></div>
 
@@ -159,9 +163,9 @@ Add coloring for the fish-shell.
 </pre></div>
 </div>
 </div>
-<div id="outline-container-org9f27e70" class="outline-3">
-<h3 id="org9f27e70">HTML</h3>
-<div class="outline-text-3" id="text-org9f27e70">
+<div id="outline-container-orgc6b1b95" class="outline-3">
+<h3 id="orgc6b1b95">HTML</h3>
+<div class="outline-text-3" id="text-orgc6b1b95">
 <div class="highlight"><pre><span></span><span class="p">(</span><span class="s">"html"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"html"</span><span class="p">)</span>
 </pre></div>
 
@@ -169,10 +173,37 @@ Add coloring for the fish-shell.
 </pre></div>
 </div>
 </div>
+
+<div id="outline-container-org99b9895" class="outline-3">
+<h3 id="org99b9895">Jinja</h3>
+<div class="outline-text-3" id="text-org99b9895">
+<div class="highlight"><pre><span></span><span class="p">(</span><span class="s">"jinja"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"html+jinja"</span><span class="p">)</span>
+</pre></div>
+
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">pseudocode</span><span class="o">()</span> <span class="cp">%}</span>
+  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
+</pre></div>
 </div>
-<div id="outline-container-orgca991a9" class="outline-2">
-<h2 id="orgca991a9">The Tangle</h2>
-<div class="outline-text-2" id="text-orgca991a9">
+</div>
+
+<div id="outline-container-org118b2db" class="outline-3">
+<h3 id="org118b2db">Mako</h3>
+<div class="outline-text-3" id="text-org118b2db">
+<div class="highlight"><pre><span></span><span class="p">(</span><span class="s">"mako"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"html+mako"</span><span class="p">)</span>
+</pre></div>
+
+<div class="highlight"><pre><span></span><span class="cp">&lt;%</span><span class="nb">def</span> <span class="na">name=</span><span class="s">"pseudocode()"</span><span class="cp">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="cp">&lt;/%</span><span class="nb">def</span><span class="cp">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga611118" class="outline-2">
+<h2 id="orga611118">The Tangle</h2>
+<div class="outline-text-2" id="text-orga611118">
 <div class="highlight"><pre><span></span><span class="c1">;; Init file to use with the orgmode plugin.</span>
 
 <span class="c1">;; this is generated from the post with the slug: orgmode-plugin-initel</span>
@@ -250,10 +281,12 @@ Add coloring for the fish-shell.
 <span class="w">    </span><span class="p">(</span><span class="s">"haskell"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"haskell"</span><span class="p">)</span>
 <span class="w">    </span><span class="nv">&lt;&lt;html-pygments&gt;&gt;</span>
 <span class="w">    </span><span class="p">(</span><span class="s">"java"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"java"</span><span class="p">)</span>
+<span class="w">    </span><span class="nv">&lt;&lt;jinja-pygments&gt;&gt;</span>
 <span class="w">    </span><span class="p">(</span><span class="s">"js"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"js"</span><span class="p">)</span>
 <span class="w">    </span><span class="p">(</span><span class="s">"julia"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"julia"</span><span class="p">)</span>
 <span class="w">    </span><span class="p">(</span><span class="s">"latex"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"latex"</span><span class="p">)</span>
 <span class="w">    </span><span class="p">(</span><span class="s">"lisp"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"lisp"</span><span class="p">)</span>
+<span class="w">    </span><span class="nv">&lt;&lt;mako-pygments&gt;&gt;</span>
 <span class="w">    </span><span class="p">(</span><span class="s">"makefile"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"makefile"</span><span class="p">)</span>
 <span class="w">    </span><span class="p">(</span><span class="s">"matlab"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"matlab"</span><span class="p">)</span>
 <span class="w">    </span><span class="p">(</span><span class="s">"mscgen"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"mscgen"</span><span class="p">)</span>
@@ -328,9 +361,9 @@ Add coloring for the fish-shell.
 </div>
 </div>
 
-<div id="outline-container-orgc2393d6" class="outline-2">
-<h2 id="orgc2393d6">Links</h2>
-<div class="outline-text-2" id="text-orgc2393d6">
+<div id="outline-container-org0eea310" class="outline-2">
+<h2 id="org0eea310">Links</h2>
+<div class="outline-text-2" id="text-org0eea310">
 <ul class="org-ul">
 <li>Chaganti P. Plugins for Nikola. 2020 [cited 2023 Jun 25]. orgmode. Available from: <a href="https://plugins.getnikola.com/v8/orgmode/">https://plugins.getnikola.com/v8/orgmode/</a>
 </li>
@@ -351,6 +384,9 @@ Add coloring for the fish-shell.
 <ul class="pager hidden-print">
 <li class="previous">
                 <a href="../nikola-confpy/index.html" rel="prev" title="Nikola Conf.py">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../jinja-math-helper/index.html" rel="next" title="Jinja Math Helper">Next post</a>
             </li>
         </ul></nav></aside></article><!--End of body content--><footer id="footer">
             Scribbles by <a href="mailto:cloisteredmonkey.jmark@slmail.me">The Cloistered Monkey</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         

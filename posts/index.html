@@ -88,7 +88,259 @@ bg-light
     
 
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="orgmode-plugin-initel/index.html" class="u-url">Orgmode Plugin init.el</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="jinja-math-helper/index.html" class="u-url">Jinja Math Helper</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                The Cloistered Monkey
+            </span></p>
+            <p class="dateline">
+            <a href="jinja-math-helper/index.html" rel="bookmark">
+            <time class="published dt-published" datetime="2023-10-09T16:30:02-07:00" itemprop="datePublished" title="2023-10-09 16:30">2023-10-09 16:30</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li>
+<a href="jinja-math-helper/index.html#org977ee21">The Math Macros</a>
+<ul>
+<li><a href="jinja-math-helper/index.html#orga9a138c">The Math Scripts Macro</a></li>
+<li><a href="jinja-math-helper/index.html#org2675dbe">Pseudocode Additional Config</a></li>
+<li><a href="jinja-math-helper/index.html#org792f303">The Math Styles Macro</a></li>
+</ul>
+</li>
+<li>
+<a href="jinja-math-helper/index.html#org6cfd849">The Post Checkers</a>
+<ul>
+<li><a href="jinja-math-helper/index.html#org31dd385">Math Scripts</a></li>
+<li><a href="jinja-math-helper/index.html#orgc1005f9">Math Styles</a></li>
+</ul>
+</li>
+<li>
+<a href="jinja-math-helper/index.html#orgdb2b33a">Pseudocode Macros</a>
+<ul>
+<li><a href="jinja-math-helper/index.html#org6dabdf4">Code</a></li>
+<li><a href="jinja-math-helper/index.html#org5516a79">Style</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org977ee21" class="outline-2">
+<h2 id="org977ee21">The Math Macros</h2>
+<div class="outline-text-2" id="text-org977ee21">
+</div>
+<div id="outline-container-orga9a138c" class="outline-3">
+<h3 id="orga9a138c">The Math Scripts Macro</h3>
+<div class="outline-text-3" id="text-orga9a138c">
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">math_scripts</span><span class="o">()</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">if</span> <span class="nv">use_katex</span> <span class="cp">%}</span>
+	<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js"</span> <span class="na">integrity</span><span class="o">=</span><span class="s">"sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ"</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">"anonymous"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js"</span> <span class="na">integrity</span><span class="o">=</span><span class="s">"sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">"anonymous"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+	<span class="cp">{%</span> <span class="k">if</span> <span class="nv">katex_auto_render</span> <span class="cp">%}</span>
+	    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">		</span><span class="nx">renderMathInElement</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span>
+<span class="w">		    </span><span class="p">{</span>
+<span class="w">			</span><span class="cp">{{</span> <span class="nv">katex_auto_render</span> <span class="cp">}}</span>
+<span class="w">		    </span><span class="p">}</span>
+<span class="w">		</span><span class="p">);</span>
+<span class="w">	    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+	<span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
+	    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">		</span><span class="nx">renderMathInElement</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span>
+<span class="w">		    </span><span class="p">{</span>
+<span class="w">			</span><span class="nx">delimiters</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">			    </span><span class="p">{</span><span class="nx">left</span><span class="o">:</span><span class="w"> </span><span class="s2">"$$"</span><span class="p">,</span><span class="w"> </span><span class="nx">right</span><span class="o">:</span><span class="w"> </span><span class="s2">"$$"</span><span class="p">,</span><span class="w"> </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">},</span>
+<span class="w">			    </span><span class="p">{</span><span class="nx">left</span><span class="o">:</span><span class="w"> </span><span class="s2">"\\["</span><span class="p">,</span><span class="w"> </span><span class="nx">right</span><span class="o">:</span><span class="w"> </span><span class="s2">"\\]"</span><span class="p">,</span><span class="w"> </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">},</span>
+<span class="w">			    </span><span class="p">{</span><span class="nx">left</span><span class="o">:</span><span class="w"> </span><span class="s2">"\\begin{equation*}"</span><span class="p">,</span><span class="w"> </span><span class="nx">right</span><span class="o">:</span><span class="w"> </span><span class="s2">"\\end{equation*}"</span><span class="p">,</span><span class="w"> </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">},</span>
+<span class="w">			    </span><span class="p">{</span><span class="nx">left</span><span class="o">:</span><span class="w"> </span><span class="s2">"\\("</span><span class="p">,</span><span class="w"> </span><span class="nx">right</span><span class="o">:</span><span class="w"> </span><span class="s2">"\\)"</span><span class="p">,</span><span class="w"> </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">}</span>
+<span class="w">			</span><span class="p">]</span>
+<span class="w">		    </span><span class="p">}</span>
+<span class="w">		</span><span class="p">);</span>
+<span class="w">	    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+	<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
+	<span class="c">{#  Note: given the size of MathJax; nikola will retrieve MathJax from a CDN regardless of use_cdn configuration #}</span>
+
+<span class="c">{# the default config has been updated with stuff that pseudocode.js needs #}</span>
+	<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"</span> <span class="na">integrity</span><span class="o">=</span><span class="s">"sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH"</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">"anonymous"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+	<span class="cp">{%</span> <span class="k">if</span> <span class="nv">mathjax_config</span> <span class="cp">%}</span>
+	<span class="cp">{{</span> <span class="nv">mathjax_config</span> <span class="cp">}}</span>
+	<span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
+	<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/x-mathjax-config"</span><span class="p">&gt;</span>
+<span class="w">	 </span><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span>
+	   tex2jax: {
+	     inlineMath: [['$','$'], ['\\(','\\)']],
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-org2675dbe" class="outline-3">
+<h3 id="org2675dbe">Pseudocode Additional Config</h3>
+<div class="outline-text-3" id="text-org2675dbe">
+<div class="highlight"><pre><span></span>	     displayMath: [['$$','$$'], ['\\[','\\]']],
+	     processEscapes: true,
+	     processEnvironments: true,
+	   },
+	   displayAlign: 'center',
+	   "HTML-CSS": {
+	     styles: {'.MathJax_Display': {"margin": 0}}
+	   }
+	 });
+	<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+	<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-org792f303" class="outline-3">
+<h3 id="org792f303">The Math Styles Macro</h3>
+<div class="outline-text-3" id="text-org792f303">
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">math_styles</span><span class="o">()</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">if</span> <span class="nv">use_katex</span> <span class="cp">%}</span>
+	<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css"</span> <span class="na">integrity</span><span class="o">=</span><span class="s">"sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j"</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">"anonymous"</span><span class="p">&gt;</span>
+    <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6cfd849" class="outline-2">
+<h2 id="org6cfd849">The Post Checkers</h2>
+<div class="outline-text-2" id="text-org6cfd849">
+</div>
+<div id="outline-container-org31dd385" class="outline-3">
+<h3 id="org31dd385">Math Scripts</h3>
+<div class="outline-text-3" id="text-org31dd385">
+</div>
+<div id="outline-container-org8fad752" class="outline-4">
+<h4 id="org8fad752">Math Scripts If Post</h4>
+<div class="outline-text-4" id="text-org8fad752">
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">math_scripts_ifpost</span><span class="o">(</span><span class="nv">post</span><span class="o">)</span> <span class="cp">%}</span>
+  <span class="cp">{%</span> <span class="k">if</span> <span class="nv">post.has_math</span> <span class="cp">%}</span>
+    <span class="cp">{{</span> <span class="nv">math_scripts</span><span class="o">()</span> <span class="cp">}}</span>
+</pre></div>
+
+<p>
+I didn't build code to make a proper metadata setting for pseudocode
+so it checks the post.meta object has_pseudocode
+So as long as the post header has `.. has_pseudocode: &lt;any text&gt;` it will put it in 
+</p>
+
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">elif</span> <span class="nv">post.meta</span><span class="o">(</span><span class="s2">"has_pseudocode"</span><span class="o">)</span> <span class="cp">%}</span>
+  <span class="cp">{{</span> <span class="nv">math_scripts</span><span class="o">()</span> <span class="cp">}}</span>
+  <span class="cp">{{</span> <span class="nv">pseudocode</span><span class="o">()</span> <span class="cp">}}</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>  <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</div>
+<div id="outline-container-orge279dcd" class="outline-4">
+<h4 id="orge279dcd">Math Scripts If Posts</h4>
+<div class="outline-text-4" id="text-orge279dcd">
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">math_scripts_ifposts</span><span class="o">(</span><span class="nv">posts</span><span class="o">)</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">if</span> <span class="nv">posts</span><span class="o">|</span><span class="nf">selectattr</span><span class="o">(</span><span class="s2">"has_math"</span><span class="o">)|</span><span class="nf">list</span> <span class="cp">%}</span>
+      <span class="cp">{{</span> <span class="nv">math_scripts</span><span class="o">()</span> <span class="cp">}}</span>
+</pre></div>
+
+<div class="highlight"><pre><span></span>    <span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
+      <span class="cp">{%</span> <span class="k">set</span> <span class="nv">not_yet</span> <span class="o">=</span> <span class="nv">namespace</span><span class="o">(</span><span class="nv">set_up</span><span class="o">=</span><span class="kp">true</span><span class="o">)</span> <span class="cp">%}</span>
+      <span class="cp">{%</span> <span class="k">for</span> <span class="nv">post</span> <span class="k">in</span> <span class="nv">posts</span> <span class="cp">%}</span>
+	<span class="cp">{%</span> <span class="k">if</span> <span class="nv">post.meta</span><span class="o">(</span><span class="s2">"has_pseudocode"</span><span class="o">)</span> <span class="k">and</span> <span class="nv">not_yet.set_up</span> <span class="cp">%}</span>
+	  <span class="cp">{{</span> <span class="nv">math_scripts</span><span class="o">()</span> <span class="cp">}}</span>
+	  <span class="cp">{{</span> <span class="nv">pseudocode</span><span class="o">()</span> <span class="cp">}}</span>
+	  <span class="cp">{%</span> <span class="k">set</span> <span class="nv">not_yet.set_up</span> <span class="o">=</span> <span class="kp">false</span> <span class="cp">%}</span>
+	<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+      <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc1005f9" class="outline-3">
+<h3 id="orgc1005f9">Math Styles</h3>
+<div class="outline-text-3" id="text-orgc1005f9">
+</div>
+<div id="outline-container-orgee150ed" class="outline-4">
+<h4 id="orgee150ed">Math Styles If Post</h4>
+<div class="outline-text-4" id="text-orgee150ed">
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">math_styles_ifpost</span><span class="o">(</span><span class="nv">post</span><span class="o">)</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">if</span> <span class="nv">post.has_math</span> <span class="cp">%}</span>
+      <span class="cp">{{</span> <span class="nv">math_styles</span><span class="o">()</span> <span class="cp">}}</span>
+</pre></div>
+
+<div class="highlight"><pre><span></span>    <span class="cp">{%</span> <span class="k">elif</span> <span class="nv">post.meta</span><span class="o">(</span><span class="s2">"has_pseudocode"</span><span class="o">)</span> <span class="cp">%}</span>
+      <span class="cp">{{</span> <span class="nv">code_styles</span><span class="o">()</span> <span class="cp">}}</span>
+    <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-org0dadbbf" class="outline-4">
+<h4 id="org0dadbbf">Math Styles If Posts</h4>
+<div class="outline-text-4" id="text-org0dadbbf">
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">math_styles_ifposts</span><span class="o">(</span><span class="nv">posts</span><span class="o">)</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">if</span> <span class="nv">posts</span><span class="o">|</span><span class="nf">selectattr</span><span class="o">(</span><span class="s2">"has_math"</span><span class="o">)|</span><span class="nf">list</span> <span class="cp">%}</span>
+      <span class="cp">{{</span> <span class="nv">math_styles</span><span class="o">()</span> <span class="cp">}}</span>
+</pre></div>
+
+<div class="highlight"><pre><span></span>    <span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
+      <span class="cp">{%</span> <span class="k">set</span> <span class="nv">not_yet</span> <span class="o">=</span> <span class="nv">namespace</span><span class="o">(</span><span class="nv">set_up</span><span class="o">=</span><span class="kp">true</span><span class="o">)</span> <span class="cp">%}</span>
+      <span class="cp">{%</span> <span class="k">for</span> <span class="nv">post</span> <span class="k">in</span> <span class="nv">posts</span> <span class="cp">%}</span>
+	<span class="cp">{%</span> <span class="k">if</span> <span class="nv">post.meta</span><span class="o">(</span><span class="s2">"has_pseudocode"</span><span class="o">)</span> <span class="k">and</span> <span class="nv">not_yet.set_up</span> <span class="cp">%}</span>
+	  <span class="cp">{{</span> <span class="nv">math_styles</span><span class="o">()</span> <span class="cp">}}</span>
+	  <span class="cp">{{</span> <span class="nv">code_styles</span><span class="o">()</span> <span class="cp">}}</span>
+	  <span class="cp">{%</span> <span class="k">set</span> <span class="nv">not_yet.set_up</span> <span class="o">=</span> <span class="kp">false</span> <span class="cp">%}</span>
+	<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+      <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdb2b33a" class="outline-2">
+<h2 id="orgdb2b33a">Pseudocode Macros</h2>
+<div class="outline-text-2" id="text-orgdb2b33a">
+<p>
+These define the macros to insert the pseudocode scripts into the HTML.
+</p>
+</div>
+
+<div id="outline-container-org6dabdf4" class="outline-3">
+<h3 id="org6dabdf4">Code</h3>
+<div class="outline-text-3" id="text-org6dabdf4">
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">pseudocode</span><span class="o">()</span> <span class="cp">%}</span>
+  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-org5516a79" class="outline-3">
+<h3 id="org5516a79">Style</h3>
+<div class="outline-text-3" id="text-org5516a79">
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">code_styles</span><span class="o">()</span> <span class="cp">%}</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.css"</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</div>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="orgmode-plugin-initel/index.html" class="u-url">Orgmode Plugin init.el</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 The Cloistered Monkey
@@ -103,18 +355,21 @@ bg-light
 This is the emacs configuration (<code>init.el</code>) for the <a href="https://plugins.getnikola.com/v8/orgmode/">orgmode plugin</a> to export posts and pages to HTML. I spent forever messing with the <code>init.el</code> file for my emacs instance, but it turns out that the plugin has its own configuration so you have to make changes here or they won't matter.
 </p>
 
-<div id="outline-container-orgcf2dcce" class="outline-2">
-<h2 id="orgcf2dcce">Pygments</h2>
-<div class="outline-text-2" id="text-orgcf2dcce">
+<div id="outline-container-orgddc05da" class="outline-2">
+<h2 id="orgddc05da">Pygments</h2>
+<div class="outline-text-2" id="text-orgddc05da">
 <p>
 This is the list of languages that pygments will colorize when source-code blocks are exported. The org-babel documentation has a <a href="https://orgmode.org/worg/org-contrib/babel/languages/index.html">list of supported</a> languages, but it doesn't list <code>fish</code>, although that seems to work. It might be because I inserted fish-mode, or maybe it just has to be a <a href="https://pygments.org/languages/">supported pygments language</a>.
 </p>
+
+<p>
+The first argument is what you put as the type in the source block and the second is the pygments short-name <code>("org-source-name" . "pygments-name")</code>.
+</p>
 </div>
 
-
-<div id="outline-container-org9cccb01" class="outline-3">
-<h3 id="org9cccb01">Fish</h3>
-<div class="outline-text-3" id="text-org9cccb01">
+<div id="outline-container-org2e4c152" class="outline-3">
+<h3 id="org2e4c152">Fish</h3>
+<div class="outline-text-3" id="text-org2e4c152">
 <p>
 Add coloring for the fish-shell. 
 </p>
@@ -129,9 +384,9 @@ Add coloring for the fish-shell.
 </pre></div>
 </div>
 </div>
-<div id="outline-container-org0ef1e27" class="outline-3">
-<h3 id="org0ef1e27">Gherkin</h3>
-<div class="outline-text-3" id="text-org0ef1e27">
+<div id="outline-container-org2185e6e" class="outline-3">
+<h3 id="org2185e6e">Gherkin</h3>
+<div class="outline-text-3" id="text-org2185e6e">
 <div class="highlight"><pre><span></span><span class="p">(</span><span class="s">"gherkin"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"gherkin"</span><span class="p">)</span>
 </pre></div>
 
@@ -145,9 +400,9 @@ Add coloring for the fish-shell.
 </pre></div>
 </div>
 </div>
-<div id="outline-container-org9f27e70" class="outline-3">
-<h3 id="org9f27e70">HTML</h3>
-<div class="outline-text-3" id="text-org9f27e70">
+<div id="outline-container-orgc6b1b95" class="outline-3">
+<h3 id="orgc6b1b95">HTML</h3>
+<div class="outline-text-3" id="text-orgc6b1b95">
 <div class="highlight"><pre><span></span><span class="p">(</span><span class="s">"html"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"html"</span><span class="p">)</span>
 </pre></div>
 
@@ -155,10 +410,37 @@ Add coloring for the fish-shell.
 </pre></div>
 </div>
 </div>
+
+<div id="outline-container-org99b9895" class="outline-3">
+<h3 id="org99b9895">Jinja</h3>
+<div class="outline-text-3" id="text-org99b9895">
+<div class="highlight"><pre><span></span><span class="p">(</span><span class="s">"jinja"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"html+jinja"</span><span class="p">)</span>
+</pre></div>
+
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">pseudocode</span><span class="o">()</span> <span class="cp">%}</span>
+  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
+</pre></div>
 </div>
-<div id="outline-container-orgca991a9" class="outline-2">
-<h2 id="orgca991a9">The Tangle</h2>
-<div class="outline-text-2" id="text-orgca991a9">
+</div>
+
+<div id="outline-container-org118b2db" class="outline-3">
+<h3 id="org118b2db">Mako</h3>
+<div class="outline-text-3" id="text-org118b2db">
+<div class="highlight"><pre><span></span><span class="p">(</span><span class="s">"mako"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"html+mako"</span><span class="p">)</span>
+</pre></div>
+
+<div class="highlight"><pre><span></span><span class="cp">&lt;%</span><span class="nb">def</span> <span class="na">name=</span><span class="s">"pseudocode()"</span><span class="cp">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="cp">&lt;/%</span><span class="nb">def</span><span class="cp">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga611118" class="outline-2">
+<h2 id="orga611118">The Tangle</h2>
+<div class="outline-text-2" id="text-orga611118">
 <div class="highlight"><pre><span></span><span class="c1">;; Init file to use with the orgmode plugin.</span>
 
 <span class="c1">;; this is generated from the post with the slug: orgmode-plugin-initel</span>
@@ -236,10 +518,12 @@ Add coloring for the fish-shell.
 <span class="w">    </span><span class="p">(</span><span class="s">"haskell"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"haskell"</span><span class="p">)</span>
 <span class="w">    </span><span class="nv">&lt;&lt;html-pygments&gt;&gt;</span>
 <span class="w">    </span><span class="p">(</span><span class="s">"java"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"java"</span><span class="p">)</span>
+<span class="w">    </span><span class="nv">&lt;&lt;jinja-pygments&gt;&gt;</span>
 <span class="w">    </span><span class="p">(</span><span class="s">"js"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"js"</span><span class="p">)</span>
 <span class="w">    </span><span class="p">(</span><span class="s">"julia"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"julia"</span><span class="p">)</span>
 <span class="w">    </span><span class="p">(</span><span class="s">"latex"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"latex"</span><span class="p">)</span>
 <span class="w">    </span><span class="p">(</span><span class="s">"lisp"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"lisp"</span><span class="p">)</span>
+<span class="w">    </span><span class="nv">&lt;&lt;mako-pygments&gt;&gt;</span>
 <span class="w">    </span><span class="p">(</span><span class="s">"makefile"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"makefile"</span><span class="p">)</span>
 <span class="w">    </span><span class="p">(</span><span class="s">"matlab"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"matlab"</span><span class="p">)</span>
 <span class="w">    </span><span class="p">(</span><span class="s">"mscgen"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"mscgen"</span><span class="p">)</span>
@@ -314,9 +598,9 @@ Add coloring for the fish-shell.
 </div>
 </div>
 
-<div id="outline-container-orgc2393d6" class="outline-2">
-<h2 id="orgc2393d6">Links</h2>
-<div class="outline-text-2" id="text-orgc2393d6">
+<div id="outline-container-org0eea310" class="outline-2">
+<h2 id="org0eea310">Links</h2>
+<div class="outline-text-2" id="text-org0eea310">
 <ul class="org-ul">
 <li>Chaganti P. Plugins for Nikola. 2020 [cited 2023 Jun 25]. orgmode. Available from: <a href="https://plugins.getnikola.com/v8/orgmode/">https://plugins.getnikola.com/v8/orgmode/</a>
 </li>
@@ -341,9 +625,9 @@ Add coloring for the fish-shell.
             </p>
         </div>
     </header><div class="e-content entry-content">
-    <div id="outline-container-org338587d" class="outline-2">
-<h2 id="org338587d">Site Data</h2>
-<div class="outline-text-2" id="text-org338587d">
+    <div id="outline-container-orge93e542" class="outline-2">
+<h2 id="orge93e542">Site Data</h2>
+<div class="outline-text-2" id="text-orge93e542">
 <div class="highlight"><pre><span></span><span class="c1"># Data about this site</span>
 <span class="n">BLOG_AUTHOR</span> <span class="o">=</span> <span class="s2">"The Cloistered Monkey"</span>  <span class="c1"># (translatable)</span>
 <span class="n">BLOG_TITLE</span> <span class="o">=</span> <span class="s2">"Beach Pig Rump &amp; Thigh"</span>  <span class="c1"># (translatable)</span>
@@ -360,31 +644,31 @@ Add coloring for the fish-shell.
 </div>
 
 
-<div id="outline-container-orge6293ef" class="outline-2">
-<h2 id="orge6293ef">The Theme</h2>
-<div class="outline-text-2" id="text-orge6293ef">
+<div id="outline-container-org98bee22" class="outline-2">
+<h2 id="org98bee22">The Theme</h2>
+<div class="outline-text-2" id="text-org98bee22">
 <p>
 This is how you choose the theme to use. We're using a custom theme so there's three things that have to match.
 </p>
 </div>
 
-<div id="outline-container-org4c8ccb1" class="outline-3">
-<h3 id="org4c8ccb1">The Theme Location</h3>
-<div class="outline-text-3" id="text-org4c8ccb1">
+<div id="outline-container-org84375b6" class="outline-3">
+<h3 id="org84375b6">The Theme Location</h3>
+<div class="outline-text-3" id="text-org84375b6">
 <p>
 Next to the <code>conf.py</code> file at the root of the nikola repository we need a folder named "themes" and inside that we put a folder whose name matches the name of our theme. I'm going to use <code>custom-mako</code> as our example. The only other expected option at this point would be <code>custom-jinja</code>. So our "themes" folder should look like this (more or less):
 </p>
 
-<pre class="example" id="orga882cc6">
+<pre class="example" id="orgfb5f595">
 themes/
   custom-mako/
 </pre>
 </div>
 </div>
 
-<div id="outline-container-org9f54574" class="outline-3">
-<h3 id="org9f54574">The Theme Configuration</h3>
-<div class="outline-text-3" id="text-org9f54574">
+<div id="outline-container-orgbdb2ec7" class="outline-3">
+<h3 id="orgbdb2ec7">The Theme Configuration</h3>
+<div class="outline-text-3" id="text-orgbdb2ec7">
 <p>
 Inside the <code>themes/custom-mako/</code> folder we need a file with the name <code>custom-mako.theme</code> - the base name of the file needs to match the name of our theme. This is where we tell nikola that we're using mako (or jinja as the case may be). Here's what's in it (the mako version).
 </p>
@@ -404,9 +688,9 @@ family = bootstrap4
 </div>
 </div>
 
-<div id="outline-container-orgb001568" class="outline-3">
-<h3 id="orgb001568">The conf.py</h3>
-<div class="outline-text-3" id="text-orgb001568">
+<div id="outline-container-orgfd17f6a" class="outline-3">
+<h3 id="orgfd17f6a">The conf.py</h3>
+<div class="outline-text-3" id="text-orgfd17f6a">
 <p>
 Inside <code>conf.py</code> we put the name of the theme, matching the name of the folder and configuration file.
 </p>
@@ -418,13 +702,13 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </div>
 </div>
 
-<div id="outline-container-org785dfa5" class="outline-2">
-<h2 id="org785dfa5">Posts and Pages</h2>
-<div class="outline-text-2" id="text-org785dfa5">
+<div id="outline-container-orgedf5558" class="outline-2">
+<h2 id="orgedf5558">Posts and Pages</h2>
+<div class="outline-text-2" id="text-orgedf5558">
 </div>
-<div id="outline-container-org79e556f" class="outline-3">
-<h3 id="org79e556f">Posts</h3>
-<div class="outline-text-3" id="text-org79e556f">
+<div id="outline-container-orgd530b97" class="outline-3">
+<h3 id="orgd530b97">Posts</h3>
+<div class="outline-text-3" id="text-orgd530b97">
 <div class="highlight"><pre><span></span><span class="n">POSTS</span> <span class="o">=</span> <span class="p">(</span>
     <span class="p">(</span><span class="s2">"posts/*.org"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
     <span class="p">(</span><span class="s2">"posts/*.rst"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
@@ -436,9 +720,9 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </div>
 </div>
 
-<div id="outline-container-orgbf5e315" class="outline-3">
-<h3 id="orgbf5e315">Pages</h3>
-<div class="outline-text-3" id="text-orgbf5e315">
+<div id="outline-container-org718a9e4" class="outline-3">
+<h3 id="org718a9e4">Pages</h3>
+<div class="outline-text-3" id="text-org718a9e4">
 <div class="highlight"><pre><span></span><span class="n">PAGES</span> <span class="o">=</span> <span class="p">(</span>
     <span class="p">(</span><span class="s2">"source/*.org"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"page.tmpl"</span><span class="p">),</span>
     <span class="p">(</span><span class="s2">"source/*.rst"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"page.tmpl"</span><span class="p">),</span>
@@ -450,9 +734,9 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </div>
 </div>
 
-<div id="outline-container-orgcf5a113" class="outline-3">
-<h3 id="orgcf5a113">The Index Path</h3>
-<div class="outline-text-3" id="text-orgcf5a113">
+<div id="outline-container-orgaacdce1" class="outline-3">
+<h3 id="orgaacdce1">The Index Path</h3>
+<div class="outline-text-3" id="text-orgaacdce1">
 <div class="highlight"><pre><span></span><span class="c1"># Final location for the main blog page and sibling paginated pages is</span>
 <span class="c1"># output / TRANSLATION[lang] / INDEX_PATH / index-*.html</span>
 <span class="c1"># (translatable)</span>
@@ -462,9 +746,9 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </div>
 </div>
 </div>
-<div id="outline-container-org9567614" class="outline-2">
-<h2 id="org9567614">Navigation Links</h2>
-<div class="outline-text-2" id="text-org9567614">
+<div id="outline-container-orgf7a073c" class="outline-2">
+<h2 id="orgf7a073c">Navigation Links</h2>
+<div class="outline-text-2" id="text-orgf7a073c">
 <div class="highlight"><pre><span></span><span class="n">NAVIGATION_LINKS</span> <span class="o">=</span> <span class="p">{</span>
     <span class="n">DEFAULT_LANG</span><span class="p">:</span> <span class="p">(</span>
 	<span class="p">(</span><span class="s2">"/posts/"</span><span class="p">,</span> <span class="s2">"Posts"</span><span class="p">),</span>
@@ -487,9 +771,9 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </div>
 </div>
 
-<div id="outline-container-orgb05b0dc" class="outline-2">
-<h2 id="orgb05b0dc">Github Deploy</h2>
-<div class="outline-text-2" id="text-orgb05b0dc">
+<div id="outline-container-org22de4a1" class="outline-2">
+<h2 id="org22de4a1">Github Deploy</h2>
+<div class="outline-text-2" id="text-org22de4a1">
 <div class="highlight"><pre><span></span><span class="c1"># github_deploy configuration</span>
 <span class="c1"># For more details, read the manual:</span>
 <span class="c1"># https://getnikola.com/handbook.html#deploying-to-github</span>
@@ -507,9 +791,9 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </div>
 </div>
 
-<div id="outline-container-orgccd9700" class="outline-2">
-<h2 id="orgccd9700">The License</h2>
-<div class="outline-text-2" id="text-orgccd9700">
+<div id="outline-container-org23066b0" class="outline-2">
+<h2 id="org23066b0">The License</h2>
+<div class="outline-text-2" id="text-org23066b0">
 <div class="highlight"><pre><span></span><span class="n">LICENSE</span> <span class="o">=</span> <span class="s1">'''</span>
 <span class="s1">&lt;div id="license"xmlns:cc="http://creativecommons.org/ns#" &gt;This work is licensed under</span>
 <span class="s1">&lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0</span>
@@ -521,17 +805,17 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </div>
 </div>
 
-<div id="outline-container-org2a4f878" class="outline-2">
-<h2 id="org2a4f878">The Footer</h2>
-<div class="outline-text-2" id="text-org2a4f878">
+<div id="outline-container-orgcd885d1" class="outline-2">
+<h2 id="orgcd885d1">The Footer</h2>
+<div class="outline-text-2" id="text-orgcd885d1">
 <div class="highlight"><pre><span></span><span class="n">CONTENT_FOOTER</span> <span class="o">=</span> <span class="s1">'Scribbles by &lt;a href="mailto:</span><span class="si">{email}</span><span class="s1">"&gt;</span><span class="si">{author}</span><span class="s1">&lt;/a&gt; - Powered by         &lt;a href="https://getnikola.com" rel="nofollow"&gt;Nikola&lt;/a&gt;         </span><span class="si">{license}</span><span class="s1">'</span>
 </pre></div>
 </div>
 </div>
 
-<div id="outline-container-orgd55ee87" class="outline-2">
-<h2 id="orgd55ee87">Strip Indexes</h2>
-<div class="outline-text-2" id="text-orgd55ee87">
+<div id="outline-container-orgd79aa51" class="outline-2">
+<h2 id="orgd79aa51">Strip Indexes</h2>
+<div class="outline-text-2" id="text-orgd79aa51">
 <div class="highlight"><pre><span></span><span class="c1"># If a link ends in /index.html,  drop the index.html part.</span>
 <span class="c1"># http://mysite/foo/bar/index.html =&gt; http://mysite/foo/bar/</span>
 <span class="c1"># (Uses the INDEX_FILE setting, so if that is, say, default.html,</span>
@@ -541,9 +825,9 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </div>
 </div>
 
-<div id="outline-container-orgeafee80" class="outline-2">
-<h2 id="orgeafee80">Search Form</h2>
-<div class="outline-text-2" id="text-orgeafee80">
+<div id="outline-container-orgb4874ad" class="outline-2">
+<h2 id="orgb4874ad">Search Form</h2>
+<div class="outline-text-2" id="text-orgb4874ad">
 <div class="highlight"><pre><span></span><span class="c1"># A search form to search this site, for the sidebar. You can use a Google</span>
 <span class="c1"># custom search (https://www.google.com/cse/)</span>
 <span class="c1"># Or a DuckDuckGo search: https://duckduckgo.com/search_box.html</span>
@@ -571,9 +855,9 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </pre></div>
 </div>
 </div>
-<div id="outline-container-org7ba8a51" class="outline-2">
-<h2 id="org7ba8a51">The Tangle</h2>
-<div class="outline-text-2" id="text-org7ba8a51">
+<div id="outline-container-org729db7f" class="outline-2">
+<h2 id="org729db7f">The Tangle</h2>
+<div class="outline-text-2" id="text-org729db7f">
 <p>
 This should eventually get broken up enough to be hidden, but not yet.
 </p>
@@ -1923,15 +2207,6 @@ This should eventually get broken up enough to be hidden, but not yet.
         </div>
     </header><div class="e-content entry-content">
     <p>
-{# This is tangled from the "p5-div-shortcode" post #}
-
-<script src="p5-cdn-url/%7B%7B%20source%20%7D%7D"></script></p>
-<div class="p5js" id="{{ divid }}"></div>
-
-
-
-
-<p>
 To change the script tag with the URL for the p5 CDN, put a new one in the <code>GLOBAL_CONTEXT</code> dictionary defined in the <code>conf.py</code> file using the <code>p5_library_source</code> as the key and the new cag as the value. For example:
 </p>
 
@@ -1958,13 +2233,13 @@ To change the script tag with the URL for the p5 CDN, put a new one in the <code
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
 <li>
-<a href="p5-div-shortcode/index.html#org0eb1e46">The Shortcodes</a>
+<a href="p5-div-shortcode/index.html#orge004912">The Shortcodes</a>
 <ul>
-<li><a href="p5-div-shortcode/index.html#orgcfa25e2">Mako</a></li>
-<li><a href="p5-div-shortcode/index.html#org73c747b">Jinja</a></li>
+<li><a href="p5-div-shortcode/index.html#org82772cd">Mako</a></li>
+<li><a href="p5-div-shortcode/index.html#org26978c3">Jinja</a></li>
 </ul>
 </li>
-<li><a href="p5-div-shortcode/index.html#org9d20819">Links</a></li>
+<li><a href="p5-div-shortcode/index.html#org71540df">Links</a></li>
 </ul>
 </div>
 </div>
@@ -1980,7 +2255,7 @@ To change the script tag with the URL for the p5 CDN, put a new one in the <code
 This is a test of the <code>p5div</code> shortcode. For it to work (assuming you're using mako) you need to:
 </p>
 
-<div class="notecard" id="org525fec0">
+<div class="notecard" id="orgb8414b1">
 <ul class="org-ul">
 <li>set up the <code>p5.tmpl</code> template (in <code>themes/custom-mako/templates/</code>)</li>
 <li>have <code>..template: p5.tmpl</code> in the metadata for this post</li>
@@ -1988,7 +2263,7 @@ This is a test of the <code>p5div</code> shortcode. For it to work (assuming you
 </ul>
 </div>
 
-<div class="notecard" id="org1950980">
+<div class="notecard" id="org98053b9">
 <p>
 <b><b>Note:</b></b>
 </p>
@@ -1999,9 +2274,9 @@ I'll be using the names based on the idea that we're using the <code>mako</code>
 
 </div>
 
-<div id="outline-container-org0eb1e46" class="outline-2">
-<h2 id="org0eb1e46">The Shortcodes</h2>
-<div class="outline-text-2" id="text-org0eb1e46">
+<div id="outline-container-orge004912" class="outline-2">
+<h2 id="orge004912">The Shortcodes</h2>
+<div class="outline-text-2" id="text-orge004912">
 <p>
 There actually needs to be two different shortcodes, one for jinja and one for mako. This repository is using mako (as does <a href="https://necromuralist.github.io">https://necromuralist.github.io</a>) but <a href="https://necromuralist.github.io/Ape-Iron/">ape-iron</a> is using jinja. It's a little too convoluted to keep switching back and forth so I'm mostly going to be relying on ape-iron to test the jinja version (although I really should figure out an easy way to test both).
 </p>
@@ -2010,7 +2285,7 @@ There actually needs to be two different shortcodes, one for jinja and one for m
 The shortcode creates two HTML tags:
 </p>
 
-<div class="notecard" id="org50a18c5">
+<div class="notecard" id="org05b1a0e">
 <ul class="org-ul">
 <li>a script tag that needs the path to the source p5js file</li>
 <li>a div tag that needs the ID to use so that the p5 sketch can be put inside it</li>
@@ -2037,7 +2312,7 @@ And the default <code>type</code> is javascript so you don't need to use it if i
 </p>
 </blockquote>
 
-<div class="notecard" id="orgff7ef41">
+<div class="notecard" id="orgdee2da7">
 <p>
 <b><b>Note:</b></b>
 </p>
@@ -2049,25 +2324,23 @@ I was setting the class for the <code>div</code> to "p5js" but it turns out that
 </div>
 </div>
 
-<div id="outline-container-orgcfa25e2" class="outline-3">
-<h3 id="orgcfa25e2">Mako</h3>
-<div class="outline-text-3" id="text-orgcfa25e2">
+<div id="outline-container-org82772cd" class="outline-3">
+<h3 id="org82772cd">Mako</h3>
+<div class="outline-text-3" id="text-org82772cd">
 <p>
 I don't see an easy way to set which shortcodes folder to use so I'm going to go with adding "mako" to the end of the shortcodes meant for the mako engine and not putting a suffix on the ones meant for jinja. This shortcode will go into <code>shortcodes/p5divmako.tmpl</code>: 
 </p>
 
-<div class="highlight"><pre><span></span>&lt;script src="${source}"&gt;&lt;/script&gt;
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"${source}"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 
-&lt;div class="p5js" id="${divid}"&gt;&lt;/div&gt;
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"p5js"</span> <span class="na">id</span><span class="o">=</span><span class="s">"${divid}"</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
 
 <p>
 To use this shortcode you add something that looks like this to a page or post.
 </p>
 
-<div class="highlight"><pre><span></span>
-{{% p5divmako divid="e70fd042-noise-graph" source="noise_graph.js" %}}
-
+<div class="highlight"><pre><span></span><span class="cp">{{</span><span class="o">%</span> <span class="nv">p5divmako</span> <span class="nv">divid</span><span class="o">=</span><span class="s2">"e70fd042-noise-graph"</span> <span class="nv">source</span><span class="o">=</span><span class="s2">"noise_graph.js"</span> <span class="o">%</span><span class="cp">}}</span>
 </pre></div>
 
 <p>
@@ -2083,33 +2356,31 @@ Where <code>noise_graph</code> is the name of the function in <code>noise_graph.
 </div>
 </div>
 
-<div id="outline-container-org73c747b" class="outline-3">
-<h3 id="org73c747b">Jinja</h3>
-<div class="outline-text-3" id="text-org73c747b">
+<div id="outline-container-org26978c3" class="outline-3">
+<h3 id="org26978c3">Jinja</h3>
+<div class="outline-text-3" id="text-org26978c3">
 <p>
 Here's the jinja version of the shortcode. It's going to go into <code>shortcodes/p5div.tmpl</code>.
 </p>
 
-<div class="highlight"><pre><span></span>&lt;script src="{{ source }}"&gt;&lt;/script&gt;
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"</span><span class="cp">{{</span> <span class="nv">source</span> <span class="cp">}}</span><span class="s">"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 
-&lt;div class="p5js" id="{{ divid }}"&gt;&lt;/div&gt;
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"p5js"</span> <span class="na">id</span><span class="o">=</span><span class="s">"</span><span class="cp">{{</span> <span class="nv">divid</span> <span class="cp">}}</span><span class="s">"</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
 
 <p>
 To use it you use the same syntax as the mako-based shortcode, just change the name of the shortcode to <code>p5div.tmpl</code>.
 </p>
 
-<div class="highlight"><pre><span></span>
-{{% p5div divid="e70fd042-noise-graph" source="noise_graph.js" %}}
-
+<div class="highlight"><pre><span></span><span class="cp">{{</span><span class="o">%</span> <span class="nv">p5div</span> <span class="nv">divid</span><span class="o">=</span><span class="s2">"e70fd042-noise-graph"</span> <span class="nv">source</span><span class="o">=</span><span class="s2">"noise_graph.js"</span> <span class="o">%</span><span class="cp">}}</span>
 </pre></div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org9d20819" class="outline-2">
-<h2 id="org9d20819">Links</h2>
-<div class="outline-text-2" id="text-org9d20819">
+<div id="outline-container-org71540df" class="outline-2">
+<h2 id="org71540df">Links</h2>
+<div class="outline-text-2" id="text-org71540df">
 <ul class="org-ul">
 <li>&lt;script&gt;: The Script element - HTML: HyperText Markup Language | MDN [Internet]. 2023 [cited 2023 Jun 20]. Available from: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script</a>
 </li>

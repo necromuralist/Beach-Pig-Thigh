@@ -5,22 +5,25 @@
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;
 &lt;/div&gt;
-</copyright><lastBuildDate>Wed, 28 Jun 2023 00:04:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Orgmode Plugin init.el</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;p&gt;
+</copyright><lastBuildDate>Tue, 10 Oct 2023 00:20:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Orgmode Plugin init.el</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;p&gt;
 This is the emacs configuration (&lt;code&gt;init.el&lt;/code&gt;) for the &lt;a href="https://plugins.getnikola.com/v8/orgmode/"&gt;orgmode plugin&lt;/a&gt; to export posts and pages to HTML. I spent forever messing with the &lt;code&gt;init.el&lt;/code&gt; file for my emacs instance, but it turns out that the plugin has its own configuration so you have to make changes here or they won't matter.
 &lt;/p&gt;
 
-&lt;div id="outline-container-orgcf2dcce" class="outline-2"&gt;
-&lt;h2 id="orgcf2dcce"&gt;Pygments&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgcf2dcce"&gt;
+&lt;div id="outline-container-orgddc05da" class="outline-2"&gt;
+&lt;h2 id="orgddc05da"&gt;Pygments&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgddc05da"&gt;
 &lt;p&gt;
 This is the list of languages that pygments will colorize when source-code blocks are exported. The org-babel documentation has a &lt;a href="https://orgmode.org/worg/org-contrib/babel/languages/index.html"&gt;list of supported&lt;/a&gt; languages, but it doesn't list &lt;code&gt;fish&lt;/code&gt;, although that seems to work. It might be because I inserted fish-mode, or maybe it just has to be a &lt;a href="https://pygments.org/languages/"&gt;supported pygments language&lt;/a&gt;.
 &lt;/p&gt;
+
+&lt;p&gt;
+The first argument is what you put as the type in the source block and the second is the pygments short-name &lt;code&gt;("org-source-name" . "pygments-name")&lt;/code&gt;.
+&lt;/p&gt;
 &lt;/div&gt;
 
-
-&lt;div id="outline-container-org9cccb01" class="outline-3"&gt;
-&lt;h3 id="org9cccb01"&gt;Fish&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org9cccb01"&gt;
+&lt;div id="outline-container-org2e4c152" class="outline-3"&gt;
+&lt;h3 id="org2e4c152"&gt;Fish&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org2e4c152"&gt;
 &lt;p&gt;
 Add coloring for the fish-shell. 
 &lt;/p&gt;
@@ -35,9 +38,9 @@ Add coloring for the fish-shell.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org0ef1e27" class="outline-3"&gt;
-&lt;h3 id="org0ef1e27"&gt;Gherkin&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org0ef1e27"&gt;
+&lt;div id="outline-container-org2185e6e" class="outline-3"&gt;
+&lt;h3 id="org2185e6e"&gt;Gherkin&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org2185e6e"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"gherkin"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"gherkin"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -51,9 +54,9 @@ Add coloring for the fish-shell.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org9f27e70" class="outline-3"&gt;
-&lt;h3 id="org9f27e70"&gt;HTML&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org9f27e70"&gt;
+&lt;div id="outline-container-orgc6b1b95" class="outline-3"&gt;
+&lt;h3 id="orgc6b1b95"&gt;HTML&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgc6b1b95"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"html"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"html"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -61,10 +64,37 @@ Add coloring for the fish-shell.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
+&lt;div id="outline-container-org99b9895" class="outline-3"&gt;
+&lt;h3 id="org99b9895"&gt;Jinja&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org99b9895"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"jinja"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"html+jinja"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;macro&lt;/span&gt; &lt;span class="nv"&gt;pseudocode&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endmacro&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgca991a9" class="outline-2"&gt;
-&lt;h2 id="orgca991a9"&gt;The Tangle&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgca991a9"&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org118b2db" class="outline-3"&gt;
+&lt;h3 id="org118b2db"&gt;Mako&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org118b2db"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"mako"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"html+mako"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%&lt;/span&gt;&lt;span class="nb"&gt;def&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;"pseudocode()"&lt;/span&gt;&lt;span class="cp"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;&amp;lt;/%&lt;/span&gt;&lt;span class="nb"&gt;def&lt;/span&gt;&lt;span class="cp"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orga611118" class="outline-2"&gt;
+&lt;h2 id="orga611118"&gt;The Tangle&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orga611118"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;;; Init file to use with the orgmode plugin.&lt;/span&gt;
 
 &lt;span class="c1"&gt;;; this is generated from the post with the slug: orgmode-plugin-initel&lt;/span&gt;
@@ -142,10 +172,12 @@ Add coloring for the fish-shell.
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"haskell"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"haskell"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;&amp;lt;&amp;lt;html-pygments&amp;gt;&amp;gt;&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"java"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"java"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;&amp;lt;&amp;lt;jinja-pygments&amp;gt;&amp;gt;&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"js"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"js"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"julia"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"julia"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"latex"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"latex"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"lisp"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"lisp"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;&amp;lt;&amp;lt;mako-pygments&amp;gt;&amp;gt;&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"makefile"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"makefile"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"matlab"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"matlab"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"mscgen"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"mscgen"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -220,9 +252,9 @@ Add coloring for the fish-shell.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgc2393d6" class="outline-2"&gt;
-&lt;h2 id="orgc2393d6"&gt;Links&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgc2393d6"&gt;
+&lt;div id="outline-container-org0eea310" class="outline-2"&gt;
+&lt;h2 id="org0eea310"&gt;Links&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org0eea310"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;Chaganti P. Plugins for Nikola. 2020 [cited 2023 Jun 25]. orgmode. Available from: &lt;a href="https://plugins.getnikola.com/v8/orgmode/"&gt;https://plugins.getnikola.com/v8/orgmode/&lt;/a&gt;&lt;/li&gt;
 

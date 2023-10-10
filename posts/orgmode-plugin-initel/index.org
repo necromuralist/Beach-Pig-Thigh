@@ -15,6 +15,7 @@ This is the emacs configuration (~init.el~) for the [[https://plugins.getnikola.
 * Pygments
 This is the list of languages that pygments will colorize when source-code blocks are exported. The org-babel documentation has a [[https://orgmode.org/worg/org-contrib/babel/languages/index.html][list of supported]] languages, but it doesn't list ~fish~, although that seems to work. It might be because I inserted fish-mode, or maybe it just has to be a [[https://pygments.org/languages/][supported pygments language]].
 
+The first argument is what you put as the type in the source block and the second is the pygments short-name ~("org-source-name" . "pygments-name")~.
 
 ** Fish
 Add coloring for the fish-shell. 
@@ -53,6 +54,31 @@ Then the feature fragment is colorized.
 #+begin_src html
 <h1>Colorize HTML</h1>
 #+end_src
+
+** Jinja
+
+#+begin_src emacs-lisp :noweb-ref jinja-pygments
+("jinja" . "html+jinja")
+#+end_src
+
+#+begin_src jinja
+{% macro pseudocode() %}
+  <script src="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js"></script>
+{% endmacro %}
+#+end_src
+
+** Mako
+
+#+begin_src emacs-lisp :noweb-ref mako-pygments
+("mako" . "html+mako")
+#+end_src
+
+#+begin_src mako
+<%def name="pseudocode()">
+<script src="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js"></script>
+</%def>
+#+end_src
+
 * The Tangle
 #+begin_src emacs-lisp :tangle ../plugins/orgmode/init.el
 ;; Init file to use with the orgmode plugin.
@@ -132,10 +158,12 @@ Then the feature fragment is colorized.
     ("haskell" . "haskell")
     <<html-pygments>>
     ("java" . "java")
+    <<jinja-pygments>>
     ("js" . "js")
     ("julia" . "julia")
     ("latex" . "latex")
     ("lisp" . "lisp")
+    <<mako-pygments>>
     ("makefile" . "makefile")
     ("matlab" . "matlab")
     ("mscgen" . "mscgen")

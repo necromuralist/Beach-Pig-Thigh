@@ -73,10 +73,8 @@ I don't see an easy way to set which shortcodes folder to use so I'm going to go
 
 To use this shortcode you add something that looks like this to a page or post.
 
-#+begin_src html
-{{% raw %}}
+#+begin_src jinja
 {{% p5divmako divid="e70fd042-noise-graph" source="noise_graph.js" %}}
-{{% /raw %}}
 #+end_src
 
 This assumes that the sketch is in ~files/posts/<slug>/noise_graph.js~ and that the p5 code is adding the sketch to  "e70fd042-noise-graph". Meaning that there's something like this in the in the ~noise_graph.js~ file:
@@ -97,7 +95,7 @@ Here's the jinja version of the shortcode. It's going to go into ~shortcodes/p5d
 <<jinja-shortcode>>
 #+end_src
 
-#+begin_src html :noweb-ref jinja-shortcode
+#+begin_src jinja :noweb-ref jinja-shortcode
 <script src="{{ source }}"></script>
 
 <div class="p5js" id="{{ divid }}"></div>
@@ -105,10 +103,8 @@ Here's the jinja version of the shortcode. It's going to go into ~shortcodes/p5d
 
 To use it you use the same syntax as the mako-based shortcode, just change the name of the shortcode to ~p5div.tmpl~.
 
-#+begin_src html
-{{% raw %}}
+#+begin_src jinja
 {{% p5div divid="e70fd042-noise-graph" source="noise_graph.js" %}}
-{{% /raw %}}
 #+end_src
 
 * Links
