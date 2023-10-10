@@ -1,0 +1,219 @@
+#+BEGIN_COMMENT
+.. title: Jinja Math Helper
+.. slug: jinja-math-helper
+.. date: 2023-10-09 16:30:02 UTC-07:00
+.. tags: jinja,template,pseudocode,math
+.. category: Jinja
+.. link: 
+.. description: A math and pseudocode template for jinja.
+.. type: text
+
+#+END_COMMENT
+#+OPTIONS: ^:{}
+#+TOC: headlines 2
+
+#+begin_src noweb :tangle ../themes/custom-jinja/templates/math_helper.tmpl :exports none
+{#  Note: at present, MathJax and KaTeX do not respect the USE_CDN configuration option #}
+
+<<math-scripts-macro>>
+<<pseudocode-config>>
+
+<<math-styles-macro>>
+
+<<math-scripts-ifpost>>
+<<pseudocode-check-ifpost>>
+<<end-math-scripts-ifpost>>
+
+<<math-scripts-ifposts>>
+<<pseudocode-ifposts>>
+
+<<math-styles-ifpost>>
+<<pseudocode-styles-ifpost>>
+
+<<math-styles-if-posts>>
+<<pseudocode-styles-ifposts>>
+
+{# This is for pseudocode.js #}
+{# https://github.com/SaswatPadhi/pseudocode.js #}
+
+<<macro-pseudocode>>
+
+<<macro-code-styles>>
+#+end_src
+
+* The Math Macros
+** The Math Scripts Macro
+
+#+begin_src jinja :noweb-ref math-scripts-macro
+{% macro math_scripts() %}
+    {% if use_katex %}
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+        {% if katex_auto_render %}
+            <script>
+                renderMathInElement(document.body,
+                    {
+                        {{ katex_auto_render }}
+                    }
+                );
+            </script>
+        {% else %}
+            <script>
+                renderMathInElement(document.body,
+                    {
+                        delimiters: [
+                            {left: "$$", right: "$$", display: true},
+                            {left: "\\[", right: "\\]", display: true},
+                            {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+                            {left: "\\(", right: "\\)", display: false}
+                        ]
+                    }
+                );
+            </script>
+        {% endif %}
+    {% else %}
+        {#  Note: given the size of MathJax; nikola will retrieve MathJax from a CDN regardless of use_cdn configuration #}
+
+{# the default config has been updated with stuff that pseudocode.js needs #}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script>
+        {% if mathjax_config %}
+        {{ mathjax_config }}
+        {% else %}
+        <script type="text/x-mathjax-config">
+         MathJax.Hub.Config({
+           tex2jax: {
+             inlineMath: [['$','$'], ['\\(','\\)']],
+#+end_src
+
+** Pseudocode Additional Config
+
+#+begin_src jinja :noweb-ref pseudocode-config
+             displayMath: [['$$','$$'], ['\\[','\\]']],
+             processEscapes: true,
+             processEnvironments: true,
+           },
+           displayAlign: 'center',
+           "HTML-CSS": {
+             styles: {'.MathJax_Display': {"margin": 0}}
+           }
+         });
+        </script>
+        {% endif %}
+    {% endif %}
+{% endmacro %}
+#+end_src
+
+** The Math Styles Macro
+
+#+begin_src jinja :noweb-ref math-styles-macro
+{% macro math_styles() %}
+    {% if use_katex %}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+    {% endif %}
+{% endmacro %}
+#+end_src
+
+* The Post Checkers
+** Math Scripts
+*** Math Scripts If Post
+
+#+begin_src jinja :noweb-ref math-scripts-ifpost
+{% macro math_scripts_ifpost(post) %}
+  {% if post.has_math %}
+    {{ math_scripts() }}
+
+#+end_src
+
+I didn't build code to make a proper metadata setting for pseudocode
+so it checks the post.meta object has_pseudocode
+So as long as the post header has `.. has_pseudocode: <any text>` it will put it in 
+
+#+begin_src jinja :noweb-ref pseudocode-check-ifpost
+  {% elif post.meta("has_pseudocode") %}
+    {{ math_scripts() }}
+    {{ pseudocode() }}
+#+end_src
+
+
+#+begin_src jinja :noweb-ref end-math-scripts-ifpost
+  {% endif %}
+{% endmacro %}
+#+end_src
+*** Math Scripts If Posts
+
+#+begin_src jinja :noweb-ref math-scripts-ifposts
+{% macro math_scripts_ifposts(posts) %}
+    {% if posts|selectattr("has_math")|list %}
+      {{ math_scripts() }}
+#+end_src
+
+#+begin_src jinja :noweb-ref pseudocode-ifposts
+    {% else %}
+      {% set not_yet = namespace(set_up=true) %}
+      {% for post in posts %}
+        {% if post.meta("has_pseudocode") and not_yet.set_up %}
+          {{ math_scripts() }}
+          {{ pseudocode() }}
+          {% set not_yet.set_up = false %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+{% endmacro %}
+#+end_src
+** Math Styles
+
+*** Math Styles If Post
+
+#+begin_src jinja :noweb-ref math-styles-ifpost
+{% macro math_styles_ifpost(post) %}
+    {% if post.has_math %}
+      {{ math_styles() }}
+#+end_src
+
+#+begin_src jinja :noweb-ref pseudocode-styles-ifpost
+    {% elif post.meta("has_pseudocode") %}
+      {{ code_styles() }}
+    {% endif %}
+{% endmacro %}
+#+end_src
+
+*** Math Styles If Posts
+
+#+begin_src jinja :noweb-ref math-styles-if-posts
+{% macro math_styles_ifposts(posts) %}
+    {% if posts|selectattr("has_math")|list %}
+      {{ math_styles() }}
+#+end_src
+
+#+begin_src jinja :noweb-ref pseudocode-styles-ifposts
+    {% else %}
+      {% set not_yet = namespace(set_up=true) %}
+      {% for post in posts %}
+        {% if post.meta("has_pseudocode") and not_yet.set_up %}
+          {{ math_styles() }}
+          {{ code_styles() }}
+          {% set not_yet.set_up = false %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+{% endmacro %}
+#+end_src
+* Pseudocode Macros
+
+These define the macros to insert the pseudocode scripts into the HTML.
+
+** Code
+
+#+begin_src jinja :noweb-ref macro-pseudocode
+{% macro pseudocode() %}
+  <script src="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js"></script>
+{% endmacro %}
+#+end_src
+
+** Style
+
+#+begin_src jinja :noweb-ref macro-code-styles
+{% macro code_styles() %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.css">
+{% endmacro %}
+#+end_src
