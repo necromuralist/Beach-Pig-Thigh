@@ -12,9 +12,6 @@
 #+OPTIONS: ^:{}
 #+TOC: headlines 3
 
-{{% p5div divid="noise-graph" source="../p5-div-shortcode/noise_graph.js" %}}
-
-
 To change the script tag with the URL for the p5 CDN, put a new one in the ~GLOBAL_CONTEXT~ dictionary defined in the ~conf.py~ file using the ~p5_library_source~ as the key and the new cag as the value. For example:
 
 #+begin_src python :results none
