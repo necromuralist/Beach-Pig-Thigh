@@ -152,6 +152,7 @@ NAVIGATION_LINKS = {
                 ("https://necromuralist.github.io/Bowling-For-Data/", "Bowling For Data"),
                 ("https://necromuralist.github.io/Give-The-Fish/", "Give the Fish"),
                 ("https://necromuralist.github.io/Neurotic-Networking/", "Neurotic Networking"),
+                ("https://necromuralist.github.io/Terribilis-Ludum/", "Terribilis Ludum"),
                 ("https://necromuralist.github.io/Visions-Voices-Data/", "Visions, Voices, Data")
                 ),
             "Monkey Pages"
