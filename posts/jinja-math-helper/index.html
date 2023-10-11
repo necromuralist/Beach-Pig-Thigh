@@ -119,160 +119,210 @@ bg-light
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
+<li><a href="index.html#org46a5751">What This Is</a></li>
 <li>
-<a href="index.html#org977ee21">The Math Macros</a>
+<a href="index.html#org8db9fef">The Macros</a>
 <ul>
-<li><a href="index.html#orga9a138c">The Math Scripts Macro</a></li>
-<li><a href="index.html#org2675dbe">Pseudocode Additional Config</a></li>
-<li><a href="index.html#org792f303">The Math Styles Macro</a></li>
+<li><a href="index.html#orgba06bb7">Pseudocode Macros</a></li>
+<li><a href="index.html#org24e7b74">Code</a></li>
+<li><a href="index.html#org0a92835">Style</a></li>
+<li><a href="index.html#orgc5bf722">The Math Scripts Macro</a></li>
+<li><a href="index.html#orgdc94010">Pseudocode Additional Config</a></li>
 </ul>
 </li>
 <li>
-<a href="index.html#org6cfd849">The Post Checkers</a>
+<a href="index.html#org442884b">The Post Checkers</a>
 <ul>
-<li><a href="index.html#org31dd385">Math Scripts</a></li>
-<li><a href="index.html#orgc1005f9">Math Styles</a></li>
+<li><a href="index.html#org3eeb0c2">Math Scripts</a></li>
+<li><a href="index.html#org14a5f22">Math Styles</a></li>
 </ul>
 </li>
-<li>
-<a href="index.html#orgdb2b33a">Pseudocode Macros</a>
-<ul>
-<li><a href="index.html#org6dabdf4">Code</a></li>
-<li><a href="index.html#org5516a79">Style</a></li>
-</ul>
-</li>
+<li><a href="index.html#org834136f">The Race Condition</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org977ee21" class="outline-2">
-<h2 id="org977ee21">The Math Macros</h2>
-<div class="outline-text-2" id="text-org977ee21">
-</div>
-<div id="outline-container-orga9a138c" class="outline-3">
-<h3 id="orga9a138c">The Math Scripts Macro</h3>
-<div class="outline-text-3" id="text-orga9a138c">
-<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">math_scripts</span><span class="o">()</span> <span class="cp">%}</span>
-    <span class="cp">{%</span> <span class="k">if</span> <span class="nv">use_katex</span> <span class="cp">%}</span>
-	<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js"</span> <span class="na">integrity</span><span class="o">=</span><span class="s">"sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ"</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">"anonymous"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js"</span> <span class="na">integrity</span><span class="o">=</span><span class="s">"sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">"anonymous"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-	<span class="cp">{%</span> <span class="k">if</span> <span class="nv">katex_auto_render</span> <span class="cp">%}</span>
-	    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="w">		</span><span class="nx">renderMathInElement</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span>
-<span class="w">		    </span><span class="p">{</span>
-<span class="w">			</span><span class="cp">{{</span> <span class="nv">katex_auto_render</span> <span class="cp">}}</span>
-<span class="w">		    </span><span class="p">}</span>
-<span class="w">		</span><span class="p">);</span>
-<span class="w">	    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-	<span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
-	    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="w">		</span><span class="nx">renderMathInElement</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span>
-<span class="w">		    </span><span class="p">{</span>
-<span class="w">			</span><span class="nx">delimiters</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">			    </span><span class="p">{</span><span class="nx">left</span><span class="o">:</span><span class="w"> </span><span class="s2">"$$"</span><span class="p">,</span><span class="w"> </span><span class="nx">right</span><span class="o">:</span><span class="w"> </span><span class="s2">"$$"</span><span class="p">,</span><span class="w"> </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">},</span>
-<span class="w">			    </span><span class="p">{</span><span class="nx">left</span><span class="o">:</span><span class="w"> </span><span class="s2">"\\["</span><span class="p">,</span><span class="w"> </span><span class="nx">right</span><span class="o">:</span><span class="w"> </span><span class="s2">"\\]"</span><span class="p">,</span><span class="w"> </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">},</span>
-<span class="w">			    </span><span class="p">{</span><span class="nx">left</span><span class="o">:</span><span class="w"> </span><span class="s2">"\\begin{equation*}"</span><span class="p">,</span><span class="w"> </span><span class="nx">right</span><span class="o">:</span><span class="w"> </span><span class="s2">"\\end{equation*}"</span><span class="p">,</span><span class="w"> </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">},</span>
-<span class="w">			    </span><span class="p">{</span><span class="nx">left</span><span class="o">:</span><span class="w"> </span><span class="s2">"\\("</span><span class="p">,</span><span class="w"> </span><span class="nx">right</span><span class="o">:</span><span class="w"> </span><span class="s2">"\\)"</span><span class="p">,</span><span class="w"> </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">}</span>
-<span class="w">			</span><span class="p">]</span>
-<span class="w">		    </span><span class="p">}</span>
-<span class="w">		</span><span class="p">);</span>
-<span class="w">	    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-	<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
-    <span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
-	<span class="c">{#  Note: given the size of MathJax; nikola will retrieve MathJax from a CDN regardless of use_cdn configuration #}</span>
+<div id="outline-container-org46a5751" class="outline-2">
+<h2 id="org46a5751">What This Is</h2>
+<div class="outline-text-2" id="text-org46a5751">
+<p>
+In one of my Nikola sites (<a href="https://necromuralist.github.io/Bowling-For-Data/">Bowling For Data</a>) I wanted a simpler way to use <a href="https://github.com/SaswatPadhi/pseudocode.js">pseudocode.js</a> in posts (simpler than having to always insert the CDN URLs into the HTML) so I thought I'd copy what the <code>.. has_math:</code> metadata flag does, but it turns out to involve more code than I was hoping to need so I instead copied over the math template and hacked in what I needed. 
+</p>
 
-<span class="c">{# the default config has been updated with stuff that pseudocode.js needs #}</span>
-	<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"</span> <span class="na">integrity</span><span class="o">=</span><span class="s">"sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH"</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">"anonymous"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-	<span class="cp">{%</span> <span class="k">if</span> <span class="nv">mathjax_config</span> <span class="cp">%}</span>
-	<span class="cp">{{</span> <span class="nv">mathjax_config</span> <span class="cp">}}</span>
-	<span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
-	<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/x-mathjax-config"</span><span class="p">&gt;</span>
-<span class="w">	 </span><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span>
-	   tex2jax: {
-	     inlineMath: [['$','$'], ['\\(','\\)']],
-</pre></div>
+<p>
+I wanted to use it in a repository I'm starting up (<a href="https://necromuralist.github.io/Terribilis-Ludum/">Terribilis Ludum</a>) so I copied the hacked template over to it but I couldn't get it to work. Then I realized that <i>Bowling For Data</i> is using <a href="https://www.makotemplates.org/">mako</a> while I had set up <i>Terribilis Ludum</i> for <a href="https://jinja.palletsprojects.com/en/3.1.x/">Jinja</a> so I was going to have to re-do it. I find Jinja harder to understand than Mako, partly because their documentation is sparse (and just one long document) but also because Mako uses python-ish syntax while Jinja… doesn't. But I suppose it's a good idea to have both, so here's the Jinja version.
+</p>
+
+<p>
+I was thinking it'd be better to make a separate template instead of replicng the <code>math_helper.tmpl</code>, but it gets called in the index page template so I'd have to hack that up too, which seemed like too much bother, especially since I don't really know what everything is doing in there.
+</p>
 </div>
 </div>
 
-<div id="outline-container-org2675dbe" class="outline-3">
-<h3 id="org2675dbe">Pseudocode Additional Config</h3>
-<div class="outline-text-3" id="text-org2675dbe">
-<div class="highlight"><pre><span></span>	     displayMath: [['$$','$$'], ['\\[','\\]']],
-	     processEscapes: true,
-	     processEnvironments: true,
-	   },
-	   displayAlign: 'center',
-	   "HTML-CSS": {
-	     styles: {'.MathJax_Display': {"margin": 0}}
-	   }
-	 });
-	<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-	<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
-    <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+<div id="outline-container-org8db9fef" class="outline-2">
+<h2 id="org8db9fef">The Macros</h2>
+<div class="outline-text-2" id="text-org8db9fef">
+</div>
+<div id="outline-container-orgba06bb7" class="outline-3">
+<h3 id="orgba06bb7">Pseudocode Macros</h3>
+<div class="outline-text-3" id="text-orgba06bb7">
+<p>
+These define the macros to insert the pseudocode scripts into the HTML.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24e7b74" class="outline-3">
+<h3 id="org24e7b74">Code</h3>
+<div class="outline-text-3" id="text-org24e7b74">
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">pseudocode</span><span class="o">()</span> <span class="cp">%}</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/pseudocode@2.4.1/build/pseudocode.min.css"</span><span class="p">&gt;</span>
 <span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
-</pre></div>
-</div>
-</div>
-
-<div id="outline-container-org792f303" class="outline-3">
-<h3 id="org792f303">The Math Styles Macro</h3>
-<div class="outline-text-3" id="text-org792f303">
-<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">math_styles</span><span class="o">()</span> <span class="cp">%}</span>
-    <span class="cp">{%</span> <span class="k">if</span> <span class="nv">use_katex</span> <span class="cp">%}</span>
-	<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css"</span> <span class="na">integrity</span><span class="o">=</span><span class="s">"sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j"</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">"anonymous"</span><span class="p">&gt;</span>
-    <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
-<span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
-</pre></div>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org6cfd849" class="outline-2">
-<h2 id="org6cfd849">The Post Checkers</h2>
-<div class="outline-text-2" id="text-org6cfd849">
-</div>
-<div id="outline-container-org31dd385" class="outline-3">
-<h3 id="org31dd385">Math Scripts</h3>
-<div class="outline-text-3" id="text-org31dd385">
-</div>
-<div id="outline-container-org8fad752" class="outline-4">
-<h4 id="org8fad752">Math Scripts If Post</h4>
-<div class="outline-text-4" id="text-org8fad752">
-<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">math_scripts_ifpost</span><span class="o">(</span><span class="nv">post</span><span class="o">)</span> <span class="cp">%}</span>
-  <span class="cp">{%</span> <span class="k">if</span> <span class="nv">post.has_math</span> <span class="cp">%}</span>
-    <span class="cp">{{</span> <span class="nv">math_scripts</span><span class="o">()</span> <span class="cp">}}</span>
 </pre></div>
 
 <p>
-I didn't build code to make a proper metadata setting for pseudocode
-so it checks the post.meta object has_pseudocode
-So as long as the post header has `.. has_pseudocode: &lt;any text&gt;` it will put it in 
+This is the current pseudocode.js version (as of October 11, 2023). There is also an URL that
+is just "latest" but the pseudocode.js documentation says that it isn't always up to date so thtis will require periodically checking on the version as time goes on if keeping up to date makes some kind of version.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0a92835" class="outline-3">
+<h3 id="org0a92835">Style</h3>
+<div class="outline-text-3" id="text-org0a92835">
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">code_styles</span><span class="o">()</span> <span class="cp">%}</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/pseudocode@2.4.1/build/pseudocode.min.js"</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-orgc5bf722" class="outline-3">
+<h3 id="orgc5bf722">The Math Scripts Macro</h3>
+<div class="outline-text-3" id="text-orgc5bf722">
+<p>
+This is the macro that configures <a href="https://www.mathjax.org/">MathJax</a>. I tried changing it to MathJax 3 but the rendering went a little cuckoo so I had to go back to 2.7.5 like in the original.
+</p>
+
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">math_scripts</span><span class="o">()</span> <span class="cp">%}</span>
+  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"</span> <span class="na">integrity</span><span class="o">=</span><span class="s">"sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH"</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">"anonymous"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="cp">{%</span> <span class="k">if</span> <span class="nv">mathjax_config</span> <span class="cp">%}</span>
+    <span class="cp">{{</span> <span class="nv">mathjax_config</span> <span class="cp">}}</span>
+  <span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/x-mathjax-config"</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span>
+	tex2jax: {
+	    inlineMath: [['$','$'], ['\\(','\\)']],
+</pre></div>
+
+<p>
+I did change the <code>inlineMath</code> dollar sign - the original had the word "latex" after the dollar sign, I guess so it doesn't mess up cases where you want actual dollar signs on the same line.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdc94010" class="outline-3">
+<h3 id="orgdc94010">Pseudocode Additional Config</h3>
+<div class="outline-text-3" id="text-orgdc94010">
+<p>
+This is extra configuration stuff I added. I suppose this could (maybe should) go into the <code>conf.py</code> file. Maybe I'll change it later.
+</p>
+
+<div class="highlight"><pre><span></span>	displayMath: [['$$','$$'], ['\\[','\\]']],
+	processEscapes: true,
+	processEnvironments: true,
+    }
+});
+</pre></div>
+
+<p>
+And this is just to close out the macro.
+</p>
+
+<div class="highlight"><pre><span></span>      <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
+</pre></div>
+
+<p>
+There was also a "math styles" macro but it only seemed to apply to katex and since I'm using MathJax I got rid of it.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org442884b" class="outline-2">
+<h2 id="org442884b">The Post Checkers</h2>
+<div class="outline-text-2" id="text-org442884b">
+<p>
+These are the macros that get called in the index templates to check if the page needs the math rendering code.
+</p>
+</div>
+
+<div id="outline-container-org3eeb0c2" class="outline-3">
+<h3 id="org3eeb0c2">Math Scripts</h3>
+<div class="outline-text-3" id="text-org3eeb0c2">
+<p>
+If the <code>has_pseudocode</code> flag is set I'm calling the <code>math_scripts</code> in the later macros that add the CSS because they insert stuff into the head of the HTML, not the body. This seems to help a little with getting the math in the pseudocode to render when the page is cached by the browser.
+</p>
+</div>
+
+<div id="outline-container-org1a5eef7" class="outline-4">
+<h4 id="org1a5eef7">Math Scripts If Post</h4>
+<div class="outline-text-4" id="text-org1a5eef7">
+<p>
+This first chunk runs if the post has <code>.. has_math: true</code> in the metadata. It's calling the <code>math_scripts</code> macro from the prior section.
+</p>
+
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">math_scripts_ifpost</span><span class="o">(</span><span class="nv">post</span><span class="o">)</span> <span class="cp">%}</span>
+  <span class="cp">{%</span> <span class="k">if</span> <span class="nv">post.has_math</span> <span class="cp">%}</span>
+   <span class="cp">{{</span> <span class="nv">math_scripts</span><span class="o">()</span> <span class="cp">}}</span>
+</pre></div>
+
+<p>
+I added this next part for the pseudocode. I didn't build code to make a proper metadata setting for pseudocode so unlike the previous chunk which is able to check <code>if post.has_math</code> I'm checking the post.meta object for the string "has_pseudocode". So as long as the post metadata has <code>.. has_pseudocode: &lt;any text&gt;</code> it will put in the math and pseudocode.
 </p>
 
 <div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">elif</span> <span class="nv">post.meta</span><span class="o">(</span><span class="s2">"has_pseudocode"</span><span class="o">)</span> <span class="cp">%}</span>
-  <span class="cp">{{</span> <span class="nv">math_scripts</span><span class="o">()</span> <span class="cp">}}</span>
+  <span class="c">{# the call to math_scripts is in the CSS macros to put it in the HEAD #}</span>
   <span class="cp">{{</span> <span class="nv">pseudocode</span><span class="o">()</span> <span class="cp">}}</span>
 </pre></div>
 
+<p>
+And here's the end of the macro.
+</p>
 
 <div class="highlight"><pre><span></span>  <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
 <span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
 </pre></div>
 </div>
 </div>
-<div id="outline-container-orge279dcd" class="outline-4">
-<h4 id="orge279dcd">Math Scripts If Posts</h4>
-<div class="outline-text-4" id="text-orge279dcd">
+
+<div id="outline-container-orgc90f62a" class="outline-4">
+<h4 id="orgc90f62a">Math Scripts If Posts</h4>
+<div class="outline-text-4" id="text-orgc90f62a">
+<p>
+This macro is like the previous one except it gets used when on the default page which has the latest several posts displayed on it so we need to check if any of the posts has the metadata requesting math or pseudocode and only insert them once, even if multiple posts use them.
+</p>
+
+<p>
+This came from nikola.
+</p>
+
 <div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">math_scripts_ifposts</span><span class="o">(</span><span class="nv">posts</span><span class="o">)</span> <span class="cp">%}</span>
     <span class="cp">{%</span> <span class="k">if</span> <span class="nv">posts</span><span class="o">|</span><span class="nf">selectattr</span><span class="o">(</span><span class="s2">"has_math"</span><span class="o">)|</span><span class="nf">list</span> <span class="cp">%}</span>
       <span class="cp">{{</span> <span class="nv">math_scripts</span><span class="o">()</span> <span class="cp">}}</span>
 </pre></div>
 
+<p>
+I added this next section to get the pseudocode into the page. Since <code>mako</code> uses python syntax I could do it as a generator comprehension in one line in the other version, but I couldn't figure out how to do it with Jinja so I used a for-loop. It doesn't add a lot of extra code but there were two things that seemed unusual. One is that you can't break out of the for-loop so I needed a variable to check if I've already set up MathJax and pseudocode.js. The other is that for some reason Jinja's variables are by default local to the for-loop, you can't access anything declared outside of it and thus I needed to  use the <code>namespace</code> function which makes it so you can use the object <code>not_yet</code> in the loop, which is what I used to check that we only call the <code>math_scripts</code> and <code>pseudocode</code> macros once.
+</p>
+
 <div class="highlight"><pre><span></span>    <span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
       <span class="cp">{%</span> <span class="k">set</span> <span class="nv">not_yet</span> <span class="o">=</span> <span class="nv">namespace</span><span class="o">(</span><span class="nv">set_up</span><span class="o">=</span><span class="kp">true</span><span class="o">)</span> <span class="cp">%}</span>
       <span class="cp">{%</span> <span class="k">for</span> <span class="nv">post</span> <span class="k">in</span> <span class="nv">posts</span> <span class="cp">%}</span>
 	<span class="cp">{%</span> <span class="k">if</span> <span class="nv">post.meta</span><span class="o">(</span><span class="s2">"has_pseudocode"</span><span class="o">)</span> <span class="k">and</span> <span class="nv">not_yet.set_up</span> <span class="cp">%}</span>
-	  <span class="cp">{{</span> <span class="nv">math_scripts</span><span class="o">()</span> <span class="cp">}}</span>
 	  <span class="cp">{{</span> <span class="nv">pseudocode</span><span class="o">()</span> <span class="cp">}}</span>
 	  <span class="cp">{%</span> <span class="k">set</span> <span class="nv">not_yet.set_up</span> <span class="o">=</span> <span class="kp">false</span> <span class="cp">%}</span>
 	<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
@@ -283,19 +333,30 @@ So as long as the post header has `.. has_pseudocode: &lt;any text&gt;` it will 
 </div>
 </div>
 </div>
-<div id="outline-container-orgc1005f9" class="outline-3">
-<h3 id="orgc1005f9">Math Styles</h3>
-<div class="outline-text-3" id="text-orgc1005f9">
-</div>
-<div id="outline-container-orgee150ed" class="outline-4">
-<h4 id="orgee150ed">Math Styles If Post</h4>
-<div class="outline-text-4" id="text-orgee150ed">
-<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">math_styles_ifpost</span><span class="o">(</span><span class="nv">post</span><span class="o">)</span> <span class="cp">%}</span>
-    <span class="cp">{%</span> <span class="k">if</span> <span class="nv">post.has_math</span> <span class="cp">%}</span>
-      <span class="cp">{{</span> <span class="nv">math_styles</span><span class="o">()</span> <span class="cp">}}</span>
-</pre></div>
 
-<div class="highlight"><pre><span></span>    <span class="cp">{%</span> <span class="k">elif</span> <span class="nv">post.meta</span><span class="o">(</span><span class="s2">"has_pseudocode"</span><span class="o">)</span> <span class="cp">%}</span>
+<div id="outline-container-org14a5f22" class="outline-3">
+<h3 id="org14a5f22">Math Styles</h3>
+<div class="outline-text-3" id="text-org14a5f22">
+<p>
+This is like the previous two sections except it inserts the CSS. This gets put into the head while the scripts get put into the body of the posts.
+According to <a href="https://stackoverflow.com/a/2451441">StackOverflow</a> putting javascript in the HEAD can block loading so javascript should go at the bottom. Is that what my P5 template is doing? I'll need to look into that.
+</p>
+
+<p>
+It might be the reason that MathJax isn't rendering until I refresh the page sometimes, though, so I use it to insert MathJax into the HTML head when putting in pseudocode.js.
+</p>
+</div>
+
+<div id="outline-container-org2157dac" class="outline-4">
+<h4 id="org2157dac">Math Styles If Post</h4>
+<div class="outline-text-4" id="text-org2157dac">
+<p>
+Since I got rid of the math-style macro this just loads the pseudocode styling (if it's needed).
+</p>
+
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">math_styles_ifpost</span><span class="o">(</span><span class="nv">post</span><span class="o">)</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">if</span> <span class="nv">post.meta</span><span class="o">(</span><span class="s2">"has_pseudocode"</span><span class="o">)</span> <span class="cp">%}</span>
+      <span class="cp">{{</span> <span class="nv">math_scripts</span><span class="o">()</span> <span class="cp">}}</span>
       <span class="cp">{{</span> <span class="nv">code_styles</span><span class="o">()</span> <span class="cp">}}</span>
     <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
 <span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
@@ -303,56 +364,39 @@ So as long as the post header has `.. has_pseudocode: &lt;any text&gt;` it will 
 </div>
 </div>
 
-<div id="outline-container-org0dadbbf" class="outline-4">
-<h4 id="org0dadbbf">Math Styles If Posts</h4>
-<div class="outline-text-4" id="text-org0dadbbf">
-<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">math_styles_ifposts</span><span class="o">(</span><span class="nv">posts</span><span class="o">)</span> <span class="cp">%}</span>
-    <span class="cp">{%</span> <span class="k">if</span> <span class="nv">posts</span><span class="o">|</span><span class="nf">selectattr</span><span class="o">(</span><span class="s2">"has_math"</span><span class="o">)|</span><span class="nf">list</span> <span class="cp">%}</span>
-      <span class="cp">{{</span> <span class="nv">math_styles</span><span class="o">()</span> <span class="cp">}}</span>
-</pre></div>
-
-<div class="highlight"><pre><span></span>    <span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
-      <span class="cp">{%</span> <span class="k">set</span> <span class="nv">not_yet</span> <span class="o">=</span> <span class="nv">namespace</span><span class="o">(</span><span class="nv">set_up</span><span class="o">=</span><span class="kp">true</span><span class="o">)</span> <span class="cp">%}</span>
-      <span class="cp">{%</span> <span class="k">for</span> <span class="nv">post</span> <span class="k">in</span> <span class="nv">posts</span> <span class="cp">%}</span>
-	<span class="cp">{%</span> <span class="k">if</span> <span class="nv">post.meta</span><span class="o">(</span><span class="s2">"has_pseudocode"</span><span class="o">)</span> <span class="k">and</span> <span class="nv">not_yet.set_up</span> <span class="cp">%}</span>
-	  <span class="cp">{{</span> <span class="nv">math_styles</span><span class="o">()</span> <span class="cp">}}</span>
-	  <span class="cp">{{</span> <span class="nv">code_styles</span><span class="o">()</span> <span class="cp">}}</span>
-	  <span class="cp">{%</span> <span class="k">set</span> <span class="nv">not_yet.set_up</span> <span class="o">=</span> <span class="kp">false</span> <span class="cp">%}</span>
-	<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
-      <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
-    <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
-<span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div id="outline-container-orgdb2b33a" class="outline-2">
-<h2 id="orgdb2b33a">Pseudocode Macros</h2>
-<div class="outline-text-2" id="text-orgdb2b33a">
+<div id="outline-container-org311cab5" class="outline-4">
+<h4 id="org311cab5">Math Styles If Posts</h4>
+<div class="outline-text-4" id="text-org311cab5">
 <p>
-These define the macros to insert the pseudocode scripts into the HTML.
+And this is for the case where there are multiple posts on a page.
 </p>
-</div>
 
-<div id="outline-container-org6dabdf4" class="outline-3">
-<h3 id="org6dabdf4">Code</h3>
-<div class="outline-text-3" id="text-org6dabdf4">
-<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">pseudocode</span><span class="o">()</span> <span class="cp">%}</span>
-  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">math_styles_ifposts</span><span class="o">(</span><span class="nv">posts</span><span class="o">)</span> <span class="cp">%}</span>
+  <span class="cp">{%</span> <span class="k">set</span> <span class="nv">not_yet</span> <span class="o">=</span> <span class="nv">namespace</span><span class="o">(</span><span class="nv">set_up</span><span class="o">=</span><span class="kp">true</span><span class="o">)</span> <span class="cp">%}</span>
+  <span class="cp">{%</span> <span class="k">for</span> <span class="nv">post</span> <span class="k">in</span> <span class="nv">posts</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">if</span> <span class="nv">post.meta</span><span class="o">(</span><span class="s2">"has_pseudocode"</span><span class="o">)</span> <span class="k">and</span> <span class="nv">not_yet.set_up</span> <span class="cp">%}</span>
+      <span class="cp">{{</span> <span class="nv">math_scripts</span><span class="o">()</span> <span class="cp">}}</span>
+      <span class="cp">{{</span> <span class="nv">code_styles</span><span class="o">()</span> <span class="cp">}}</span>
+      <span class="cp">{%</span> <span class="k">set</span> <span class="nv">not_yet.set_up</span> <span class="o">=</span> <span class="kp">false</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+  <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
 <span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org5516a79" class="outline-3">
-<h3 id="org5516a79">Style</h3>
-<div class="outline-text-3" id="text-org5516a79">
-<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">code_styles</span><span class="o">()</span> <span class="cp">%}</span>
-<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.css"</span><span class="p">&gt;</span>
-<span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
-</pre></div>
 </div>
+</div>
+
+<div id="outline-container-org834136f" class="outline-2">
+<h2 id="org834136f">The Race Condition</h2>
+<div class="outline-text-2" id="text-org834136f">
+<p>
+There appears to be a race condition problem that happens sometimes if I reload the page too many times.(<a href="https://github.com/mathjax/MathJax/issues/1805#issuecomment-314433504">https://github.com/mathjax/MathJax/issues/1805#issuecomment-314433504</a>). It prevents the math being completely rendered in the pseudocode (it converts the inline symbol (slash right-parethesis) to dollar signs, so it's doing something, but it leaves the rest of the latex as is). It can be fixed by clearing the cache but I decided to try and work around it a little.
+</p>
+
+<p>
+It only affects the pseudocode so I moved the loading of the <code>math_scripts</code> into the styles macros because they insert it into the head and not the body (which mathjax says is preferred anyway). It doesn't bother the pseudocode to be in the body so I'm leaving it there.
+</p>
 </div>
 </div>
     </div>
