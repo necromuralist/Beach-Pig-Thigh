@@ -63,6 +63,9 @@ These define the macros to insert the pseudocode scripts into the HTML.
 {% endmacro %}
 #+end_src
 
+This is the current pseudocode.js version (as of October 11, 2023). There is also an URL that
+is just "latest" but the pseudocode.js documentation says that it isn't always up to date so thtis will require periodically checking on the version as time goes on if keeping up to date makes some kind of version.
+
 ** Style
 
 #+begin_src jinja :noweb-ref macro-code-styles
@@ -130,7 +133,7 @@ This first chunk runs if the post has ~.. has_math: true~ in the metadata. It's 
    {{ math_scripts() }}
 #+end_src
 
-I added this next part for the pseudocode. I didn't build code to make a proper metadata setting for pseudocode so unlike the previous chunk which is able to check ~if post.has_math~ I'm checking the post.meta object for the string "has_pseudocode". So as long as the post metadata has `.. has_pseudocode: <any text>` it will put in the math and pseudocode.
+I added this next part for the pseudocode. I didn't build code to make a proper metadata setting for pseudocode so unlike the previous chunk which is able to check ~if post.has_math~ I'm checking the post.meta object for the string "has_pseudocode". So as long as the post metadata has ~.. has_pseudocode: <any text>~ it will put in the math and pseudocode.
 
 #+begin_src jinja :noweb-ref pseudocode-check-ifpost
   {% elif post.meta("has_pseudocode") %}
@@ -157,7 +160,7 @@ This came from nikola.
       {{ math_scripts() }}
 #+end_src
 
-I added this to get the pseudocode into the page. Since ~mako~ uses python syntax I could do it as a generator comprehension in one line in the other version, but I couldn't figure out how to do it with Jinja so I used a for-loop. It doesn't add a lot of extra code but there were two things that seemed unusual. One is that you can't break out of the for-loop so I needed a variable to check if I've already set up MathJax and pseudocode.js. The othe is that for some reason Jinja's variables are by default local to the for-loop, you can't access anything declared outside of it and thus the use of the ~namespace~ function which makes it so you can use the object ~not_yet~ in the loop, which is what I used to check that we only call the ~math_scripts~ and ~pseudocode~ macros once.
+I added this next section to get the pseudocode into the page. Since ~mako~ uses python syntax I could do it as a generator comprehension in one line in the other version, but I couldn't figure out how to do it with Jinja so I used a for-loop. It doesn't add a lot of extra code but there were two things that seemed unusual. One is that you can't break out of the for-loop so I needed a variable to check if I've already set up MathJax and pseudocode.js. The other is that for some reason Jinja's variables are by default local to the for-loop, you can't access anything declared outside of it and thus I needed to  use the ~namespace~ function which makes it so you can use the object ~not_yet~ in the loop, which is what I used to check that we only call the ~math_scripts~ and ~pseudocode~ macros once.
 
 #+begin_src jinja :noweb-ref pseudocode-ifposts
     {% else %}
@@ -177,7 +180,7 @@ I added this to get the pseudocode into the page. Since ~mako~ uses python synta
 This is like the previous two sections except it inserts the CSS. This gets put into the head while the scripts get put into the body of the posts.
 According to [[https://stackoverflow.com/a/2451441][StackOverflow]] putting javascript in the HEAD can block loading so javascript should go at the bottom. Is that what my P5 template is doing? I'll need to look into that.
 
-It might be the reason that MathJax isn't rendering until I refresh the page sometimes, though.
+It might be the reason that MathJax isn't rendering until I refresh the page sometimes, though, so I use it to insert MathJax into the HTML head when putting in pseudocode.js.
 
 *** Math Styles If Post
 Since I got rid of the math-style macro this just loads the pseudocode styling (if it's needed).
