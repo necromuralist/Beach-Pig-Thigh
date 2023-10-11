@@ -13,12 +13,20 @@
 #+TOC: headlines 2
 
 #+begin_src noweb :tangle ../themes/custom-jinja/templates/math_helper.tmpl :exports none
+{# the original template comes from <virtualenv>/lib/python3.11/site-packages/nikola/data/themes/base-jinja/templates/math_helper.tmpl #}
+{# The hacked template is in the Beach Pig Thigh repo #}
 {#  Note: at present, MathJax and KaTeX do not respect the USE_CDN configuration option #}
+
+{# This is for pseudocode.js #}
+{# https://github.com/SaswatPadhi/pseudocode.js #}
+
+<<macro-pseudocode>>
+
+<<macro-code-styles>>
 
 <<math-scripts-macro>>
 <<pseudocode-config>>
-
-<<math-styles-macro>>
+<<end-math-scripts-macro>>
 
 <<math-scripts-ifpost>>
 <<pseudocode-check-ifpost>>
@@ -32,173 +40,18 @@
 
 <<math-styles-if-posts>>
 <<pseudocode-styles-ifposts>>
-
-{# This is for pseudocode.js #}
-{# https://github.com/SaswatPadhi/pseudocode.js #}
-
-<<macro-pseudocode>>
-
-<<macro-code-styles>>
 #+end_src
 
-* The Math Macros
-** The Math Scripts Macro
+* What This Is
 
-#+begin_src jinja :noweb-ref math-scripts-macro
-{% macro math_scripts() %}
-    {% if use_katex %}
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
-        {% if katex_auto_render %}
-            <script>
-                renderMathInElement(document.body,
-                    {
-                        {{ katex_auto_render }}
-                    }
-                );
-            </script>
-        {% else %}
-            <script>
-                renderMathInElement(document.body,
-                    {
-                        delimiters: [
-                            {left: "$$", right: "$$", display: true},
-                            {left: "\\[", right: "\\]", display: true},
-                            {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
-                            {left: "\\(", right: "\\)", display: false}
-                        ]
-                    }
-                );
-            </script>
-        {% endif %}
-    {% else %}
-        {#  Note: given the size of MathJax; nikola will retrieve MathJax from a CDN regardless of use_cdn configuration #}
+In one of my Nikola sites ([[https://necromuralist.github.io/Bowling-For-Data/][Bowling For Data]]) I wanted a simpler way to use [[https://github.com/SaswatPadhi/pseudocode.js][pseudocode.js]] in posts (simpler than having to always insert the CDN URLs into the HTML) so I thought I'd copy what the ~.. has_math:~ metadata flag does, but it turns out to involve more code than I was hoping to need so I instead copied over the math template and hacked in what I needed. 
 
-{# the default config has been updated with stuff that pseudocode.js needs #}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script>
-        {% if mathjax_config %}
-        {{ mathjax_config }}
-        {% else %}
-        <script type="text/x-mathjax-config">
-         MathJax.Hub.Config({
-           tex2jax: {
-             inlineMath: [['$','$'], ['\\(','\\)']],
-#+end_src
+I wanted to use it in a repository I'm starting up ([[https://necromuralist.github.io/Terribilis-Ludum/][Terribilis Ludum]]) so I copied the hacked template over to it but I couldn't get it to work. Then I realized that /Bowling For Data/ is using [[https://www.makotemplates.org/][mako]] while I had set up /Terribilis Ludum/ for [[https://jinja.palletsprojects.com/en/3.1.x/][Jinja]] so I was going to have to re-do it. I find Jinja harder to understand than Mako, partly because their documentation is sparse (and just one long document) but also because Mako uses python-ish syntax while Jinja... doesn't. But I suppose it's a good idea to have both, so here's the Jinja version.
 
-** Pseudocode Additional Config
+I was thinking it'd be better to make a separate template instead of replicng the ~math_helper.tmpl~, but it gets called in the index page template so I'd have to hack that up too, which seemed like too much bother, especially since I don't really know what everything is doing in there.
 
-#+begin_src jinja :noweb-ref pseudocode-config
-             displayMath: [['$$','$$'], ['\\[','\\]']],
-             processEscapes: true,
-             processEnvironments: true,
-           },
-           displayAlign: 'center',
-           "HTML-CSS": {
-             styles: {'.MathJax_Display': {"margin": 0}}
-           }
-         });
-        </script>
-        {% endif %}
-    {% endif %}
-{% endmacro %}
-#+end_src
-
-** The Math Styles Macro
-
-#+begin_src jinja :noweb-ref math-styles-macro
-{% macro math_styles() %}
-    {% if use_katex %}
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
-    {% endif %}
-{% endmacro %}
-#+end_src
-
-* The Post Checkers
-** Math Scripts
-*** Math Scripts If Post
-
-#+begin_src jinja :noweb-ref math-scripts-ifpost
-{% macro math_scripts_ifpost(post) %}
-  {% if post.has_math %}
-    {{ math_scripts() }}
-
-#+end_src
-
-I didn't build code to make a proper metadata setting for pseudocode
-so it checks the post.meta object has_pseudocode
-So as long as the post header has `.. has_pseudocode: <any text>` it will put it in 
-
-#+begin_src jinja :noweb-ref pseudocode-check-ifpost
-  {% elif post.meta("has_pseudocode") %}
-    {{ math_scripts() }}
-    {{ pseudocode() }}
-#+end_src
-
-
-#+begin_src jinja :noweb-ref end-math-scripts-ifpost
-  {% endif %}
-{% endmacro %}
-#+end_src
-*** Math Scripts If Posts
-
-#+begin_src jinja :noweb-ref math-scripts-ifposts
-{% macro math_scripts_ifposts(posts) %}
-    {% if posts|selectattr("has_math")|list %}
-      {{ math_scripts() }}
-#+end_src
-
-#+begin_src jinja :noweb-ref pseudocode-ifposts
-    {% else %}
-      {% set not_yet = namespace(set_up=true) %}
-      {% for post in posts %}
-        {% if post.meta("has_pseudocode") and not_yet.set_up %}
-          {{ math_scripts() }}
-          {{ pseudocode() }}
-          {% set not_yet.set_up = false %}
-        {% endif %}
-      {% endfor %}
-    {% endif %}
-{% endmacro %}
-#+end_src
-** Math Styles
-
-*** Math Styles If Post
-
-#+begin_src jinja :noweb-ref math-styles-ifpost
-{% macro math_styles_ifpost(post) %}
-    {% if post.has_math %}
-      {{ math_styles() }}
-#+end_src
-
-#+begin_src jinja :noweb-ref pseudocode-styles-ifpost
-    {% elif post.meta("has_pseudocode") %}
-      {{ code_styles() }}
-    {% endif %}
-{% endmacro %}
-#+end_src
-
-*** Math Styles If Posts
-
-#+begin_src jinja :noweb-ref math-styles-if-posts
-{% macro math_styles_ifposts(posts) %}
-    {% if posts|selectattr("has_math")|list %}
-      {{ math_styles() }}
-#+end_src
-
-#+begin_src jinja :noweb-ref pseudocode-styles-ifposts
-    {% else %}
-      {% set not_yet = namespace(set_up=true) %}
-      {% for post in posts %}
-        {% if post.meta("has_pseudocode") and not_yet.set_up %}
-          {{ math_styles() }}
-          {{ code_styles() }}
-          {% set not_yet.set_up = false %}
-        {% endif %}
-      {% endfor %}
-    {% endif %}
-{% endmacro %}
-#+end_src
-* Pseudocode Macros
+* The Macros
+** Pseudocode Macros
 
 These define the macros to insert the pseudocode scripts into the HTML.
 
@@ -206,7 +59,7 @@ These define the macros to insert the pseudocode scripts into the HTML.
 
 #+begin_src jinja :noweb-ref macro-pseudocode
 {% macro pseudocode() %}
-  <script src="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pseudocode@2.4.1/build/pseudocode.min.css">
 {% endmacro %}
 #+end_src
 
@@ -214,6 +67,144 @@ These define the macros to insert the pseudocode scripts into the HTML.
 
 #+begin_src jinja :noweb-ref macro-code-styles
 {% macro code_styles() %}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.css">
+<script src="https://cdn.jsdelivr.net/npm/pseudocode@2.4.1/build/pseudocode.min.js">
+</script>
 {% endmacro %}
 #+end_src
+
+** The Math Scripts Macro
+
+This is the macro that configures [[https://www.mathjax.org/][MathJax]]. I tried changing it to MathJax 3 but the rendering went a little cuckoo so I had to go back to 2.7.5 like in the original.
+
+#+begin_src jinja :noweb-ref math-scripts-macro
+{% macro math_scripts() %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script>
+  {% if mathjax_config %}
+    {{ mathjax_config }}
+  {% else %}
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+
+#+end_src
+
+I did change the ~inlineMath~ dollar sign - the original had the word "latex" after the dollar sign, I guess so it doesn't mess up cases where you want actual dollar signs on the same line.
+
+** Pseudocode Additional Config
+
+This is extra configuration stuff I added. I suppose this could (maybe should) go into the ~conf.py~ file. Maybe I'll change it later.
+
+#+begin_src jinja :noweb-ref pseudocode-config
+            displayMath: [['$$','$$'], ['\\[','\\]']],
+            processEscapes: true,
+            processEnvironments: true,
+        }
+    });
+#+end_src
+
+And this is just to close out the macro.
+
+#+begin_src jinja :noweb-ref end-math-scripts-macro
+      </script>
+  {% endif %}
+{% endmacro %}
+#+end_src
+
+There was also a "math styles" macro but it only seemed to apply to katex and since I'm using MathJax I got rid of it.
+
+* The Post Checkers
+These are the macros that get called in the index templates to check if the page needs the math rendering code.
+
+** Math Scripts
+*** Math Scripts If Post
+
+This first chunk runs if the post has ~.. has_math: true~ in the metadata. It's calling the ~math_scripts~ macro from the prior section.
+
+#+begin_src jinja :noweb-ref math-scripts-ifpost
+{% macro math_scripts_ifpost(post) %}
+  {% if post.has_math %}
+   {{ math_scripts() }}
+#+end_src
+
+I added this next part for the pseudocode. I didn't build code to make a proper metadata setting for pseudocode so unlike the previous chunk which is able to check ~if post.has_math~ I'm checking the post.meta object for the string "has_pseudocode". So as long as the post metadata has `.. has_pseudocode: <any text>` it will put put in the math and pseudocode.
+
+#+begin_src jinja :noweb-ref pseudocode-check-ifpost
+  {% elif post.meta("has_pseudocode") %}
+    {# the call to math_scripts is in the CSS call to put it in the HEAD #}
+    {{ pseudocode() }}
+#+end_src
+
+And here's the end of the macro.
+
+#+begin_src jinja :noweb-ref end-math-scripts-ifpost
+  {% endif %}
+{% endmacro %}
+#+end_src
+
+*** Math Scripts If Posts
+
+This macro is like the previous one except it gets used when on the default page which has the latest several posts displayed on it so we need to check if any of the posts has the metadata requesting math or pseudocode and only insert them once, even if multiple posts use them.
+
+This came from nikola.
+
+#+begin_src jinja :noweb-ref math-scripts-ifposts
+{% macro math_scripts_ifposts(posts) %}
+    {% if posts|selectattr("has_math")|list %}
+      {{ math_scripts() }}
+#+end_src
+
+I added this to get the pseudocode into the page. Since ~mako~ uses python syntax I could do it as a generator comprehension in one line in the other version, but I couldn't figure out how to do it with Jinja so I used a for-loop. It doesn't add a lot of extra code but there were two things that seemed unusual. One is that you can't break out of the for-loop so I needed a variable to check if I've already set up MathJax and pseudocode.js. The othe is that for some reason Jinja's variables are by default local to the for-loop, you can't access anything declared outside of it and thus the use of the ~namespace~ function which makes it so you can use the object ~not_yet~ in the loop, which is what I used to check that we only call the ~math_scripts~ and ~pseudocode~ macros once.
+
+#+begin_src jinja :noweb-ref pseudocode-ifposts
+    {% else %}
+      {% set not_yet = namespace(set_up=true) %}
+      {% for post in posts %}
+        {% if post.meta("has_pseudocode") and not_yet.set_up %}
+          {{ pseudocode() }}
+          {% set not_yet.set_up = false %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+{% endmacro %}
+#+end_src
+
+** Math Styles
+
+This is like the previous two sections except it inserts the CSS. This gets put into the head while the scripts get put into the body of the posts.
+According to [[https://stackoverflow.com/a/2451441][StackOverflow]] putting javascript in the HEAD can block loading so javascript should go at the bottom. Is that what my P5 template is doing? I'll need to look into that.
+
+It might be the reason that MathJax isn't rendering until I refresh the page sometimes, though.
+
+*** Math Styles If Post
+Since I got rid of the math-style macro this just loads the pseudocode styling (if it's needed).
+
+#+begin_src jinja :noweb-ref math-styles-ifpost
+{% macro math_styles_ifpost(post) %}
+    {% if post.meta("has_pseudocode") %}
+      {{ math_scripts() }}
+      {{ code_styles() }}
+    {% endif %}
+{% endmacro %}
+#+end_src
+
+*** Math Styles If Posts
+
+And this is for the case where there are multiple posts on a page.
+
+#+begin_src jinja :noweb-ref math-styles-if-posts
+{% macro math_styles_ifposts(posts) %}
+  {% set not_yet = namespace(set_up=true) %}
+  {% for post in posts %}
+    {% if post.meta("has_pseudocode") and not_yet.set_up %}
+      {{ math_scripts() }}
+      {{ code_styles() }}
+      {% set not_yet.set_up = false %}
+    {% endif %}
+  {% endfor %}
+{% endmacro %}
+#+end_src
+
+* The Race Condition
+
+There appears to be a race condition problem sometimes that can be fixed by clearing the cache if you reload the page too many times (https://github.com/mathjax/MathJax/issues/1805#issuecomment-314433504). It only affects the pseudocode so I moved the loading of the ~math_scripts~ into the styles macros because they insert it into the head and not the body (which mathjax says is preferred anyway). It doesn't bother the pseudocode to be in the body so I'm leaving it there.
