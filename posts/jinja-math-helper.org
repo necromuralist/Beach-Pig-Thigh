@@ -117,6 +117,9 @@ There was also a "math styles" macro but it only seemed to apply to katex and si
 These are the macros that get called in the index templates to check if the page needs the math rendering code.
 
 ** Math Scripts
+
+If the ~has_pseudocode~ flag is set I'm calling the ~math_scripts~ in the later macros that add the CSS because they insert stuff into the head of the HTML, not the body. This seems to help a little with getting the math in the pseudocode to render when the page is cached by the browser.
+
 *** Math Scripts If Post
 
 This first chunk runs if the post has ~.. has_math: true~ in the metadata. It's calling the ~math_scripts~ macro from the prior section.
@@ -127,11 +130,11 @@ This first chunk runs if the post has ~.. has_math: true~ in the metadata. It's 
    {{ math_scripts() }}
 #+end_src
 
-I added this next part for the pseudocode. I didn't build code to make a proper metadata setting for pseudocode so unlike the previous chunk which is able to check ~if post.has_math~ I'm checking the post.meta object for the string "has_pseudocode". So as long as the post metadata has `.. has_pseudocode: <any text>` it will put put in the math and pseudocode.
+I added this next part for the pseudocode. I didn't build code to make a proper metadata setting for pseudocode so unlike the previous chunk which is able to check ~if post.has_math~ I'm checking the post.meta object for the string "has_pseudocode". So as long as the post metadata has `.. has_pseudocode: <any text>` it will put in the math and pseudocode.
 
 #+begin_src jinja :noweb-ref pseudocode-check-ifpost
   {% elif post.meta("has_pseudocode") %}
-    {# the call to math_scripts is in the CSS call to put it in the HEAD #}
+    {# the call to math_scripts is in the CSS macros to put it in the HEAD #}
     {{ pseudocode() }}
 #+end_src
 
@@ -207,4 +210,6 @@ And this is for the case where there are multiple posts on a page.
 
 * The Race Condition
 
-There appears to be a race condition problem sometimes that can be fixed by clearing the cache if you reload the page too many times (https://github.com/mathjax/MathJax/issues/1805#issuecomment-314433504). It only affects the pseudocode so I moved the loading of the ~math_scripts~ into the styles macros because they insert it into the head and not the body (which mathjax says is preferred anyway). It doesn't bother the pseudocode to be in the body so I'm leaving it there.
+There appears to be a race condition problem that happens sometimes if I reload the page too many times.(https://github.com/mathjax/MathJax/issues/1805#issuecomment-314433504). It prevents the math being completely rendered in the pseudocode (it converts the inline symbol (slash right-parethesis) to dollar signs, so it's doing something, but it leaves the rest of the latex as is). It can be fixed by clearing the cache but I decided to try and work around it a little.
+
+It only affects the pseudocode so I moved the loading of the ~math_scripts~ into the styles macros because they insert it into the head and not the body (which mathjax says is preferred anyway). It doesn't bother the pseudocode to be in the body so I'm leaving it there.
