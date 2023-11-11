@@ -79,6 +79,22 @@ Then the feature fragment is colorized.
 </%def>
 #+end_src
 
+* Lazy Image Loading
+This adds [[https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading][Lazy Loading]] to the HTML image tags.
+
+#+begin_src lisp :noweb-ref lazy-load-images
+;; Export images with lazy link type
+(defun org-custom-link-img-url-export (path desc format)
+  (cond
+   ((eq format 'html)
+    (format "<img src=\"%s\" alt=\"%s\" loading=\"lazy\" />" path desc))))
+(org-add-link-type "lazy-img-url" nil 'org-custom-link-img-url-export)
+#+end_src
+
+This is supposed to let the browser know that it doesn't have to load the image until it's within view of the user. Here's an example hosted on pCloud.
+
+[[lazy-img-url:https://filedn.com/lKA05W1iHns4eTWccSVfpum/majority-element/majority-element-panel-001-002-unscaled.png][Majority-Item Panels 1 & 2]]
+
 * The Tangle
 #+begin_src emacs-lisp :tangle ../plugins/orgmode/init.el
 ;; Init file to use with the orgmode plugin.
@@ -225,6 +241,8 @@ contextual information."
                ((eq 'html backend)
                 (format "<a href=\"link:%s\">%s</a>"
                         path (or desc path))))))
+
+<<lazy-load-images>>
 
 ;; Export function used by Nikola.
 (defun nikola-html-export (infile outfile)
