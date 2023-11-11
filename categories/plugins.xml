@@ -5,13 +5,13 @@
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;
 &lt;/div&gt;
-</copyright><lastBuildDate>Tue, 10 Oct 2023 00:20:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Orgmode Plugin init.el</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;p&gt;
+</copyright><lastBuildDate>Sat, 11 Nov 2023 00:23:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Orgmode Plugin init.el</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;p&gt;
 This is the emacs configuration (&lt;code&gt;init.el&lt;/code&gt;) for the &lt;a href="https://plugins.getnikola.com/v8/orgmode/"&gt;orgmode plugin&lt;/a&gt; to export posts and pages to HTML. I spent forever messing with the &lt;code&gt;init.el&lt;/code&gt; file for my emacs instance, but it turns out that the plugin has its own configuration so you have to make changes here or they won't matter.
 &lt;/p&gt;
 
-&lt;div id="outline-container-orgddc05da" class="outline-2"&gt;
-&lt;h2 id="orgddc05da"&gt;Pygments&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgddc05da"&gt;
+&lt;div id="outline-container-org4827fda" class="outline-2"&gt;
+&lt;h2 id="org4827fda"&gt;Pygments&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org4827fda"&gt;
 &lt;p&gt;
 This is the list of languages that pygments will colorize when source-code blocks are exported. The org-babel documentation has a &lt;a href="https://orgmode.org/worg/org-contrib/babel/languages/index.html"&gt;list of supported&lt;/a&gt; languages, but it doesn't list &lt;code&gt;fish&lt;/code&gt;, although that seems to work. It might be because I inserted fish-mode, or maybe it just has to be a &lt;a href="https://pygments.org/languages/"&gt;supported pygments language&lt;/a&gt;.
 &lt;/p&gt;
@@ -21,9 +21,9 @@ The first argument is what you put as the type in the source block and the secon
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org2e4c152" class="outline-3"&gt;
-&lt;h3 id="org2e4c152"&gt;Fish&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org2e4c152"&gt;
+&lt;div id="outline-container-orgbd0c548" class="outline-3"&gt;
+&lt;h3 id="orgbd0c548"&gt;Fish&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgbd0c548"&gt;
 &lt;p&gt;
 Add coloring for the fish-shell. 
 &lt;/p&gt;
@@ -38,9 +38,9 @@ Add coloring for the fish-shell.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org2185e6e" class="outline-3"&gt;
-&lt;h3 id="org2185e6e"&gt;Gherkin&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org2185e6e"&gt;
+&lt;div id="outline-container-org29735a6" class="outline-3"&gt;
+&lt;h3 id="org29735a6"&gt;Gherkin&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org29735a6"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"gherkin"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"gherkin"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -54,9 +54,9 @@ Add coloring for the fish-shell.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgc6b1b95" class="outline-3"&gt;
-&lt;h3 id="orgc6b1b95"&gt;HTML&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgc6b1b95"&gt;
+&lt;div id="outline-container-orgd4f625e" class="outline-3"&gt;
+&lt;h3 id="orgd4f625e"&gt;HTML&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgd4f625e"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"html"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"html"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -65,9 +65,9 @@ Add coloring for the fish-shell.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org99b9895" class="outline-3"&gt;
-&lt;h3 id="org99b9895"&gt;Jinja&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org99b9895"&gt;
+&lt;div id="outline-container-org461bf3a" class="outline-3"&gt;
+&lt;h3 id="org461bf3a"&gt;Jinja&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org461bf3a"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"jinja"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"html+jinja"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -78,9 +78,9 @@ Add coloring for the fish-shell.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org118b2db" class="outline-3"&gt;
-&lt;h3 id="org118b2db"&gt;Mako&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org118b2db"&gt;
+&lt;div id="outline-container-orgbf6ba87" class="outline-3"&gt;
+&lt;h3 id="orgbf6ba87"&gt;Mako&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgbf6ba87"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"mako"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"html+mako"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -92,9 +92,34 @@ Add coloring for the fish-shell.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orga611118" class="outline-2"&gt;
-&lt;h2 id="orga611118"&gt;The Tangle&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orga611118"&gt;
+&lt;div id="outline-container-org7d2ea6f" class="outline-2"&gt;
+&lt;h2 id="org7d2ea6f"&gt;Lazy Image Loading&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org7d2ea6f"&gt;
+&lt;p&gt;
+This adds &lt;a href="https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading"&gt;Lazy Loading&lt;/a&gt; to the HTML image tags.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;;; Export images with lazy link type&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;defun&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;org-custom-link-img-url-export&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;path&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;desc&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;format&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;cond&lt;/span&gt;
+&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nb"&gt;eq&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;format&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;'html&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;format&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"&amp;lt;img src=\"%s\" alt=\"%s\" loading=\"lazy\" /&amp;gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;path&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;desc&lt;/span&gt;&lt;span class="p"&gt;))))&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;org-add-link-type&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"lazy-img-url"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="no"&gt;nil&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;'org-custom-link-img-url-export&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;
+This is supposed to let the browser know that it doesn't have to load the image until it's within view of the user. Here's an example hosted on pCloud.
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;img src="https://filedn.com/lKA05W1iHns4eTWccSVfpum/majority-element/majority-element-panel-001-002-unscaled.png" alt="Majority-Item Panels 1 &amp;amp; 2" loading="lazy"&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org37729a9" class="outline-2"&gt;
+&lt;h2 id="org37729a9"&gt;The Tangle&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org37729a9"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;;; Init file to use with the orgmode plugin.&lt;/span&gt;
 
 &lt;span class="c1"&gt;;; this is generated from the post with the slug: orgmode-plugin-initel&lt;/span&gt;
@@ -240,6 +265,8 @@ Add coloring for the fish-shell.
 &lt;span class="w"&gt;		&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;format&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"&amp;lt;a href=&lt;/span&gt;&lt;span class="se"&gt;\"&lt;/span&gt;&lt;span class="s"&gt;link:%s&lt;/span&gt;&lt;span class="se"&gt;\"&lt;/span&gt;&lt;span class="s"&gt;&amp;gt;%s&amp;lt;/a&amp;gt;"&lt;/span&gt;
 &lt;span class="w"&gt;			&lt;/span&gt;&lt;span class="nv"&gt;path&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;or&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;desc&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;path&lt;/span&gt;&lt;span class="p"&gt;))))))&lt;/span&gt;
 
+&lt;span class="nv"&gt;&amp;lt;&amp;lt;lazy-load-images&amp;gt;&amp;gt;&lt;/span&gt;
+
 &lt;span class="c1"&gt;;; Export function used by Nikola.&lt;/span&gt;
 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;defun&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;nikola-html-export&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;infile&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;outfile&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="s"&gt;"Export the body only of the input file and write it to&lt;/span&gt;
@@ -252,9 +279,9 @@ Add coloring for the fish-shell.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org0eea310" class="outline-2"&gt;
-&lt;h2 id="org0eea310"&gt;Links&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org0eea310"&gt;
+&lt;div id="outline-container-org3639005" class="outline-2"&gt;
+&lt;h2 id="org3639005"&gt;Links&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org3639005"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;Chaganti P. Plugins for Nikola. 2020 [cited 2023 Jun 25]. orgmode. Available from: &lt;a href="https://plugins.getnikola.com/v8/orgmode/"&gt;https://plugins.getnikola.com/v8/orgmode/&lt;/a&gt;&lt;/li&gt;
 
