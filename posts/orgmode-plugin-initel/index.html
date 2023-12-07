@@ -119,9 +119,9 @@ bg-light
 This is the emacs configuration (<code>init.el</code>) for the <a href="https://plugins.getnikola.com/v8/orgmode/">orgmode plugin</a> to export posts and pages to HTML. I spent forever messing with the <code>init.el</code> file for my emacs instance, but it turns out that the plugin has its own configuration so you have to make changes here or they won't matter.
 </p>
 
-<div id="outline-container-org4827fda" class="outline-2">
-<h2 id="org4827fda">Pygments</h2>
-<div class="outline-text-2" id="text-org4827fda">
+<div id="outline-container-org3f9015f" class="outline-2">
+<h2 id="org3f9015f">Pygments</h2>
+<div class="outline-text-2" id="text-org3f9015f">
 <p>
 This is the list of languages that pygments will colorize when source-code blocks are exported. The org-babel documentation has a <a href="https://orgmode.org/worg/org-contrib/babel/languages/index.html">list of supported</a> languages, but it doesn't list <code>fish</code>, although that seems to work. It might be because I inserted fish-mode, or maybe it just has to be a <a href="https://pygments.org/languages/">supported pygments language</a>.
 </p>
@@ -131,9 +131,9 @@ The first argument is what you put as the type in the source block and the secon
 </p>
 </div>
 
-<div id="outline-container-orgbd0c548" class="outline-3">
-<h3 id="orgbd0c548">Fish</h3>
-<div class="outline-text-3" id="text-orgbd0c548">
+<div id="outline-container-org09f2bc5" class="outline-3">
+<h3 id="org09f2bc5">Fish</h3>
+<div class="outline-text-3" id="text-org09f2bc5">
 <p>
 Add coloring for the fish-shell. 
 </p>
@@ -148,9 +148,9 @@ Add coloring for the fish-shell.
 </pre></div>
 </div>
 </div>
-<div id="outline-container-org29735a6" class="outline-3">
-<h3 id="org29735a6">Gherkin</h3>
-<div class="outline-text-3" id="text-org29735a6">
+<div id="outline-container-org00cea6a" class="outline-3">
+<h3 id="org00cea6a">Gherkin</h3>
+<div class="outline-text-3" id="text-org00cea6a">
 <div class="highlight"><pre><span></span><span class="p">(</span><span class="s">"gherkin"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"gherkin"</span><span class="p">)</span>
 </pre></div>
 
@@ -164,9 +164,9 @@ Add coloring for the fish-shell.
 </pre></div>
 </div>
 </div>
-<div id="outline-container-orgd4f625e" class="outline-3">
-<h3 id="orgd4f625e">HTML</h3>
-<div class="outline-text-3" id="text-orgd4f625e">
+<div id="outline-container-orgd78412e" class="outline-3">
+<h3 id="orgd78412e">HTML</h3>
+<div class="outline-text-3" id="text-orgd78412e">
 <div class="highlight"><pre><span></span><span class="p">(</span><span class="s">"html"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"html"</span><span class="p">)</span>
 </pre></div>
 
@@ -175,9 +175,27 @@ Add coloring for the fish-shell.
 </div>
 </div>
 
-<div id="outline-container-org461bf3a" class="outline-3">
-<h3 id="org461bf3a">Jinja</h3>
-<div class="outline-text-3" id="text-org461bf3a">
+<div id="outline-container-orgc790334" class="outline-3">
+<h3 id="orgc790334">INI</h3>
+<div class="outline-text-3" id="text-orgc790334">
+<p>
+For <a href="https://en.wikipedia.org/wiki/INI_file?useskin=vector">INI</a> configuration files.
+</p>
+
+<div class="highlight"><pre><span></span><span class="p">(</span><span class="s">"ini"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"ini"</span><span class="p">)</span>
+</pre></div>
+
+<div class="highlight"><pre><span></span><span class="k">[Roles]</span>
+<span class="na">killer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">whale</span>
+<span class="na">monk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">fish</span>
+<span class="na">lion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">seal</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-org0662028" class="outline-3">
+<h3 id="org0662028">Jinja</h3>
+<div class="outline-text-3" id="text-org0662028">
 <div class="highlight"><pre><span></span><span class="p">(</span><span class="s">"jinja"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"html+jinja"</span><span class="p">)</span>
 </pre></div>
 
@@ -188,9 +206,9 @@ Add coloring for the fish-shell.
 </div>
 </div>
 
-<div id="outline-container-orgbf6ba87" class="outline-3">
-<h3 id="orgbf6ba87">Mako</h3>
-<div class="outline-text-3" id="text-orgbf6ba87">
+<div id="outline-container-org2e6ee99" class="outline-3">
+<h3 id="org2e6ee99">Mako</h3>
+<div class="outline-text-3" id="text-org2e6ee99">
 <div class="highlight"><pre><span></span><span class="p">(</span><span class="s">"mako"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"html+mako"</span><span class="p">)</span>
 </pre></div>
 
@@ -202,9 +220,9 @@ Add coloring for the fish-shell.
 </div>
 </div>
 
-<div id="outline-container-org7d2ea6f" class="outline-2">
-<h2 id="org7d2ea6f">Lazy Image Loading</h2>
-<div class="outline-text-2" id="text-org7d2ea6f">
+<div id="outline-container-orgd3edcd9" class="outline-2">
+<h2 id="orgd3edcd9">Lazy Image Loading</h2>
+<div class="outline-text-2" id="text-orgd3edcd9">
 <p>
 This adds <a href="https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading">Lazy Loading</a> to the HTML image tags.
 </p>
@@ -226,9 +244,9 @@ This is supposed to let the browser know that it doesn't have to load the image 
 </div>
 </div>
 
-<div id="outline-container-org37729a9" class="outline-2">
-<h2 id="org37729a9">The Tangle</h2>
-<div class="outline-text-2" id="text-org37729a9">
+<div id="outline-container-org4fdeab6" class="outline-2">
+<h2 id="org4fdeab6">The Tangle</h2>
+<div class="outline-text-2" id="text-org4fdeab6">
 <div class="highlight"><pre><span></span><span class="c1">;; Init file to use with the orgmode plugin.</span>
 
 <span class="c1">;; this is generated from the post with the slug: orgmode-plugin-initel</span>
@@ -261,9 +279,9 @@ This is supposed to let the browser know that it doesn't have to load the image 
 <span class="c1">;; Load Nikola macros</span>
 <span class="p">(</span><span class="nf">setq</span><span class="w"> </span><span class="nv">nikola-macro-templates</span>
 <span class="w">      </span><span class="p">(</span><span class="nf">with-current-buffer</span>
-<span class="w">	  </span><span class="p">(</span><span class="nf">find-file</span>
-<span class="w">	   </span><span class="p">(</span><span class="nf">expand-file-name</span><span class="w"> </span><span class="s">"macros.org"</span><span class="w"> </span><span class="p">(</span><span class="nf">file-name-directory</span><span class="w"> </span><span class="nv">load-file-name</span><span class="p">)))</span>
-<span class="w">	</span><span class="p">(</span><span class="nf">org-macro--collect-macros</span><span class="p">)))</span>
+<span class="w">          </span><span class="p">(</span><span class="nf">find-file</span>
+<span class="w">           </span><span class="p">(</span><span class="nf">expand-file-name</span><span class="w"> </span><span class="s">"macros.org"</span><span class="w"> </span><span class="p">(</span><span class="nf">file-name-directory</span><span class="w"> </span><span class="nv">load-file-name</span><span class="p">)))</span>
+<span class="w">        </span><span class="p">(</span><span class="nf">org-macro--collect-macros</span><span class="p">)))</span>
 
 <span class="c1">;;; Code highlighting</span>
 <span class="p">(</span><span class="nf">defun</span><span class="w"> </span><span class="nv">org-html-decode-plain-text</span><span class="w"> </span><span class="p">(</span><span class="nf">text</span><span class="p">)</span>
@@ -283,8 +301,8 @@ This is supposed to let the browser know that it doesn't have to load the image 
 <span class="w">    </span><span class="p">(</span><span class="nf">insert</span><span class="w"> </span><span class="nv">code</span><span class="p">)</span>
 <span class="w">    </span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="p">((</span><span class="nf">lang</span><span class="w"> </span><span class="p">(</span><span class="k">or</span><span class="w"> </span><span class="p">(</span><span class="nb">cdr</span><span class="w"> </span><span class="p">(</span><span class="nb">assoc</span><span class="w"> </span><span class="nv">lang</span><span class="w"> </span><span class="nv">org-pygments-language-alist</span><span class="p">))</span><span class="w"> </span><span class="s">"text"</span><span class="p">)))</span>
 <span class="w">      </span><span class="p">(</span><span class="nf">shell-command-on-region</span><span class="w"> </span><span class="p">(</span><span class="nf">point-min</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nf">point-max</span><span class="p">)</span>
-<span class="w">			       </span><span class="p">(</span><span class="nb">format</span><span class="w"> </span><span class="s">"pygmentize -f html -l %s"</span><span class="w"> </span><span class="nv">lang</span><span class="p">)</span>
-<span class="w">			       </span><span class="p">(</span><span class="nf">buffer-name</span><span class="p">)</span><span class="w"> </span><span class="nv">t</span><span class="p">))</span>
+<span class="w">                               </span><span class="p">(</span><span class="nb">format</span><span class="w"> </span><span class="s">"pygmentize -f html -l %s"</span><span class="w"> </span><span class="nv">lang</span><span class="p">)</span>
+<span class="w">                               </span><span class="p">(</span><span class="nf">buffer-name</span><span class="p">)</span><span class="w"> </span><span class="nv">t</span><span class="p">))</span>
 <span class="w">    </span><span class="p">(</span><span class="nf">buffer-string</span><span class="p">)))</span>
 
 <span class="p">(</span><span class="nf">defconst</span><span class="w"> </span><span class="nv">org-pygments-language-alist</span>
@@ -305,6 +323,7 @@ This is supposed to let the browser know that it doesn't have to load the image 
 <span class="w">    </span><span class="p">(</span><span class="s">"groovy"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"groovy"</span><span class="p">)</span>
 <span class="w">    </span><span class="p">(</span><span class="s">"haskell"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"haskell"</span><span class="p">)</span>
 <span class="w">    </span><span class="nv">&lt;&lt;html-pygments&gt;&gt;</span>
+<span class="w">    </span><span class="nv">&lt;&lt;ini-pygments&gt;&gt;</span>
 <span class="w">    </span><span class="p">(</span><span class="s">"java"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"java"</span><span class="p">)</span>
 <span class="w">    </span><span class="nv">&lt;&lt;jinja-pygments&gt;&gt;</span>
 <span class="w">    </span><span class="p">(</span><span class="s">"js"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"js"</span><span class="p">)</span>
@@ -343,13 +362,13 @@ This is supposed to let the browser know that it doesn't have to load the image 
 <span class="w">  </span><span class="p">(</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nf">org-export-read-attribute</span><span class="w"> </span><span class="nv">:attr_html</span><span class="w"> </span><span class="nv">src-block</span><span class="w"> </span><span class="nv">:textarea</span><span class="p">)</span>
 <span class="w">      </span><span class="p">(</span><span class="nf">org-html--textarea-block</span><span class="w"> </span><span class="nv">src-block</span><span class="p">)</span>
 <span class="w">    </span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="p">((</span><span class="nf">lang</span><span class="w"> </span><span class="p">(</span><span class="nf">org-element-property</span><span class="w"> </span><span class="nv">:language</span><span class="w"> </span><span class="nv">src-block</span><span class="p">))</span>
-<span class="w">	  </span><span class="p">(</span><span class="nf">code</span><span class="w"> </span><span class="p">(</span><span class="nf">org-element-property</span><span class="w"> </span><span class="nv">:value</span><span class="w"> </span><span class="nv">src-block</span><span class="p">))</span>
-<span class="w">	  </span><span class="p">(</span><span class="nf">code-html</span><span class="w"> </span><span class="p">(</span><span class="nf">org-html-format-code</span><span class="w"> </span><span class="nv">src-block</span><span class="w"> </span><span class="nv">info</span><span class="p">)))</span>
+<span class="w">          </span><span class="p">(</span><span class="nf">code</span><span class="w"> </span><span class="p">(</span><span class="nf">org-element-property</span><span class="w"> </span><span class="nv">:value</span><span class="w"> </span><span class="nv">src-block</span><span class="p">))</span>
+<span class="w">          </span><span class="p">(</span><span class="nf">code-html</span><span class="w"> </span><span class="p">(</span><span class="nf">org-html-format-code</span><span class="w"> </span><span class="nv">src-block</span><span class="w"> </span><span class="nv">info</span><span class="p">)))</span>
 <span class="w">      </span><span class="p">(</span><span class="k">if</span><span class="w"> </span><span class="nv">nikola-use-pygments</span>
-<span class="w">	  </span><span class="p">(</span><span class="nf">progn</span>
-<span class="w">	    </span><span class="p">(</span><span class="k">unless</span><span class="w"> </span><span class="nv">lang</span><span class="w"> </span><span class="p">(</span><span class="nf">setq</span><span class="w"> </span><span class="nv">lang</span><span class="w"> </span><span class="s">""</span><span class="p">))</span>
-<span class="w">	    </span><span class="p">(</span><span class="nf">pygmentize</span><span class="w"> </span><span class="p">(</span><span class="nf">downcase</span><span class="w"> </span><span class="nv">lang</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nf">org-html-decode-plain-text</span><span class="w"> </span><span class="nv">code</span><span class="p">)))</span>
-<span class="w">	</span><span class="nv">code-html</span><span class="p">))))</span>
+<span class="w">          </span><span class="p">(</span><span class="nf">progn</span>
+<span class="w">            </span><span class="p">(</span><span class="k">unless</span><span class="w"> </span><span class="nv">lang</span><span class="w"> </span><span class="p">(</span><span class="nf">setq</span><span class="w"> </span><span class="nv">lang</span><span class="w"> </span><span class="s">""</span><span class="p">))</span>
+<span class="w">            </span><span class="p">(</span><span class="nf">pygmentize</span><span class="w"> </span><span class="p">(</span><span class="nf">downcase</span><span class="w"> </span><span class="nv">lang</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nf">org-html-decode-plain-text</span><span class="w"> </span><span class="nv">code</span><span class="p">)))</span>
+<span class="w">        </span><span class="nv">code-html</span><span class="p">))))</span>
 
 <span class="c1">;; Export images with custom link type</span>
 <span class="p">(</span><span class="nf">defun</span><span class="w"> </span><span class="nv">org-custom-link-img-url-export</span><span class="w"> </span><span class="p">(</span><span class="nf">path</span><span class="w"> </span><span class="nv">desc</span><span class="w"> </span><span class="nb">format</span><span class="p">)</span>
@@ -369,10 +388,10 @@ This is supposed to let the browser know that it doesn't have to load the image 
 <span class="p">(</span><span class="nf">org-link-set-parameters</span>
 <span class="w">  </span><span class="s">"link"</span>
 <span class="w">  </span><span class="nv">:export</span><span class="w"> </span><span class="p">(</span><span class="k">lambda</span><span class="w"> </span><span class="p">(</span><span class="nf">path</span><span class="w"> </span><span class="nv">desc</span><span class="w"> </span><span class="nv">backend</span><span class="p">)</span>
-<span class="w">	     </span><span class="p">(</span><span class="k">cond</span>
-<span class="w">	       </span><span class="p">((</span><span class="nf">eq</span><span class="w"> </span><span class="ss">'html</span><span class="w"> </span><span class="nv">backend</span><span class="p">)</span>
-<span class="w">		</span><span class="p">(</span><span class="nb">format</span><span class="w"> </span><span class="s">"&lt;a href=</span><span class="se">\"</span><span class="s">link:%s</span><span class="se">\"</span><span class="s">&gt;%s&lt;/a&gt;"</span>
-<span class="w">			</span><span class="nv">path</span><span class="w"> </span><span class="p">(</span><span class="k">or</span><span class="w"> </span><span class="nv">desc</span><span class="w"> </span><span class="nv">path</span><span class="p">))))))</span>
+<span class="w">             </span><span class="p">(</span><span class="k">cond</span>
+<span class="w">               </span><span class="p">((</span><span class="nf">eq</span><span class="w"> </span><span class="ss">'html</span><span class="w"> </span><span class="nv">backend</span><span class="p">)</span>
+<span class="w">                </span><span class="p">(</span><span class="nb">format</span><span class="w"> </span><span class="s">"&lt;a href=</span><span class="se">\"</span><span class="s">link:%s</span><span class="se">\"</span><span class="s">&gt;%s&lt;/a&gt;"</span>
+<span class="w">                        </span><span class="nv">path</span><span class="w"> </span><span class="p">(</span><span class="k">or</span><span class="w"> </span><span class="nv">desc</span><span class="w"> </span><span class="nv">path</span><span class="p">))))))</span>
 
 <span class="nv">&lt;&lt;lazy-load-images&gt;&gt;</span>
 
@@ -388,9 +407,9 @@ This is supposed to let the browser know that it doesn't have to load the image 
 </div>
 </div>
 
-<div id="outline-container-org3639005" class="outline-2">
-<h2 id="org3639005">Links</h2>
-<div class="outline-text-2" id="text-org3639005">
+<div id="outline-container-org13e78e0" class="outline-2">
+<h2 id="org13e78e0">Links</h2>
+<div class="outline-text-2" id="text-org13e78e0">
 <ul class="org-ul">
 <li>Chaganti P. Plugins for Nikola. 2020 [cited 2023 Jun 25]. orgmode. Available from: <a href="https://plugins.getnikola.com/v8/orgmode/">https://plugins.getnikola.com/v8/orgmode/</a>
 </li>

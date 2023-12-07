@@ -19,7 +19,11 @@
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/categories/cat_plugins.xml</loc>
-  <lastmod>2023-11-11T00:23:00Z</lastmod>
+  <lastmod>2023-12-07T01:12:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://necromuralist.github.io/Beach-Pig-Thigh/categories/cat_shortcode.xml</loc>
+  <lastmod>2023-12-07T01:09:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/categories/jinja.xml</loc>
@@ -35,15 +39,19 @@
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/categories/orgmode.xml</loc>
-  <lastmod>2023-11-11T00:23:00Z</lastmod>
+  <lastmod>2023-12-07T01:12:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/categories/p5.xml</loc>
   <lastmod>2023-10-10T00:30:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://necromuralist.github.io/Beach-Pig-Thigh/categories/plugin.xml</loc>
+  <lastmod>2023-12-07T01:09:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/categories/plugins.xml</loc>
-  <lastmod>2023-11-11T00:23:00Z</lastmod>
+  <lastmod>2023-12-07T01:12:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/categories/pseudocode.xml</loc>
@@ -51,7 +59,7 @@
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/categories/shortcode.xml</loc>
-  <lastmod>2023-10-10T00:30:00Z</lastmod>
+  <lastmod>2023-12-07T01:09:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/categories/template.xml</loc>
@@ -59,10 +67,10 @@
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/rss.xml</loc>
-  <lastmod>2023-11-11T00:23:00Z</lastmod>
+  <lastmod>2023-12-07T01:12:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Beach-Pig-Thigh/sitemap.xml</loc>
-  <lastmod>2023-11-11T00:23:00Z</lastmod>
+  <lastmod>2023-12-07T01:12:00Z</lastmod>
  </sitemap>
 </sitemapindex>
