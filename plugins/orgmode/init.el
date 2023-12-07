@@ -74,6 +74,7 @@
     ("groovy" . "groovy")
     ("haskell" . "haskell")
     ("html" . "html")
+    ("ini" . "ini")
     ("java" . "java")
     ("jinja" . "html+jinja")
     ("js" . "js")

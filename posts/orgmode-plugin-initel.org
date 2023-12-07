@@ -55,6 +55,21 @@ Then the feature fragment is colorized.
 <h1>Colorize HTML</h1>
 #+end_src
 
+** INI
+
+For [[https://en.wikipedia.org/wiki/INI_file?useskin=vector][INI]] configuration files.
+
+#+begin_src emacs-lisp :noweb-ref ini-pygments
+("ini" . "ini")
+#+end_src
+
+#+begin_src ini
+[Roles]
+killer = whale
+monk = fish
+lion = seal
+#+end_src
+
 ** Jinja
 
 #+begin_src emacs-lisp :noweb-ref jinja-pygments
@@ -173,6 +188,7 @@ This is supposed to let the browser know that it doesn't have to load the image 
     ("groovy" . "groovy")
     ("haskell" . "haskell")
     <<html-pygments>>
+    <<ini-pygments>>
     ("java" . "java")
     <<jinja-pygments>>
     ("js" . "js")

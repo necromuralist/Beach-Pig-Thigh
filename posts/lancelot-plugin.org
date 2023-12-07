@@ -15,6 +15,7 @@
 This is a variant of the built-in ~doc~ shortcode (although it seems to go into the plugins folder for some reason, I'll have to look into that). The ReStructured Text ~doc~ documentation says that you can pass in text to display instead of the title of the post it's linking to, but I couldn't get it to work with the non-RST version so I adapted it so I could use it in org-mode posts. I didn't really look too closely at the code, just enough to get it working so it's probably pretty fragile.
 
 * The Plugin File
+
 #+begin_src ini :tangle ../plugins/lancelot/lancelot.plugin
 [Core]
 name = lancelot
@@ -25,7 +26,7 @@ PluginCategory = Shortcode
 
 [Documentation]
 author = The Cloistered Monkey
-version = 0.1
+version = 0.2
 website = https://necromuralist.github.io/Beach-Pig-Thigh
 description = Variant of the doc shortcode that allows alternate titles.
 #+end_src
