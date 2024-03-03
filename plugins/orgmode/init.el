@@ -159,3 +159,7 @@ specified location."
     (org-macro-replace-all nikola-macro-templates)
     (org-html-export-as-html nil nil t t)
     (write-file outfile nil)))
+
+;; silence  notice that emacs is using a default of 4 spaces
+(setq python-indent-guess-indent-offset t)
+(setq python-indent-guess-indent-offset-verbose nil)

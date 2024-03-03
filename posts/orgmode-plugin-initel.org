@@ -110,6 +110,14 @@ This is supposed to let the browser know that it doesn't have to load the image 
 
 [[lazy-img-url:https://filedn.com/lKA05W1iHns4eTWccSVfpum/majority-element/majority-element-panel-001-002-unscaled.png][Majority-Item Panels 1 & 2]]
 
+* Silencing the Python Warning
+
+Emacs warns you that it's using 4 spaces for the python code, which is what we want anyway, so this should, hopefully, turn off all those warnings.
+
+#+begin_src emacs-lisp :noweb-ref python-space-guess-silence
+(setq python-indent-guess-indent-offset t)
+(setq python-indent-guess-indent-offset-verbose nil)
+#+end_src
 * The Tangle
 #+begin_src emacs-lisp :tangle ../plugins/orgmode/init.el
 ;; Init file to use with the orgmode plugin.
@@ -268,6 +276,9 @@ specified location."
     (org-macro-replace-all nikola-macro-templates)
     (org-html-export-as-html nil nil t t)
     (write-file outfile nil)))
+
+;; silence  notice that emacs is using a default of 4 spaces
+<<python-space-guess-silence>>
 #+end_src
 
 * Links
