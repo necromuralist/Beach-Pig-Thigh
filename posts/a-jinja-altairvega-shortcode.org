@@ -1,0 +1,65 @@
+#+BEGIN_COMMENT
+.. title: A Jinja Altair/Vega Shortcode
+.. slug: a-jinja-altairvega-shortcode
+.. date: 2024-03-19 18:16:50 UTC-07:00
+.. tags: shortcodes,altair,javascript
+.. category: Jinja
+.. link: 
+.. description: A shortcode to put altair into a post.
+.. type: text
+.. template: altair.tmpl
+#+END_COMMENT
+#+OPTIONS: ^:{}
+#+TOC: headlines 3
+#+PROPERTY: header-args :session ~/.local/share/jupyter/runtime/kernel-aecf041a-9a35-4810-a51c-8526d922c56f.json
+
+#+BEGIN_SRC python :results none :exports none
+%load_ext autoreload
+%autoreload 2
+#+END_SRC
+
+* The Shortcode Template
+
+This is a shortcode-template to add the HTML for an altair-vega sketch (both the script and div tags). The shortcode takes two arguments:
+
+ - ~source~: the name of the javascript chart file
+ - ~divid~: the ID of the div in the HTML where the chart will go.
+
+The file is in ~shortcodes/altairdiv.tmpl~. Note that since it's a template it will only work with Jinja. To make it work with mako you need another template (which I haven't made yet).
+
+#+begin_src jinja :tangle ../shortcodes/altairdiv.tmpl
+<div class="altair-vega" id="{{ divid }}"></div>
+
+<script src="{{ source }}"></script>
+#+end_src
+
+#+begin_notecard
+**Note:** The only thing that makes this altair-specific is the class. This is also the case with the {{% doc %}}p5-div-shortcode{{% /doc %}}, so perhaps a generic shortcode that takes the class as a third-argument would be better... Although then you'd have to remember the class names.
+#+end_notecard
+
+* Try it Out
+
+ As noted, this is a Jinja shortcode so the ~conf.py~ has to be pointing to the jinja theme.
+
+ #+begin_src python :results none
+# from pypi
+import altair
+import pandas
+
+# monkey
+from graeae.visualization.altair_helpers import output_path, save_vega_embed
+#+end_src
+
+#+begin_src python :results output
+OUTPUT = output_path(slug="a-jinja-altairvega-shortcode")
+
+data = pandas.DataFrame(dict(a=[1, 3, 5], b=[3, 9, 27]))
+chart = altair.Chart(data).mark_bar().encode(
+    x="a",
+    y="b"
+).properties(height=600, width="container")
+
+save_vega_embed(chart, name="shortcode-bar",output_path=OUTPUT, div_id="shortcode-bar-id")
+#+end_src
+
+{{% altairdiv source="shortcode-bar.js" divid="shortcode-bar-id" %}}

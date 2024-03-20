@@ -5,8 +5,9 @@
 {% import 'pagination_helper.tmpl' as pagination with context %}
 {% import 'feeds_translations_helper.tmpl' as feeds_translations with context %}
 
-{# -*- Monkey Template -*- #}
+{# -*- Monkey Templates -*- #}
 {% import 'p5_helper.tmpl' as p5 with context %}
+{% import 'altair_helper.tmpl' as altair with context %}
 
 {% extends 'base.tmpl' %}
 
@@ -17,6 +18,7 @@
     {% endif %}
     {{ math.math_styles_ifposts(posts) }}
     {{ p5.p5_scripts_ifposts(posts) }}
+    {{ altair.altair_scripts_ifposts(posts)}}
 {% endblock %}
 
 {% block content %}
