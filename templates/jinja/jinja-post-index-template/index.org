@@ -12,12 +12,22 @@
 
 * The Index Template
 
-This is the template used to produce the page with the latest posts. The number of posts on the page is set in ~conf.py~ using the ~INDEX_DISPLAY_POST_COUNT~ variable (10 is the default). I'm overriding the default because I want to be able to add [[https://p5js.org/][p5]] code to posts. Using a special template works when you look at single posts (see the ~p5.tmpl~ template) but the index template won't pick up on that so I'm inserting a macro call to get p5 into the main page (if there's a p5 post on it).
+This is the Jinja template used to produce the page with the latest posts. The number of posts on the page is set in ~conf.py~ using the ~INDEX_DISPLAY_POST_COUNT~ variable (10 is the default). I'm overriding the default because I want to be able to add [[https://p5js.org/][p5]] code to posts. Using a special template works when you look at single posts (see the ~p5.tmpl~ template) but the index template won't pick up on that so I'm inserting a macro call to get p5 into the main page (if there's a p5 post on it).
 
 This overrides the built-in ~index.tmpl~ found at ~<virtualenv>/lib/python3.11/site-packages/nikola/data/themes/base-jinja/templates/~.
 
+In ~Beach Pig Thigh~ it's located at ~themes/custom-jinja/templates/index.tmpl~.
+
+This is needed for two templates:
+
+ - ~p5.tmpl~
+ - ~altair.tmpl~
+   
 * The Tangle
-#+begin_src html :tangle index.tmpl
+
+Here's the tangle that creates the template. It's written in noweb syntax so anything written with double angle brackets (like ~<<default-imports>>~) will be replace by one of the sections defined later.
+
+#+begin_src html :tangle ../../../themes/custom-jinja/templates/index.tmpl
 {#  -*- coding: utf-8 -*- #}
 <<default-imports>>
 
@@ -31,7 +41,7 @@ This overrides the built-in ~index.tmpl~ found at ~<virtualenv>/lib/python3.11/s
         <link rel="prefetch" href="{{ posts[0].permalink() }}" type="text/html">
     {% endif %}
     {{ math.math_styles_ifposts(posts) }}
-    <<p5-macro>>
+    <<monkey-posts-check>>
 {% endblock %}
 
 {% block content %}
@@ -93,7 +103,7 @@ This overrides the built-in ~index.tmpl~ found at ~<virtualenv>/lib/python3.11/s
 #+end_src
 * Imports
 ** The Defaults
-These imports were already in the built-in template.
+These imports were already in the built-in template, but I'm hoping to eventually break the whole template up so there's a little more documentation so I'll start with these.
 
 #+begin_src jinja :noweb-ref default-imports
 {% import 'index_helper.tmpl' as helper with context %}
@@ -103,18 +113,24 @@ These imports were already in the built-in template.
 {% import 'feeds_translations_helper.tmpl' as feeds_translations with context %}
 #+end_src
 
-* Monkey Imports
-This is what I'm adding.
+This will go where ~<<default-imports>>~ is in the tangle up above.
+
+** Monkey Imports
+This is what I'm adding, it will go where ~<<monkey-imports>>~ is in the tangle. This assumes that these template-files exist in ~themes/custom-jinja/templates/~.
 
 #+begin_src jinja :noweb-ref monkey-imports
-{# -*- Monkey Template -*- #}
+{# -*- Monkey Templates -*- #}
 {% import 'p5_helper.tmpl' as p5 with context %}
+{% import 'altair_helper.tmpl' as altair with context %}
 #+end_src
 
-* Calling the P5 Macro
+* Checking If There Are Posts
 
-This is where we call the macro to insert (or not) a tag to pull in the p5 library. I originally tried putting it next to where the mathjax macro gets called (at the end of the template) but this caused an error sayng that the ~p5~ object was undefined. Putting it in the head seems to fix it.
+This is where we call the macro to insert (or not) a tag to pull in the p5 library or the vega libraries. I originally tried putting it next to where the mathjax macro gets called (at the end of the template) but this caused an error saying that the ~p5~ object was undefined. Putting it in the head seems to fix it. These need to be defined in the templates imported in the previous section.
 
-#+begin_src jinja :noweb-ref p5-macro
+#+begin_src jinja :noweb-ref monkey-posts-check
 {{ p5.p5_scripts_ifposts(posts) }}
+{{ altair.altair_scripts_ifposts(posts)}}
 #+end_src
+
+This will be substituted into the ~<<monkey-posts-check>>~ section of the tangle.

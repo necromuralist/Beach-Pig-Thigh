@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+<html prefix="
+og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 " lang="en">
 <head>
 <meta charset="utf-8">
@@ -15,7 +16,12 @@
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="manifest" href="../site.webmanifest">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js" integrity="sha512-3RlxD1bW34eFKPwj9gUXEWtdSMC59QqIqHnD8O/NoTwSJhgxRizdcFVQhUMFyTp5RwLTDL0Lbcqtl8b7bFAzog==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script><style>
+    .error {
+        color: red;
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.6.1"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -79,17 +85,252 @@ bg-light
     <div class="body-content">
         <!--Body content-->
         
-        
-        
-
     
-
-
-
     
-
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="lancelot-shortcode/index.html" class="u-url">Lancelot Shortcode</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="a-jinja-altairvega-shortcode/index.html" class="u-url">A Jinja Altair/Vega Shortcode</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                The Cloistered Monkey
+            </span></p>
+            <p class="dateline">
+            <a href="a-jinja-altairvega-shortcode/index.html" rel="bookmark">
+            <time class="published dt-published" datetime="2024-03-19T18:16:50-07:00" itemprop="datePublished" title="2024-03-19 18:16">2024-03-19 18:16</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="a-jinja-altairvega-shortcode/index.html#org29da9e6">The Shortcode Template</a></li>
+<li><a href="a-jinja-altairvega-shortcode/index.html#org3f0495d">Try it Out</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org29da9e6" class="outline-2">
+<h2 id="org29da9e6">The Shortcode Template</h2>
+<div class="outline-text-2" id="text-org29da9e6">
+<p>
+This is a shortcode-template to add the HTML for an altair-vega sketch (both the script and div tags). The shortcode takes two arguments:
+</p>
+
+<ul class="org-ul">
+<li>
+<code>source</code>: the name of the javascript chart file</li>
+<li>
+<code>divid</code>: the ID of the div in the HTML where the chart will go.</li>
+</ul>
+<p>
+The file is in <code>shortcodes/altairdiv.tmpl</code>. Note that since it's a template it will only work with Jinja. To make it work with mako you need another template (which I haven't made yet).
+</p>
+
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"altair-vega"</span> <span class="na">id</span><span class="o">=</span><span class="s">"</span><span class="cp">{{</span> <span class="nv">divid</span> <span class="cp">}}</span><span class="s">"</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"</span><span class="cp">{{</span> <span class="nv">source</span> <span class="cp">}}</span><span class="s">"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+
+<div class="notecard" id="org8f662a6">
+<p>
+<b><b>Note:</b></b> The only thing that makes this altair-specific is the class. This is also the case with the <a href="p5-div-shortcode/index.html">P5 Div Shortcode</a>, so perhaps a generic shortcode that takes the class as a third-argument would be better… Although then you'd have to remember the class names.
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3f0495d" class="outline-2">
+<h2 id="org3f0495d">Try it Out</h2>
+<div class="outline-text-2" id="text-org3f0495d">
+<p>
+As noted, this is a Jinja shortcode so the <code>conf.py</code> has to be pointing to the jinja theme.
+</p>
+
+<div class="highlight"><pre><span></span> <span class="c1"># from pypi</span>
+ <span class="kn">import</span> <span class="nn">altair</span>
+ <span class="kn">import</span> <span class="nn">pandas</span>
+
+ <span class="c1"># monkey</span>
+ <span class="kn">from</span> <span class="nn">graeae.visualization.altair_helpers</span> <span class="kn">import</span> <span class="n">output_path</span><span class="p">,</span> <span class="n">save_vega_embed</span>
+</pre></div>
+
+<div class="highlight"><pre><span></span><span class="n">OUTPUT</span> <span class="o">=</span> <span class="n">output_path</span><span class="p">(</span><span class="n">slug</span><span class="o">=</span><span class="s2">"a-jinja-altairvega-shortcode"</span><span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">b</span><span class="o">=</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">27</span><span class="p">]))</span>
+<span class="n">chart</span> <span class="o">=</span> <span class="n">altair</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">"a"</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">"b"</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s2">"container"</span><span class="p">)</span>
+
+<span class="n">save_vega_embed</span><span class="p">(</span><span class="n">chart</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"shortcode-bar"</span><span class="p">,</span><span class="n">output_path</span><span class="o">=</span><span class="n">OUTPUT</span><span class="p">,</span> <span class="n">div_id</span><span class="o">=</span><span class="s2">"shortcode-bar-id"</span><span class="p">)</span>
+</pre></div>
+
+<p>
+</p>
+<div class="altair-vega" id="shortcode-bar-id"></div>
+
+<script src="a-jinja-altairvega-shortcode/shortcode-bar.js"></script>
+</div>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="a-jinja-altairvega-template/index.html" class="u-url">A Jinja Altair/Vega Template</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                The Cloistered Monkey
+            </span></p>
+            <p class="dateline">
+            <a href="a-jinja-altairvega-template/index.html" rel="bookmark">
+            <time class="published dt-published" datetime="2024-03-19T17:51:41-07:00" itemprop="datePublished" title="2024-03-19 17:51">2024-03-19 17:51</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div id="outline-container-org8e36ecb" class="outline-2">
+<h2 id="org8e36ecb">The Altair Template</h2>
+<div class="outline-text-2" id="text-org8e36ecb">
+<p>
+This is the Jinja template to get altair-vega into posts. To use it add <code>.. template: altair.tmpl</code> to the post metadata. It is located at <code>themes/custom-jinja/templates/altair.tmpl</code>
+</p>
+</div>
+
+<div id="outline-container-org6076e98" class="outline-3">
+<h3 id="org6076e98">The Tangle</h3>
+<div class="outline-text-3" id="text-org6076e98">
+<p>
+Here's the tangle that creates the template file.
+</p>
+
+<div class="highlight"><pre><span></span><span class="c">{#  -*- coding: utf-8 -*- #}</span>
+<span class="err">&lt;</span><span class="p">&lt;</span><span class="nt">altair-helper-import</span><span class="p">&gt;</span>&gt;
+
+<span class="cp">{%</span> <span class="k">extends</span> <span class="s1">'post.tmpl'</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">extra_head</span> <span class="cp">%}</span>
+  <span class="cp">{{</span> <span class="nb">super</span><span class="o">()</span> <span class="cp">}}</span>
+  <span class="err">&lt;</span><span class="p">&lt;</span><span class="nt">altair-macro-call</span><span class="p">&gt;</span>&gt;
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span> 
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-orgfda9b8a" class="outline-3">
+<h3 id="orgfda9b8a">Altair Helper Import</h3>
+<div class="outline-text-3" id="text-orgfda9b8a">
+<p>
+Both this template and the <code>index.tmpl</code> template need to import the vega library I made a macro to do it and put it in a separate file (<code>altair_helper.tmpl</code>) so we need to import that macro here.
+</p>
+
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">import</span> <span class="s1">'altair_helper.tmpl'</span> <span class="k">as</span> <span class="nv">altair</span> <span class="k">with context</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-org4a43b74" class="outline-3">
+<h3 id="org4a43b74">The Altair Macro Call</h3>
+<div class="outline-text-3" id="text-org4a43b74">
+<p>
+Here's where we call the macro to insert the <code>script</code> tag to get vega. 
+</p>
+
+<div class="highlight"><pre><span></span><span class="cp">{{</span> <span class="nv">altair.altair_scripts</span><span class="o">()</span> <span class="cp">}}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org47683f3" class="outline-2">
+<h2 id="org47683f3">The Altair Helper Template</h2>
+<div class="outline-text-2" id="text-org47683f3">
+<p>
+This is the template file that contains the functions (macros) to check whether the HTML to work with vega should be added or not. It is located at <code>themes/custom-jinja/templates/altair_helper.tmpl</code> It's used by both the <code>altair.tmpl</code> template (above) and the <code>index.tmpl</code> template that's used for the latest posts.
+</p>
+</div>
+
+<div id="outline-container-org40a056e" class="outline-3">
+<h3 id="org40a056e">The Tangle</h3>
+<div class="outline-text-3" id="text-org40a056e">
+<div class="highlight"><pre><span></span><span class="c">{#  -*- coding: utf-8 -*- #}</span>
+
+<span class="err">&lt;</span><span class="p">&lt;</span><span class="nt">vega-scripts-macro</span><span class="p">&gt;</span>&gt;
+
+<span class="err">&lt;</span><span class="p">&lt;</span><span class="nt">vega-post-macro</span><span class="p">&gt;</span>&gt;
+
+<span class="err">&lt;</span><span class="p">&lt;</span><span class="nt">vega-index-macro</span><span class="p">&gt;</span>&gt;
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-org76eceab" class="outline-3">
+<h3 id="org76eceab">Vega Scripts Macro</h3>
+<div class="outline-text-3" id="text-org76eceab">
+<p>
+This adds the vega library to the HTML HEAD as well as defining an "error" class that gets used if there's an error in rendering the vega chart. It has the versions hard-wired into it so it will need to be changed if we want to use a different version of vega, vega-lite, or vega-embed.
+</p>
+
+<div class="highlight"><pre><span></span><span class="c">{# macro to add the altair-vega.js code tags #}</span>
+<span class="c">{# and define an error color class #}</span>
+<span class="cp">{%</span> <span class="k">macro</span> <span class="nv">altair_scripts</span><span class="o">()</span> <span class="cp">%}</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">error</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/javascript"</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/vega@5"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/javascript"</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/vega-lite@5.6.1"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/javascript"</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/vega-embed@6"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-org3be16a0" class="outline-3">
+<h3 id="org3be16a0">Vega Post Macro</h3>
+<div class="outline-text-3" id="text-org3be16a0">
+<p>
+Here's a macro that gets called to set up a single post (as opposed to a post in the latest-posts feed). It adds the vega-imports to the document HEAD if there's a <code>.. has_altair</code> field in the meta data. I don't think this works yet - there needs to be more work done on the <code>post</code> template or I need to make a real plugin.
+</p>
+
+<div class="highlight"><pre><span></span><span class="c">{# macro for a single post #}</span>
+<span class="c">{# `post`: a Post object #}</span>
+<span class="cp">{%</span> <span class="k">macro</span> <span class="nv">altair_scripts_ifpost</span><span class="o">(</span><span class="nv">post</span><span class="o">)</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">if</span> <span class="nv">post.meta</span><span class="o">(</span><span class="s2">"has_altair"</span><span class="o">)</span> <span class="cp">%}</span>
+        <span class="cp">{{</span> <span class="nv">altair_scripts</span><span class="o">()</span> <span class="cp">}}</span>
+    <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-orgefb1c93" class="outline-3">
+<h3 id="orgefb1c93">Vega Index Macro</h3>
+<div class="outline-text-3" id="text-orgefb1c93">
+<p>
+This is the macro that adds the vega libraries if the post is in the posts feed and it has been set in the metadata.
+</p>
+
+<div class="highlight"><pre><span></span><span class="c">{# macro used by feed page with multiple posts (e.g. index.tmpl) #}</span>
+<span class="c">{# 'posts': list of Post objects #}</span>
+<span class="c">{# jinja doesn't support comprehensions so we have to use a for-loop #}</span>
+<span class="c">{# the ~post.meta~ object is a Functionary object #}</span>
+<span class="c">{# the metadata is in a dictionary that's in a dictionary #}</span>
+<span class="c">{# if you try ~post.meta.has_altair~ it will fail because you need the language you're using as a key #}</span>
+<span class="c">{# e.g. ~post.meta.en.has_altair~ #}</span>
+<span class="c">{# to not refer to the langugage you need to call it like a function, passing in the "has_altair" key as an argument #}</span>
+<span class="cp">{%</span> <span class="k">macro</span> <span class="nv">altair_scripts_ifposts</span><span class="o">(</span><span class="nv">posts</span><span class="o">)</span> <span class="cp">%}</span>
+  <span class="cp">{%</span> <span class="k">set</span> <span class="nv">altair_added</span> <span class="o">=</span> <span class="kp">False</span> <span class="cp">%}</span>
+  <span class="cp">{%</span> <span class="k">for</span> <span class="nv">post</span> <span class="k">in</span> <span class="nv">posts</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">if</span> <span class="o">(</span><span class="nv">post.meta</span><span class="o">(</span><span class="s2">"has_altair"</span><span class="o">)</span> <span class="k">or</span> <span class="nv">post.meta</span><span class="o">(</span><span class="s2">"template"</span><span class="o">)</span> <span class="o">==</span> <span class="s2">"altair.tmpl"</span><span class="o">)</span> <span class="k">and</span> <span class="k">not</span> <span class="nv">altair_added</span> <span class="cp">%}</span>
+      <span class="cp">{%</span> <span class="k">set</span> <span class="nv">altair_added</span> <span class="o">=</span> <span class="kp">True</span> <span class="cp">%}</span>
+      <span class="cp">{{</span> <span class="nv">altair_scripts</span><span class="o">()</span> <span class="cp">}}</span>
+    <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+  <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</div>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="lancelot-shortcode/index.html" class="u-url">Lancelot Shortcode</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 The Cloistered Monkey
@@ -2638,14 +2879,8 @@ To use it you use the same syntax as the mako-based shortcode, just change the n
     </article>
 </div>
 
-
-
-
     
 
-
-
-            
 
         <!--End of body content-->
 
@@ -2657,11 +2892,9 @@ To use it you use the same syntax as the mako-based shortcode, just change the n
 </div>
 
             
-            
         </footer>
 </div>
 </div>
-
 
         <script src="../assets/js/all-nocdn.js"></script><script>
     baguetteBox.run('div#content', {

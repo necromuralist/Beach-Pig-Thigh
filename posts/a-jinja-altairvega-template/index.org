@@ -1,0 +1,120 @@
+#+BEGIN_COMMENT
+.. title: A Jinja Altair/Vega Template
+.. slug: a-jinja-altairvega-template
+.. date: 2024-03-19 17:51:41 UTC-07:00
+.. tags: templates,altair,javascript
+.. category: Jinja
+.. link: 
+.. description: A Jinja template for pages with vega (via altair).
+.. type: text
+
+#+END_COMMENT
+
+* The Altair Template
+
+This is the Jinja template to get altair-vega into posts. To use it add ~.. template: altair.tmpl~ to the post metadata. It is located at ~themes/custom-jinja/templates/altair.tmpl~
+
+** The Tangle
+
+Here's the tangle that creates the template file.
+
+#+begin_src jinja :tangle ../themes/custom-jinja/templates/altair.tmpl
+{#  -*- coding: utf-8 -*- #}
+<<altair-helper-import>>
+
+{% extends 'post.tmpl' %}
+
+{% block extra_head %}
+  {{ super() }}
+  <<altair-macro-call>>
+{% endblock %} 
+#+end_src
+
+** Altair Helper Import
+
+Both this template and the ~index.tmpl~ template need to import the vega library I made a macro to do it and put it in a separate file (~altair_helper.tmpl~) so we need to import that macro here.
+
+#+begin_src jinja :noweb-ref altair-helper-import
+{% import 'altair_helper.tmpl' as altair with context %}
+#+end_src
+
+** The Altair Macro Call
+
+Here's where we call the macro to insert the ~script~ tag to get vega. 
+
+#+begin_src jinja :noweb-ref altair-macro-call
+{{ altair.altair_scripts() }}
+#+end_src
+
+* The Altair Helper Template
+
+This is the template file that contains the functions (macros) to check whether the HTML to work with vega should be added or not. It is located at ~themes/custom-jinja/templates/altair_helper.tmpl~ It's used by both the ~altair.tmpl~ template (above) and the ~index.tmpl~ template that's used for the latest posts.
+
+** The Tangle
+
+#+begin_src jinja :tangle ../themes/custom-jinja/templates/altair_helper.tmpl
+{#  -*- coding: utf-8 -*- #}
+
+<<vega-scripts-macro>>
+
+<<vega-post-macro>>
+
+<<vega-index-macro>>
+#+end_src
+
+** Vega Scripts Macro
+
+This adds the vega library to the HTML HEAD as well as defining an "error" class that gets used if there's an error in rendering the vega chart. It has the versions hard-wired into it so it will need to be changed if we want to use a different version of vega, vega-lite, or vega-embed.
+
+#+begin_src jinja :noweb-ref vega-scripts-macro
+{# macro to add the altair-vega.js code tags #}
+{# and define an error color class #}
+{% macro altair_scripts() %}
+    <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.6.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+{% endmacro %}
+#+end_src
+
+** Vega Post Macro
+
+Here's a macro that gets called to set up a single post (as opposed to a post in the latest-posts feed). It adds the vega-imports to the document HEAD if there's a ~.. has_altair~ field in the meta data. I don't think this works yet - there needs to be more work done on the ~post~ template or I need to make a real plugin.
+
+#+begin_src jinja :noweb-ref vega-post-macro
+{# macro for a single post #}
+{# `post`: a Post object #}
+{% macro altair_scripts_ifpost(post) %}
+    {% if post.meta("has_altair") %}
+        {{ altair_scripts() }}
+    {% endif %}
+{% endmacro %}
+#+end_src
+
+** Vega Index Macro
+
+This is the macro that adds the vega libraries if the post is in the posts feed and it has been set in the metadata.
+
+#+begin_src jinja :noweb-ref vega-index-macro
+{# macro used by feed page with multiple posts (e.g. index.tmpl) #}
+{# 'posts': list of Post objects #}
+{# jinja doesn't support comprehensions so we have to use a for-loop #}
+{# the ~post.meta~ object is a Functionary object #}
+{# the metadata is in a dictionary that's in a dictionary #}
+{# if you try ~post.meta.has_altair~ it will fail because you need the language you're using as a key #}
+{# e.g. ~post.meta.en.has_altair~ #}
+{# to not refer to the langugage you need to call it like a function, passing in the "has_altair" key as an argument #}
+{% macro altair_scripts_ifposts(posts) %}
+  {% set altair_added = False %}
+  {% for post in posts %}
+    {% if (post.meta("has_altair") or post.meta("template") == "altair.tmpl") and not altair_added %}
+      {% set altair_added = True %}
+      {{ altair_scripts() }}
+    {% endif %}
+  {% endfor %}
+{% endmacro %}
+#+end_src

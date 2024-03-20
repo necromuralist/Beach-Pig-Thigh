@@ -260,3 +260,9 @@ footer {
 .p-name.entry-title {
     text-align: center;
 }
+
+/* Altair (vega) charts */
+
+.altair-vega {
+    width: 100%;
+}

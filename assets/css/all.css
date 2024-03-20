@@ -1187,3 +1187,9 @@ footer {
     text-align: center;
 }
 
+/* Altair (vega) charts */
+
+.altair-vega {
+    width: 100%;
+}
+
