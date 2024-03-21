@@ -115,7 +115,7 @@ These imports were already in the built-in template, but I'm hoping to eventuall
 
 This will go where ~<<default-imports>>~ is in the tangle up above.
 
-** Monkey Imports
+* Monkey Imports
 This is what I'm adding, it will go where ~<<monkey-imports>>~ is in the tangle. This assumes that these template-files exist in ~themes/custom-jinja/templates/~.
 
 #+begin_src jinja :noweb-ref monkey-imports
