@@ -9,6 +9,8 @@
 .. type: text
 
 #+END_COMMENT
+#+OPTIONS: ^:{}
+#+TOC: headlines 3
 
 This is the emacs configuration (~init.el~) for the [[https://plugins.getnikola.com/v8/orgmode/][orgmode plugin]] to export posts and pages to HTML. I spent forever messing with the ~init.el~ file for my emacs instance, but it turns out that the plugin has its own configuration so you have to make changes here or they won't matter.
 
@@ -109,6 +111,12 @@ This adds [[https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loadin
 This is supposed to let the browser know that it doesn't have to load the image until it's within view of the user. Here's an example hosted on pCloud.
 
 [[lazy-img-url:https://filedn.com/lKA05W1iHns4eTWccSVfpum/majority-element/majority-element-panel-001-002-unscaled.png][Majority-Item Panels 1 & 2]]
+
+You use it by using ~lazy-img-url~ instead of ~img-url~ in an image link.
+
+#+begin_src org
+[[lazy-img-url:test-image.png][Alternate Image Name]]
+#+end_src
 
 * Silencing the Python Warning
 
