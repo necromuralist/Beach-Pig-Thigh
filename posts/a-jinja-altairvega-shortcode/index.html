@@ -121,15 +121,14 @@ bg-light
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="index.html#org29da9e6">The Shortcode Template</a></li>
-<li><a href="index.html#org3f0495d">Try it Out</a></li>
+<li><a href="index.html#org8f21d04">The Shortcode Template</a></li>
+<li><a href="index.html#orgd4fa8f4">Try it Out</a></li>
 </ul>
 </div>
 </div>
-
-<div id="outline-container-org29da9e6" class="outline-2">
-<h2 id="org29da9e6">The Shortcode Template</h2>
-<div class="outline-text-2" id="text-org29da9e6">
+<div id="outline-container-org8f21d04" class="outline-2">
+<h2 id="org8f21d04">The Shortcode Template</h2>
+<div class="outline-text-2" id="text-org8f21d04">
 <p>
 This is a shortcode-template to add the HTML for an altair-vega sketch (both the script and div tags). The shortcode takes two arguments:
 </p>
@@ -149,7 +148,7 @@ The file is in <code>shortcodes/altairdiv.tmpl</code>. Note that since it's a te
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"</span><span class="cp">{{</span> <span class="nv">source</span> <span class="cp">}}</span><span class="s">"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 
-<div class="notecard" id="org8f662a6">
+<div class="notecard" id="orgbd790c5">
 <p>
 <b><b>Note:</b></b> The only thing that makes this altair-specific is the class. This is also the case with the <a href="../p5-div-shortcode/index.html">P5 Div Shortcode</a>, so perhaps a generic shortcode that takes the class as a third-argument would be better… Although then you'd have to remember the class names.
 </p>
@@ -157,20 +156,19 @@ The file is in <code>shortcodes/altairdiv.tmpl</code>. Note that since it's a te
 </div>
 </div>
 </div>
-
-<div id="outline-container-org3f0495d" class="outline-2">
-<h2 id="org3f0495d">Try it Out</h2>
-<div class="outline-text-2" id="text-org3f0495d">
+<div id="outline-container-orgd4fa8f4" class="outline-2">
+<h2 id="orgd4fa8f4">Try it Out</h2>
+<div class="outline-text-2" id="text-orgd4fa8f4">
 <p>
 As noted, this is a Jinja shortcode so the <code>conf.py</code> has to be pointing to the jinja theme.
 </p>
 
 <div class="highlight"><pre><span></span> <span class="c1"># from pypi</span>
- <span class="kn">import</span> <span class="nn">altair</span>
- <span class="kn">import</span> <span class="nn">pandas</span>
+ <span class="kn">import</span><span class="w"> </span><span class="nn">altair</span>
+ <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span>
 
  <span class="c1"># monkey</span>
- <span class="kn">from</span> <span class="nn">graeae.visualization.altair_helpers</span> <span class="kn">import</span> <span class="n">output_path</span><span class="p">,</span> <span class="n">save_vega_embed</span>
+ <span class="kn">from</span><span class="w"> </span><span class="nn">graeae.visualization.altair_helpers</span><span class="w"> </span><span class="kn">import</span> <span class="n">output_path</span><span class="p">,</span> <span class="n">save_vega_embed</span>
 </pre></div>
 
 <div class="highlight"><pre><span></span><span class="n">OUTPUT</span> <span class="o">=</span> <span class="n">output_path</span><span class="p">(</span><span class="n">slug</span><span class="o">=</span><span class="s2">"a-jinja-altairvega-shortcode"</span><span class="p">)</span>

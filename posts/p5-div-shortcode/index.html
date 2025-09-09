@@ -35,6 +35,7 @@ Links
 
 
 
+## This is tangled from the &quot;p5-div-shortcode&quot; post
 
 
 
@@ -42,19 +43,13 @@ Links
 
 
 
-
-This is a test of the p5div shortcode. For it to work (assuming you're using mako) you need to:
-
-
-
-
-set up the p5.tmpl template (in ">
+This is a test of the p5div shortcode. For it to work (assuming you're using mako">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2023-05-05T15:19:31-07:00">
 <meta property="article:tag" content="p5">
 <meta property="article:tag" content="shortcode">
 <meta property="article:tag" content="template">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js" integrity="sha512-d6sc8kbZEtA2LwB9m/ck0FhvyUwVfdmvTeyJRprmj7Wg9wRFtHDIpr6qk4g/y3Ix3O9I6KHIv6SGu9f7RaP1Gw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -144,29 +139,29 @@ bg-light
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
 <li>
-<a href="index.html#orge004912">The Shortcodes</a>
+<a href="index.html#org04a1962">The Shortcodes</a>
 <ul>
-<li><a href="index.html#org82772cd">Mako</a></li>
-<li><a href="index.html#org26978c3">Jinja</a></li>
+<li><a href="index.html#orgb1ad9e7">Mako</a></li>
+<li><a href="index.html#orgcd31e20">Jinja</a></li>
 </ul>
 </li>
-<li><a href="index.html#org71540df">Links</a></li>
+<li><a href="index.html#org45c724f">Links</a></li>
 </ul>
 </div>
 </div>
 
 <p>
+## This is tangled from the "p5-div-shortcode" post
 
-<script src="noise_graph.js"></script></p>
-<div class="p5js" id="e70fd042-noise-graph"></div>
-
+<script src="${source}"></script></p>
+<div class="p5js" id="${divid}"></div>
 
 
 <p>
 This is a test of the <code>p5div</code> shortcode. For it to work (assuming you're using mako) you need to:
 </p>
 
-<div class="notecard" id="orgb8414b1">
+<div class="notecard" id="org3bf2f96">
 <ul class="org-ul">
 <li>set up the <code>p5.tmpl</code> template (in <code>themes/custom-mako/templates/</code>)</li>
 <li>have <code>..template: p5.tmpl</code> in the metadata for this post</li>
@@ -174,7 +169,7 @@ This is a test of the <code>p5div</code> shortcode. For it to work (assuming you
 </ul>
 </div>
 
-<div class="notecard" id="org98053b9">
+<div class="notecard" id="org315e2d5">
 <p>
 <b><b>Note:</b></b>
 </p>
@@ -184,10 +179,9 @@ I'll be using the names based on the idea that we're using the <code>mako</code>
 </p>
 
 </div>
-
-<div id="outline-container-orge004912" class="outline-2">
-<h2 id="orge004912">The Shortcodes</h2>
-<div class="outline-text-2" id="text-orge004912">
+<div id="outline-container-org04a1962" class="outline-2">
+<h2 id="org04a1962">The Shortcodes</h2>
+<div class="outline-text-2" id="text-org04a1962">
 <p>
 There actually needs to be two different shortcodes, one for jinja and one for mako. This repository is using mako (as does <a href="https://necromuralist.github.io">https://necromuralist.github.io</a>) but <a href="https://necromuralist.github.io/Ape-Iron/">ape-iron</a> is using jinja. It's a little too convoluted to keep switching back and forth so I'm mostly going to be relying on ape-iron to test the jinja version (although I really should figure out an easy way to test both).
 </p>
@@ -196,7 +190,7 @@ There actually needs to be two different shortcodes, one for jinja and one for m
 The shortcode creates two HTML tags:
 </p>
 
-<div class="notecard" id="org05b1a0e">
+<div class="notecard" id="orge079045">
 <ul class="org-ul">
 <li>a script tag that needs the path to the source p5js file</li>
 <li>a div tag that needs the ID to use so that the p5 sketch can be put inside it</li>
@@ -223,7 +217,7 @@ And the default <code>type</code> is javascript so you don't need to use it if i
 </p>
 </blockquote>
 
-<div class="notecard" id="orgdee2da7">
+<div class="notecard" id="org48ed241">
 <p>
 <b><b>Note:</b></b>
 </p>
@@ -234,10 +228,9 @@ I was setting the class for the <code>div</code> to "p5js" but it turns out that
 
 </div>
 </div>
-
-<div id="outline-container-org82772cd" class="outline-3">
-<h3 id="org82772cd">Mako</h3>
-<div class="outline-text-3" id="text-org82772cd">
+<div id="outline-container-orgb1ad9e7" class="outline-3">
+<h3 id="orgb1ad9e7">Mako</h3>
+<div class="outline-text-3" id="text-orgb1ad9e7">
 <p>
 I don't see an easy way to set which shortcodes folder to use so I'm going to go with adding "mako" to the end of the shortcodes meant for the mako engine and not putting a suffix on the ones meant for jinja. This shortcode will go into <code>shortcodes/p5divmako.tmpl</code>: 
 </p>
@@ -266,10 +259,9 @@ Where <code>noise_graph</code> is the name of the function in <code>noise_graph.
 </p>
 </div>
 </div>
-
-<div id="outline-container-org26978c3" class="outline-3">
-<h3 id="org26978c3">Jinja</h3>
-<div class="outline-text-3" id="text-org26978c3">
+<div id="outline-container-orgcd31e20" class="outline-3">
+<h3 id="orgcd31e20">Jinja</h3>
+<div class="outline-text-3" id="text-orgcd31e20">
 <p>
 Here's the jinja version of the shortcode. It's going to go into <code>shortcodes/p5div.tmpl</code>.
 </p>
@@ -288,10 +280,9 @@ To use it you use the same syntax as the mako-based shortcode, just change the n
 </div>
 </div>
 </div>
-
-<div id="outline-container-org71540df" class="outline-2">
-<h2 id="org71540df">Links</h2>
-<div class="outline-text-2" id="text-org71540df">
+<div id="outline-container-org45c724f" class="outline-2">
+<h2 id="org45c724f">Links</h2>
+<div class="outline-text-2" id="text-org45c724f">
 <ul class="org-ul">
 <li>&lt;script&gt;: The Script element - HTML: HyperText Markup Language | MDN [Internet]. 2023 [cited 2023 Jun 20]. Available from: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script</a>
 </li>

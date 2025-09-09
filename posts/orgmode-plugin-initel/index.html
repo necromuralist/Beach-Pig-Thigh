@@ -116,20 +116,20 @@ bg-light
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
 <li>
-<a href="index.html#orgac826f3">Pygments</a>
+<a href="index.html#org50fe896">Pygments</a>
 <ul>
-<li><a href="index.html#org9e4882e">Fish</a></li>
-<li><a href="index.html#org005f510">Gherkin</a></li>
-<li><a href="index.html#org0062ffb">HTML</a></li>
-<li><a href="index.html#org7e2c70c">INI</a></li>
-<li><a href="index.html#org38e7536">Jinja</a></li>
-<li><a href="index.html#org6ffc41d">Mako</a></li>
+<li><a href="index.html#org781d57c">Fish</a></li>
+<li><a href="index.html#orgf9a11c5">Gherkin</a></li>
+<li><a href="index.html#org917b2a2">HTML</a></li>
+<li><a href="index.html#org5a1c302">INI</a></li>
+<li><a href="index.html#orgc2b8368">Jinja</a></li>
+<li><a href="index.html#org9a23973">Mako</a></li>
 </ul>
 </li>
-<li><a href="index.html#org574bcca">Lazy Image Loading</a></li>
-<li><a href="index.html#org802fcd7">Silencing the Python Warning</a></li>
-<li><a href="index.html#orgdb866dd">The Tangle</a></li>
-<li><a href="index.html#org94f1c5b">Links</a></li>
+<li><a href="index.html#org511a978">Lazy Image Loading</a></li>
+<li><a href="index.html#org8e65fc8">Silencing the Python Warning</a></li>
+<li><a href="index.html#org22fc87b">The Tangle</a></li>
+<li><a href="index.html#org99b065f">Links</a></li>
 </ul>
 </div>
 </div>
@@ -137,10 +137,9 @@ bg-light
 <p>
 This is the emacs configuration (<code>init.el</code>) for the <a href="https://plugins.getnikola.com/v8/orgmode/">orgmode plugin</a> to export posts and pages to HTML. I spent forever messing with the <code>init.el</code> file for my emacs instance, but it turns out that the plugin has its own configuration so you have to make changes here or they won't matter.
 </p>
-
-<div id="outline-container-orgac826f3" class="outline-2">
-<h2 id="orgac826f3">Pygments</h2>
-<div class="outline-text-2" id="text-orgac826f3">
+<div id="outline-container-org50fe896" class="outline-2">
+<h2 id="org50fe896">Pygments</h2>
+<div class="outline-text-2" id="text-org50fe896">
 <p>
 This is the list of languages that pygments will colorize when source-code blocks are exported. The org-babel documentation has a <a href="https://orgmode.org/worg/org-contrib/babel/languages/index.html">list of supported</a> languages, but it doesn't list <code>fish</code>, although that seems to work. It might be because I inserted fish-mode, or maybe it just has to be a <a href="https://pygments.org/languages/">supported pygments language</a>.
 </p>
@@ -149,10 +148,9 @@ This is the list of languages that pygments will colorize when source-code block
 The first argument is what you put as the type in the source block and the second is the pygments short-name <code>("org-source-name" . "pygments-name")</code>.
 </p>
 </div>
-
-<div id="outline-container-org9e4882e" class="outline-3">
-<h3 id="org9e4882e">Fish</h3>
-<div class="outline-text-3" id="text-org9e4882e">
+<div id="outline-container-org781d57c" class="outline-3">
+<h3 id="org781d57c">Fish</h3>
+<div class="outline-text-3" id="text-org781d57c">
 <p>
 Add coloring for the fish-shell. 
 </p>
@@ -167,25 +165,30 @@ Add coloring for the fish-shell.
 </pre></div>
 </div>
 </div>
-<div id="outline-container-org005f510" class="outline-3">
-<h3 id="org005f510">Gherkin</h3>
-<div class="outline-text-3" id="text-org005f510">
-<div class="highlight"><pre><span></span><span class="p">(</span><span class="s">"gherkin"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"gherkin"</span><span class="p">)</span>
+<div id="outline-container-orgf9a11c5" class="outline-3">
+<h3 id="orgf9a11c5">Gherkin</h3>
+<div class="outline-text-3" id="text-orgf9a11c5">
+<p>
+This will nicely colorize the <i>feature</i> files when using BDD. pygments refers to them using <i>gherkin</i> but the <code>feature-mode</code> for emacs calls them <i>feature</i> blocks so the first line sets up an alias so that we can use either "gherkin" or "feature" as the language in the org-babel header and it will get colorized on exporting to HTML, although only using "feature" as the language will colorize both the block in the emacs org-mode buffer and the exported HTML.
+</p>
+
+<div class="highlight"><pre><span></span><span class="p">(</span><span class="s">"feature"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"gherkin"</span><span class="p">)</span>
+<span class="p">(</span><span class="s">"gherkin"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"gherkin"</span><span class="p">)</span>
 </pre></div>
 
 <div class="highlight"><pre><span></span><span class="k">Scenario:</span><span class="nf"> Gherkin colorization</span>
 
 <span class="nf">Feature: Pygments gherkin colorization</span>
 
-<span class="k">Given </span><span class="nf">a gherkin feature file</span>
-<span class="k">When </span><span class="nf">the org-mode file is exported to HTML</span>
-<span class="k">Then </span><span class="nf">the feature fragment is colorized.</span>
+<span class="k">  Given </span><span class="nf">a gherkin feature file</span>
+<span class="nf">  </span><span class="k">When </span><span class="nf">the org-mode file is exported to HTML</span>
+<span class="nf">  </span><span class="k">Then </span><span class="nf">the feature fragment is colorized.</span>
 </pre></div>
 </div>
 </div>
-<div id="outline-container-org0062ffb" class="outline-3">
-<h3 id="org0062ffb">HTML</h3>
-<div class="outline-text-3" id="text-org0062ffb">
+<div id="outline-container-org917b2a2" class="outline-3">
+<h3 id="org917b2a2">HTML</h3>
+<div class="outline-text-3" id="text-org917b2a2">
 <div class="highlight"><pre><span></span><span class="p">(</span><span class="s">"html"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"html"</span><span class="p">)</span>
 </pre></div>
 
@@ -193,10 +196,9 @@ Add coloring for the fish-shell.
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org7e2c70c" class="outline-3">
-<h3 id="org7e2c70c">INI</h3>
-<div class="outline-text-3" id="text-org7e2c70c">
+<div id="outline-container-org5a1c302" class="outline-3">
+<h3 id="org5a1c302">INI</h3>
+<div class="outline-text-3" id="text-org5a1c302">
 <p>
 For <a href="https://en.wikipedia.org/wiki/INI_file?useskin=vector">INI</a> configuration files.
 </p>
@@ -211,10 +213,9 @@ For <a href="https://en.wikipedia.org/wiki/INI_file?useskin=vector">INI</a> conf
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org38e7536" class="outline-3">
-<h3 id="org38e7536">Jinja</h3>
-<div class="outline-text-3" id="text-org38e7536">
+<div id="outline-container-orgc2b8368" class="outline-3">
+<h3 id="orgc2b8368">Jinja</h3>
+<div class="outline-text-3" id="text-orgc2b8368">
 <div class="highlight"><pre><span></span><span class="p">(</span><span class="s">"jinja"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"html+jinja"</span><span class="p">)</span>
 </pre></div>
 
@@ -224,10 +225,9 @@ For <a href="https://en.wikipedia.org/wiki/INI_file?useskin=vector">INI</a> conf
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org6ffc41d" class="outline-3">
-<h3 id="org6ffc41d">Mako</h3>
-<div class="outline-text-3" id="text-org6ffc41d">
+<div id="outline-container-org9a23973" class="outline-3">
+<h3 id="org9a23973">Mako</h3>
+<div class="outline-text-3" id="text-org9a23973">
 <div class="highlight"><pre><span></span><span class="p">(</span><span class="s">"mako"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"html+mako"</span><span class="p">)</span>
 </pre></div>
 
@@ -238,10 +238,9 @@ For <a href="https://en.wikipedia.org/wiki/INI_file?useskin=vector">INI</a> conf
 </div>
 </div>
 </div>
-
-<div id="outline-container-org574bcca" class="outline-2">
-<h2 id="org574bcca">Lazy Image Loading</h2>
-<div class="outline-text-2" id="text-org574bcca">
+<div id="outline-container-org511a978" class="outline-2">
+<h2 id="org511a978">Lazy Image Loading</h2>
+<div class="outline-text-2" id="text-org511a978">
 <p>
 This adds <a href="https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading">Lazy Loading</a> to the HTML image tags.
 </p>
@@ -269,10 +268,9 @@ You use it by using <code>lazy-img-url</code> instead of <code>img-url</code> in
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org802fcd7" class="outline-2">
-<h2 id="org802fcd7">Silencing the Python Warning</h2>
-<div class="outline-text-2" id="text-org802fcd7">
+<div id="outline-container-org8e65fc8" class="outline-2">
+<h2 id="org8e65fc8">Silencing the Python Warning</h2>
+<div class="outline-text-2" id="text-org8e65fc8">
 <p>
 Emacs warns you that it's using 4 spaces for the python code, which is what we want anyway, so this should, hopefully, turn off all those warnings.
 </p>
@@ -282,9 +280,9 @@ Emacs warns you that it's using 4 spaces for the python code, which is what we w
 </pre></div>
 </div>
 </div>
-<div id="outline-container-orgdb866dd" class="outline-2">
-<h2 id="orgdb866dd">The Tangle</h2>
-<div class="outline-text-2" id="text-orgdb866dd">
+<div id="outline-container-org22fc87b" class="outline-2">
+<h2 id="org22fc87b">The Tangle</h2>
+<div class="outline-text-2" id="text-org22fc87b">
 <div class="highlight"><pre><span></span><span class="c1">;; Init file to use with the orgmode plugin.</span>
 
 <span class="c1">;; this is generated from the post with the slug: orgmode-plugin-initel</span>
@@ -447,10 +445,9 @@ Emacs warns you that it's using 4 spaces for the python code, which is what we w
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org94f1c5b" class="outline-2">
-<h2 id="org94f1c5b">Links</h2>
-<div class="outline-text-2" id="text-org94f1c5b">
+<div id="outline-container-org99b065f" class="outline-2">
+<h2 id="org99b065f">Links</h2>
+<div class="outline-text-2" id="text-org99b065f">
 <ul class="org-ul">
 <li>Chaganti P. Plugins for Nikola. 2020 [cited 2023 Jun 25]. orgmode. Available from: <a href="https://plugins.getnikola.com/v8/orgmode/">https://plugins.getnikola.com/v8/orgmode/</a>
 </li>

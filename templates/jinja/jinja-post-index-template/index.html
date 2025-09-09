@@ -99,9 +99,9 @@ bg-light
 
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div id="outline-container-org47522a6" class="outline-2">
-<h2 id="org47522a6">The Index Template</h2>
-<div class="outline-text-2" id="text-org47522a6">
+    <div id="outline-container-orga412582" class="outline-2">
+<h2 id="orga412582">The Index Template</h2>
+<div class="outline-text-2" id="text-orga412582">
 <p>
 This is the Jinja template used to produce the page with the latest posts. The number of posts on the page is set in <code>conf.py</code> using the <code>INDEX_DISPLAY_POST_COUNT</code> variable (10 is the default). I'm overriding the default because I want to be able to add <a href="https://p5js.org/">p5</a> code to posts. Using a special template works when you look at single posts (see the <code>p5.tmpl</code> template) but the index template won't pick up on that so I'm inserting a macro call to get p5 into the main page (if there's a p5 post on it).
 </p>
@@ -124,10 +124,9 @@ This is needed for two templates:
 </ul>
 </div>
 </div>
-
-<div id="outline-container-org09862f4" class="outline-2">
-<h2 id="org09862f4">The Tangle</h2>
-<div class="outline-text-2" id="text-org09862f4">
+<div id="outline-container-orga9c6899" class="outline-2">
+<h2 id="orga9c6899">The Tangle</h2>
+<div class="outline-text-2" id="text-orga9c6899">
 <p>
 Here's the tangle that creates the template. It's written in noweb syntax so anything written with double angle brackets (like <code>&lt;&lt;default-imports&gt;&gt;</code>) will be replace by one of the sections defined later.
 </p>
@@ -207,13 +206,13 @@ Here's the tangle that creates the template. It's written in noweb syntax so any
 </pre></div>
 </div>
 </div>
-<div id="outline-container-org4c66b98" class="outline-2">
-<h2 id="org4c66b98">Imports</h2>
-<div class="outline-text-2" id="text-org4c66b98">
+<div id="outline-container-org13d9c73" class="outline-2">
+<h2 id="org13d9c73">Imports</h2>
+<div class="outline-text-2" id="text-org13d9c73">
 </div>
-<div id="outline-container-org746d4c4" class="outline-3">
-<h3 id="org746d4c4">The Defaults</h3>
-<div class="outline-text-3" id="text-org746d4c4">
+<div id="outline-container-orgcbf0e9c" class="outline-3">
+<h3 id="orgcbf0e9c">The Defaults</h3>
+<div class="outline-text-3" id="text-orgcbf0e9c">
 <p>
 These imports were already in the built-in template, but I'm hoping to eventually break the whole template up so there's a little more documentation so I'll start with these.
 </p>
@@ -231,10 +230,9 @@ This will go where <code>&lt;&lt;default-imports&gt;&gt;</code> is in the tangle
 </div>
 </div>
 </div>
-
-<div id="outline-container-orgec9c33b" class="outline-2">
-<h2 id="orgec9c33b">Monkey Imports</h2>
-<div class="outline-text-2" id="text-orgec9c33b">
+<div id="outline-container-orged537b1" class="outline-2">
+<h2 id="orged537b1">Monkey Imports</h2>
+<div class="outline-text-2" id="text-orged537b1">
 <p>
 This is what I'm adding, it will go where <code>&lt;&lt;monkey-imports&gt;&gt;</code> is in the tangle. This assumes that these template-files exist in <code>themes/custom-jinja/templates/</code>.
 </p>
@@ -245,10 +243,9 @@ This is what I'm adding, it will go where <code>&lt;&lt;monkey-imports&gt;&gt;</
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org669c4af" class="outline-2">
-<h2 id="org669c4af">Checking If There Are Posts</h2>
-<div class="outline-text-2" id="text-org669c4af">
+<div id="outline-container-org8ca0333" class="outline-2">
+<h2 id="org8ca0333">Checking If There Are Posts</h2>
+<div class="outline-text-2" id="text-org8ca0333">
 <p>
 This is where we call the macro to insert (or not) a tag to pull in the p5 library or the vega libraries. I originally tried putting it next to where the mathjax macro gets called (at the end of the template) but this caused an error saying that the <code>p5</code> object was undefined. Putting it in the head seems to fix it. These need to be defined in the templates imported in the previous section.
 </p>

@@ -16,7 +16,7 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="manifest" href="../site.webmanifest">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script><style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js" integrity="sha512-d6sc8kbZEtA2LwB9m/ck0FhvyUwVfdmvTeyJRprmj7Wg9wRFtHDIpr6qk4g/y3Ix3O9I6KHIv6SGu9f7RaP1Gw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js" integrity="sha512-d6sc8kbZEtA2LwB9m/ck0FhvyUwVfdmvTeyJRprmj7Wg9wRFtHDIpr6qk4g/y3Ix3O9I6KHIv6SGu9f7RaP1Gw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><style>
     .error {
         color: red;
     }
@@ -103,15 +103,14 @@ bg-light
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="a-jinja-altairvega-shortcode/index.html#org29da9e6">The Shortcode Template</a></li>
-<li><a href="a-jinja-altairvega-shortcode/index.html#org3f0495d">Try it Out</a></li>
+<li><a href="a-jinja-altairvega-shortcode/index.html#org8f21d04">The Shortcode Template</a></li>
+<li><a href="a-jinja-altairvega-shortcode/index.html#orgd4fa8f4">Try it Out</a></li>
 </ul>
 </div>
 </div>
-
-<div id="outline-container-org29da9e6" class="outline-2">
-<h2 id="org29da9e6">The Shortcode Template</h2>
-<div class="outline-text-2" id="text-org29da9e6">
+<div id="outline-container-org8f21d04" class="outline-2">
+<h2 id="org8f21d04">The Shortcode Template</h2>
+<div class="outline-text-2" id="text-org8f21d04">
 <p>
 This is a shortcode-template to add the HTML for an altair-vega sketch (both the script and div tags). The shortcode takes two arguments:
 </p>
@@ -131,7 +130,7 @@ The file is in <code>shortcodes/altairdiv.tmpl</code>. Note that since it's a te
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"</span><span class="cp">{{</span> <span class="nv">source</span> <span class="cp">}}</span><span class="s">"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 
-<div class="notecard" id="org8f662a6">
+<div class="notecard" id="orgbd790c5">
 <p>
 <b><b>Note:</b></b> The only thing that makes this altair-specific is the class. This is also the case with the <a href="p5-div-shortcode/index.html">P5 Div Shortcode</a>, so perhaps a generic shortcode that takes the class as a third-argument would be better… Although then you'd have to remember the class names.
 </p>
@@ -139,20 +138,19 @@ The file is in <code>shortcodes/altairdiv.tmpl</code>. Note that since it's a te
 </div>
 </div>
 </div>
-
-<div id="outline-container-org3f0495d" class="outline-2">
-<h2 id="org3f0495d">Try it Out</h2>
-<div class="outline-text-2" id="text-org3f0495d">
+<div id="outline-container-orgd4fa8f4" class="outline-2">
+<h2 id="orgd4fa8f4">Try it Out</h2>
+<div class="outline-text-2" id="text-orgd4fa8f4">
 <p>
 As noted, this is a Jinja shortcode so the <code>conf.py</code> has to be pointing to the jinja theme.
 </p>
 
 <div class="highlight"><pre><span></span> <span class="c1"># from pypi</span>
- <span class="kn">import</span> <span class="nn">altair</span>
- <span class="kn">import</span> <span class="nn">pandas</span>
+ <span class="kn">import</span><span class="w"> </span><span class="nn">altair</span>
+ <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span>
 
  <span class="c1"># monkey</span>
- <span class="kn">from</span> <span class="nn">graeae.visualization.altair_helpers</span> <span class="kn">import</span> <span class="n">output_path</span><span class="p">,</span> <span class="n">save_vega_embed</span>
+ <span class="kn">from</span><span class="w"> </span><span class="nn">graeae.visualization.altair_helpers</span><span class="w"> </span><span class="kn">import</span> <span class="n">output_path</span><span class="p">,</span> <span class="n">save_vega_embed</span>
 </pre></div>
 
 <div class="highlight"><pre><span></span><span class="n">OUTPUT</span> <span class="o">=</span> <span class="n">output_path</span><span class="p">(</span><span class="n">slug</span><span class="o">=</span><span class="s2">"a-jinja-altairvega-shortcode"</span><span class="p">)</span>
@@ -185,17 +183,16 @@ As noted, this is a Jinja shortcode so the <code>conf.py</code> has to be pointi
             </p>
         </div>
     </header><div class="e-content entry-content">
-    <div id="outline-container-org8e36ecb" class="outline-2">
-<h2 id="org8e36ecb">The Altair Template</h2>
-<div class="outline-text-2" id="text-org8e36ecb">
+    <div id="outline-container-org639e7c9" class="outline-2">
+<h2 id="org639e7c9">The Altair Template</h2>
+<div class="outline-text-2" id="text-org639e7c9">
 <p>
 This is the Jinja template to get altair-vega into posts. To use it add <code>.. template: altair.tmpl</code> to the post metadata. It is located at <code>themes/custom-jinja/templates/altair.tmpl</code>
 </p>
 </div>
-
-<div id="outline-container-org6076e98" class="outline-3">
-<h3 id="org6076e98">The Tangle</h3>
-<div class="outline-text-3" id="text-org6076e98">
+<div id="outline-container-org7c0d802" class="outline-3">
+<h3 id="org7c0d802">The Tangle</h3>
+<div class="outline-text-3" id="text-org7c0d802">
 <p>
 Here's the tangle that creates the template file.
 </p>
@@ -212,10 +209,9 @@ Here's the tangle that creates the template file.
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-orgfda9b8a" class="outline-3">
-<h3 id="orgfda9b8a">Altair Helper Import</h3>
-<div class="outline-text-3" id="text-orgfda9b8a">
+<div id="outline-container-orgb470aa8" class="outline-3">
+<h3 id="orgb470aa8">Altair Helper Import</h3>
+<div class="outline-text-3" id="text-orgb470aa8">
 <p>
 Both this template and the <code>index.tmpl</code> template need to import the vega library I made a macro to do it and put it in a separate file (<code>altair_helper.tmpl</code>) so we need to import that macro here.
 </p>
@@ -224,10 +220,9 @@ Both this template and the <code>index.tmpl</code> template need to import the v
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org4a43b74" class="outline-3">
-<h3 id="org4a43b74">The Altair Macro Call</h3>
-<div class="outline-text-3" id="text-org4a43b74">
+<div id="outline-container-orgf9460f0" class="outline-3">
+<h3 id="orgf9460f0">The Altair Macro Call</h3>
+<div class="outline-text-3" id="text-orgf9460f0">
 <p>
 Here's where we call the macro to insert the <code>script</code> tag to get vega. 
 </p>
@@ -237,18 +232,16 @@ Here's where we call the macro to insert the <code>script</code> tag to get vega
 </div>
 </div>
 </div>
-
-<div id="outline-container-org47683f3" class="outline-2">
-<h2 id="org47683f3">The Altair Helper Template</h2>
-<div class="outline-text-2" id="text-org47683f3">
+<div id="outline-container-orgc7b349f" class="outline-2">
+<h2 id="orgc7b349f">The Altair Helper Template</h2>
+<div class="outline-text-2" id="text-orgc7b349f">
 <p>
 This is the template file that contains the functions (macros) to check whether the HTML to work with vega should be added or not. It is located at <code>themes/custom-jinja/templates/altair_helper.tmpl</code> It's used by both the <code>altair.tmpl</code> template (above) and the <code>index.tmpl</code> template that's used for the latest posts.
 </p>
 </div>
-
-<div id="outline-container-org40a056e" class="outline-3">
-<h3 id="org40a056e">The Tangle</h3>
-<div class="outline-text-3" id="text-org40a056e">
+<div id="outline-container-org92bd147" class="outline-3">
+<h3 id="org92bd147">The Tangle</h3>
+<div class="outline-text-3" id="text-org92bd147">
 <div class="highlight"><pre><span></span><span class="c">{#  -*- coding: utf-8 -*- #}</span>
 
 <span class="err">&lt;</span><span class="p">&lt;</span><span class="nt">vega-scripts-macro</span><span class="p">&gt;</span>&gt;
@@ -259,10 +252,9 @@ This is the template file that contains the functions (macros) to check whether 
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org76eceab" class="outline-3">
-<h3 id="org76eceab">Vega Scripts Macro</h3>
-<div class="outline-text-3" id="text-org76eceab">
+<div id="outline-container-org767ed2a" class="outline-3">
+<h3 id="org767ed2a">Vega Scripts Macro</h3>
+<div class="outline-text-3" id="text-org767ed2a">
 <p>
 This adds the vega library to the HTML HEAD as well as defining an "error" class that gets used if there's an error in rendering the vega chart. It has the versions hard-wired into it so it will need to be changed if we want to use a different version of vega, vega-lite, or vega-embed.
 </p>
@@ -282,10 +274,9 @@ This adds the vega library to the HTML HEAD as well as defining an "error" class
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org3be16a0" class="outline-3">
-<h3 id="org3be16a0">Vega Post Macro</h3>
-<div class="outline-text-3" id="text-org3be16a0">
+<div id="outline-container-org31364e6" class="outline-3">
+<h3 id="org31364e6">Vega Post Macro</h3>
+<div class="outline-text-3" id="text-org31364e6">
 <p>
 Here's a macro that gets called to set up a single post (as opposed to a post in the latest-posts feed). It adds the vega-imports to the document HEAD if there's a <code>.. has_altair</code> field in the meta data. I don't think this works yet - there needs to be more work done on the <code>post</code> template or I need to make a real plugin.
 </p>
@@ -300,10 +291,9 @@ Here's a macro that gets called to set up a single post (as opposed to a post in
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-orgefb1c93" class="outline-3">
-<h3 id="orgefb1c93">Vega Index Macro</h3>
-<div class="outline-text-3" id="text-orgefb1c93">
+<div id="outline-container-org21800ca" class="outline-3">
+<h3 id="org21800ca">Vega Index Macro</h3>
+<div class="outline-text-3" id="text-org21800ca">
 <p>
 This is the macro that adds the vega libraries if the post is in the posts feed and it has been set in the metadata.
 </p>
@@ -341,18 +331,17 @@ This is the macro that adds the vega libraries if the post is in the posts feed 
             </p>
         </div>
     </header><div class="e-content entry-content">
-    <div id="outline-container-org2068c68" class="outline-2">
-<h2 id="org2068c68">Introduction</h2>
-<div class="outline-text-2" id="text-org2068c68">
+    <div id="outline-container-orgde1ef57" class="outline-2">
+<h2 id="orgde1ef57">Introduction</h2>
+<div class="outline-text-2" id="text-orgde1ef57">
 <p>
 This is a variant of the built-in <code>doc</code> shortcode (although it seems to go into the plugins folder for some reason, I'll have to look into that). The ReStructured Text <code>doc</code> documentation says that you can pass in text to display instead of the title of the post it's linking to, but I couldn't get it to work with the non-RST version so I adapted it so I could use it in org-mode posts. I didn't really look too closely at the code, just enough to get it working so it's probably pretty fragile.
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgc607679" class="outline-2">
-<h2 id="orgc607679">The Plugin File</h2>
-<div class="outline-text-2" id="text-orgc607679">
+<div id="outline-container-orgb1ff6ae" class="outline-2">
+<h2 id="orgb1ff6ae">The Plugin File</h2>
+<div class="outline-text-2" id="text-orgb1ff6ae">
 <div class="highlight"><pre><span></span><span class="k">[Core]</span>
 <span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">lancelot</span>
 <span class="na">module</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">lancelot</span>
@@ -368,10 +357,9 @@ This is a variant of the built-in <code>doc</code> shortcode (although it seems 
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-orgf7d1eb2" class="outline-2">
-<h2 id="orgf7d1eb2">The Python Code</h2>
-<div class="outline-text-2" id="text-orgf7d1eb2">
+<div id="outline-container-orge2120ed" class="outline-2">
+<h2 id="orge2120ed">The Python Code</h2>
+<div class="outline-text-2" id="text-orge2120ed">
 <div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 <span class="c1"># This file is public domain according to its author, the Cloistered Monkey</span>
 
@@ -382,16 +370,16 @@ This is a variant of the built-in <code>doc</code> shortcode (although it seems 
 <span class="sd">than HTML symbols.</span>
 <span class="sd">"""</span>
 
-<span class="kn">from</span> <span class="nn">nikola.plugin_categories</span> <span class="kn">import</span> <span class="n">ShortcodePlugin</span>
-<span class="kn">from</span> <span class="nn">nikola.utils</span> <span class="kn">import</span> <span class="n">LOGGER</span><span class="p">,</span> <span class="n">slugify</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nikola.plugin_categories</span><span class="w"> </span><span class="kn">import</span> <span class="n">ShortcodePlugin</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nikola.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">LOGGER</span><span class="p">,</span> <span class="n">slugify</span>
 
 
-<span class="k">class</span> <span class="nc">Plugin</span><span class="p">(</span><span class="n">ShortcodePlugin</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Plugin</span><span class="p">(</span><span class="n">ShortcodePlugin</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Plugin for non-rst inter-site links."""</span>
 
     <span class="n">name</span> <span class="o">=</span> <span class="s2">"lancelot"</span>
 
-    <span class="k">def</span> <span class="nf">handler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">site</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">handler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">site</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                 <span class="n">date</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">post</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""Create an inter-site link</span>
 
@@ -426,7 +414,7 @@ This is a variant of the built-in <code>doc</code> shortcode (although it seems 
         <span class="k">return</span> <span class="n">output</span><span class="p">,</span> <span class="p">[]</span>
 
 
-<span class="k">def</span> <span class="nf">lancelot_link</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">slug</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">lancelot_link</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">slug</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""process the slug, check if it exists or is duplicated</span>
 
 <span class="sd">    if `title` is None this will grab the post-title</span>
@@ -487,32 +475,31 @@ This is a variant of the built-in <code>doc</code> shortcode (although it seems 
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="jinja-math-helper/index.html#org46a5751">What This Is</a></li>
+<li><a href="jinja-math-helper/index.html#orgd99f8cc">What This Is</a></li>
 <li>
-<a href="jinja-math-helper/index.html#org8db9fef">The Macros</a>
+<a href="jinja-math-helper/index.html#org2797904">The Macros</a>
 <ul>
-<li><a href="jinja-math-helper/index.html#orgba06bb7">Pseudocode Macros</a></li>
-<li><a href="jinja-math-helper/index.html#org24e7b74">Code</a></li>
-<li><a href="jinja-math-helper/index.html#org0a92835">Style</a></li>
-<li><a href="jinja-math-helper/index.html#orgc5bf722">The Math Scripts Macro</a></li>
-<li><a href="jinja-math-helper/index.html#orgdc94010">Pseudocode Additional Config</a></li>
+<li><a href="jinja-math-helper/index.html#org1c06e4f">Pseudocode Macros</a></li>
+<li><a href="jinja-math-helper/index.html#org9cf4bbe">Code</a></li>
+<li><a href="jinja-math-helper/index.html#org35dfe41">Style</a></li>
+<li><a href="jinja-math-helper/index.html#org0faaa30">The Math Scripts Macro</a></li>
+<li><a href="jinja-math-helper/index.html#orgce3192d">Pseudocode Additional Config</a></li>
 </ul>
 </li>
 <li>
-<a href="jinja-math-helper/index.html#org442884b">The Post Checkers</a>
+<a href="jinja-math-helper/index.html#org7a4a817">The Post Checkers</a>
 <ul>
-<li><a href="jinja-math-helper/index.html#org3eeb0c2">Math Scripts</a></li>
-<li><a href="jinja-math-helper/index.html#org14a5f22">Math Styles</a></li>
+<li><a href="jinja-math-helper/index.html#org91503b9">Math Scripts</a></li>
+<li><a href="jinja-math-helper/index.html#org8bb7613">Math Styles</a></li>
 </ul>
 </li>
-<li><a href="jinja-math-helper/index.html#org834136f">The Race Condition</a></li>
+<li><a href="jinja-math-helper/index.html#org6dc2b78">The Race Condition</a></li>
 </ul>
 </div>
 </div>
-
-<div id="outline-container-org46a5751" class="outline-2">
-<h2 id="org46a5751">What This Is</h2>
-<div class="outline-text-2" id="text-org46a5751">
+<div id="outline-container-orgd99f8cc" class="outline-2">
+<h2 id="orgd99f8cc">What This Is</h2>
+<div class="outline-text-2" id="text-orgd99f8cc">
 <p>
 In one of my Nikola sites (<a href="https://necromuralist.github.io/Bowling-For-Data/">Bowling For Data</a>) I wanted a simpler way to use <a href="https://github.com/SaswatPadhi/pseudocode.js">pseudocode.js</a> in posts (simpler than having to always insert the CDN URLs into the HTML) so I thought I'd copy what the <code>.. has_math:</code> metadata flag does, but it turns out to involve more code than I was hoping to need so I instead copied over the math template and hacked in what I needed. 
 </p>
@@ -526,23 +513,21 @@ I was thinking it'd be better to make a separate template instead of replicng th
 </p>
 </div>
 </div>
-
-<div id="outline-container-org8db9fef" class="outline-2">
-<h2 id="org8db9fef">The Macros</h2>
-<div class="outline-text-2" id="text-org8db9fef">
+<div id="outline-container-org2797904" class="outline-2">
+<h2 id="org2797904">The Macros</h2>
+<div class="outline-text-2" id="text-org2797904">
 </div>
-<div id="outline-container-orgba06bb7" class="outline-3">
-<h3 id="orgba06bb7">Pseudocode Macros</h3>
-<div class="outline-text-3" id="text-orgba06bb7">
+<div id="outline-container-org1c06e4f" class="outline-3">
+<h3 id="org1c06e4f">Pseudocode Macros</h3>
+<div class="outline-text-3" id="text-org1c06e4f">
 <p>
 These define the macros to insert the pseudocode scripts into the HTML.
 </p>
 </div>
 </div>
-
-<div id="outline-container-org24e7b74" class="outline-3">
-<h3 id="org24e7b74">Code</h3>
-<div class="outline-text-3" id="text-org24e7b74">
+<div id="outline-container-org9cf4bbe" class="outline-3">
+<h3 id="org9cf4bbe">Code</h3>
+<div class="outline-text-3" id="text-org9cf4bbe">
 <div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">pseudocode</span><span class="o">()</span> <span class="cp">%}</span>
 <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/pseudocode@2.4.1/build/pseudocode.min.css"</span><span class="p">&gt;</span>
 <span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
@@ -554,10 +539,9 @@ is just "latest" but the pseudocode.js documentation says that it isn't always u
 </p>
 </div>
 </div>
-
-<div id="outline-container-org0a92835" class="outline-3">
-<h3 id="org0a92835">Style</h3>
-<div class="outline-text-3" id="text-org0a92835">
+<div id="outline-container-org35dfe41" class="outline-3">
+<h3 id="org35dfe41">Style</h3>
+<div class="outline-text-3" id="text-org35dfe41">
 <div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">code_styles</span><span class="o">()</span> <span class="cp">%}</span>
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/pseudocode@2.4.1/build/pseudocode.min.js"</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -565,10 +549,9 @@ is just "latest" but the pseudocode.js documentation says that it isn't always u
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-orgc5bf722" class="outline-3">
-<h3 id="orgc5bf722">The Math Scripts Macro</h3>
-<div class="outline-text-3" id="text-orgc5bf722">
+<div id="outline-container-org0faaa30" class="outline-3">
+<h3 id="org0faaa30">The Math Scripts Macro</h3>
+<div class="outline-text-3" id="text-org0faaa30">
 <p>
 This is the macro that configures <a href="https://www.mathjax.org/">MathJax</a>. I tried changing it to MathJax 3 but the rendering went a little cuckoo so I had to go back to 2.7.5 like in the original.
 </p>
@@ -580,8 +563,8 @@ This is the macro that configures <a href="https://www.mathjax.org/">MathJax</a>
   <span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/x-mathjax-config"</span><span class="p">&gt;</span>
 <span class="w">      </span><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span>
-	tex2jax: {
-	    inlineMath: [['$','$'], ['\\(','\\)']],
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
 </pre></div>
 
 <p>
@@ -589,17 +572,16 @@ I did change the <code>inlineMath</code> dollar sign - the original had the word
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgdc94010" class="outline-3">
-<h3 id="orgdc94010">Pseudocode Additional Config</h3>
-<div class="outline-text-3" id="text-orgdc94010">
+<div id="outline-container-orgce3192d" class="outline-3">
+<h3 id="orgce3192d">Pseudocode Additional Config</h3>
+<div class="outline-text-3" id="text-orgce3192d">
 <p>
 This is extra configuration stuff I added. I suppose this could (maybe should) go into the <code>conf.py</code> file. Maybe I'll change it later.
 </p>
 
-<div class="highlight"><pre><span></span>	displayMath: [['$$','$$'], ['\\[','\\]']],
-	processEscapes: true,
-	processEnvironments: true,
+<div class="highlight"><pre><span></span>        displayMath: [['$$','$$'], ['\\[','\\]']],
+        processEscapes: true,
+        processEnvironments: true,
     }
 });
 </pre></div>
@@ -619,26 +601,23 @@ There was also a "math styles" macro but it only seemed to apply to katex and si
 </div>
 </div>
 </div>
-
-<div id="outline-container-org442884b" class="outline-2">
-<h2 id="org442884b">The Post Checkers</h2>
-<div class="outline-text-2" id="text-org442884b">
+<div id="outline-container-org7a4a817" class="outline-2">
+<h2 id="org7a4a817">The Post Checkers</h2>
+<div class="outline-text-2" id="text-org7a4a817">
 <p>
 These are the macros that get called in the index templates to check if the page needs the math rendering code.
 </p>
 </div>
-
-<div id="outline-container-org3eeb0c2" class="outline-3">
-<h3 id="org3eeb0c2">Math Scripts</h3>
-<div class="outline-text-3" id="text-org3eeb0c2">
+<div id="outline-container-org91503b9" class="outline-3">
+<h3 id="org91503b9">Math Scripts</h3>
+<div class="outline-text-3" id="text-org91503b9">
 <p>
 If the <code>has_pseudocode</code> flag is set I'm calling the <code>math_scripts</code> in the later macros that add the CSS because they insert stuff into the head of the HTML, not the body. This seems to help a little with getting the math in the pseudocode to render when the page is cached by the browser.
 </p>
 </div>
-
-<div id="outline-container-org1a5eef7" class="outline-4">
-<h4 id="org1a5eef7">Math Scripts If Post</h4>
-<div class="outline-text-4" id="text-org1a5eef7">
+<div id="outline-container-orgb599671" class="outline-4">
+<h4 id="orgb599671">Math Scripts If Post</h4>
+<div class="outline-text-4" id="text-orgb599671">
 <p>
 This first chunk runs if the post has <code>.. has_math: true</code> in the metadata. It's calling the <code>math_scripts</code> macro from the prior section.
 </p>
@@ -666,10 +645,9 @@ And here's the end of the macro.
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-orgc90f62a" class="outline-4">
-<h4 id="orgc90f62a">Math Scripts If Posts</h4>
-<div class="outline-text-4" id="text-orgc90f62a">
+<div id="outline-container-org191f297" class="outline-4">
+<h4 id="org191f297">Math Scripts If Posts</h4>
+<div class="outline-text-4" id="text-org191f297">
 <p>
 This macro is like the previous one except it gets used when on the default page which has the latest several posts displayed on it so we need to check if any of the posts has the metadata requesting math or pseudocode and only insert them once, even if multiple posts use them.
 </p>
@@ -690,10 +668,10 @@ I added this next section to get the pseudocode into the page. Since <code>mako<
 <div class="highlight"><pre><span></span>    <span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
       <span class="cp">{%</span> <span class="k">set</span> <span class="nv">not_yet</span> <span class="o">=</span> <span class="nv">namespace</span><span class="o">(</span><span class="nv">set_up</span><span class="o">=</span><span class="kp">true</span><span class="o">)</span> <span class="cp">%}</span>
       <span class="cp">{%</span> <span class="k">for</span> <span class="nv">post</span> <span class="k">in</span> <span class="nv">posts</span> <span class="cp">%}</span>
-	<span class="cp">{%</span> <span class="k">if</span> <span class="nv">post.meta</span><span class="o">(</span><span class="s2">"has_pseudocode"</span><span class="o">)</span> <span class="k">and</span> <span class="nv">not_yet.set_up</span> <span class="cp">%}</span>
-	  <span class="cp">{{</span> <span class="nv">pseudocode</span><span class="o">()</span> <span class="cp">}}</span>
-	  <span class="cp">{%</span> <span class="k">set</span> <span class="nv">not_yet.set_up</span> <span class="o">=</span> <span class="kp">false</span> <span class="cp">%}</span>
-	<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+        <span class="cp">{%</span> <span class="k">if</span> <span class="nv">post.meta</span><span class="o">(</span><span class="s2">"has_pseudocode"</span><span class="o">)</span> <span class="k">and</span> <span class="nv">not_yet.set_up</span> <span class="cp">%}</span>
+          <span class="cp">{{</span> <span class="nv">pseudocode</span><span class="o">()</span> <span class="cp">}}</span>
+          <span class="cp">{%</span> <span class="k">set</span> <span class="nv">not_yet.set_up</span> <span class="o">=</span> <span class="kp">false</span> <span class="cp">%}</span>
+        <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
       <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
     <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
 <span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
@@ -701,10 +679,9 @@ I added this next section to get the pseudocode into the page. Since <code>mako<
 </div>
 </div>
 </div>
-
-<div id="outline-container-org14a5f22" class="outline-3">
-<h3 id="org14a5f22">Math Styles</h3>
-<div class="outline-text-3" id="text-org14a5f22">
+<div id="outline-container-org8bb7613" class="outline-3">
+<h3 id="org8bb7613">Math Styles</h3>
+<div class="outline-text-3" id="text-org8bb7613">
 <p>
 This is like the previous two sections except it inserts the CSS. This gets put into the head while the scripts get put into the body of the posts.
 According to <a href="https://stackoverflow.com/a/2451441">StackOverflow</a> putting javascript in the HEAD can block loading so javascript should go at the bottom. Is that what my P5 template is doing? I'll need to look into that.
@@ -714,10 +691,9 @@ According to <a href="https://stackoverflow.com/a/2451441">StackOverflow</a> put
 It might be the reason that MathJax isn't rendering until I refresh the page sometimes, though, so I use it to insert MathJax into the HTML head when putting in pseudocode.js.
 </p>
 </div>
-
-<div id="outline-container-org2157dac" class="outline-4">
-<h4 id="org2157dac">Math Styles If Post</h4>
-<div class="outline-text-4" id="text-org2157dac">
+<div id="outline-container-org33a0eef" class="outline-4">
+<h4 id="org33a0eef">Math Styles If Post</h4>
+<div class="outline-text-4" id="text-org33a0eef">
 <p>
 Since I got rid of the math-style macro this just loads the pseudocode styling (if it's needed).
 </p>
@@ -731,10 +707,9 @@ Since I got rid of the math-style macro this just loads the pseudocode styling (
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org311cab5" class="outline-4">
-<h4 id="org311cab5">Math Styles If Posts</h4>
-<div class="outline-text-4" id="text-org311cab5">
+<div id="outline-container-orgcd65db8" class="outline-4">
+<h4 id="orgcd65db8">Math Styles If Posts</h4>
+<div class="outline-text-4" id="text-orgcd65db8">
 <p>
 And this is for the case where there are multiple posts on a page.
 </p>
@@ -754,10 +729,9 @@ And this is for the case where there are multiple posts on a page.
 </div>
 </div>
 </div>
-
-<div id="outline-container-org834136f" class="outline-2">
-<h2 id="org834136f">The Race Condition</h2>
-<div class="outline-text-2" id="text-org834136f">
+<div id="outline-container-org6dc2b78" class="outline-2">
+<h2 id="org6dc2b78">The Race Condition</h2>
+<div class="outline-text-2" id="text-org6dc2b78">
 <p>
 There appears to be a race condition problem that happens sometimes if I reload the page too many times.(<a href="https://github.com/mathjax/MathJax/issues/1805#issuecomment-314433504">https://github.com/mathjax/MathJax/issues/1805#issuecomment-314433504</a>). It prevents the math being completely rendered in the pseudocode (it converts the inline symbol (slash right-parethesis) to dollar signs, so it's doing something, but it leaves the rest of the latex as is). It can be fixed by clearing the cache but I decided to try and work around it a little.
 </p>
@@ -784,20 +758,20 @@ It only affects the pseudocode so I moved the loading of the <code>math_scripts<
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
 <li>
-<a href="orgmode-plugin-initel/index.html#orgac826f3">Pygments</a>
+<a href="orgmode-plugin-initel/index.html#org50fe896">Pygments</a>
 <ul>
-<li><a href="orgmode-plugin-initel/index.html#org9e4882e">Fish</a></li>
-<li><a href="orgmode-plugin-initel/index.html#org005f510">Gherkin</a></li>
-<li><a href="orgmode-plugin-initel/index.html#org0062ffb">HTML</a></li>
-<li><a href="orgmode-plugin-initel/index.html#org7e2c70c">INI</a></li>
-<li><a href="orgmode-plugin-initel/index.html#org38e7536">Jinja</a></li>
-<li><a href="orgmode-plugin-initel/index.html#org6ffc41d">Mako</a></li>
+<li><a href="orgmode-plugin-initel/index.html#org781d57c">Fish</a></li>
+<li><a href="orgmode-plugin-initel/index.html#orgf9a11c5">Gherkin</a></li>
+<li><a href="orgmode-plugin-initel/index.html#org917b2a2">HTML</a></li>
+<li><a href="orgmode-plugin-initel/index.html#org5a1c302">INI</a></li>
+<li><a href="orgmode-plugin-initel/index.html#orgc2b8368">Jinja</a></li>
+<li><a href="orgmode-plugin-initel/index.html#org9a23973">Mako</a></li>
 </ul>
 </li>
-<li><a href="orgmode-plugin-initel/index.html#org574bcca">Lazy Image Loading</a></li>
-<li><a href="orgmode-plugin-initel/index.html#org802fcd7">Silencing the Python Warning</a></li>
-<li><a href="orgmode-plugin-initel/index.html#orgdb866dd">The Tangle</a></li>
-<li><a href="orgmode-plugin-initel/index.html#org94f1c5b">Links</a></li>
+<li><a href="orgmode-plugin-initel/index.html#org511a978">Lazy Image Loading</a></li>
+<li><a href="orgmode-plugin-initel/index.html#org8e65fc8">Silencing the Python Warning</a></li>
+<li><a href="orgmode-plugin-initel/index.html#org22fc87b">The Tangle</a></li>
+<li><a href="orgmode-plugin-initel/index.html#org99b065f">Links</a></li>
 </ul>
 </div>
 </div>
@@ -805,10 +779,9 @@ It only affects the pseudocode so I moved the loading of the <code>math_scripts<
 <p>
 This is the emacs configuration (<code>init.el</code>) for the <a href="https://plugins.getnikola.com/v8/orgmode/">orgmode plugin</a> to export posts and pages to HTML. I spent forever messing with the <code>init.el</code> file for my emacs instance, but it turns out that the plugin has its own configuration so you have to make changes here or they won't matter.
 </p>
-
-<div id="outline-container-orgac826f3" class="outline-2">
-<h2 id="orgac826f3">Pygments</h2>
-<div class="outline-text-2" id="text-orgac826f3">
+<div id="outline-container-org50fe896" class="outline-2">
+<h2 id="org50fe896">Pygments</h2>
+<div class="outline-text-2" id="text-org50fe896">
 <p>
 This is the list of languages that pygments will colorize when source-code blocks are exported. The org-babel documentation has a <a href="https://orgmode.org/worg/org-contrib/babel/languages/index.html">list of supported</a> languages, but it doesn't list <code>fish</code>, although that seems to work. It might be because I inserted fish-mode, or maybe it just has to be a <a href="https://pygments.org/languages/">supported pygments language</a>.
 </p>
@@ -817,10 +790,9 @@ This is the list of languages that pygments will colorize when source-code block
 The first argument is what you put as the type in the source block and the second is the pygments short-name <code>("org-source-name" . "pygments-name")</code>.
 </p>
 </div>
-
-<div id="outline-container-org9e4882e" class="outline-3">
-<h3 id="org9e4882e">Fish</h3>
-<div class="outline-text-3" id="text-org9e4882e">
+<div id="outline-container-org781d57c" class="outline-3">
+<h3 id="org781d57c">Fish</h3>
+<div class="outline-text-3" id="text-org781d57c">
 <p>
 Add coloring for the fish-shell. 
 </p>
@@ -835,25 +807,30 @@ Add coloring for the fish-shell.
 </pre></div>
 </div>
 </div>
-<div id="outline-container-org005f510" class="outline-3">
-<h3 id="org005f510">Gherkin</h3>
-<div class="outline-text-3" id="text-org005f510">
-<div class="highlight"><pre><span></span><span class="p">(</span><span class="s">"gherkin"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"gherkin"</span><span class="p">)</span>
+<div id="outline-container-orgf9a11c5" class="outline-3">
+<h3 id="orgf9a11c5">Gherkin</h3>
+<div class="outline-text-3" id="text-orgf9a11c5">
+<p>
+This will nicely colorize the <i>feature</i> files when using BDD. pygments refers to them using <i>gherkin</i> but the <code>feature-mode</code> for emacs calls them <i>feature</i> blocks so the first line sets up an alias so that we can use either "gherkin" or "feature" as the language in the org-babel header and it will get colorized on exporting to HTML, although only using "feature" as the language will colorize both the block in the emacs org-mode buffer and the exported HTML.
+</p>
+
+<div class="highlight"><pre><span></span><span class="p">(</span><span class="s">"feature"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"gherkin"</span><span class="p">)</span>
+<span class="p">(</span><span class="s">"gherkin"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"gherkin"</span><span class="p">)</span>
 </pre></div>
 
 <div class="highlight"><pre><span></span><span class="k">Scenario:</span><span class="nf"> Gherkin colorization</span>
 
 <span class="nf">Feature: Pygments gherkin colorization</span>
 
-<span class="k">Given </span><span class="nf">a gherkin feature file</span>
-<span class="k">When </span><span class="nf">the org-mode file is exported to HTML</span>
-<span class="k">Then </span><span class="nf">the feature fragment is colorized.</span>
+<span class="k">  Given </span><span class="nf">a gherkin feature file</span>
+<span class="nf">  </span><span class="k">When </span><span class="nf">the org-mode file is exported to HTML</span>
+<span class="nf">  </span><span class="k">Then </span><span class="nf">the feature fragment is colorized.</span>
 </pre></div>
 </div>
 </div>
-<div id="outline-container-org0062ffb" class="outline-3">
-<h3 id="org0062ffb">HTML</h3>
-<div class="outline-text-3" id="text-org0062ffb">
+<div id="outline-container-org917b2a2" class="outline-3">
+<h3 id="org917b2a2">HTML</h3>
+<div class="outline-text-3" id="text-org917b2a2">
 <div class="highlight"><pre><span></span><span class="p">(</span><span class="s">"html"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"html"</span><span class="p">)</span>
 </pre></div>
 
@@ -861,10 +838,9 @@ Add coloring for the fish-shell.
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org7e2c70c" class="outline-3">
-<h3 id="org7e2c70c">INI</h3>
-<div class="outline-text-3" id="text-org7e2c70c">
+<div id="outline-container-org5a1c302" class="outline-3">
+<h3 id="org5a1c302">INI</h3>
+<div class="outline-text-3" id="text-org5a1c302">
 <p>
 For <a href="https://en.wikipedia.org/wiki/INI_file?useskin=vector">INI</a> configuration files.
 </p>
@@ -879,10 +855,9 @@ For <a href="https://en.wikipedia.org/wiki/INI_file?useskin=vector">INI</a> conf
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org38e7536" class="outline-3">
-<h3 id="org38e7536">Jinja</h3>
-<div class="outline-text-3" id="text-org38e7536">
+<div id="outline-container-orgc2b8368" class="outline-3">
+<h3 id="orgc2b8368">Jinja</h3>
+<div class="outline-text-3" id="text-orgc2b8368">
 <div class="highlight"><pre><span></span><span class="p">(</span><span class="s">"jinja"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"html+jinja"</span><span class="p">)</span>
 </pre></div>
 
@@ -892,10 +867,9 @@ For <a href="https://en.wikipedia.org/wiki/INI_file?useskin=vector">INI</a> conf
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org6ffc41d" class="outline-3">
-<h3 id="org6ffc41d">Mako</h3>
-<div class="outline-text-3" id="text-org6ffc41d">
+<div id="outline-container-org9a23973" class="outline-3">
+<h3 id="org9a23973">Mako</h3>
+<div class="outline-text-3" id="text-org9a23973">
 <div class="highlight"><pre><span></span><span class="p">(</span><span class="s">"mako"</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">"html+mako"</span><span class="p">)</span>
 </pre></div>
 
@@ -906,10 +880,9 @@ For <a href="https://en.wikipedia.org/wiki/INI_file?useskin=vector">INI</a> conf
 </div>
 </div>
 </div>
-
-<div id="outline-container-org574bcca" class="outline-2">
-<h2 id="org574bcca">Lazy Image Loading</h2>
-<div class="outline-text-2" id="text-org574bcca">
+<div id="outline-container-org511a978" class="outline-2">
+<h2 id="org511a978">Lazy Image Loading</h2>
+<div class="outline-text-2" id="text-org511a978">
 <p>
 This adds <a href="https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading">Lazy Loading</a> to the HTML image tags.
 </p>
@@ -937,10 +910,9 @@ You use it by using <code>lazy-img-url</code> instead of <code>img-url</code> in
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org802fcd7" class="outline-2">
-<h2 id="org802fcd7">Silencing the Python Warning</h2>
-<div class="outline-text-2" id="text-org802fcd7">
+<div id="outline-container-org8e65fc8" class="outline-2">
+<h2 id="org8e65fc8">Silencing the Python Warning</h2>
+<div class="outline-text-2" id="text-org8e65fc8">
 <p>
 Emacs warns you that it's using 4 spaces for the python code, which is what we want anyway, so this should, hopefully, turn off all those warnings.
 </p>
@@ -950,9 +922,9 @@ Emacs warns you that it's using 4 spaces for the python code, which is what we w
 </pre></div>
 </div>
 </div>
-<div id="outline-container-orgdb866dd" class="outline-2">
-<h2 id="orgdb866dd">The Tangle</h2>
-<div class="outline-text-2" id="text-orgdb866dd">
+<div id="outline-container-org22fc87b" class="outline-2">
+<h2 id="org22fc87b">The Tangle</h2>
+<div class="outline-text-2" id="text-org22fc87b">
 <div class="highlight"><pre><span></span><span class="c1">;; Init file to use with the orgmode plugin.</span>
 
 <span class="c1">;; this is generated from the post with the slug: orgmode-plugin-initel</span>
@@ -1115,10 +1087,9 @@ Emacs warns you that it's using 4 spaces for the python code, which is what we w
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org94f1c5b" class="outline-2">
-<h2 id="org94f1c5b">Links</h2>
-<div class="outline-text-2" id="text-org94f1c5b">
+<div id="outline-container-org99b065f" class="outline-2">
+<h2 id="org99b065f">Links</h2>
+<div class="outline-text-2" id="text-org99b065f">
 <ul class="org-ul">
 <li>Chaganti P. Plugins for Nikola. 2020 [cited 2023 Jun 25]. orgmode. Available from: <a href="https://plugins.getnikola.com/v8/orgmode/">https://plugins.getnikola.com/v8/orgmode/</a>
 </li>
@@ -1143,9 +1114,9 @@ Emacs warns you that it's using 4 spaces for the python code, which is what we w
             </p>
         </div>
     </header><div class="e-content entry-content">
-    <div id="outline-container-orge93e542" class="outline-2">
-<h2 id="orge93e542">Site Data</h2>
-<div class="outline-text-2" id="text-orge93e542">
+    <div id="outline-container-org131a94f" class="outline-2">
+<h2 id="org131a94f">Site Data</h2>
+<div class="outline-text-2" id="text-org131a94f">
 <div class="highlight"><pre><span></span><span class="c1"># Data about this site</span>
 <span class="n">BLOG_AUTHOR</span> <span class="o">=</span> <span class="s2">"The Cloistered Monkey"</span>  <span class="c1"># (translatable)</span>
 <span class="n">BLOG_TITLE</span> <span class="o">=</span> <span class="s2">"Beach Pig Rump &amp; Thigh"</span>  <span class="c1"># (translatable)</span>
@@ -1160,55 +1131,50 @@ Emacs warns you that it's using 4 spaces for the python code, which is what we w
 </pre></div>
 </div>
 </div>
-
-
-<div id="outline-container-org98bee22" class="outline-2">
-<h2 id="org98bee22">The Theme</h2>
-<div class="outline-text-2" id="text-org98bee22">
+<div id="outline-container-org315213b" class="outline-2">
+<h2 id="org315213b">The Theme</h2>
+<div class="outline-text-2" id="text-org315213b">
 <p>
 This is how you choose the theme to use. We're using a custom theme so there's three things that have to match.
 </p>
 </div>
-
-<div id="outline-container-org84375b6" class="outline-3">
-<h3 id="org84375b6">The Theme Location</h3>
-<div class="outline-text-3" id="text-org84375b6">
+<div id="outline-container-org8f3fdcc" class="outline-3">
+<h3 id="org8f3fdcc">The Theme Location</h3>
+<div class="outline-text-3" id="text-org8f3fdcc">
 <p>
 Next to the <code>conf.py</code> file at the root of the nikola repository we need a folder named "themes" and inside that we put a folder whose name matches the name of our theme. I'm going to use <code>custom-mako</code> as our example. The only other expected option at this point would be <code>custom-jinja</code>. So our "themes" folder should look like this (more or less):
 </p>
 
-<pre class="example" id="orgfb5f595">
+<pre class="example" id="org893f847">
 themes/
   custom-mako/
 </pre>
 </div>
 </div>
-
-<div id="outline-container-orgbdb2ec7" class="outline-3">
-<h3 id="orgbdb2ec7">The Theme Configuration</h3>
-<div class="outline-text-3" id="text-orgbdb2ec7">
+<div id="outline-container-org9597eeb" class="outline-3">
+<h3 id="org9597eeb">The Theme Configuration</h3>
+<div class="outline-text-3" id="text-org9597eeb">
 <p>
 Inside the <code>themes/custom-mako/</code> folder we need a file with the name <code>custom-mako.theme</code> - the base name of the file needs to match the name of our theme. This is where we tell nikola that we're using mako (or jinja as the case may be). Here's what's in it (the mako version).
 </p>
 
-<div class="highlight"><pre><span></span>[Theme]
-engine = mako
-parent = bootstrap4
-author = The Nikola Contributors
-author_url = https://getnikola.com/
-license = MIT
-based_on = Bootstrap 4 &lt;http://getbootstrap.com/&gt;
-tags = bootstrap
+<div class="highlight"><pre><span></span><span class="k">[Theme]</span>
+<span class="na">engine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">mako</span>
+<span class="na">parent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">bootstrap4</span>
+<span class="na">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">The Nikola Contributors</span>
+<span class="na">author_url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">https://getnikola.com/</span>
+<span class="na">license</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">MIT</span>
+<span class="na">based_on</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Bootstrap 4 &lt;http://getbootstrap.com/&gt;</span>
+<span class="na">tags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">bootstrap</span>
 
-[Family]
-family = bootstrap4
+<span class="k">[Family]</span>
+<span class="na">family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">bootstrap4</span>
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-orgfd17f6a" class="outline-3">
-<h3 id="orgfd17f6a">The conf.py</h3>
-<div class="outline-text-3" id="text-orgfd17f6a">
+<div id="outline-container-orgc940c57" class="outline-3">
+<h3 id="orgc940c57">The conf.py</h3>
+<div class="outline-text-3" id="text-orgc940c57">
 <p>
 Inside <code>conf.py</code> we put the name of the theme, matching the name of the folder and configuration file.
 </p>
@@ -1219,14 +1185,13 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </div>
 </div>
 </div>
-
-<div id="outline-container-orgedf5558" class="outline-2">
-<h2 id="orgedf5558">Posts and Pages</h2>
-<div class="outline-text-2" id="text-orgedf5558">
+<div id="outline-container-org0e0f613" class="outline-2">
+<h2 id="org0e0f613">Posts and Pages</h2>
+<div class="outline-text-2" id="text-org0e0f613">
 </div>
-<div id="outline-container-orgd530b97" class="outline-3">
-<h3 id="orgd530b97">Posts</h3>
-<div class="outline-text-3" id="text-orgd530b97">
+<div id="outline-container-org772fddf" class="outline-3">
+<h3 id="org772fddf">Posts</h3>
+<div class="outline-text-3" id="text-org772fddf">
 <div class="highlight"><pre><span></span><span class="n">POSTS</span> <span class="o">=</span> <span class="p">(</span>
     <span class="p">(</span><span class="s2">"posts/*.org"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
     <span class="p">(</span><span class="s2">"posts/*.rst"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
@@ -1237,10 +1202,9 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org718a9e4" class="outline-3">
-<h3 id="org718a9e4">Pages</h3>
-<div class="outline-text-3" id="text-org718a9e4">
+<div id="outline-container-org23a79e7" class="outline-3">
+<h3 id="org23a79e7">Pages</h3>
+<div class="outline-text-3" id="text-org23a79e7">
 <div class="highlight"><pre><span></span><span class="n">PAGES</span> <span class="o">=</span> <span class="p">(</span>
     <span class="p">(</span><span class="s2">"source/*.org"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"page.tmpl"</span><span class="p">),</span>
     <span class="p">(</span><span class="s2">"source/*.rst"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"page.tmpl"</span><span class="p">),</span>
@@ -1251,10 +1215,9 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-orgaacdce1" class="outline-3">
-<h3 id="orgaacdce1">The Index Path</h3>
-<div class="outline-text-3" id="text-orgaacdce1">
+<div id="outline-container-org14a85d3" class="outline-3">
+<h3 id="org14a85d3">The Index Path</h3>
+<div class="outline-text-3" id="text-org14a85d3">
 <div class="highlight"><pre><span></span><span class="c1"># Final location for the main blog page and sibling paginated pages is</span>
 <span class="c1"># output / TRANSLATION[lang] / INDEX_PATH / index-*.html</span>
 <span class="c1"># (translatable)</span>
@@ -1264,34 +1227,33 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </div>
 </div>
 </div>
-<div id="outline-container-orgf7a073c" class="outline-2">
-<h2 id="orgf7a073c">Navigation Links</h2>
-<div class="outline-text-2" id="text-orgf7a073c">
+<div id="outline-container-org434c405" class="outline-2">
+<h2 id="org434c405">Navigation Links</h2>
+<div class="outline-text-2" id="text-org434c405">
 <div class="highlight"><pre><span></span><span class="n">NAVIGATION_LINKS</span> <span class="o">=</span> <span class="p">{</span>
     <span class="n">DEFAULT_LANG</span><span class="p">:</span> <span class="p">(</span>
-	<span class="p">(</span><span class="s2">"/posts/"</span><span class="p">,</span> <span class="s2">"Posts"</span><span class="p">),</span>
-	<span class="p">(</span><span class="s2">"/archive.html"</span><span class="p">,</span> <span class="s2">"Archive"</span><span class="p">),</span>
-	<span class="p">(</span><span class="s2">"/categories/"</span><span class="p">,</span> <span class="s2">"Tags"</span><span class="p">),</span>
-	<span class="p">(</span><span class="s2">"/rss.xml"</span><span class="p">,</span> <span class="s2">"RSS"</span><span class="p">),</span>
-	<span class="p">(</span>
-	    <span class="p">(</span>
-		<span class="p">(</span><span class="s2">"https://necromuralist.github.io/"</span><span class="p">,</span> <span class="s2">"The Cloistered Monkey"</span><span class="p">),</span>
-		<span class="p">(</span><span class="s2">"https://necromuralist.github.io/Ape-Iron/"</span><span class="p">,</span> <span class="s2">"Ape Iron"</span><span class="p">),</span>
-		<span class="p">(</span><span class="s2">"https://necromuralist.github.io/Bowling-For-Data/"</span><span class="p">,</span> <span class="s2">"Bowling For Data"</span><span class="p">),</span>
-		<span class="p">(</span><span class="s2">"https://necromuralist.github.io/Neurotic-Networking/"</span><span class="p">,</span> <span class="s2">"Neurotic Networking"</span><span class="p">),</span>
-		<span class="p">(</span><span class="s2">"https://necromuralist.github.io/Visions-Voices-Data/"</span><span class="p">,</span> <span class="s2">"Visions, Voices, Data"</span><span class="p">)</span>
-		<span class="p">),</span>
-	    <span class="s2">"Monkey Pages"</span>
-	<span class="p">),</span>
+        <span class="p">(</span><span class="s2">"/posts/"</span><span class="p">,</span> <span class="s2">"Posts"</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">"/archive.html"</span><span class="p">,</span> <span class="s2">"Archive"</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">"/categories/"</span><span class="p">,</span> <span class="s2">"Tags"</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">"/rss.xml"</span><span class="p">,</span> <span class="s2">"RSS"</span><span class="p">),</span>
+        <span class="p">(</span>
+            <span class="p">(</span>
+                <span class="p">(</span><span class="s2">"https://necromuralist.github.io/"</span><span class="p">,</span> <span class="s2">"The Cloistered Monkey"</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">"https://necromuralist.github.io/Ape-Iron/"</span><span class="p">,</span> <span class="s2">"Ape Iron"</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">"https://necromuralist.github.io/Bowling-For-Data/"</span><span class="p">,</span> <span class="s2">"Bowling For Data"</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">"https://necromuralist.github.io/Neurotic-Networking/"</span><span class="p">,</span> <span class="s2">"Neurotic Networking"</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">"https://necromuralist.github.io/Visions-Voices-Data/"</span><span class="p">,</span> <span class="s2">"Visions, Voices, Data"</span><span class="p">)</span>
+                <span class="p">),</span>
+            <span class="s2">"Monkey Pages"</span>
+        <span class="p">),</span>
     <span class="p">),</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org22de4a1" class="outline-2">
-<h2 id="org22de4a1">Github Deploy</h2>
-<div class="outline-text-2" id="text-org22de4a1">
+<div id="outline-container-org1978881" class="outline-2">
+<h2 id="org1978881">Github Deploy</h2>
+<div class="outline-text-2" id="text-org1978881">
 <div class="highlight"><pre><span></span><span class="c1"># github_deploy configuration</span>
 <span class="c1"># For more details, read the manual:</span>
 <span class="c1"># https://getnikola.com/handbook.html#deploying-to-github</span>
@@ -1308,10 +1270,9 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org23066b0" class="outline-2">
-<h2 id="org23066b0">The License</h2>
-<div class="outline-text-2" id="text-org23066b0">
+<div id="outline-container-org9258f80" class="outline-2">
+<h2 id="org9258f80">The License</h2>
+<div class="outline-text-2" id="text-org9258f80">
 <div class="highlight"><pre><span></span><span class="n">LICENSE</span> <span class="o">=</span> <span class="s1">'''</span>
 <span class="s1">&lt;div id="license"xmlns:cc="http://creativecommons.org/ns#" &gt;This work is licensed under</span>
 <span class="s1">&lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0</span>
@@ -1322,18 +1283,16 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-orgcd885d1" class="outline-2">
-<h2 id="orgcd885d1">The Footer</h2>
-<div class="outline-text-2" id="text-orgcd885d1">
+<div id="outline-container-org0097c3c" class="outline-2">
+<h2 id="org0097c3c">The Footer</h2>
+<div class="outline-text-2" id="text-org0097c3c">
 <div class="highlight"><pre><span></span><span class="n">CONTENT_FOOTER</span> <span class="o">=</span> <span class="s1">'Scribbles by &lt;a href="mailto:</span><span class="si">{email}</span><span class="s1">"&gt;</span><span class="si">{author}</span><span class="s1">&lt;/a&gt; - Powered by         &lt;a href="https://getnikola.com" rel="nofollow"&gt;Nikola&lt;/a&gt;         </span><span class="si">{license}</span><span class="s1">'</span>
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-orgd79aa51" class="outline-2">
-<h2 id="orgd79aa51">Strip Indexes</h2>
-<div class="outline-text-2" id="text-orgd79aa51">
+<div id="outline-container-orgc71cf78" class="outline-2">
+<h2 id="orgc71cf78">Strip Indexes</h2>
+<div class="outline-text-2" id="text-orgc71cf78">
 <div class="highlight"><pre><span></span><span class="c1"># If a link ends in /index.html,  drop the index.html part.</span>
 <span class="c1"># http://mysite/foo/bar/index.html =&gt; http://mysite/foo/bar/</span>
 <span class="c1"># (Uses the INDEX_FILE setting, so if that is, say, default.html,</span>
@@ -1342,10 +1301,9 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-orgb4874ad" class="outline-2">
-<h2 id="orgb4874ad">Search Form</h2>
-<div class="outline-text-2" id="text-orgb4874ad">
+<div id="outline-container-org12ce251" class="outline-2">
+<h2 id="org12ce251">Search Form</h2>
+<div class="outline-text-2" id="text-org12ce251">
 <div class="highlight"><pre><span></span><span class="c1"># A search form to search this site, for the sidebar. You can use a Google</span>
 <span class="c1"># custom search (https://www.google.com/cse/)</span>
 <span class="c1"># Or a DuckDuckGo search: https://duckduckgo.com/search_box.html</span>
@@ -1373,16 +1331,16 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </pre></div>
 </div>
 </div>
-<div id="outline-container-org729db7f" class="outline-2">
-<h2 id="org729db7f">The Tangle</h2>
-<div class="outline-text-2" id="text-org729db7f">
+<div id="outline-container-org118375f" class="outline-2">
+<h2 id="org118375f">The Tangle</h2>
+<div class="outline-text-2" id="text-org118375f">
 <p>
 This should eventually get broken up enough to be hidden, but not yet.
 </p>
 
 <div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 
-<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
 <span class="c1"># !! This is the configuration of Nikola. !! #</span>
 <span class="c1"># !!  You should edit it to your liking.  !! #</span>
@@ -1537,20 +1495,20 @@ This should eventually get broken up enough to be hidden, but not yet.
 <span class="c1"># Config for bootblog4:</span>
 <span class="n">THEME_CONFIG</span> <span class="o">=</span> <span class="p">{</span>
     <span class="n">DEFAULT_LANG</span><span class="p">:</span> <span class="p">{</span>
-	<span class="c1"># Show the latest featured post in a large box, with the previewimage as its background.</span>
-	<span class="s1">'featured_large'</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
-	<span class="c1"># Show the first (remaining) two featured posts in small boxes.</span>
-	<span class="s1">'featured_small'</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
-	<span class="c1"># Show featured posts on mobile.</span>
-	<span class="s1">'featured_on_mobile'</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-	<span class="c1"># Show image in `featured_large` on mobile.</span>
-	<span class="c1"># `featured_small` displays them only on desktop.</span>
-	<span class="s1">'featured_large_image_on_mobile'</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-	<span class="c1"># Strip HTML from featured post text.</span>
-	<span class="s1">'featured_strip_html'</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
-	<span class="c1"># Contents of the sidebar, If empty, the sidebar is not displayed.</span>
-	<span class="s1">'sidebar'</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
-	<span class="s2">"navbar_light"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="c1"># Show the latest featured post in a large box, with the previewimage as its background.</span>
+        <span class="s1">'featured_large'</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="c1"># Show the first (remaining) two featured posts in small boxes.</span>
+        <span class="s1">'featured_small'</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="c1"># Show featured posts on mobile.</span>
+        <span class="s1">'featured_on_mobile'</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="c1"># Show image in `featured_large` on mobile.</span>
+        <span class="c1"># `featured_small` displays them only on desktop.</span>
+        <span class="s1">'featured_large_image_on_mobile'</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="c1"># Strip HTML from featured post text.</span>
+        <span class="s1">'featured_strip_html'</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="c1"># Contents of the sidebar, If empty, the sidebar is not displayed.</span>
+        <span class="s1">'sidebar'</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+        <span class="s2">"navbar_light"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="c1"># Config for bootstrap4:</span>
@@ -2333,13 +2291,13 @@ This should eventually get broken up enough to be hidden, but not yet.
 <span class="c1"># (translatable)</span>
 <span class="n">CONTENT_FOOTER_FORMATS</span> <span class="o">=</span> <span class="p">{</span>
     <span class="n">DEFAULT_LANG</span><span class="p">:</span> <span class="p">(</span>
-	<span class="p">(),</span>
-	<span class="p">{</span>
-	    <span class="s2">"email"</span><span class="p">:</span> <span class="n">BLOG_EMAIL</span><span class="p">,</span>
-	    <span class="s2">"author"</span><span class="p">:</span> <span class="n">BLOG_AUTHOR</span><span class="p">,</span>
-	    <span class="s2">"date"</span><span class="p">:</span> <span class="n">time</span><span class="o">.</span><span class="n">gmtime</span><span class="p">()</span><span class="o">.</span><span class="n">tm_year</span><span class="p">,</span>
-	    <span class="s2">"license"</span><span class="p">:</span> <span class="n">LICENSE</span>
-	<span class="p">}</span>
+        <span class="p">(),</span>
+        <span class="p">{</span>
+            <span class="s2">"email"</span><span class="p">:</span> <span class="n">BLOG_EMAIL</span><span class="p">,</span>
+            <span class="s2">"author"</span><span class="p">:</span> <span class="n">BLOG_AUTHOR</span><span class="p">,</span>
+            <span class="s2">"date"</span><span class="p">:</span> <span class="n">time</span><span class="o">.</span><span class="n">gmtime</span><span class="p">()</span><span class="o">.</span><span class="n">tm_year</span><span class="p">,</span>
+            <span class="s2">"license"</span><span class="p">:</span> <span class="n">LICENSE</span>
+        <span class="p">}</span>
     <span class="p">)</span>
 <span class="p">}</span>
 
@@ -2751,29 +2709,29 @@ To change the script tag with the URL for the p5 CDN, put a new one in the <code
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
 <li>
-<a href="p5-div-shortcode/index.html#orge004912">The Shortcodes</a>
+<a href="p5-div-shortcode/index.html#org04a1962">The Shortcodes</a>
 <ul>
-<li><a href="p5-div-shortcode/index.html#org82772cd">Mako</a></li>
-<li><a href="p5-div-shortcode/index.html#org26978c3">Jinja</a></li>
+<li><a href="p5-div-shortcode/index.html#orgb1ad9e7">Mako</a></li>
+<li><a href="p5-div-shortcode/index.html#orgcd31e20">Jinja</a></li>
 </ul>
 </li>
-<li><a href="p5-div-shortcode/index.html#org71540df">Links</a></li>
+<li><a href="p5-div-shortcode/index.html#org45c724f">Links</a></li>
 </ul>
 </div>
 </div>
 
 <p>
+## This is tangled from the "p5-div-shortcode" post
 
-<script src="p5-div-shortcode/noise_graph.js"></script></p>
-<div class="p5js" id="e70fd042-noise-graph"></div>
-
+<script src="p5-div-shortcode/${source}"></script></p>
+<div class="p5js" id="${divid}"></div>
 
 
 <p>
 This is a test of the <code>p5div</code> shortcode. For it to work (assuming you're using mako) you need to:
 </p>
 
-<div class="notecard" id="orgb8414b1">
+<div class="notecard" id="org3bf2f96">
 <ul class="org-ul">
 <li>set up the <code>p5.tmpl</code> template (in <code>themes/custom-mako/templates/</code>)</li>
 <li>have <code>..template: p5.tmpl</code> in the metadata for this post</li>
@@ -2781,7 +2739,7 @@ This is a test of the <code>p5div</code> shortcode. For it to work (assuming you
 </ul>
 </div>
 
-<div class="notecard" id="org98053b9">
+<div class="notecard" id="org315e2d5">
 <p>
 <b><b>Note:</b></b>
 </p>
@@ -2791,10 +2749,9 @@ I'll be using the names based on the idea that we're using the <code>mako</code>
 </p>
 
 </div>
-
-<div id="outline-container-orge004912" class="outline-2">
-<h2 id="orge004912">The Shortcodes</h2>
-<div class="outline-text-2" id="text-orge004912">
+<div id="outline-container-org04a1962" class="outline-2">
+<h2 id="org04a1962">The Shortcodes</h2>
+<div class="outline-text-2" id="text-org04a1962">
 <p>
 There actually needs to be two different shortcodes, one for jinja and one for mako. This repository is using mako (as does <a href="https://necromuralist.github.io">https://necromuralist.github.io</a>) but <a href="https://necromuralist.github.io/Ape-Iron/">ape-iron</a> is using jinja. It's a little too convoluted to keep switching back and forth so I'm mostly going to be relying on ape-iron to test the jinja version (although I really should figure out an easy way to test both).
 </p>
@@ -2803,7 +2760,7 @@ There actually needs to be two different shortcodes, one for jinja and one for m
 The shortcode creates two HTML tags:
 </p>
 
-<div class="notecard" id="org05b1a0e">
+<div class="notecard" id="orge079045">
 <ul class="org-ul">
 <li>a script tag that needs the path to the source p5js file</li>
 <li>a div tag that needs the ID to use so that the p5 sketch can be put inside it</li>
@@ -2830,7 +2787,7 @@ And the default <code>type</code> is javascript so you don't need to use it if i
 </p>
 </blockquote>
 
-<div class="notecard" id="orgdee2da7">
+<div class="notecard" id="org48ed241">
 <p>
 <b><b>Note:</b></b>
 </p>
@@ -2841,10 +2798,9 @@ I was setting the class for the <code>div</code> to "p5js" but it turns out that
 
 </div>
 </div>
-
-<div id="outline-container-org82772cd" class="outline-3">
-<h3 id="org82772cd">Mako</h3>
-<div class="outline-text-3" id="text-org82772cd">
+<div id="outline-container-orgb1ad9e7" class="outline-3">
+<h3 id="orgb1ad9e7">Mako</h3>
+<div class="outline-text-3" id="text-orgb1ad9e7">
 <p>
 I don't see an easy way to set which shortcodes folder to use so I'm going to go with adding "mako" to the end of the shortcodes meant for the mako engine and not putting a suffix on the ones meant for jinja. This shortcode will go into <code>shortcodes/p5divmako.tmpl</code>: 
 </p>
@@ -2873,10 +2829,9 @@ Where <code>noise_graph</code> is the name of the function in <code>noise_graph.
 </p>
 </div>
 </div>
-
-<div id="outline-container-org26978c3" class="outline-3">
-<h3 id="org26978c3">Jinja</h3>
-<div class="outline-text-3" id="text-org26978c3">
+<div id="outline-container-orgcd31e20" class="outline-3">
+<h3 id="orgcd31e20">Jinja</h3>
+<div class="outline-text-3" id="text-orgcd31e20">
 <p>
 Here's the jinja version of the shortcode. It's going to go into <code>shortcodes/p5div.tmpl</code>.
 </p>
@@ -2895,10 +2850,9 @@ To use it you use the same syntax as the mako-based shortcode, just change the n
 </div>
 </div>
 </div>
-
-<div id="outline-container-org71540df" class="outline-2">
-<h2 id="org71540df">Links</h2>
-<div class="outline-text-2" id="text-org71540df">
+<div id="outline-container-org45c724f" class="outline-2">
+<h2 id="org45c724f">Links</h2>
+<div class="outline-text-2" id="text-org45c724f">
 <ul class="org-ul">
 <li>&lt;script&gt;: The Script element - HTML: HyperText Markup Language | MDN [Internet]. 2023 [cited 2023 Jun 20]. Available from: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script</a>
 </li>

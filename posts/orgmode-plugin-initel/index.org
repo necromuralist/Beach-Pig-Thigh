@@ -33,19 +33,21 @@ function color_test
 end
 #+end_src
 ** Gherkin
+This will nicely colorize the /feature/ files when using BDD. pygments refers to them using /gherkin/ but the =feature-mode= for emacs calls them /feature/ blocks so the first line sets up an alias so that we can use either "gherkin" or "feature" as the language in the org-babel header and it will get colorized on exporting to HTML, although only using "feature" as the language will colorize both the block in the emacs org-mode buffer and the exported HTML.
 
 #+begin_src emacs-lisp :noweb-ref gherkin-pygments
+("feature" . "gherkin")
 ("gherkin" . "gherkin")
 #+end_src
 
-#+begin_src gherkin
+#+begin_src feature
 Scenario: Gherkin colorization
 
 Feature: Pygments gherkin colorization
 
-Given a gherkin feature file
-When the org-mode file is exported to HTML
-Then the feature fragment is colorized.
+  Given a gherkin feature file
+  When the org-mode file is exported to HTML
+  Then the feature fragment is colorized.
 #+end_src
 ** HTML
 

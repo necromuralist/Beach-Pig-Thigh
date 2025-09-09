@@ -101,17 +101,17 @@ bg-light
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div class="highlight"><pre><span></span><span class="err">&lt;</span><span class="p">&lt;</span><span class="nt">everything-else</span><span class="p">&gt;</span>&gt;
 </pre></div>
-<div id="outline-container-org98403b4" class="outline-2">
-<h2 id="org98403b4">Introduction</h2>
-<div class="outline-text-2" id="text-org98403b4">
+<div id="outline-container-orgde891c2" class="outline-2">
+<h2 id="orgde891c2">Introduction</h2>
+<div class="outline-text-2" id="text-orgde891c2">
 <p>
 This is an extension of the <code>math_helper.tmpl</code> mako template that comes with nikola. The original version checks for the <code>has_math: True</code> entry in the post meta-data and then loads either Kate or MathJax based on what's in the <code>conf.py</code> file. My extension adds support for <a href="https://github.com/SaswatPadhi/pseudocode.js#readme">pseudocode.js</a>.
 </p>
 </div>
 </div>
-<div id="outline-container-orgf401bea" class="outline-2">
-<h2 id="orgf401bea">Everything Else</h2>
-<div class="outline-text-2" id="text-orgf401bea">
+<div id="outline-container-org9a2e4a2" class="outline-2">
+<h2 id="org9a2e4a2">Everything Else</h2>
+<div class="outline-text-2" id="text-org9a2e4a2">
 <p>
 This is a dump for stuff until I finish this literate-code re-write.
 </p>
@@ -119,118 +119,118 @@ This is a dump for stuff until I finish this literate-code re-write.
 <div class="highlight"><pre><span></span>### Note: at present, MathJax and KaTeX do not respect the USE_CDN configuration option
 <span class="err">&lt;</span>%def name="math_scripts()"&gt;
   %if use_katex:
-	<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js"</span> <span class="na">integrity</span><span class="o">=</span><span class="s">"sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ"</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">"anonymous"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js"</span> <span class="na">integrity</span><span class="o">=</span><span class="s">"sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">"anonymous"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-	% if katex_auto_render:
-	    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="w">		</span><span class="nx">renderMathInElement</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span>
-<span class="w">		    </span><span class="p">{</span>
-<span class="w">			</span><span class="nx">$</span><span class="p">{</span><span class="nx">katex_auto_render</span><span class="p">}</span>
-<span class="w">		    </span><span class="p">}</span>
-<span class="w">		</span><span class="p">);</span>
-<span class="w">	    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-	% else:
-	    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="w">		</span><span class="nx">renderMathInElement</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span>
-<span class="w">		    </span><span class="p">{</span>
-<span class="w">			</span><span class="nx">delimiters</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">			    </span><span class="p">{</span><span class="nx">left</span><span class="o">:</span><span class="w"> </span><span class="s2">"$$"</span><span class="p">,</span><span class="w"> </span><span class="nx">right</span><span class="o">:</span><span class="w"> </span><span class="s2">"$$"</span><span class="p">,</span><span class="w"> </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">},</span>
-<span class="w">			    </span><span class="p">{</span><span class="nx">left</span><span class="o">:</span><span class="w"> </span><span class="s2">"\\["</span><span class="p">,</span><span class="w"> </span><span class="nx">right</span><span class="o">:</span><span class="w"> </span><span class="s2">"\\]"</span><span class="p">,</span><span class="w"> </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">},</span>
-<span class="w">			    </span><span class="p">{</span><span class="nx">left</span><span class="o">:</span><span class="w"> </span><span class="s2">"\\begin{equation*}"</span><span class="p">,</span><span class="w"> </span><span class="nx">right</span><span class="o">:</span><span class="w"> </span><span class="s2">"\\end{equation*}"</span><span class="p">,</span><span class="w"> </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">},</span>
-<span class="w">			    </span><span class="p">{</span><span class="nx">left</span><span class="o">:</span><span class="w"> </span><span class="s2">"\\("</span><span class="p">,</span><span class="w"> </span><span class="nx">right</span><span class="o">:</span><span class="w"> </span><span class="s2">"\\)"</span><span class="p">,</span><span class="w"> </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">}</span>
-<span class="w">			</span><span class="p">]</span>
-<span class="w">		    </span><span class="p">}</span>
-<span class="w">		</span><span class="p">);</span>
-<span class="w">	    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-	% endif # katex_auto_render
+        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js"</span> <span class="na">integrity</span><span class="o">=</span><span class="s">"sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ"</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">"anonymous"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js"</span> <span class="na">integrity</span><span class="o">=</span><span class="s">"sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">"anonymous"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+        % if katex_auto_render:
+            <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">                </span><span class="nx">renderMathInElement</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span>
+<span class="w">                    </span><span class="p">{</span>
+<span class="w">                        </span><span class="nx">$</span><span class="p">{</span><span class="nx">katex_auto_render</span><span class="p">}</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">);</span>
+<span class="w">            </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+        % else:
+            <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">                </span><span class="nx">renderMathInElement</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span>
+<span class="w">                    </span><span class="p">{</span>
+<span class="w">                        </span><span class="nx">delimiters</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                            </span><span class="p">{</span><span class="nx">left</span><span class="o">:</span><span class="w"> </span><span class="s2">"$$"</span><span class="p">,</span><span class="w"> </span><span class="nx">right</span><span class="o">:</span><span class="w"> </span><span class="s2">"$$"</span><span class="p">,</span><span class="w"> </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">},</span>
+<span class="w">                            </span><span class="p">{</span><span class="nx">left</span><span class="o">:</span><span class="w"> </span><span class="s2">"\\["</span><span class="p">,</span><span class="w"> </span><span class="nx">right</span><span class="o">:</span><span class="w"> </span><span class="s2">"\\]"</span><span class="p">,</span><span class="w"> </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">},</span>
+<span class="w">                            </span><span class="p">{</span><span class="nx">left</span><span class="o">:</span><span class="w"> </span><span class="s2">"\\begin{equation*}"</span><span class="p">,</span><span class="w"> </span><span class="nx">right</span><span class="o">:</span><span class="w"> </span><span class="s2">"\\end{equation*}"</span><span class="p">,</span><span class="w"> </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">},</span>
+<span class="w">                            </span><span class="p">{</span><span class="nx">left</span><span class="o">:</span><span class="w"> </span><span class="s2">"\\("</span><span class="p">,</span><span class="w"> </span><span class="nx">right</span><span class="o">:</span><span class="w"> </span><span class="s2">"\\)"</span><span class="p">,</span><span class="w"> </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">}</span>
+<span class="w">                        </span><span class="p">]</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">);</span>
+<span class="w">            </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+        % endif # katex_auto_render
     %else:
 ### Note: given the size of MathJax; nikola will retrieve MathJax from a CDN regardless of use_cdn configuration
 #### the default config has been updated with stuff that pseudocode.js needs
 
-	    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"</span> <span class="na">integrity</span><span class="o">=</span><span class="s">"sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH"</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">"anonymous"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-	    % if mathjax_config:
-	    ${mathjax_config}
-	    % else:
-	    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/x-mathjax-config"</span><span class="p">&gt;</span>
-<span class="w">	     </span><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span>
-<span class="w">	       </span><span class="nx">tex2jax</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">		 </span><span class="nx">inlineMath</span><span class="o">:</span><span class="w"> </span><span class="p">[[</span><span class="s1">'$'</span><span class="p">,</span><span class="s1">'$'</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="s1">'\\('</span><span class="p">,</span><span class="s1">'\\)'</span><span class="p">]],</span>
-<span class="w">		 </span><span class="nx">displayMath</span><span class="o">:</span><span class="w"> </span><span class="p">[[</span><span class="s1">'$$'</span><span class="p">,</span><span class="s1">'$$'</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="s1">'\\['</span><span class="p">,</span><span class="s1">'\\]'</span><span class="p">]],</span>
-<span class="w">		 </span><span class="nx">processEscapes</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">		 </span><span class="nx">processEnvironments</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">	       </span><span class="p">},</span>
-<span class="w">	       </span><span class="nx">displayAlign</span><span class="o">:</span><span class="w"> </span><span class="s1">'center'</span><span class="p">,</span>
-<span class="w">	       </span><span class="s2">"HTML-CSS"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">		 </span><span class="nx">styles</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="s1">'.MathJax_Display'</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"margin"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">}}</span>
-<span class="w">	       </span><span class="p">}</span>
-<span class="w">	     </span><span class="p">});</span>
-<span class="w">	    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-	    % endif # mathjax_config
-	    %endif # use_katex
-	<span class="err">&lt;</span>/%def&gt; # end of math_scripts
+            <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"</span> <span class="na">integrity</span><span class="o">=</span><span class="s">"sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH"</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">"anonymous"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+            % if mathjax_config:
+            ${mathjax_config}
+            % else:
+            <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/x-mathjax-config"</span><span class="p">&gt;</span>
+<span class="w">             </span><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span>
+<span class="w">               </span><span class="nx">tex2jax</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                 </span><span class="nx">inlineMath</span><span class="o">:</span><span class="w"> </span><span class="p">[[</span><span class="s1">'$'</span><span class="p">,</span><span class="s1">'$'</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="s1">'\\('</span><span class="p">,</span><span class="s1">'\\)'</span><span class="p">]],</span>
+<span class="w">                 </span><span class="nx">displayMath</span><span class="o">:</span><span class="w"> </span><span class="p">[[</span><span class="s1">'$$'</span><span class="p">,</span><span class="s1">'$$'</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="s1">'\\['</span><span class="p">,</span><span class="s1">'\\]'</span><span class="p">]],</span>
+<span class="w">                 </span><span class="nx">processEscapes</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">                 </span><span class="nx">processEnvironments</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">               </span><span class="p">},</span>
+<span class="w">               </span><span class="nx">displayAlign</span><span class="o">:</span><span class="w"> </span><span class="s1">'center'</span><span class="p">,</span>
+<span class="w">               </span><span class="s2">"HTML-CSS"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                 </span><span class="nx">styles</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="s1">'.MathJax_Display'</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"margin"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">}}</span>
+<span class="w">               </span><span class="p">}</span>
+<span class="w">             </span><span class="p">});</span>
+<span class="w">            </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+            % endif # mathjax_config
+            %endif # use_katex
+        <span class="err">&lt;</span>/%def&gt; # end of math_scripts
 
-	<span class="err">&lt;</span>%def name="pseudocode()"&gt;
-	    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-	    <span class="err">&lt;</span>/%def&gt;
+        <span class="err">&lt;</span>%def name="pseudocode()"&gt;
+            <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+            <span class="err">&lt;</span>/%def&gt;
 
-	    <span class="err">&lt;</span>%def name="code_styles()"&gt;
-	    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.css"</span><span class="p">&gt;</span>
-	    <span class="err">&lt;</span>/%def&gt;
+            <span class="err">&lt;</span>%def name="code_styles()"&gt;
+            <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.css"</span><span class="p">&gt;</span>
+            <span class="err">&lt;</span>/%def&gt;
 
-	    <span class="err">&lt;</span>%def name="math_styles()"&gt;
-	    % if use_katex:
-	    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css"</span> <span class="na">integrity</span><span class="o">=</span><span class="s">"sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j"</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">"anonymous"</span><span class="p">&gt;</span>
-	    % endif
-	    <span class="err">&lt;</span>/%def&gt;
-
-
-	    # This first section is used when an individual post is loaded,
-	    # not for the front page where you have multiple posts loaded.
-
-	    <span class="err">&lt;</span>%def name="math_scripts_ifpost(post)"&gt;
-	    % if post.meta("has_pseudocode"):
-	    ${math_scripts()}
-	    ${pseudocode()}
-
-	    % elif post.has_math:
-	    ${math_scripts()}
-	    % endif
-	    <span class="err">&lt;</span>/%def&gt; # math_scripts_ifpost
-
-	    <span class="err">&lt;</span>%def name="math_styles_ifpost(post)"&gt;
-	    % if post.has_math:
-	    ${math_styles()}
-	    % elif post.meta("has_pseudocode"):
-	    ${math_styles()}
-	    ${code_styles()}
-	    %endif
-	    <span class="err">&lt;</span>/%def&gt; # math_styles_ifpost
-
-	    # The next section is for the main posts page with multiple posts
-	    # displayed.
-	    # Since the pseudocode blocks are supersets of the math blocks, you
-	    # need to give them priority over the mathblocks when setting up the
-	    # conditonal or they won't be used.
-
-	    <span class="err">&lt;</span>%def name="math_scripts_ifposts(posts)"&gt;
-	    % if any(post.meta("has_pseudocode") for post in posts):
-	    ${math_scripts()}
-	    ${pseudocode()}
-
-	    % elif any(post.has_math for post in posts):
-	    ${math_scripts()}
-	    % endif
-	    <span class="err">&lt;</span>/%def&gt; # math_scripts_ifposts
+            <span class="err">&lt;</span>%def name="math_styles()"&gt;
+            % if use_katex:
+            <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css"</span> <span class="na">integrity</span><span class="o">=</span><span class="s">"sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j"</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">"anonymous"</span><span class="p">&gt;</span>
+            % endif
+            <span class="err">&lt;</span>/%def&gt;
 
 
-	<span class="err">&lt;</span>%def name="math_styles_ifposts(posts)"&gt;
-	    % if any(post.meta("has_pseudocode") for post in posts):
-	    ${math_styles()}
-	    ${code_styles()}
-	    % elif any(post.has_math for post in posts):
-	    ${math_styles()}
-	    % endif
-	<span class="err">&lt;</span>/%def&gt; # math_styles_ifposts
+            # This first section is used when an individual post is loaded,
+            # not for the front page where you have multiple posts loaded.
+
+            <span class="err">&lt;</span>%def name="math_scripts_ifpost(post)"&gt;
+            % if post.meta("has_pseudocode"):
+            ${math_scripts()}
+            ${pseudocode()}
+
+            % elif post.has_math:
+            ${math_scripts()}
+            % endif
+            <span class="err">&lt;</span>/%def&gt; # math_scripts_ifpost
+
+            <span class="err">&lt;</span>%def name="math_styles_ifpost(post)"&gt;
+            % if post.has_math:
+            ${math_styles()}
+            % elif post.meta("has_pseudocode"):
+            ${math_styles()}
+            ${code_styles()}
+            %endif
+            <span class="err">&lt;</span>/%def&gt; # math_styles_ifpost
+
+            # The next section is for the main posts page with multiple posts
+            # displayed.
+            # Since the pseudocode blocks are supersets of the math blocks, you
+            # need to give them priority over the mathblocks when setting up the
+            # conditonal or they won't be used.
+
+            <span class="err">&lt;</span>%def name="math_scripts_ifposts(posts)"&gt;
+            % if any(post.meta("has_pseudocode") for post in posts):
+            ${math_scripts()}
+            ${pseudocode()}
+
+            % elif any(post.has_math for post in posts):
+            ${math_scripts()}
+            % endif
+            <span class="err">&lt;</span>/%def&gt; # math_scripts_ifposts
+
+
+        <span class="err">&lt;</span>%def name="math_styles_ifposts(posts)"&gt;
+            % if any(post.meta("has_pseudocode") for post in posts):
+            ${math_styles()}
+            ${code_styles()}
+            % elif any(post.has_math for post in posts):
+            ${math_styles()}
+            % endif
+        <span class="err">&lt;</span>/%def&gt; # math_styles_ifposts
 </pre></div>
 </div>
 </div>

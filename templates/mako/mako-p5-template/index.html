@@ -100,18 +100,17 @@ bg-light
 
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div id="outline-container-org843a33f" class="outline-2">
-<h2 id="org843a33f">The P5 Template</h2>
-<div class="outline-text-2" id="text-org843a33f">
+    <div id="outline-container-org77a858c" class="outline-2">
+<h2 id="org77a858c">The P5 Template</h2>
+<div class="outline-text-2" id="text-org77a858c">
 <p>
 The P5 template is what I use to get p5 into posts. You use it by setting the <code>.. template: p5.tmpl</code> line in the metadata for the post you want to add it to. I also have it set to use a <code>.. has_p5: true</code> entry in the metadata, but I didn't want to update the post template to get it working so that will only work for the index page that shows the latests posts (not when you display an individual post).
 </p>
 </div>
 </div>
-
-<div id="outline-container-org8aa67e5" class="outline-2">
-<h2 id="org8aa67e5">The Tangle</h2>
-<div class="outline-text-2" id="text-org8aa67e5">
+<div id="outline-container-org127432a" class="outline-2">
+<h2 id="org127432a">The Tangle</h2>
+<div class="outline-text-2" id="text-org127432a">
 <div class="highlight"><pre><span></span>##  -*- coding: utf-8 -*-
 <span class="err">&lt;</span><span class="p">&lt;</span><span class="nt">p5-helper-import</span><span class="p">&gt;</span>&gt;
 
@@ -124,10 +123,9 @@ The P5 template is what I use to get p5 into posts. You use it by setting the <c
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-orgbe048f0" class="outline-2">
-<h2 id="orgbe048f0">Import the Helpers</h2>
-<div class="outline-text-2" id="text-orgbe048f0">
+<div id="outline-container-orge21f05a" class="outline-2">
+<h2 id="orge21f05a">Import the Helpers</h2>
+<div class="outline-text-2" id="text-orge21f05a">
 <p>
 Since both this template and the <code>index.tmpl</code> template need to import the p5 library I made a macro to do it and put it in a separate file (<code>p5_helper.tmpl</code>) so we need to import it here.
 </p>
@@ -136,10 +134,9 @@ Since both this template and the <code>index.tmpl</code> template need to import
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org8f7487d" class="outline-2">
-<h2 id="org8f7487d">Add the p5</h2>
-<div class="outline-text-2" id="text-org8f7487d">
+<div id="outline-container-orgb40a50c" class="outline-2">
+<h2 id="orgb40a50c">Add the p5</h2>
+<div class="outline-text-2" id="text-orgb40a50c">
 <p>
 Here's where we call the macro to insert the <code>script</code> tag to get p5. It seems to have to go into the head rather than the body of the post to work. It's actually just one line so I could have written the tag instead of calling the macro, but I'm using a CDN and the URL has the specific version of p5 that gets pulled in so I thought it would be better to have only one place where the URL gets defined.
 </p>

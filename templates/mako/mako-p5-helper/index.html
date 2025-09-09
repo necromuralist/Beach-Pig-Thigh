@@ -100,9 +100,9 @@ bg-light
 
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div id="outline-container-orgcbb7da4" class="outline-2">
-<h2 id="orgcbb7da4">The P5 Helper Template</h2>
-<div class="outline-text-2" id="text-orgcbb7da4">
+    <div id="outline-container-orge764279" class="outline-2">
+<h2 id="orge764279">The P5 Helper Template</h2>
+<div class="outline-text-2" id="text-orge764279">
 <p>
 This is where I defined some macros to add the p5 code to posts. It's based on the <code>math_helper.tmpl</code> template, although it took a little bit more work (well, too much work) to figure out how to get the metadata for this template.
 </p>
@@ -117,19 +117,18 @@ This is where I defined some macros to add the p5 code to posts. It's based on t
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-orga758069" class="outline-2">
-<h2 id="orga758069">P5 Scripts</h2>
-<div class="outline-text-2" id="text-orga758069">
+<div id="outline-container-orgb812428" class="outline-2">
+<h2 id="orgb812428">P5 Scripts</h2>
+<div class="outline-text-2" id="text-orgb812428">
 <p>
 This is the macro to call to add the tag to pull in the p5 code from a CDN. Any key you put in the <code>GLOBAL_CONTEXT</code> dictionary in your <code>conf.py</code> file becomes a variable you can use in the template. So in this case, to set a different source for the p5 library the user could update the <code>GLOBAL_CONTEXT</code> to be:
 </p>
 
 <div class="highlight"><pre><span></span><span class="n">GLOBAL_CONTEXT</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"p5_library_source"</span><span class="p">:</span>
-		  <span class="p">(</span><span class="s1">'&lt;script'</span> <span class="s1">'src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"'</span>
-		   <span class="s1">'integrity="sha512-3RlxD1bW34eFKPwj9gUXEWtdSMC59QqIqHnD8O/NoTwSJhgxRizdcFVQhUMFyTp5RwLTDL0Lbcqtl8b7bFAzog=="'</span>
-		   <span class="s1">' crossorigin="anonymous"'</span>
-		   <span class="s1">' referrerpolicy="no-referrer"&gt;&lt;/script&gt;'</span><span class="p">)}</span>
+                  <span class="p">(</span><span class="s1">'&lt;script'</span> <span class="s1">'src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"'</span>
+                   <span class="s1">'integrity="sha512-3RlxD1bW34eFKPwj9gUXEWtdSMC59QqIqHnD8O/NoTwSJhgxRizdcFVQhUMFyTp5RwLTDL0Lbcqtl8b7bFAzog=="'</span>
+                   <span class="s1">' crossorigin="anonymous"'</span>
+                   <span class="s1">' referrerpolicy="no-referrer"&gt;&lt;/script&gt;'</span><span class="p">)}</span>
 </pre></div>
 
 <p>
@@ -148,17 +147,16 @@ location if you choose not to use the CDN
   ${p5_library_source}
 % else:
   <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"</span>
-	  <span class="na">integrity</span><span class="o">=</span><span class="s">"sha512-3RlxD1bW34eFKPwj9gUXEWtdSMC59QqIqHnD8O/NoTwSJhgxRizdcFVQhUMFyTp5RwLTDL0Lbcqtl8b7bFAzog=="</span>
-	  <span class="na">crossorigin</span><span class="o">=</span><span class="s">"anonymous"</span> <span class="na">referrerpolicy</span><span class="o">=</span><span class="s">"no-referrer"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+          <span class="na">integrity</span><span class="o">=</span><span class="s">"sha512-3RlxD1bW34eFKPwj9gUXEWtdSMC59QqIqHnD8O/NoTwSJhgxRizdcFVQhUMFyTp5RwLTDL0Lbcqtl8b7bFAzog=="</span>
+          <span class="na">crossorigin</span><span class="o">=</span><span class="s">"anonymous"</span> <span class="na">referrerpolicy</span><span class="o">=</span><span class="s">"no-referrer"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 % endif
 <span class="err">&lt;</span>/%def&gt;
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-orgb873573" class="outline-2">
-<h2 id="orgb873573">P5 Post Macro</h2>
-<div class="outline-text-2" id="text-orgb873573">
+<div id="outline-container-orgfe35d2c" class="outline-2">
+<h2 id="orgfe35d2c">P5 Post Macro</h2>
+<div class="outline-text-2" id="text-orgfe35d2c">
 <p>
 This is a macro to use if you have a template with a single post object (e.g. if you override the <code>post.tmpl</code> template or one of its children). I'm using a dedicated template for p5 posts right now so it isn't being used.
 </p>
@@ -169,16 +167,15 @@ This is a macro to use if you have a template with a single post object (e.g. if
 <span class="err">&lt;</span>/%doc&gt;
 <span class="err">&lt;</span>%def name="p5_ifpost(post)"&gt;
     %if post.meta("has_p5"):
-	${p5_scripts()}
+        ${p5_scripts()}
     %endif
 <span class="err">&lt;</span>/%def&gt;
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org82a01ff" class="outline-2">
-<h2 id="org82a01ff">P5 Post Index Macro</h2>
-<div class="outline-text-2" id="text-org82a01ff">
+<div id="outline-container-org840d34f" class="outline-2">
+<h2 id="org840d34f">P5 Post Index Macro</h2>
+<div class="outline-text-2" id="text-org840d34f">
 <p>
 This is the macro I'm adding to the <code>index.tmpl</code> template to get p5 into the latest pages feed. Jinja doesn't support the comprehension-type syntax that <code>mako</code> does and <code>Nikola</code> puts the metadata dictionary into a Functionary object which is a default dict that is callable. The metadata dictionary that we want is actually set as the value to a key in the dictionary matching the language for the sight (<code>en</code> in my case). So you can't access it directly (e.g. you can't use <code>post.meta.has_p5</code>) but if you call the meta object like a function instead of using it as a dictionary it will bypass the language key for you so you don't have to know what the language is (e.g. <code>post.meta("has_p5")</code> is the same as <code>post.meta.en.has_p5</code> (if English is the language being used)). Since I only use English it's probably unnecessary to use the function-syntax, but it seems to be the way it's intended to be used (and it took forever to figure out what was going on) so I'm using it.
 </p>

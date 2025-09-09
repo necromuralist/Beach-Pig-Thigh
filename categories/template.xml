@@ -1,38 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Beach Pig Rump &amp; Thigh (Posts about template)</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/</link><description></description><atom:link href="https://necromuralist.github.io/Beach-Pig-Thigh/categories/template.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Beach Pig Rump &amp; Thigh (Posts about template)</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/</link><description></description><atom:link href="https://necromuralist.github.io/Beach-Pig-Thigh/categories/template.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
 &lt;div id="license"xmlns:cc="http://creativecommons.org/ns#" &gt;This work is licensed under
 &lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;
 &lt;/div&gt;
-</copyright><lastBuildDate>Wed, 11 Oct 2023 05:31:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Jinja Math Helper</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+</copyright><lastBuildDate>Tue, 09 Sep 2025 19:05:23 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Jinja Math Helper</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#org46a5751"&gt;What This Is&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#org8db9fef"&gt;The Macros&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#orgd99f8cc"&gt;What This Is&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#org2797904"&gt;The Macros&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#orgba06bb7"&gt;Pseudocode Macros&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#org24e7b74"&gt;Code&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#org0a92835"&gt;Style&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#orgc5bf722"&gt;The Math Scripts Macro&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#orgdc94010"&gt;Pseudocode Additional Config&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#org1c06e4f"&gt;Pseudocode Macros&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#org9cf4bbe"&gt;Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#org35dfe41"&gt;Style&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#org0faaa30"&gt;The Math Scripts Macro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#orgce3192d"&gt;Pseudocode Additional Config&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#org442884b"&gt;The Post Checkers&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#org7a4a817"&gt;The Post Checkers&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#org3eeb0c2"&gt;Math Scripts&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#org14a5f22"&gt;Math Styles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#org91503b9"&gt;Math Scripts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#org8bb7613"&gt;Math Styles&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#org834136f"&gt;The Race Condition&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/jinja-math-helper/index.html#org6dc2b78"&gt;The Race Condition&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org46a5751" class="outline-2"&gt;
-&lt;h2 id="org46a5751"&gt;What This Is&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org46a5751"&gt;
+&lt;div id="outline-container-orgd99f8cc" class="outline-2"&gt;
+&lt;h2 id="orgd99f8cc"&gt;What This Is&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgd99f8cc"&gt;
 &lt;p&gt;
 In one of my Nikola sites (&lt;a href="https://necromuralist.github.io/Bowling-For-Data/"&gt;Bowling For Data&lt;/a&gt;) I wanted a simpler way to use &lt;a href="https://github.com/SaswatPadhi/pseudocode.js"&gt;pseudocode.js&lt;/a&gt; in posts (simpler than having to always insert the CDN URLs into the HTML) so I thought I'd copy what the &lt;code&gt;.. has_math:&lt;/code&gt; metadata flag does, but it turns out to involve more code than I was hoping to need so I instead copied over the math template and hacked in what I needed. 
 &lt;/p&gt;
@@ -46,23 +45,21 @@ I was thinking it'd be better to make a separate template instead of replicng th
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org8db9fef" class="outline-2"&gt;
-&lt;h2 id="org8db9fef"&gt;The Macros&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org8db9fef"&gt;
+&lt;div id="outline-container-org2797904" class="outline-2"&gt;
+&lt;h2 id="org2797904"&gt;The Macros&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org2797904"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgba06bb7" class="outline-3"&gt;
-&lt;h3 id="orgba06bb7"&gt;Pseudocode Macros&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgba06bb7"&gt;
+&lt;div id="outline-container-org1c06e4f" class="outline-3"&gt;
+&lt;h3 id="org1c06e4f"&gt;Pseudocode Macros&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org1c06e4f"&gt;
 &lt;p&gt;
 These define the macros to insert the pseudocode scripts into the HTML.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org24e7b74" class="outline-3"&gt;
-&lt;h3 id="org24e7b74"&gt;Code&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org24e7b74"&gt;
+&lt;div id="outline-container-org9cf4bbe" class="outline-3"&gt;
+&lt;h3 id="org9cf4bbe"&gt;Code&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org9cf4bbe"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;macro&lt;/span&gt; &lt;span class="nv"&gt;pseudocode&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
 &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;link&lt;/span&gt; &lt;span class="na"&gt;rel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"stylesheet"&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"https://cdn.jsdelivr.net/npm/pseudocode@2.4.1/build/pseudocode.min.css"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endmacro&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
@@ -74,10 +71,9 @@ is just "latest" but the pseudocode.js documentation says that it isn't always u
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org0a92835" class="outline-3"&gt;
-&lt;h3 id="org0a92835"&gt;Style&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org0a92835"&gt;
+&lt;div id="outline-container-org35dfe41" class="outline-3"&gt;
+&lt;h3 id="org35dfe41"&gt;Style&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org35dfe41"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;macro&lt;/span&gt; &lt;span class="nv"&gt;code_styles&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
 &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"https://cdn.jsdelivr.net/npm/pseudocode@2.4.1/build/pseudocode.min.js"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
@@ -85,10 +81,9 @@ is just "latest" but the pseudocode.js documentation says that it isn't always u
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-orgc5bf722" class="outline-3"&gt;
-&lt;h3 id="orgc5bf722"&gt;The Math Scripts Macro&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgc5bf722"&gt;
+&lt;div id="outline-container-org0faaa30" class="outline-3"&gt;
+&lt;h3 id="org0faaa30"&gt;The Math Scripts Macro&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org0faaa30"&gt;
 &lt;p&gt;
 This is the macro that configures &lt;a href="https://www.mathjax.org/"&gt;MathJax&lt;/a&gt;. I tried changing it to MathJax 3 but the rendering went a little cuckoo so I had to go back to 2.7.5 like in the original.
 &lt;/p&gt;
@@ -100,8 +95,8 @@ This is the macro that configures &lt;a href="https://www.mathjax.org/"&gt;MathJ
   &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"text/x-mathjax-config"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nx"&gt;MathJax&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Hub&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Config&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
-	tex2jax: {
-	    inlineMath: [['$','$'], ['\\(','\\)']],
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;
@@ -109,17 +104,16 @@ I did change the &lt;code&gt;inlineMath&lt;/code&gt; dollar sign - the original 
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-orgdc94010" class="outline-3"&gt;
-&lt;h3 id="orgdc94010"&gt;Pseudocode Additional Config&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgdc94010"&gt;
+&lt;div id="outline-container-orgce3192d" class="outline-3"&gt;
+&lt;h3 id="orgce3192d"&gt;Pseudocode Additional Config&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgce3192d"&gt;
 &lt;p&gt;
 This is extra configuration stuff I added. I suppose this could (maybe should) go into the &lt;code&gt;conf.py&lt;/code&gt; file. Maybe I'll change it later.
 &lt;/p&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;	displayMath: [['$$','$$'], ['\\[','\\]']],
-	processEscapes: true,
-	processEnvironments: true,
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;        displayMath: [['$$','$$'], ['\\[','\\]']],
+        processEscapes: true,
+        processEnvironments: true,
     }
 });
 &lt;/pre&gt;&lt;/div&gt;
@@ -139,26 +133,23 @@ There was also a "math styles" macro but it only seemed to apply to katex and si
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org442884b" class="outline-2"&gt;
-&lt;h2 id="org442884b"&gt;The Post Checkers&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org442884b"&gt;
+&lt;div id="outline-container-org7a4a817" class="outline-2"&gt;
+&lt;h2 id="org7a4a817"&gt;The Post Checkers&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org7a4a817"&gt;
 &lt;p&gt;
 These are the macros that get called in the index templates to check if the page needs the math rendering code.
 &lt;/p&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org3eeb0c2" class="outline-3"&gt;
-&lt;h3 id="org3eeb0c2"&gt;Math Scripts&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org3eeb0c2"&gt;
+&lt;div id="outline-container-org91503b9" class="outline-3"&gt;
+&lt;h3 id="org91503b9"&gt;Math Scripts&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org91503b9"&gt;
 &lt;p&gt;
 If the &lt;code&gt;has_pseudocode&lt;/code&gt; flag is set I'm calling the &lt;code&gt;math_scripts&lt;/code&gt; in the later macros that add the CSS because they insert stuff into the head of the HTML, not the body. This seems to help a little with getting the math in the pseudocode to render when the page is cached by the browser.
 &lt;/p&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org1a5eef7" class="outline-4"&gt;
-&lt;h4 id="org1a5eef7"&gt;Math Scripts If Post&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org1a5eef7"&gt;
+&lt;div id="outline-container-orgb599671" class="outline-4"&gt;
+&lt;h4 id="orgb599671"&gt;Math Scripts If Post&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgb599671"&gt;
 &lt;p&gt;
 This first chunk runs if the post has &lt;code&gt;.. has_math: true&lt;/code&gt; in the metadata. It's calling the &lt;code&gt;math_scripts&lt;/code&gt; macro from the prior section.
 &lt;/p&gt;
@@ -186,10 +177,9 @@ And here's the end of the macro.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-orgc90f62a" class="outline-4"&gt;
-&lt;h4 id="orgc90f62a"&gt;Math Scripts If Posts&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgc90f62a"&gt;
+&lt;div id="outline-container-org191f297" class="outline-4"&gt;
+&lt;h4 id="org191f297"&gt;Math Scripts If Posts&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org191f297"&gt;
 &lt;p&gt;
 This macro is like the previous one except it gets used when on the default page which has the latest several posts displayed on it so we need to check if any of the posts has the metadata requesting math or pseudocode and only insert them once, even if multiple posts use them.
 &lt;/p&gt;
@@ -210,10 +200,10 @@ I added this next section to get the pseudocode into the page. Since &lt;code&gt
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
       &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;not_yet&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;namespace&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;set_up&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kp"&gt;true&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
       &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;post&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;posts&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-	&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;post.meta&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"has_pseudocode"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="k"&gt;and&lt;/span&gt; &lt;span class="nv"&gt;not_yet.set_up&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-	  &lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;pseudocode&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;
-	  &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;not_yet.set_up&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kp"&gt;false&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-	&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+        &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;post.meta&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"has_pseudocode"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="k"&gt;and&lt;/span&gt; &lt;span class="nv"&gt;not_yet.set_up&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+          &lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;pseudocode&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;
+          &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;not_yet.set_up&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kp"&gt;false&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+        &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
       &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endfor&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
     &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
 &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endmacro&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
@@ -221,10 +211,9 @@ I added this next section to get the pseudocode into the page. Since &lt;code&gt
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org14a5f22" class="outline-3"&gt;
-&lt;h3 id="org14a5f22"&gt;Math Styles&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org14a5f22"&gt;
+&lt;div id="outline-container-org8bb7613" class="outline-3"&gt;
+&lt;h3 id="org8bb7613"&gt;Math Styles&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org8bb7613"&gt;
 &lt;p&gt;
 This is like the previous two sections except it inserts the CSS. This gets put into the head while the scripts get put into the body of the posts.
 According to &lt;a href="https://stackoverflow.com/a/2451441"&gt;StackOverflow&lt;/a&gt; putting javascript in the HEAD can block loading so javascript should go at the bottom. Is that what my P5 template is doing? I'll need to look into that.
@@ -234,10 +223,9 @@ According to &lt;a href="https://stackoverflow.com/a/2451441"&gt;StackOverflow&l
 It might be the reason that MathJax isn't rendering until I refresh the page sometimes, though, so I use it to insert MathJax into the HTML head when putting in pseudocode.js.
 &lt;/p&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org2157dac" class="outline-4"&gt;
-&lt;h4 id="org2157dac"&gt;Math Styles If Post&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org2157dac"&gt;
+&lt;div id="outline-container-org33a0eef" class="outline-4"&gt;
+&lt;h4 id="org33a0eef"&gt;Math Styles If Post&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org33a0eef"&gt;
 &lt;p&gt;
 Since I got rid of the math-style macro this just loads the pseudocode styling (if it's needed).
 &lt;/p&gt;
@@ -251,10 +239,9 @@ Since I got rid of the math-style macro this just loads the pseudocode styling (
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org311cab5" class="outline-4"&gt;
-&lt;h4 id="org311cab5"&gt;Math Styles If Posts&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org311cab5"&gt;
+&lt;div id="outline-container-orgcd65db8" class="outline-4"&gt;
+&lt;h4 id="orgcd65db8"&gt;Math Styles If Posts&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgcd65db8"&gt;
 &lt;p&gt;
 And this is for the case where there are multiple posts on a page.
 &lt;/p&gt;
@@ -274,10 +261,9 @@ And this is for the case where there are multiple posts on a page.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org834136f" class="outline-2"&gt;
-&lt;h2 id="org834136f"&gt;The Race Condition&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org834136f"&gt;
+&lt;div id="outline-container-org6dc2b78" class="outline-2"&gt;
+&lt;h2 id="org6dc2b78"&gt;The Race Condition&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org6dc2b78"&gt;
 &lt;p&gt;
 There appears to be a race condition problem that happens sometimes if I reload the page too many times.(&lt;a href="https://github.com/mathjax/MathJax/issues/1805#issuecomment-314433504"&gt;https://github.com/mathjax/MathJax/issues/1805#issuecomment-314433504&lt;/a&gt;). It prevents the math being completely rendered in the pseudocode (it converts the inline symbol (slash right-parethesis) to dollar signs, so it's doing something, but it leaves the rest of the latex as is). It can be fixed by clearing the cache but I decided to try and work around it a little.
 &lt;/p&gt;
@@ -299,30 +285,30 @@ To change the script tag with the URL for the p5 CDN, put a new one in the &lt;c
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html#orge004912"&gt;The Shortcodes&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html#org04a1962"&gt;The Shortcodes&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html#org82772cd"&gt;Mako&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html#org26978c3"&gt;Jinja&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html#orgb1ad9e7"&gt;Mako&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html#orgcd31e20"&gt;Jinja&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html#org71540df"&gt;Links&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/index.html#org45c724f"&gt;Links&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;p&gt;
+## This is tangled from the "p5-div-shortcode" post
 
-&lt;script src="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/noise_graph.js"&gt;&lt;/script&gt;
+&lt;script src="https://necromuralist.github.io/Beach-Pig-Thigh/posts/p5-div-shortcode/${source}"&gt;&lt;/script&gt;
 
-&lt;/p&gt;&lt;div class="p5js" id="e70fd042-noise-graph"&gt;&lt;/div&gt;
-
+&lt;/p&gt;&lt;div class="p5js" id="${divid}"&gt;&lt;/div&gt;
 
 
 &lt;p&gt;
 This is a test of the &lt;code&gt;p5div&lt;/code&gt; shortcode. For it to work (assuming you're using mako) you need to:
 &lt;/p&gt;
 
-&lt;div class="notecard" id="orgb8414b1"&gt;
+&lt;div class="notecard" id="org3bf2f96"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;set up the &lt;code&gt;p5.tmpl&lt;/code&gt; template (in &lt;code&gt;themes/custom-mako/templates/&lt;/code&gt;)&lt;/li&gt;
 &lt;li&gt;have &lt;code&gt;..template: p5.tmpl&lt;/code&gt; in the metadata for this post&lt;/li&gt;
@@ -331,7 +317,7 @@ This is a test of the &lt;code&gt;p5div&lt;/code&gt; shortcode. For it to work (
 
 &lt;/div&gt;
 
-&lt;div class="notecard" id="org98053b9"&gt;
+&lt;div class="notecard" id="org315e2d5"&gt;
 &lt;p&gt;
 &lt;b&gt;&lt;b&gt;Note:&lt;/b&gt;&lt;/b&gt;
 &lt;/p&gt;
@@ -341,10 +327,9 @@ I'll be using the names based on the idea that we're using the &lt;code&gt;mako&
 &lt;/p&gt;
 
 &lt;/div&gt;
-
-&lt;div id="outline-container-orge004912" class="outline-2"&gt;
-&lt;h2 id="orge004912"&gt;The Shortcodes&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orge004912"&gt;
+&lt;div id="outline-container-org04a1962" class="outline-2"&gt;
+&lt;h2 id="org04a1962"&gt;The Shortcodes&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org04a1962"&gt;
 &lt;p&gt;
 There actually needs to be two different shortcodes, one for jinja and one for mako. This repository is using mako (as does &lt;a href="https://necromuralist.github.io"&gt;https://necromuralist.github.io&lt;/a&gt;) but &lt;a href="https://necromuralist.github.io/Ape-Iron/"&gt;ape-iron&lt;/a&gt; is using jinja. It's a little too convoluted to keep switching back and forth so I'm mostly going to be relying on ape-iron to test the jinja version (although I really should figure out an easy way to test both).
 &lt;/p&gt;
@@ -353,7 +338,7 @@ There actually needs to be two different shortcodes, one for jinja and one for m
 The shortcode creates two HTML tags:
 &lt;/p&gt;
 
-&lt;div class="notecard" id="org05b1a0e"&gt;
+&lt;div class="notecard" id="orge079045"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;a script tag that needs the path to the source p5js file&lt;/li&gt;
 &lt;li&gt;a div tag that needs the ID to use so that the p5 sketch can be put inside it&lt;/li&gt;
@@ -381,7 +366,7 @@ And the default &lt;code&gt;type&lt;/code&gt; is javascript so you don't need to
 &lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;div class="notecard" id="orgdee2da7"&gt;
+&lt;div class="notecard" id="org48ed241"&gt;
 &lt;p&gt;
 &lt;b&gt;&lt;b&gt;Note:&lt;/b&gt;&lt;/b&gt;
 &lt;/p&gt;
@@ -392,10 +377,9 @@ I was setting the class for the &lt;code&gt;div&lt;/code&gt; to "p5js" but it tu
 
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org82772cd" class="outline-3"&gt;
-&lt;h3 id="org82772cd"&gt;Mako&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org82772cd"&gt;
+&lt;div id="outline-container-orgb1ad9e7" class="outline-3"&gt;
+&lt;h3 id="orgb1ad9e7"&gt;Mako&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgb1ad9e7"&gt;
 &lt;p&gt;
 I don't see an easy way to set which shortcodes folder to use so I'm going to go with adding "mako" to the end of the shortcodes meant for the mako engine and not putting a suffix on the ones meant for jinja. This shortcode will go into &lt;code&gt;shortcodes/p5divmako.tmpl&lt;/code&gt;: 
 &lt;/p&gt;
@@ -424,10 +408,9 @@ Where &lt;code&gt;noise_graph&lt;/code&gt; is the name of the function in &lt;co
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org26978c3" class="outline-3"&gt;
-&lt;h3 id="org26978c3"&gt;Jinja&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org26978c3"&gt;
+&lt;div id="outline-container-orgcd31e20" class="outline-3"&gt;
+&lt;h3 id="orgcd31e20"&gt;Jinja&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgcd31e20"&gt;
 &lt;p&gt;
 Here's the jinja version of the shortcode. It's going to go into &lt;code&gt;shortcodes/p5div.tmpl&lt;/code&gt;.
 &lt;/p&gt;
@@ -446,10 +429,9 @@ To use it you use the same syntax as the mako-based shortcode, just change the n
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org71540df" class="outline-2"&gt;
-&lt;h2 id="org71540df"&gt;Links&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org71540df"&gt;
+&lt;div id="outline-container-org45c724f" class="outline-2"&gt;
+&lt;h2 id="org45c724f"&gt;Links&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org45c724f"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;&amp;lt;script&amp;gt;: The Script element - HTML: HyperText Markup Language | MDN [Internet]. 2023 [cited 2023 Jun 20]. Available from: &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script"&gt;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;

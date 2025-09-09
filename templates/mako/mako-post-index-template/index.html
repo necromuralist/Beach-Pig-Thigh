@@ -99,9 +99,9 @@ bg-light
 
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div id="outline-container-org3a01114" class="outline-2">
-<h2 id="org3a01114">The Index Template</h2>
-<div class="outline-text-2" id="text-org3a01114">
+    <div id="outline-container-org944d3b7" class="outline-2">
+<h2 id="org944d3b7">The Index Template</h2>
+<div class="outline-text-2" id="text-org944d3b7">
 <p>
 This is the template used to produce the page with the latest posts. The number of posts on the page is set in <code>conf.py</code> using the <code>INDEX_DISPLAY_POST_COUNT</code> variable (10 is the default). I'm overriding the default because I want to be able to add <a href="https://p5js.org/">p5</a> code to posts. Using a special template works when you look at single posts (see the <code>p5.tmpl</code> template) but the index template won't pick up on that so I'm inserting a macro call to get p5 into the main page (if there's a p5 post on it).
 </p>
@@ -111,10 +111,9 @@ The original template is at <code>.virtuanlenvs/beach-pig-thigh/lib/python3.11/s
 </p>
 </div>
 </div>
-
-<div id="outline-container-org56b231e" class="outline-2">
-<h2 id="org56b231e">The Tangle</h2>
-<div class="outline-text-2" id="text-org56b231e">
+<div id="outline-container-org0ca6e31" class="outline-2">
+<h2 id="org0ca6e31">The Tangle</h2>
+<div class="outline-text-2" id="text-org0ca6e31">
 <div class="highlight"><pre><span></span>## -*- coding: utf-8 -*-
 
 <span class="err">&lt;</span><span class="p">&lt;</span><span class="nt">default-imports</span><span class="p">&gt;</span>&gt;
@@ -126,7 +125,7 @@ The original template is at <code>.virtuanlenvs/beach-pig-thigh/lib/python3.11/s
 <span class="err">&lt;</span>%block name="extra_head"&gt;
     ${parent.extra_head()}
     % if posts and (permalink == '/' or permalink == '/' + index_file):
-	<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"prefetch"</span> <span class="na">href</span><span class="o">=</span><span class="s">"${posts[0].permalink()}"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/html"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"prefetch"</span> <span class="na">href</span><span class="o">=</span><span class="s">"${posts[0].permalink()}"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/html"</span><span class="p">&gt;</span>
     % endif
     ${math.math_styles_ifposts(posts)}
     <span class="err">&lt;</span><span class="p">&lt;</span><span class="nt">p5-macro</span><span class="p">&gt;</span>&gt;
@@ -149,32 +148,32 @@ The original template is at <code>.virtuanlenvs/beach-pig-thigh/lib/python3.11/s
 % for post in posts:
     <span class="p">&lt;</span><span class="nt">article</span> <span class="na">class</span><span class="o">=</span><span class="s">"h-entry post-${post.meta('type')}"</span> <span class="na">itemscope</span><span class="o">=</span><span class="s">"itemscope"</span> <span class="na">itemtype</span><span class="o">=</span><span class="s">"http://schema.org/Article"</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">"p-name entry-title"</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"${post.permalink()}"</span> <span class="na">class</span><span class="o">=</span><span class="s">"u-url"</span><span class="p">&gt;</span>${post.title()|h}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"metadata"</span><span class="p">&gt;</span>
-	    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"byline author vcard"</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"byline-name fn"</span> <span class="na">itemprop</span><span class="o">=</span><span class="s">"author"</span><span class="p">&gt;</span>
-	    % if author_pages_generated and multiple_authors_per_post:
-		% for author in post.authors():
-		    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"${_link('author', author)}"</span><span class="p">&gt;</span>${author|h}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-		% endfor
-	    % elif author_pages_generated:
-		<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"${_link('author', post.author())}"</span><span class="p">&gt;</span>${post.author()|h}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-	    % else:
-		${post.author()|h}
-	    % endif
-	    <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-	    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"dateline"</span><span class="p">&gt;</span>
-	    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"${post.permalink()}"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"bookmark"</span><span class="p">&gt;</span>
-	    <span class="p">&lt;</span><span class="nt">time</span> <span class="na">class</span><span class="o">=</span><span class="s">"published dt-published"</span> <span class="na">datetime</span><span class="o">=</span><span class="s">"${post.formatted_date('webiso')}"</span> <span class="na">itemprop</span><span class="o">=</span><span class="s">"datePublished"</span> <span class="na">title</span><span class="o">=</span><span class="s">"${post.formatted_date(date_format)|h}"</span><span class="p">&gt;</span>${post.formatted_date(date_format)|h}<span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
-	    % if post.updated and post.updated != post.date:
-		<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"updated"</span><span class="p">&gt;</span> (${messages("updated")}
-		    <span class="p">&lt;</span><span class="nt">time</span> <span class="na">class</span><span class="o">=</span><span class="s">"dt-updated"</span> <span class="na">datetime</span><span class="o">=</span><span class="s">"${post.formatted_updated('webiso')}"</span> <span class="na">itemprop</span><span class="o">=</span><span class="s">"dateUpdated"</span> <span class="na">title</span><span class="o">=</span><span class="s">"${post.formatted_updated(date_format)|h}"</span><span class="p">&gt;</span>${post.formatted_updated(date_format)|h}<span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-	    % endif
-	    <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-	    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-	    % if not post.meta('nocomments') and site_has_comments:
-		<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"commentline"</span><span class="p">&gt;</span>${comments.comment_link(post.permalink(), post._base_path)}
-	    % endif
-	<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">"p-name entry-title"</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"${post.permalink()}"</span> <span class="na">class</span><span class="o">=</span><span class="s">"u-url"</span><span class="p">&gt;</span>${post.title()|h}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"metadata"</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"byline author vcard"</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"byline-name fn"</span> <span class="na">itemprop</span><span class="o">=</span><span class="s">"author"</span><span class="p">&gt;</span>
+            % if author_pages_generated and multiple_authors_per_post:
+                % for author in post.authors():
+                    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"${_link('author', author)}"</span><span class="p">&gt;</span>${author|h}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                % endfor
+            % elif author_pages_generated:
+                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"${_link('author', post.author())}"</span><span class="p">&gt;</span>${post.author()|h}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+            % else:
+                ${post.author()|h}
+            % endif
+            <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"dateline"</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"${post.permalink()}"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"bookmark"</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">time</span> <span class="na">class</span><span class="o">=</span><span class="s">"published dt-published"</span> <span class="na">datetime</span><span class="o">=</span><span class="s">"${post.formatted_date('webiso')}"</span> <span class="na">itemprop</span><span class="o">=</span><span class="s">"datePublished"</span> <span class="na">title</span><span class="o">=</span><span class="s">"${post.formatted_date(date_format)|h}"</span><span class="p">&gt;</span>${post.formatted_date(date_format)|h}<span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
+            % if post.updated and post.updated != post.date:
+                <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"updated"</span><span class="p">&gt;</span> (${messages("updated")}
+                    <span class="p">&lt;</span><span class="nt">time</span> <span class="na">class</span><span class="o">=</span><span class="s">"dt-updated"</span> <span class="na">datetime</span><span class="o">=</span><span class="s">"${post.formatted_updated('webiso')}"</span> <span class="na">itemprop</span><span class="o">=</span><span class="s">"dateUpdated"</span> <span class="na">title</span><span class="o">=</span><span class="s">"${post.formatted_updated(date_format)|h}"</span><span class="p">&gt;</span>${post.formatted_updated(date_format)|h}<span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+            % endif
+            <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+            % if not post.meta('nocomments') and site_has_comments:
+                <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"commentline"</span><span class="p">&gt;</span>${comments.comment_link(post.permalink(), post._base_path)}
+            % endif
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
     %if index_teasers:
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"p-summary entry-summary"</span><span class="p">&gt;</span>
@@ -195,13 +194,13 @@ ${math.math_scripts_ifposts(posts)}
 </pre></div>
 </div>
 </div>
-<div id="outline-container-org8de4822" class="outline-2">
-<h2 id="org8de4822">Imports</h2>
-<div class="outline-text-2" id="text-org8de4822">
+<div id="outline-container-org97342af" class="outline-2">
+<h2 id="org97342af">Imports</h2>
+<div class="outline-text-2" id="text-org97342af">
 </div>
-<div id="outline-container-orgf995d49" class="outline-3">
-<h3 id="orgf995d49">The Defaults</h3>
-<div class="outline-text-3" id="text-orgf995d49">
+<div id="outline-container-orga8262bc" class="outline-3">
+<h3 id="orga8262bc">The Defaults</h3>
+<div class="outline-text-3" id="text-orga8262bc">
 <p>
 These imports were already in the built-in template.
 </p>
@@ -215,10 +214,9 @@ These imports were already in the built-in template.
 </div>
 </div>
 </div>
-
-<div id="outline-container-org9cca93e" class="outline-2">
-<h2 id="org9cca93e">Monkey Imports</h2>
-<div class="outline-text-2" id="text-org9cca93e">
+<div id="outline-container-org50c5f2b" class="outline-2">
+<h2 id="org50c5f2b">Monkey Imports</h2>
+<div class="outline-text-2" id="text-org50c5f2b">
 <p>
 This is what I'm adding.
 </p>
@@ -228,10 +226,9 @@ This is what I'm adding.
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-orge3db440" class="outline-2">
-<h2 id="orge3db440">Calling the P5 Macro</h2>
-<div class="outline-text-2" id="text-orge3db440">
+<div id="outline-container-org6649734" class="outline-2">
+<h2 id="org6649734">Calling the P5 Macro</h2>
+<div class="outline-text-2" id="text-org6649734">
 <p>
 This is where we call the macro to insert (or not) a tag to pull in the p5 library. I originally tried putting it next to where the mathjax macro gets called (at the end of the template) but this caused an error sayng that the <code>p5</code> object was undefined. Putting it in the head seems to fix it.
 </p>

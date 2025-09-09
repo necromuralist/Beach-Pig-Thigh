@@ -102,9 +102,9 @@ bg-light
 
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div id="outline-container-org4fa1261" class="outline-2">
-<h2 id="org4fa1261">The P5 Helper Template</h2>
-<div class="outline-text-2" id="text-org4fa1261">
+    <div id="outline-container-org16c9ee1" class="outline-2">
+<h2 id="org16c9ee1">The P5 Helper Template</h2>
+<div class="outline-text-2" id="text-org16c9ee1">
 <p>
 This is where I defined some macros to add the p5 code to posts. It's based on the <code>math_helper.tmpl</code> template, although it took a little bit more work (well, too much work) to figure out how to get the metadata for this template.
 </p>
@@ -119,10 +119,9 @@ This is where I defined some macros to add the p5 code to posts. It's based on t
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org9bcf3c2" class="outline-2">
-<h2 id="org9bcf3c2">P5 Scripts</h2>
-<div class="outline-text-2" id="text-org9bcf3c2">
+<div id="outline-container-orga20342e" class="outline-2">
+<h2 id="orga20342e">P5 Scripts</h2>
+<div class="outline-text-2" id="text-orga20342e">
 <p>
 This is the macro to call to add the tag to pull in the p5 code from a CDN.
 </p>
@@ -134,10 +133,9 @@ This is the macro to call to add the tag to pull in the p5 code from a CDN.
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org3bea09a" class="outline-2">
-<h2 id="org3bea09a">P5 Post Macro</h2>
-<div class="outline-text-2" id="text-org3bea09a">
+<div id="outline-container-org6b0f0e5" class="outline-2">
+<h2 id="org6b0f0e5">P5 Post Macro</h2>
+<div class="outline-text-2" id="text-org6b0f0e5">
 <p>
 This is a macro to use if you have a template with a single post object (e.g. if you override the <code>post.tmpl</code> template or one of its children). I'm using a dedicated template for p5 posts right now so it isn't being used.
 </p>
@@ -146,16 +144,15 @@ This is a macro to use if you have a template with a single post object (e.g. if
 <span class="c">{# `post`: a Post object #}</span>
 <span class="cp">{%</span> <span class="k">macro</span> <span class="nv">p5_scripts_ifpost</span><span class="o">(</span><span class="nv">post</span><span class="o">)</span> <span class="cp">%}</span>
     <span class="cp">{%</span> <span class="k">if</span> <span class="nv">post.meta</span><span class="o">(</span><span class="s2">"has_p5"</span><span class="o">)</span> <span class="cp">%}</span>
-	<span class="cp">{{</span> <span class="nv">p5_scripts</span><span class="o">()</span> <span class="cp">}}</span>
+        <span class="cp">{{</span> <span class="nv">p5_scripts</span><span class="o">()</span> <span class="cp">}}</span>
     <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
 <span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span>
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-orgbe2352e" class="outline-2">
-<h2 id="orgbe2352e">P5 Post Index Macro</h2>
-<div class="outline-text-2" id="text-orgbe2352e">
+<div id="outline-container-org9b30d07" class="outline-2">
+<h2 id="org9b30d07">P5 Post Index Macro</h2>
+<div class="outline-text-2" id="text-org9b30d07">
 <p>
 This is the macro I'm adding to the <code>index.tmpl</code> template to get p5 into the latest pages feed. Jinja doesn't support the comprehension-type syntax that <code>mako</code> does and <code>Nikola</code> puts the metadata dictionary into a Functionary object which is a default dict that is callable. The metadata dictionary that we want is actually set as the value to a key in the dictionary matching the language for the sight (<code>en</code> in my case). So you can't access it directly (e.g. you can't use <code>post.meta.has_p5</code>) but if you call the meta object like a function instead of using it as a dictionary it will bypass the language key for you so you don't have to know what the language is (e.g. <code>post.meta("has_p5")</code> is the same as <code>post.meta.en.has_p5</code> (if English is the language being used)). Since I only use English it's probably unnecessary to use the function-syntax, but it seems to be the way it's intended to be used (and it took forever to figure out what was going on) so I'm using it.
 </p>

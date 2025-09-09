@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Beach Pig Rump &amp; Thigh (Posts about templates)</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/</link><description></description><atom:link href="https://necromuralist.github.io/Beach-Pig-Thigh/categories/templates.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Beach Pig Rump &amp; Thigh (Posts about templates)</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/</link><description></description><atom:link href="https://necromuralist.github.io/Beach-Pig-Thigh/categories/templates.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
 &lt;div id="license"xmlns:cc="http://creativecommons.org/ns#" &gt;This work is licensed under
 &lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;
 &lt;/div&gt;
-</copyright><lastBuildDate>Wed, 20 Mar 2024 01:14:14 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>A Jinja Altair/Vega Template</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/a-jinja-altairvega-template/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-org8e36ecb" class="outline-2"&gt;
-&lt;h2 id="org8e36ecb"&gt;The Altair Template&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org8e36ecb"&gt;
+</copyright><lastBuildDate>Tue, 09 Sep 2025 19:05:23 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>A Jinja Altair/Vega Template</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/a-jinja-altairvega-template/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-org639e7c9" class="outline-2"&gt;
+&lt;h2 id="org639e7c9"&gt;The Altair Template&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org639e7c9"&gt;
 &lt;p&gt;
 This is the Jinja template to get altair-vega into posts. To use it add &lt;code&gt;.. template: altair.tmpl&lt;/code&gt; to the post metadata. It is located at &lt;code&gt;themes/custom-jinja/templates/altair.tmpl&lt;/code&gt;
 &lt;/p&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org6076e98" class="outline-3"&gt;
-&lt;h3 id="org6076e98"&gt;The Tangle&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org6076e98"&gt;
+&lt;div id="outline-container-org7c0d802" class="outline-3"&gt;
+&lt;h3 id="org7c0d802"&gt;The Tangle&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org7c0d802"&gt;
 &lt;p&gt;
 Here's the tangle that creates the template file.
 &lt;/p&gt;
@@ -32,10 +31,9 @@ Here's the tangle that creates the template file.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-orgfda9b8a" class="outline-3"&gt;
-&lt;h3 id="orgfda9b8a"&gt;Altair Helper Import&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgfda9b8a"&gt;
+&lt;div id="outline-container-orgb470aa8" class="outline-3"&gt;
+&lt;h3 id="orgb470aa8"&gt;Altair Helper Import&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgb470aa8"&gt;
 &lt;p&gt;
 Both this template and the &lt;code&gt;index.tmpl&lt;/code&gt; template need to import the vega library I made a macro to do it and put it in a separate file (&lt;code&gt;altair_helper.tmpl&lt;/code&gt;) so we need to import that macro here.
 &lt;/p&gt;
@@ -44,10 +42,9 @@ Both this template and the &lt;code&gt;index.tmpl&lt;/code&gt; template need to 
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org4a43b74" class="outline-3"&gt;
-&lt;h3 id="org4a43b74"&gt;The Altair Macro Call&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org4a43b74"&gt;
+&lt;div id="outline-container-orgf9460f0" class="outline-3"&gt;
+&lt;h3 id="orgf9460f0"&gt;The Altair Macro Call&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgf9460f0"&gt;
 &lt;p&gt;
 Here's where we call the macro to insert the &lt;code&gt;script&lt;/code&gt; tag to get vega. 
 &lt;/p&gt;
@@ -57,18 +54,16 @@ Here's where we call the macro to insert the &lt;code&gt;script&lt;/code&gt; tag
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org47683f3" class="outline-2"&gt;
-&lt;h2 id="org47683f3"&gt;The Altair Helper Template&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org47683f3"&gt;
+&lt;div id="outline-container-orgc7b349f" class="outline-2"&gt;
+&lt;h2 id="orgc7b349f"&gt;The Altair Helper Template&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgc7b349f"&gt;
 &lt;p&gt;
 This is the template file that contains the functions (macros) to check whether the HTML to work with vega should be added or not. It is located at &lt;code&gt;themes/custom-jinja/templates/altair_helper.tmpl&lt;/code&gt; It's used by both the &lt;code&gt;altair.tmpl&lt;/code&gt; template (above) and the &lt;code&gt;index.tmpl&lt;/code&gt; template that's used for the latest posts.
 &lt;/p&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org40a056e" class="outline-3"&gt;
-&lt;h3 id="org40a056e"&gt;The Tangle&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org40a056e"&gt;
+&lt;div id="outline-container-org92bd147" class="outline-3"&gt;
+&lt;h3 id="org92bd147"&gt;The Tangle&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org92bd147"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;{#  -*- coding: utf-8 -*- #}&lt;/span&gt;
 
 &lt;span class="err"&gt;&amp;lt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;vega-scripts-macro&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&amp;gt;
@@ -79,10 +74,9 @@ This is the template file that contains the functions (macros) to check whether 
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org76eceab" class="outline-3"&gt;
-&lt;h3 id="org76eceab"&gt;Vega Scripts Macro&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org76eceab"&gt;
+&lt;div id="outline-container-org767ed2a" class="outline-3"&gt;
+&lt;h3 id="org767ed2a"&gt;Vega Scripts Macro&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org767ed2a"&gt;
 &lt;p&gt;
 This adds the vega library to the HTML HEAD as well as defining an "error" class that gets used if there's an error in rendering the vega chart. It has the versions hard-wired into it so it will need to be changed if we want to use a different version of vega, vega-lite, or vega-embed.
 &lt;/p&gt;
@@ -102,10 +96,9 @@ This adds the vega library to the HTML HEAD as well as defining an "error" class
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org3be16a0" class="outline-3"&gt;
-&lt;h3 id="org3be16a0"&gt;Vega Post Macro&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org3be16a0"&gt;
+&lt;div id="outline-container-org31364e6" class="outline-3"&gt;
+&lt;h3 id="org31364e6"&gt;Vega Post Macro&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org31364e6"&gt;
 &lt;p&gt;
 Here's a macro that gets called to set up a single post (as opposed to a post in the latest-posts feed). It adds the vega-imports to the document HEAD if there's a &lt;code&gt;.. has_altair&lt;/code&gt; field in the meta data. I don't think this works yet - there needs to be more work done on the &lt;code&gt;post&lt;/code&gt; template or I need to make a real plugin.
 &lt;/p&gt;
@@ -120,10 +113,9 @@ Here's a macro that gets called to set up a single post (as opposed to a post in
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-orgefb1c93" class="outline-3"&gt;
-&lt;h3 id="orgefb1c93"&gt;Vega Index Macro&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgefb1c93"&gt;
+&lt;div id="outline-container-org21800ca" class="outline-3"&gt;
+&lt;h3 id="org21800ca"&gt;Vega Index Macro&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org21800ca"&gt;
 &lt;p&gt;
 This is the macro that adds the vega libraries if the post is in the posts feed and it has been set in the metadata.
 &lt;/p&gt;

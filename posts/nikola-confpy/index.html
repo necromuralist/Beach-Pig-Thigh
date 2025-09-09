@@ -110,9 +110,9 @@ bg-light
         </div>
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div id="outline-container-orge93e542" class="outline-2">
-<h2 id="orge93e542">Site Data</h2>
-<div class="outline-text-2" id="text-orge93e542">
+    <div id="outline-container-org131a94f" class="outline-2">
+<h2 id="org131a94f">Site Data</h2>
+<div class="outline-text-2" id="text-org131a94f">
 <div class="highlight"><pre><span></span><span class="c1"># Data about this site</span>
 <span class="n">BLOG_AUTHOR</span> <span class="o">=</span> <span class="s2">"The Cloistered Monkey"</span>  <span class="c1"># (translatable)</span>
 <span class="n">BLOG_TITLE</span> <span class="o">=</span> <span class="s2">"Beach Pig Rump &amp; Thigh"</span>  <span class="c1"># (translatable)</span>
@@ -127,55 +127,50 @@ bg-light
 </pre></div>
 </div>
 </div>
-
-
-<div id="outline-container-org98bee22" class="outline-2">
-<h2 id="org98bee22">The Theme</h2>
-<div class="outline-text-2" id="text-org98bee22">
+<div id="outline-container-org315213b" class="outline-2">
+<h2 id="org315213b">The Theme</h2>
+<div class="outline-text-2" id="text-org315213b">
 <p>
 This is how you choose the theme to use. We're using a custom theme so there's three things that have to match.
 </p>
 </div>
-
-<div id="outline-container-org84375b6" class="outline-3">
-<h3 id="org84375b6">The Theme Location</h3>
-<div class="outline-text-3" id="text-org84375b6">
+<div id="outline-container-org8f3fdcc" class="outline-3">
+<h3 id="org8f3fdcc">The Theme Location</h3>
+<div class="outline-text-3" id="text-org8f3fdcc">
 <p>
 Next to the <code>conf.py</code> file at the root of the nikola repository we need a folder named "themes" and inside that we put a folder whose name matches the name of our theme. I'm going to use <code>custom-mako</code> as our example. The only other expected option at this point would be <code>custom-jinja</code>. So our "themes" folder should look like this (more or less):
 </p>
 
-<pre class="example" id="orgfb5f595">
+<pre class="example" id="org893f847">
 themes/
   custom-mako/
 </pre>
 </div>
 </div>
-
-<div id="outline-container-orgbdb2ec7" class="outline-3">
-<h3 id="orgbdb2ec7">The Theme Configuration</h3>
-<div class="outline-text-3" id="text-orgbdb2ec7">
+<div id="outline-container-org9597eeb" class="outline-3">
+<h3 id="org9597eeb">The Theme Configuration</h3>
+<div class="outline-text-3" id="text-org9597eeb">
 <p>
 Inside the <code>themes/custom-mako/</code> folder we need a file with the name <code>custom-mako.theme</code> - the base name of the file needs to match the name of our theme. This is where we tell nikola that we're using mako (or jinja as the case may be). Here's what's in it (the mako version).
 </p>
 
-<div class="highlight"><pre><span></span>[Theme]
-engine = mako
-parent = bootstrap4
-author = The Nikola Contributors
-author_url = https://getnikola.com/
-license = MIT
-based_on = Bootstrap 4 &lt;http://getbootstrap.com/&gt;
-tags = bootstrap
+<div class="highlight"><pre><span></span><span class="k">[Theme]</span>
+<span class="na">engine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">mako</span>
+<span class="na">parent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">bootstrap4</span>
+<span class="na">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">The Nikola Contributors</span>
+<span class="na">author_url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">https://getnikola.com/</span>
+<span class="na">license</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">MIT</span>
+<span class="na">based_on</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Bootstrap 4 &lt;http://getbootstrap.com/&gt;</span>
+<span class="na">tags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">bootstrap</span>
 
-[Family]
-family = bootstrap4
+<span class="k">[Family]</span>
+<span class="na">family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">bootstrap4</span>
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-orgfd17f6a" class="outline-3">
-<h3 id="orgfd17f6a">The conf.py</h3>
-<div class="outline-text-3" id="text-orgfd17f6a">
+<div id="outline-container-orgc940c57" class="outline-3">
+<h3 id="orgc940c57">The conf.py</h3>
+<div class="outline-text-3" id="text-orgc940c57">
 <p>
 Inside <code>conf.py</code> we put the name of the theme, matching the name of the folder and configuration file.
 </p>
@@ -186,14 +181,13 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </div>
 </div>
 </div>
-
-<div id="outline-container-orgedf5558" class="outline-2">
-<h2 id="orgedf5558">Posts and Pages</h2>
-<div class="outline-text-2" id="text-orgedf5558">
+<div id="outline-container-org0e0f613" class="outline-2">
+<h2 id="org0e0f613">Posts and Pages</h2>
+<div class="outline-text-2" id="text-org0e0f613">
 </div>
-<div id="outline-container-orgd530b97" class="outline-3">
-<h3 id="orgd530b97">Posts</h3>
-<div class="outline-text-3" id="text-orgd530b97">
+<div id="outline-container-org772fddf" class="outline-3">
+<h3 id="org772fddf">Posts</h3>
+<div class="outline-text-3" id="text-org772fddf">
 <div class="highlight"><pre><span></span><span class="n">POSTS</span> <span class="o">=</span> <span class="p">(</span>
     <span class="p">(</span><span class="s2">"posts/*.org"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
     <span class="p">(</span><span class="s2">"posts/*.rst"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
@@ -204,10 +198,9 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org718a9e4" class="outline-3">
-<h3 id="org718a9e4">Pages</h3>
-<div class="outline-text-3" id="text-org718a9e4">
+<div id="outline-container-org23a79e7" class="outline-3">
+<h3 id="org23a79e7">Pages</h3>
+<div class="outline-text-3" id="text-org23a79e7">
 <div class="highlight"><pre><span></span><span class="n">PAGES</span> <span class="o">=</span> <span class="p">(</span>
     <span class="p">(</span><span class="s2">"source/*.org"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"page.tmpl"</span><span class="p">),</span>
     <span class="p">(</span><span class="s2">"source/*.rst"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"page.tmpl"</span><span class="p">),</span>
@@ -218,10 +211,9 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-orgaacdce1" class="outline-3">
-<h3 id="orgaacdce1">The Index Path</h3>
-<div class="outline-text-3" id="text-orgaacdce1">
+<div id="outline-container-org14a85d3" class="outline-3">
+<h3 id="org14a85d3">The Index Path</h3>
+<div class="outline-text-3" id="text-org14a85d3">
 <div class="highlight"><pre><span></span><span class="c1"># Final location for the main blog page and sibling paginated pages is</span>
 <span class="c1"># output / TRANSLATION[lang] / INDEX_PATH / index-*.html</span>
 <span class="c1"># (translatable)</span>
@@ -231,34 +223,33 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </div>
 </div>
 </div>
-<div id="outline-container-orgf7a073c" class="outline-2">
-<h2 id="orgf7a073c">Navigation Links</h2>
-<div class="outline-text-2" id="text-orgf7a073c">
+<div id="outline-container-org434c405" class="outline-2">
+<h2 id="org434c405">Navigation Links</h2>
+<div class="outline-text-2" id="text-org434c405">
 <div class="highlight"><pre><span></span><span class="n">NAVIGATION_LINKS</span> <span class="o">=</span> <span class="p">{</span>
     <span class="n">DEFAULT_LANG</span><span class="p">:</span> <span class="p">(</span>
-	<span class="p">(</span><span class="s2">"/posts/"</span><span class="p">,</span> <span class="s2">"Posts"</span><span class="p">),</span>
-	<span class="p">(</span><span class="s2">"/archive.html"</span><span class="p">,</span> <span class="s2">"Archive"</span><span class="p">),</span>
-	<span class="p">(</span><span class="s2">"/categories/"</span><span class="p">,</span> <span class="s2">"Tags"</span><span class="p">),</span>
-	<span class="p">(</span><span class="s2">"/rss.xml"</span><span class="p">,</span> <span class="s2">"RSS"</span><span class="p">),</span>
-	<span class="p">(</span>
-	    <span class="p">(</span>
-		<span class="p">(</span><span class="s2">"https://necromuralist.github.io/"</span><span class="p">,</span> <span class="s2">"The Cloistered Monkey"</span><span class="p">),</span>
-		<span class="p">(</span><span class="s2">"https://necromuralist.github.io/Ape-Iron/"</span><span class="p">,</span> <span class="s2">"Ape Iron"</span><span class="p">),</span>
-		<span class="p">(</span><span class="s2">"https://necromuralist.github.io/Bowling-For-Data/"</span><span class="p">,</span> <span class="s2">"Bowling For Data"</span><span class="p">),</span>
-		<span class="p">(</span><span class="s2">"https://necromuralist.github.io/Neurotic-Networking/"</span><span class="p">,</span> <span class="s2">"Neurotic Networking"</span><span class="p">),</span>
-		<span class="p">(</span><span class="s2">"https://necromuralist.github.io/Visions-Voices-Data/"</span><span class="p">,</span> <span class="s2">"Visions, Voices, Data"</span><span class="p">)</span>
-		<span class="p">),</span>
-	    <span class="s2">"Monkey Pages"</span>
-	<span class="p">),</span>
+        <span class="p">(</span><span class="s2">"/posts/"</span><span class="p">,</span> <span class="s2">"Posts"</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">"/archive.html"</span><span class="p">,</span> <span class="s2">"Archive"</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">"/categories/"</span><span class="p">,</span> <span class="s2">"Tags"</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">"/rss.xml"</span><span class="p">,</span> <span class="s2">"RSS"</span><span class="p">),</span>
+        <span class="p">(</span>
+            <span class="p">(</span>
+                <span class="p">(</span><span class="s2">"https://necromuralist.github.io/"</span><span class="p">,</span> <span class="s2">"The Cloistered Monkey"</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">"https://necromuralist.github.io/Ape-Iron/"</span><span class="p">,</span> <span class="s2">"Ape Iron"</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">"https://necromuralist.github.io/Bowling-For-Data/"</span><span class="p">,</span> <span class="s2">"Bowling For Data"</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">"https://necromuralist.github.io/Neurotic-Networking/"</span><span class="p">,</span> <span class="s2">"Neurotic Networking"</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">"https://necromuralist.github.io/Visions-Voices-Data/"</span><span class="p">,</span> <span class="s2">"Visions, Voices, Data"</span><span class="p">)</span>
+                <span class="p">),</span>
+            <span class="s2">"Monkey Pages"</span>
+        <span class="p">),</span>
     <span class="p">),</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org22de4a1" class="outline-2">
-<h2 id="org22de4a1">Github Deploy</h2>
-<div class="outline-text-2" id="text-org22de4a1">
+<div id="outline-container-org1978881" class="outline-2">
+<h2 id="org1978881">Github Deploy</h2>
+<div class="outline-text-2" id="text-org1978881">
 <div class="highlight"><pre><span></span><span class="c1"># github_deploy configuration</span>
 <span class="c1"># For more details, read the manual:</span>
 <span class="c1"># https://getnikola.com/handbook.html#deploying-to-github</span>
@@ -275,10 +266,9 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org23066b0" class="outline-2">
-<h2 id="org23066b0">The License</h2>
-<div class="outline-text-2" id="text-org23066b0">
+<div id="outline-container-org9258f80" class="outline-2">
+<h2 id="org9258f80">The License</h2>
+<div class="outline-text-2" id="text-org9258f80">
 <div class="highlight"><pre><span></span><span class="n">LICENSE</span> <span class="o">=</span> <span class="s1">'''</span>
 <span class="s1">&lt;div id="license"xmlns:cc="http://creativecommons.org/ns#" &gt;This work is licensed under</span>
 <span class="s1">&lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0</span>
@@ -289,18 +279,16 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-orgcd885d1" class="outline-2">
-<h2 id="orgcd885d1">The Footer</h2>
-<div class="outline-text-2" id="text-orgcd885d1">
+<div id="outline-container-org0097c3c" class="outline-2">
+<h2 id="org0097c3c">The Footer</h2>
+<div class="outline-text-2" id="text-org0097c3c">
 <div class="highlight"><pre><span></span><span class="n">CONTENT_FOOTER</span> <span class="o">=</span> <span class="s1">'Scribbles by &lt;a href="mailto:</span><span class="si">{email}</span><span class="s1">"&gt;</span><span class="si">{author}</span><span class="s1">&lt;/a&gt; - Powered by         &lt;a href="https://getnikola.com" rel="nofollow"&gt;Nikola&lt;/a&gt;         </span><span class="si">{license}</span><span class="s1">'</span>
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-orgd79aa51" class="outline-2">
-<h2 id="orgd79aa51">Strip Indexes</h2>
-<div class="outline-text-2" id="text-orgd79aa51">
+<div id="outline-container-orgc71cf78" class="outline-2">
+<h2 id="orgc71cf78">Strip Indexes</h2>
+<div class="outline-text-2" id="text-orgc71cf78">
 <div class="highlight"><pre><span></span><span class="c1"># If a link ends in /index.html,  drop the index.html part.</span>
 <span class="c1"># http://mysite/foo/bar/index.html =&gt; http://mysite/foo/bar/</span>
 <span class="c1"># (Uses the INDEX_FILE setting, so if that is, say, default.html,</span>
@@ -309,10 +297,9 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-orgb4874ad" class="outline-2">
-<h2 id="orgb4874ad">Search Form</h2>
-<div class="outline-text-2" id="text-orgb4874ad">
+<div id="outline-container-org12ce251" class="outline-2">
+<h2 id="org12ce251">Search Form</h2>
+<div class="outline-text-2" id="text-org12ce251">
 <div class="highlight"><pre><span></span><span class="c1"># A search form to search this site, for the sidebar. You can use a Google</span>
 <span class="c1"># custom search (https://www.google.com/cse/)</span>
 <span class="c1"># Or a DuckDuckGo search: https://duckduckgo.com/search_box.html</span>
@@ -340,16 +327,16 @@ Inside <code>conf.py</code> we put the name of the theme, matching the name of t
 </pre></div>
 </div>
 </div>
-<div id="outline-container-org729db7f" class="outline-2">
-<h2 id="org729db7f">The Tangle</h2>
-<div class="outline-text-2" id="text-org729db7f">
+<div id="outline-container-org118375f" class="outline-2">
+<h2 id="org118375f">The Tangle</h2>
+<div class="outline-text-2" id="text-org118375f">
 <p>
 This should eventually get broken up enough to be hidden, but not yet.
 </p>
 
 <div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 
-<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
 <span class="c1"># !! This is the configuration of Nikola. !! #</span>
 <span class="c1"># !!  You should edit it to your liking.  !! #</span>
@@ -504,20 +491,20 @@ This should eventually get broken up enough to be hidden, but not yet.
 <span class="c1"># Config for bootblog4:</span>
 <span class="n">THEME_CONFIG</span> <span class="o">=</span> <span class="p">{</span>
     <span class="n">DEFAULT_LANG</span><span class="p">:</span> <span class="p">{</span>
-	<span class="c1"># Show the latest featured post in a large box, with the previewimage as its background.</span>
-	<span class="s1">'featured_large'</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
-	<span class="c1"># Show the first (remaining) two featured posts in small boxes.</span>
-	<span class="s1">'featured_small'</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
-	<span class="c1"># Show featured posts on mobile.</span>
-	<span class="s1">'featured_on_mobile'</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-	<span class="c1"># Show image in `featured_large` on mobile.</span>
-	<span class="c1"># `featured_small` displays them only on desktop.</span>
-	<span class="s1">'featured_large_image_on_mobile'</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-	<span class="c1"># Strip HTML from featured post text.</span>
-	<span class="s1">'featured_strip_html'</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
-	<span class="c1"># Contents of the sidebar, If empty, the sidebar is not displayed.</span>
-	<span class="s1">'sidebar'</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
-	<span class="s2">"navbar_light"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="c1"># Show the latest featured post in a large box, with the previewimage as its background.</span>
+        <span class="s1">'featured_large'</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="c1"># Show the first (remaining) two featured posts in small boxes.</span>
+        <span class="s1">'featured_small'</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="c1"># Show featured posts on mobile.</span>
+        <span class="s1">'featured_on_mobile'</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="c1"># Show image in `featured_large` on mobile.</span>
+        <span class="c1"># `featured_small` displays them only on desktop.</span>
+        <span class="s1">'featured_large_image_on_mobile'</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="c1"># Strip HTML from featured post text.</span>
+        <span class="s1">'featured_strip_html'</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="c1"># Contents of the sidebar, If empty, the sidebar is not displayed.</span>
+        <span class="s1">'sidebar'</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+        <span class="s2">"navbar_light"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="c1"># Config for bootstrap4:</span>
@@ -1300,13 +1287,13 @@ This should eventually get broken up enough to be hidden, but not yet.
 <span class="c1"># (translatable)</span>
 <span class="n">CONTENT_FOOTER_FORMATS</span> <span class="o">=</span> <span class="p">{</span>
     <span class="n">DEFAULT_LANG</span><span class="p">:</span> <span class="p">(</span>
-	<span class="p">(),</span>
-	<span class="p">{</span>
-	    <span class="s2">"email"</span><span class="p">:</span> <span class="n">BLOG_EMAIL</span><span class="p">,</span>
-	    <span class="s2">"author"</span><span class="p">:</span> <span class="n">BLOG_AUTHOR</span><span class="p">,</span>
-	    <span class="s2">"date"</span><span class="p">:</span> <span class="n">time</span><span class="o">.</span><span class="n">gmtime</span><span class="p">()</span><span class="o">.</span><span class="n">tm_year</span><span class="p">,</span>
-	    <span class="s2">"license"</span><span class="p">:</span> <span class="n">LICENSE</span>
-	<span class="p">}</span>
+        <span class="p">(),</span>
+        <span class="p">{</span>
+            <span class="s2">"email"</span><span class="p">:</span> <span class="n">BLOG_EMAIL</span><span class="p">,</span>
+            <span class="s2">"author"</span><span class="p">:</span> <span class="n">BLOG_AUTHOR</span><span class="p">,</span>
+            <span class="s2">"date"</span><span class="p">:</span> <span class="n">time</span><span class="o">.</span><span class="n">gmtime</span><span class="p">()</span><span class="o">.</span><span class="n">tm_year</span><span class="p">,</span>
+            <span class="s2">"license"</span><span class="p">:</span> <span class="n">LICENSE</span>
+        <span class="p">}</span>
     <span class="p">)</span>
 <span class="p">}</span>
 

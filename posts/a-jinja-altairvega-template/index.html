@@ -112,17 +112,16 @@ bg-light
         </div>
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div id="outline-container-org8e36ecb" class="outline-2">
-<h2 id="org8e36ecb">The Altair Template</h2>
-<div class="outline-text-2" id="text-org8e36ecb">
+    <div id="outline-container-org639e7c9" class="outline-2">
+<h2 id="org639e7c9">The Altair Template</h2>
+<div class="outline-text-2" id="text-org639e7c9">
 <p>
 This is the Jinja template to get altair-vega into posts. To use it add <code>.. template: altair.tmpl</code> to the post metadata. It is located at <code>themes/custom-jinja/templates/altair.tmpl</code>
 </p>
 </div>
-
-<div id="outline-container-org6076e98" class="outline-3">
-<h3 id="org6076e98">The Tangle</h3>
-<div class="outline-text-3" id="text-org6076e98">
+<div id="outline-container-org7c0d802" class="outline-3">
+<h3 id="org7c0d802">The Tangle</h3>
+<div class="outline-text-3" id="text-org7c0d802">
 <p>
 Here's the tangle that creates the template file.
 </p>
@@ -139,10 +138,9 @@ Here's the tangle that creates the template file.
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-orgfda9b8a" class="outline-3">
-<h3 id="orgfda9b8a">Altair Helper Import</h3>
-<div class="outline-text-3" id="text-orgfda9b8a">
+<div id="outline-container-orgb470aa8" class="outline-3">
+<h3 id="orgb470aa8">Altair Helper Import</h3>
+<div class="outline-text-3" id="text-orgb470aa8">
 <p>
 Both this template and the <code>index.tmpl</code> template need to import the vega library I made a macro to do it and put it in a separate file (<code>altair_helper.tmpl</code>) so we need to import that macro here.
 </p>
@@ -151,10 +149,9 @@ Both this template and the <code>index.tmpl</code> template need to import the v
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org4a43b74" class="outline-3">
-<h3 id="org4a43b74">The Altair Macro Call</h3>
-<div class="outline-text-3" id="text-org4a43b74">
+<div id="outline-container-orgf9460f0" class="outline-3">
+<h3 id="orgf9460f0">The Altair Macro Call</h3>
+<div class="outline-text-3" id="text-orgf9460f0">
 <p>
 Here's where we call the macro to insert the <code>script</code> tag to get vega. 
 </p>
@@ -164,18 +161,16 @@ Here's where we call the macro to insert the <code>script</code> tag to get vega
 </div>
 </div>
 </div>
-
-<div id="outline-container-org47683f3" class="outline-2">
-<h2 id="org47683f3">The Altair Helper Template</h2>
-<div class="outline-text-2" id="text-org47683f3">
+<div id="outline-container-orgc7b349f" class="outline-2">
+<h2 id="orgc7b349f">The Altair Helper Template</h2>
+<div class="outline-text-2" id="text-orgc7b349f">
 <p>
 This is the template file that contains the functions (macros) to check whether the HTML to work with vega should be added or not. It is located at <code>themes/custom-jinja/templates/altair_helper.tmpl</code> It's used by both the <code>altair.tmpl</code> template (above) and the <code>index.tmpl</code> template that's used for the latest posts.
 </p>
 </div>
-
-<div id="outline-container-org40a056e" class="outline-3">
-<h3 id="org40a056e">The Tangle</h3>
-<div class="outline-text-3" id="text-org40a056e">
+<div id="outline-container-org92bd147" class="outline-3">
+<h3 id="org92bd147">The Tangle</h3>
+<div class="outline-text-3" id="text-org92bd147">
 <div class="highlight"><pre><span></span><span class="c">{#  -*- coding: utf-8 -*- #}</span>
 
 <span class="err">&lt;</span><span class="p">&lt;</span><span class="nt">vega-scripts-macro</span><span class="p">&gt;</span>&gt;
@@ -186,10 +181,9 @@ This is the template file that contains the functions (macros) to check whether 
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org76eceab" class="outline-3">
-<h3 id="org76eceab">Vega Scripts Macro</h3>
-<div class="outline-text-3" id="text-org76eceab">
+<div id="outline-container-org767ed2a" class="outline-3">
+<h3 id="org767ed2a">Vega Scripts Macro</h3>
+<div class="outline-text-3" id="text-org767ed2a">
 <p>
 This adds the vega library to the HTML HEAD as well as defining an "error" class that gets used if there's an error in rendering the vega chart. It has the versions hard-wired into it so it will need to be changed if we want to use a different version of vega, vega-lite, or vega-embed.
 </p>
@@ -209,10 +203,9 @@ This adds the vega library to the HTML HEAD as well as defining an "error" class
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-org3be16a0" class="outline-3">
-<h3 id="org3be16a0">Vega Post Macro</h3>
-<div class="outline-text-3" id="text-org3be16a0">
+<div id="outline-container-org31364e6" class="outline-3">
+<h3 id="org31364e6">Vega Post Macro</h3>
+<div class="outline-text-3" id="text-org31364e6">
 <p>
 Here's a macro that gets called to set up a single post (as opposed to a post in the latest-posts feed). It adds the vega-imports to the document HEAD if there's a <code>.. has_altair</code> field in the meta data. I don't think this works yet - there needs to be more work done on the <code>post</code> template or I need to make a real plugin.
 </p>
@@ -227,10 +220,9 @@ Here's a macro that gets called to set up a single post (as opposed to a post in
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-orgefb1c93" class="outline-3">
-<h3 id="orgefb1c93">Vega Index Macro</h3>
-<div class="outline-text-3" id="text-orgefb1c93">
+<div id="outline-container-org21800ca" class="outline-3">
+<h3 id="org21800ca">Vega Index Macro</h3>
+<div class="outline-text-3" id="text-org21800ca">
 <p>
 This is the macro that adds the vega libraries if the post is in the posts feed and it has been set in the metadata.
 </p>

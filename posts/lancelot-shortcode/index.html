@@ -111,18 +111,17 @@ bg-light
         </div>
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div id="outline-container-org2068c68" class="outline-2">
-<h2 id="org2068c68">Introduction</h2>
-<div class="outline-text-2" id="text-org2068c68">
+    <div id="outline-container-orgde1ef57" class="outline-2">
+<h2 id="orgde1ef57">Introduction</h2>
+<div class="outline-text-2" id="text-orgde1ef57">
 <p>
 This is a variant of the built-in <code>doc</code> shortcode (although it seems to go into the plugins folder for some reason, I'll have to look into that). The ReStructured Text <code>doc</code> documentation says that you can pass in text to display instead of the title of the post it's linking to, but I couldn't get it to work with the non-RST version so I adapted it so I could use it in org-mode posts. I didn't really look too closely at the code, just enough to get it working so it's probably pretty fragile.
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgc607679" class="outline-2">
-<h2 id="orgc607679">The Plugin File</h2>
-<div class="outline-text-2" id="text-orgc607679">
+<div id="outline-container-orgb1ff6ae" class="outline-2">
+<h2 id="orgb1ff6ae">The Plugin File</h2>
+<div class="outline-text-2" id="text-orgb1ff6ae">
 <div class="highlight"><pre><span></span><span class="k">[Core]</span>
 <span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">lancelot</span>
 <span class="na">module</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">lancelot</span>
@@ -138,10 +137,9 @@ This is a variant of the built-in <code>doc</code> shortcode (although it seems 
 </pre></div>
 </div>
 </div>
-
-<div id="outline-container-orgf7d1eb2" class="outline-2">
-<h2 id="orgf7d1eb2">The Python Code</h2>
-<div class="outline-text-2" id="text-orgf7d1eb2">
+<div id="outline-container-orge2120ed" class="outline-2">
+<h2 id="orge2120ed">The Python Code</h2>
+<div class="outline-text-2" id="text-orge2120ed">
 <div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 <span class="c1"># This file is public domain according to its author, the Cloistered Monkey</span>
 
@@ -152,16 +150,16 @@ This is a variant of the built-in <code>doc</code> shortcode (although it seems 
 <span class="sd">than HTML symbols.</span>
 <span class="sd">"""</span>
 
-<span class="kn">from</span> <span class="nn">nikola.plugin_categories</span> <span class="kn">import</span> <span class="n">ShortcodePlugin</span>
-<span class="kn">from</span> <span class="nn">nikola.utils</span> <span class="kn">import</span> <span class="n">LOGGER</span><span class="p">,</span> <span class="n">slugify</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nikola.plugin_categories</span><span class="w"> </span><span class="kn">import</span> <span class="n">ShortcodePlugin</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nikola.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">LOGGER</span><span class="p">,</span> <span class="n">slugify</span>
 
 
-<span class="k">class</span> <span class="nc">Plugin</span><span class="p">(</span><span class="n">ShortcodePlugin</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Plugin</span><span class="p">(</span><span class="n">ShortcodePlugin</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Plugin for non-rst inter-site links."""</span>
 
     <span class="n">name</span> <span class="o">=</span> <span class="s2">"lancelot"</span>
 
-    <span class="k">def</span> <span class="nf">handler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">site</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">handler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">site</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                 <span class="n">date</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">post</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""Create an inter-site link</span>
 
@@ -196,7 +194,7 @@ This is a variant of the built-in <code>doc</code> shortcode (although it seems 
         <span class="k">return</span> <span class="n">output</span><span class="p">,</span> <span class="p">[]</span>
 
 
-<span class="k">def</span> <span class="nf">lancelot_link</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">slug</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">lancelot_link</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">slug</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""process the slug, check if it exists or is duplicated</span>
 
 <span class="sd">    if `title` is None this will grab the post-title</span>

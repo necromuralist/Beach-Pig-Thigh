@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Beach Pig Rump &amp; Thigh (Posts about Nikola)</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/</link><description></description><atom:link href="https://necromuralist.github.io/Beach-Pig-Thigh/categories/cat_nikola.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Beach Pig Rump &amp; Thigh (Posts about Nikola)</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/</link><description></description><atom:link href="https://necromuralist.github.io/Beach-Pig-Thigh/categories/cat_nikola.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
 &lt;div id="license"xmlns:cc="http://creativecommons.org/ns#" &gt;This work is licensed under
 &lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;
 &lt;/div&gt;
-</copyright><lastBuildDate>Tue, 10 Oct 2023 00:20:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Nikola Conf.py</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/nikola-confpy/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-orge93e542" class="outline-2"&gt;
-&lt;h2 id="orge93e542"&gt;Site Data&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orge93e542"&gt;
+</copyright><lastBuildDate>Tue, 09 Sep 2025 19:05:23 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Nikola Conf.py</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/nikola-confpy/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-org131a94f" class="outline-2"&gt;
+&lt;h2 id="org131a94f"&gt;Site Data&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org131a94f"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Data about this site&lt;/span&gt;
 &lt;span class="n"&gt;BLOG_AUTHOR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"The Cloistered Monkey"&lt;/span&gt;  &lt;span class="c1"&gt;# (translatable)&lt;/span&gt;
 &lt;span class="n"&gt;BLOG_TITLE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"Beach Pig Rump &amp;amp; Thigh"&lt;/span&gt;  &lt;span class="c1"&gt;# (translatable)&lt;/span&gt;
@@ -22,55 +22,50 @@
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-
-&lt;div id="outline-container-org98bee22" class="outline-2"&gt;
-&lt;h2 id="org98bee22"&gt;The Theme&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org98bee22"&gt;
+&lt;div id="outline-container-org315213b" class="outline-2"&gt;
+&lt;h2 id="org315213b"&gt;The Theme&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org315213b"&gt;
 &lt;p&gt;
 This is how you choose the theme to use. We're using a custom theme so there's three things that have to match.
 &lt;/p&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org84375b6" class="outline-3"&gt;
-&lt;h3 id="org84375b6"&gt;The Theme Location&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org84375b6"&gt;
+&lt;div id="outline-container-org8f3fdcc" class="outline-3"&gt;
+&lt;h3 id="org8f3fdcc"&gt;The Theme Location&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org8f3fdcc"&gt;
 &lt;p&gt;
 Next to the &lt;code&gt;conf.py&lt;/code&gt; file at the root of the nikola repository we need a folder named "themes" and inside that we put a folder whose name matches the name of our theme. I'm going to use &lt;code&gt;custom-mako&lt;/code&gt; as our example. The only other expected option at this point would be &lt;code&gt;custom-jinja&lt;/code&gt;. So our "themes" folder should look like this (more or less):
 &lt;/p&gt;
 
-&lt;pre class="example" id="orgfb5f595"&gt;
+&lt;pre class="example" id="org893f847"&gt;
 themes/
   custom-mako/
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-orgbdb2ec7" class="outline-3"&gt;
-&lt;h3 id="orgbdb2ec7"&gt;The Theme Configuration&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgbdb2ec7"&gt;
+&lt;div id="outline-container-org9597eeb" class="outline-3"&gt;
+&lt;h3 id="org9597eeb"&gt;The Theme Configuration&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org9597eeb"&gt;
 &lt;p&gt;
 Inside the &lt;code&gt;themes/custom-mako/&lt;/code&gt; folder we need a file with the name &lt;code&gt;custom-mako.theme&lt;/code&gt; - the base name of the file needs to match the name of our theme. This is where we tell nikola that we're using mako (or jinja as the case may be). Here's what's in it (the mako version).
 &lt;/p&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[Theme]
-engine = mako
-parent = bootstrap4
-author = The Nikola Contributors
-author_url = https://getnikola.com/
-license = MIT
-based_on = Bootstrap 4 &amp;lt;http://getbootstrap.com/&amp;gt;
-tags = bootstrap
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[Theme]&lt;/span&gt;
+&lt;span class="na"&gt;engine&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;mako&lt;/span&gt;
+&lt;span class="na"&gt;parent&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;bootstrap4&lt;/span&gt;
+&lt;span class="na"&gt;author&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;The Nikola Contributors&lt;/span&gt;
+&lt;span class="na"&gt;author_url&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;https://getnikola.com/&lt;/span&gt;
+&lt;span class="na"&gt;license&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;MIT&lt;/span&gt;
+&lt;span class="na"&gt;based_on&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;Bootstrap 4 &amp;lt;http://getbootstrap.com/&amp;gt;&lt;/span&gt;
+&lt;span class="na"&gt;tags&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;bootstrap&lt;/span&gt;
 
-[Family]
-family = bootstrap4
+&lt;span class="k"&gt;[Family]&lt;/span&gt;
+&lt;span class="na"&gt;family&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;bootstrap4&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-orgfd17f6a" class="outline-3"&gt;
-&lt;h3 id="orgfd17f6a"&gt;The conf.py&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgfd17f6a"&gt;
+&lt;div id="outline-container-orgc940c57" class="outline-3"&gt;
+&lt;h3 id="orgc940c57"&gt;The conf.py&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgc940c57"&gt;
 &lt;p&gt;
 Inside &lt;code&gt;conf.py&lt;/code&gt; we put the name of the theme, matching the name of the folder and configuration file.
 &lt;/p&gt;
@@ -81,14 +76,13 @@ Inside &lt;code&gt;conf.py&lt;/code&gt; we put the name of the theme, matching t
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-orgedf5558" class="outline-2"&gt;
-&lt;h2 id="orgedf5558"&gt;Posts and Pages&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgedf5558"&gt;
+&lt;div id="outline-container-org0e0f613" class="outline-2"&gt;
+&lt;h2 id="org0e0f613"&gt;Posts and Pages&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org0e0f613"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgd530b97" class="outline-3"&gt;
-&lt;h3 id="orgd530b97"&gt;Posts&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgd530b97"&gt;
+&lt;div id="outline-container-org772fddf" class="outline-3"&gt;
+&lt;h3 id="org772fddf"&gt;Posts&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org772fddf"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;POSTS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.org"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
     &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.rst"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
@@ -99,10 +93,9 @@ Inside &lt;code&gt;conf.py&lt;/code&gt; we put the name of the theme, matching t
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org718a9e4" class="outline-3"&gt;
-&lt;h3 id="org718a9e4"&gt;Pages&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org718a9e4"&gt;
+&lt;div id="outline-container-org23a79e7" class="outline-3"&gt;
+&lt;h3 id="org23a79e7"&gt;Pages&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org23a79e7"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;PAGES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"source/*.org"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"page.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
     &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"source/*.rst"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"page.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
@@ -113,10 +106,9 @@ Inside &lt;code&gt;conf.py&lt;/code&gt; we put the name of the theme, matching t
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-orgaacdce1" class="outline-3"&gt;
-&lt;h3 id="orgaacdce1"&gt;The Index Path&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgaacdce1"&gt;
+&lt;div id="outline-container-org14a85d3" class="outline-3"&gt;
+&lt;h3 id="org14a85d3"&gt;The Index Path&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org14a85d3"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Final location for the main blog page and sibling paginated pages is&lt;/span&gt;
 &lt;span class="c1"&gt;# output / TRANSLATION[lang] / INDEX_PATH / index-*.html&lt;/span&gt;
 &lt;span class="c1"&gt;# (translatable)&lt;/span&gt;
@@ -126,34 +118,33 @@ Inside &lt;code&gt;conf.py&lt;/code&gt; we put the name of the theme, matching t
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgf7a073c" class="outline-2"&gt;
-&lt;h2 id="orgf7a073c"&gt;Navigation Links&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgf7a073c"&gt;
+&lt;div id="outline-container-org434c405" class="outline-2"&gt;
+&lt;h2 id="org434c405"&gt;Navigation Links&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org434c405"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;NAVIGATION_LINKS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="n"&gt;DEFAULT_LANG&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
-	&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"/posts/"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"Posts"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-	&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"/archive.html"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"Archive"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-	&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"/categories/"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"Tags"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-	&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"/rss.xml"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"RSS"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-	&lt;span class="p"&gt;(&lt;/span&gt;
-	    &lt;span class="p"&gt;(&lt;/span&gt;
-		&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"https://necromuralist.github.io/"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"The Cloistered Monkey"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-		&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"https://necromuralist.github.io/Ape-Iron/"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"Ape Iron"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-		&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"https://necromuralist.github.io/Bowling-For-Data/"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"Bowling For Data"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-		&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"https://necromuralist.github.io/Neurotic-Networking/"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"Neurotic Networking"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-		&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"https://necromuralist.github.io/Visions-Voices-Data/"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"Visions, Voices, Data"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-		&lt;span class="p"&gt;),&lt;/span&gt;
-	    &lt;span class="s2"&gt;"Monkey Pages"&lt;/span&gt;
-	&lt;span class="p"&gt;),&lt;/span&gt;
+        &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"/posts/"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"Posts"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+        &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"/archive.html"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"Archive"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+        &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"/categories/"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"Tags"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+        &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"/rss.xml"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"RSS"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+        &lt;span class="p"&gt;(&lt;/span&gt;
+            &lt;span class="p"&gt;(&lt;/span&gt;
+                &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"https://necromuralist.github.io/"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"The Cloistered Monkey"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+                &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"https://necromuralist.github.io/Ape-Iron/"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"Ape Iron"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+                &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"https://necromuralist.github.io/Bowling-For-Data/"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"Bowling For Data"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+                &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"https://necromuralist.github.io/Neurotic-Networking/"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"Neurotic Networking"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+                &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"https://necromuralist.github.io/Visions-Voices-Data/"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"Visions, Voices, Data"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                &lt;span class="p"&gt;),&lt;/span&gt;
+            &lt;span class="s2"&gt;"Monkey Pages"&lt;/span&gt;
+        &lt;span class="p"&gt;),&lt;/span&gt;
     &lt;span class="p"&gt;),&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org22de4a1" class="outline-2"&gt;
-&lt;h2 id="org22de4a1"&gt;Github Deploy&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org22de4a1"&gt;
+&lt;div id="outline-container-org1978881" class="outline-2"&gt;
+&lt;h2 id="org1978881"&gt;Github Deploy&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org1978881"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# github_deploy configuration&lt;/span&gt;
 &lt;span class="c1"&gt;# For more details, read the manual:&lt;/span&gt;
 &lt;span class="c1"&gt;# https://getnikola.com/handbook.html#deploying-to-github&lt;/span&gt;
@@ -170,10 +161,9 @@ Inside &lt;code&gt;conf.py&lt;/code&gt; we put the name of the theme, matching t
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org23066b0" class="outline-2"&gt;
-&lt;h2 id="org23066b0"&gt;The License&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org23066b0"&gt;
+&lt;div id="outline-container-org9258f80" class="outline-2"&gt;
+&lt;h2 id="org9258f80"&gt;The License&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org9258f80"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;LICENSE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'''&lt;/span&gt;
 &lt;span class="s1"&gt;&amp;lt;div id="license"xmlns:cc="http://creativecommons.org/ns#" &amp;gt;This work is licensed under&lt;/span&gt;
 &lt;span class="s1"&gt;&amp;lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&amp;gt;CC BY 4.0&lt;/span&gt;
@@ -184,18 +174,16 @@ Inside &lt;code&gt;conf.py&lt;/code&gt; we put the name of the theme, matching t
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-orgcd885d1" class="outline-2"&gt;
-&lt;h2 id="orgcd885d1"&gt;The Footer&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgcd885d1"&gt;
+&lt;div id="outline-container-org0097c3c" class="outline-2"&gt;
+&lt;h2 id="org0097c3c"&gt;The Footer&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org0097c3c"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;CONTENT_FOOTER&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'Scribbles by &amp;lt;a href="mailto:&lt;/span&gt;&lt;span class="si"&gt;{email}&lt;/span&gt;&lt;span class="s1"&gt;"&amp;gt;&lt;/span&gt;&lt;span class="si"&gt;{author}&lt;/span&gt;&lt;span class="s1"&gt;&amp;lt;/a&amp;gt; - Powered by         &amp;lt;a href="https://getnikola.com" rel="nofollow"&amp;gt;Nikola&amp;lt;/a&amp;gt;         &lt;/span&gt;&lt;span class="si"&gt;{license}&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-orgd79aa51" class="outline-2"&gt;
-&lt;h2 id="orgd79aa51"&gt;Strip Indexes&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgd79aa51"&gt;
+&lt;div id="outline-container-orgc71cf78" class="outline-2"&gt;
+&lt;h2 id="orgc71cf78"&gt;Strip Indexes&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgc71cf78"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# If a link ends in /index.html,  drop the index.html part.&lt;/span&gt;
 &lt;span class="c1"&gt;# http://mysite/foo/bar/index.html =&amp;gt; http://mysite/foo/bar/&lt;/span&gt;
 &lt;span class="c1"&gt;# (Uses the INDEX_FILE setting, so if that is, say, default.html,&lt;/span&gt;
@@ -204,10 +192,9 @@ Inside &lt;code&gt;conf.py&lt;/code&gt; we put the name of the theme, matching t
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-orgb4874ad" class="outline-2"&gt;
-&lt;h2 id="orgb4874ad"&gt;Search Form&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgb4874ad"&gt;
+&lt;div id="outline-container-org12ce251" class="outline-2"&gt;
+&lt;h2 id="org12ce251"&gt;Search Form&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org12ce251"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# A search form to search this site, for the sidebar. You can use a Google&lt;/span&gt;
 &lt;span class="c1"&gt;# custom search (https://www.google.com/cse/)&lt;/span&gt;
 &lt;span class="c1"&gt;# Or a DuckDuckGo search: https://duckduckgo.com/search_box.html&lt;/span&gt;
@@ -235,16 +222,16 @@ Inside &lt;code&gt;conf.py&lt;/code&gt; we put the name of the theme, matching t
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org729db7f" class="outline-2"&gt;
-&lt;h2 id="org729db7f"&gt;The Tangle&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org729db7f"&gt;
+&lt;div id="outline-container-org118375f" class="outline-2"&gt;
+&lt;h2 id="org118375f"&gt;The Tangle&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org118375f"&gt;
 &lt;p&gt;
 This should eventually get broken up enough to be hidden, but not yet.
 &lt;/p&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
 
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;time&lt;/span&gt;
 
 &lt;span class="c1"&gt;# !! This is the configuration of Nikola. !! #&lt;/span&gt;
 &lt;span class="c1"&gt;# !!  You should edit it to your liking.  !! #&lt;/span&gt;
@@ -399,20 +386,20 @@ This should eventually get broken up enough to be hidden, but not yet.
 &lt;span class="c1"&gt;# Config for bootblog4:&lt;/span&gt;
 &lt;span class="n"&gt;THEME_CONFIG&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="n"&gt;DEFAULT_LANG&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-	&lt;span class="c1"&gt;# Show the latest featured post in a large box, with the previewimage as its background.&lt;/span&gt;
-	&lt;span class="s1"&gt;'featured_large'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-	&lt;span class="c1"&gt;# Show the first (remaining) two featured posts in small boxes.&lt;/span&gt;
-	&lt;span class="s1"&gt;'featured_small'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-	&lt;span class="c1"&gt;# Show featured posts on mobile.&lt;/span&gt;
-	&lt;span class="s1"&gt;'featured_on_mobile'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-	&lt;span class="c1"&gt;# Show image in `featured_large` on mobile.&lt;/span&gt;
-	&lt;span class="c1"&gt;# `featured_small` displays them only on desktop.&lt;/span&gt;
-	&lt;span class="s1"&gt;'featured_large_image_on_mobile'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-	&lt;span class="c1"&gt;# Strip HTML from featured post text.&lt;/span&gt;
-	&lt;span class="s1"&gt;'featured_strip_html'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-	&lt;span class="c1"&gt;# Contents of the sidebar, If empty, the sidebar is not displayed.&lt;/span&gt;
-	&lt;span class="s1"&gt;'sidebar'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-	&lt;span class="s2"&gt;"navbar_light"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="c1"&gt;# Show the latest featured post in a large box, with the previewimage as its background.&lt;/span&gt;
+        &lt;span class="s1"&gt;'featured_large'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="c1"&gt;# Show the first (remaining) two featured posts in small boxes.&lt;/span&gt;
+        &lt;span class="s1"&gt;'featured_small'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="c1"&gt;# Show featured posts on mobile.&lt;/span&gt;
+        &lt;span class="s1"&gt;'featured_on_mobile'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="c1"&gt;# Show image in `featured_large` on mobile.&lt;/span&gt;
+        &lt;span class="c1"&gt;# `featured_small` displays them only on desktop.&lt;/span&gt;
+        &lt;span class="s1"&gt;'featured_large_image_on_mobile'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="c1"&gt;# Strip HTML from featured post text.&lt;/span&gt;
+        &lt;span class="s1"&gt;'featured_strip_html'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="c1"&gt;# Contents of the sidebar, If empty, the sidebar is not displayed.&lt;/span&gt;
+        &lt;span class="s1"&gt;'sidebar'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s2"&gt;"navbar_light"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="c1"&gt;# Config for bootstrap4:&lt;/span&gt;
@@ -1195,13 +1182,13 @@ This should eventually get broken up enough to be hidden, but not yet.
 &lt;span class="c1"&gt;# (translatable)&lt;/span&gt;
 &lt;span class="n"&gt;CONTENT_FOOTER_FORMATS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="n"&gt;DEFAULT_LANG&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
-	&lt;span class="p"&gt;(),&lt;/span&gt;
-	&lt;span class="p"&gt;{&lt;/span&gt;
-	    &lt;span class="s2"&gt;"email"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;BLOG_EMAIL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-	    &lt;span class="s2"&gt;"author"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;BLOG_AUTHOR&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-	    &lt;span class="s2"&gt;"date"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gmtime&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tm_year&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-	    &lt;span class="s2"&gt;"license"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;LICENSE&lt;/span&gt;
-	&lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="p"&gt;(),&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="s2"&gt;"email"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;BLOG_EMAIL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="s2"&gt;"author"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;BLOG_AUTHOR&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="s2"&gt;"date"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gmtime&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tm_year&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="s2"&gt;"license"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;LICENSE&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
     &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 

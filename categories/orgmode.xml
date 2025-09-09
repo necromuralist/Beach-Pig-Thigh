@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Beach Pig Rump &amp; Thigh (Posts about orgmode)</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/</link><description></description><atom:link href="https://necromuralist.github.io/Beach-Pig-Thigh/categories/orgmode.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Beach Pig Rump &amp; Thigh (Posts about orgmode)</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/</link><description></description><atom:link href="https://necromuralist.github.io/Beach-Pig-Thigh/categories/orgmode.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
 &lt;div id="license"xmlns:cc="http://creativecommons.org/ns#" &gt;This work is licensed under
 &lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;
 &lt;/div&gt;
-</copyright><lastBuildDate>Sun, 07 Apr 2024 01:24:47 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Orgmode Plugin init.el</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+</copyright><lastBuildDate>Tue, 09 Sep 2025 19:06:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Orgmode Plugin init.el</title><link>https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html#orgac826f3"&gt;Pygments&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html#org50fe896"&gt;Pygments&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html#org9e4882e"&gt;Fish&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html#org005f510"&gt;Gherkin&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html#org0062ffb"&gt;HTML&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html#org7e2c70c"&gt;INI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html#org38e7536"&gt;Jinja&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html#org6ffc41d"&gt;Mako&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html#org781d57c"&gt;Fish&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html#orgf9a11c5"&gt;Gherkin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html#org917b2a2"&gt;HTML&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html#org5a1c302"&gt;INI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html#orgc2b8368"&gt;Jinja&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html#org9a23973"&gt;Mako&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html#org574bcca"&gt;Lazy Image Loading&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html#org802fcd7"&gt;Silencing the Python Warning&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html#orgdb866dd"&gt;The Tangle&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html#org94f1c5b"&gt;Links&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html#org511a978"&gt;Lazy Image Loading&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html#org8e65fc8"&gt;Silencing the Python Warning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html#org22fc87b"&gt;The Tangle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Beach-Pig-Thigh/posts/orgmode-plugin-initel/index.html#org99b065f"&gt;Links&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -30,10 +30,9 @@
 &lt;p&gt;
 This is the emacs configuration (&lt;code&gt;init.el&lt;/code&gt;) for the &lt;a href="https://plugins.getnikola.com/v8/orgmode/"&gt;orgmode plugin&lt;/a&gt; to export posts and pages to HTML. I spent forever messing with the &lt;code&gt;init.el&lt;/code&gt; file for my emacs instance, but it turns out that the plugin has its own configuration so you have to make changes here or they won't matter.
 &lt;/p&gt;
-
-&lt;div id="outline-container-orgac826f3" class="outline-2"&gt;
-&lt;h2 id="orgac826f3"&gt;Pygments&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgac826f3"&gt;
+&lt;div id="outline-container-org50fe896" class="outline-2"&gt;
+&lt;h2 id="org50fe896"&gt;Pygments&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org50fe896"&gt;
 &lt;p&gt;
 This is the list of languages that pygments will colorize when source-code blocks are exported. The org-babel documentation has a &lt;a href="https://orgmode.org/worg/org-contrib/babel/languages/index.html"&gt;list of supported&lt;/a&gt; languages, but it doesn't list &lt;code&gt;fish&lt;/code&gt;, although that seems to work. It might be because I inserted fish-mode, or maybe it just has to be a &lt;a href="https://pygments.org/languages/"&gt;supported pygments language&lt;/a&gt;.
 &lt;/p&gt;
@@ -42,10 +41,9 @@ This is the list of languages that pygments will colorize when source-code block
 The first argument is what you put as the type in the source block and the second is the pygments short-name &lt;code&gt;("org-source-name" . "pygments-name")&lt;/code&gt;.
 &lt;/p&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org9e4882e" class="outline-3"&gt;
-&lt;h3 id="org9e4882e"&gt;Fish&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org9e4882e"&gt;
+&lt;div id="outline-container-org781d57c" class="outline-3"&gt;
+&lt;h3 id="org781d57c"&gt;Fish&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org781d57c"&gt;
 &lt;p&gt;
 Add coloring for the fish-shell. 
 &lt;/p&gt;
@@ -60,25 +58,30 @@ Add coloring for the fish-shell.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org005f510" class="outline-3"&gt;
-&lt;h3 id="org005f510"&gt;Gherkin&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org005f510"&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"gherkin"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"gherkin"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div id="outline-container-orgf9a11c5" class="outline-3"&gt;
+&lt;h3 id="orgf9a11c5"&gt;Gherkin&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgf9a11c5"&gt;
+&lt;p&gt;
+This will nicely colorize the &lt;i&gt;feature&lt;/i&gt; files when using BDD. pygments refers to them using &lt;i&gt;gherkin&lt;/i&gt; but the &lt;code&gt;feature-mode&lt;/code&gt; for emacs calls them &lt;i&gt;feature&lt;/i&gt; blocks so the first line sets up an alias so that we can use either "gherkin" or "feature" as the language in the org-babel header and it will get colorized on exporting to HTML, although only using "feature" as the language will colorize both the block in the emacs org-mode buffer and the exported HTML.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"feature"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"gherkin"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"gherkin"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"gherkin"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;Scenario:&lt;/span&gt;&lt;span class="nf"&gt; Gherkin colorization&lt;/span&gt;
 
 &lt;span class="nf"&gt;Feature: Pygments gherkin colorization&lt;/span&gt;
 
-&lt;span class="k"&gt;Given &lt;/span&gt;&lt;span class="nf"&gt;a gherkin feature file&lt;/span&gt;
-&lt;span class="k"&gt;When &lt;/span&gt;&lt;span class="nf"&gt;the org-mode file is exported to HTML&lt;/span&gt;
-&lt;span class="k"&gt;Then &lt;/span&gt;&lt;span class="nf"&gt;the feature fragment is colorized.&lt;/span&gt;
+&lt;span class="k"&gt;  Given &lt;/span&gt;&lt;span class="nf"&gt;a gherkin feature file&lt;/span&gt;
+&lt;span class="nf"&gt;  &lt;/span&gt;&lt;span class="k"&gt;When &lt;/span&gt;&lt;span class="nf"&gt;the org-mode file is exported to HTML&lt;/span&gt;
+&lt;span class="nf"&gt;  &lt;/span&gt;&lt;span class="k"&gt;Then &lt;/span&gt;&lt;span class="nf"&gt;the feature fragment is colorized.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org0062ffb" class="outline-3"&gt;
-&lt;h3 id="org0062ffb"&gt;HTML&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org0062ffb"&gt;
+&lt;div id="outline-container-org917b2a2" class="outline-3"&gt;
+&lt;h3 id="org917b2a2"&gt;HTML&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org917b2a2"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"html"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"html"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -86,10 +89,9 @@ Add coloring for the fish-shell.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org7e2c70c" class="outline-3"&gt;
-&lt;h3 id="org7e2c70c"&gt;INI&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org7e2c70c"&gt;
+&lt;div id="outline-container-org5a1c302" class="outline-3"&gt;
+&lt;h3 id="org5a1c302"&gt;INI&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org5a1c302"&gt;
 &lt;p&gt;
 For &lt;a href="https://en.wikipedia.org/wiki/INI_file?useskin=vector"&gt;INI&lt;/a&gt; configuration files.
 &lt;/p&gt;
@@ -104,10 +106,9 @@ For &lt;a href="https://en.wikipedia.org/wiki/INI_file?useskin=vector"&gt;INI&lt
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org38e7536" class="outline-3"&gt;
-&lt;h3 id="org38e7536"&gt;Jinja&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org38e7536"&gt;
+&lt;div id="outline-container-orgc2b8368" class="outline-3"&gt;
+&lt;h3 id="orgc2b8368"&gt;Jinja&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgc2b8368"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"jinja"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"html+jinja"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -117,10 +118,9 @@ For &lt;a href="https://en.wikipedia.org/wiki/INI_file?useskin=vector"&gt;INI&lt
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org6ffc41d" class="outline-3"&gt;
-&lt;h3 id="org6ffc41d"&gt;Mako&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org6ffc41d"&gt;
+&lt;div id="outline-container-org9a23973" class="outline-3"&gt;
+&lt;h3 id="org9a23973"&gt;Mako&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org9a23973"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"mako"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;"html+mako"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -131,10 +131,9 @@ For &lt;a href="https://en.wikipedia.org/wiki/INI_file?useskin=vector"&gt;INI&lt
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org574bcca" class="outline-2"&gt;
-&lt;h2 id="org574bcca"&gt;Lazy Image Loading&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org574bcca"&gt;
+&lt;div id="outline-container-org511a978" class="outline-2"&gt;
+&lt;h2 id="org511a978"&gt;Lazy Image Loading&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org511a978"&gt;
 &lt;p&gt;
 This adds &lt;a href="https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading"&gt;Lazy Loading&lt;/a&gt; to the HTML image tags.
 &lt;/p&gt;
@@ -163,10 +162,9 @@ You use it by using &lt;code&gt;lazy-img-url&lt;/code&gt; instead of &lt;code&gt
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org802fcd7" class="outline-2"&gt;
-&lt;h2 id="org802fcd7"&gt;Silencing the Python Warning&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org802fcd7"&gt;
+&lt;div id="outline-container-org8e65fc8" class="outline-2"&gt;
+&lt;h2 id="org8e65fc8"&gt;Silencing the Python Warning&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org8e65fc8"&gt;
 &lt;p&gt;
 Emacs warns you that it's using 4 spaces for the python code, which is what we want anyway, so this should, hopefully, turn off all those warnings.
 &lt;/p&gt;
@@ -176,9 +174,9 @@ Emacs warns you that it's using 4 spaces for the python code, which is what we w
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgdb866dd" class="outline-2"&gt;
-&lt;h2 id="orgdb866dd"&gt;The Tangle&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgdb866dd"&gt;
+&lt;div id="outline-container-org22fc87b" class="outline-2"&gt;
+&lt;h2 id="org22fc87b"&gt;The Tangle&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org22fc87b"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;;; Init file to use with the orgmode plugin.&lt;/span&gt;
 
 &lt;span class="c1"&gt;;; this is generated from the post with the slug: orgmode-plugin-initel&lt;/span&gt;
@@ -341,10 +339,9 @@ Emacs warns you that it's using 4 spaces for the python code, which is what we w
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id="outline-container-org94f1c5b" class="outline-2"&gt;
-&lt;h2 id="org94f1c5b"&gt;Links&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org94f1c5b"&gt;
+&lt;div id="outline-container-org99b065f" class="outline-2"&gt;
+&lt;h2 id="org99b065f"&gt;Links&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org99b065f"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;Chaganti P. Plugins for Nikola. 2020 [cited 2023 Jun 25]. orgmode. Available from: &lt;a href="https://plugins.getnikola.com/v8/orgmode/"&gt;https://plugins.getnikola.com/v8/orgmode/&lt;/a&gt;&lt;/li&gt;
 
